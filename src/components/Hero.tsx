@@ -13,21 +13,18 @@ const heroImages = [
   "/hero/slide7.jpg",
 ];
 
-const propertyTypes = ["All Types", "Farm / Acreage", "Residential", "Commercial"];
-const priceRanges = [
-  { label: "Any Price", min: 0, max: 0 },
-  { label: "Under $250K", min: 0, max: 250000 },
-  { label: "$250K – $500K", min: 250000, max: 500000 },
-  { label: "$500K – $1M", min: 500000, max: 1000000 },
-  { label: "$1M – $2M", min: 1000000, max: 2000000 },
-  { label: "$2M+", min: 2000000, max: 0 },
-];
+const majorTypes = ["No Preference", "Grain", "Pasture", "Mixed", "Development", "Recreational"];
+const minAcresOptions = ["No Preference", "40+", "80+", "160+", "320+", "640+", "1000+"];
+const priceLowOptions = ["No Limit", "$50,000", "$100,000", "$200,000", "$300,000", "$500,000", "$750,000", "$1,000,000"];
+const priceHighOptions = ["No Limit", "$250,000", "$500,000", "$750,000", "$1,000,000", "$2,000,000", "$3,000,000", "$5,000,000"];
 
 export default function Hero() {
-  const [query, setQuery] = useState("");
-  const [propertyType, setPropertyType] = useState("All Types");
-  const [priceRange, setPriceRange] = useState("Any Price");
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [rmName, setRmName] = useState("All Rm's");
+  const [majorType, setMajorType] = useState("No Preference");
+  const [priceLow, setPriceLow] = useState("No Limit");
+  const [priceHigh, setPriceHigh] = useState("No Limit");
+  const [minAcres, setMinAcres] = useState("No Preference");
+  const [farmChecked, setFarmChecked] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -39,147 +36,135 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, [nextSlide]);
 
-  const filteredRMs = query.length > 0
-    ? rmList.filter((rm) => rm.toLowerCase().includes(query.toLowerCase())).slice(0, 8)
-    : [];
-
   return (
-    <section className="relative min-h-[600px] overflow-hidden md:min-h-[700px]">
+    <section className="relative">
       {/* Background slideshow */}
-      {heroImages.map((src, index) => (
-        <div
-          key={src}
-          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-          style={{ opacity: index === currentSlide ? 1 : 0 }}
-        >
-          <Image
-            src={src}
-            alt={`Saskatchewan landscape ${index + 1}`}
-            fill
-            className="object-cover"
-            priority={index === 0}
-            sizes="100vw"
-          />
-        </div>
-      ))}
-
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/45" />
-
-      {/* Slide indicators */}
-      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
-        {heroImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? "w-8 bg-white"
-                : "w-2 bg-white/50 hover:bg-white/75"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
+      <div className="relative h-[280px] overflow-hidden md:h-[340px]">
+        {heroImages.map((src, index) => (
+          <div
+            key={src}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{ opacity: index === currentSlide ? 1 : 0 }}
+          >
+            <Image
+              src={src}
+              alt={`Saskatchewan landscape ${index + 1}`}
+              fill
+              className="object-cover"
+              priority={index === 0}
+              sizes="100vw"
+            />
+          </div>
         ))}
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Content overlay */}
-      <div className="relative z-10 flex min-h-[600px] items-center px-4 pb-16 pt-12 md:min-h-[700px] md:pb-24 md:pt-20">
-        <div className="mx-auto w-full max-w-4xl text-center">
-          <h1 className="text-3xl font-bold leading-tight text-white drop-shadow-lg md:text-5xl">
-            Find Your Perfect Property
-            <br />
-            <span className="text-gold">in Saskatchewan</span>
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-gray-100 drop-shadow md:text-lg">
-            Farmland, acreages, and homes across every Rural Municipality.
-            Search hundreds of listings updated daily from the MLS®.
-          </p>
+      {/* Search form overlapping the bottom of slideshow */}
+      <div className="relative mx-auto -mt-16 max-w-5xl px-4">
+        <div className="rounded bg-white/95 px-6 pb-6 pt-5 shadow-lg backdrop-blur">
+          <h2 className="mb-4 text-center text-2xl font-light text-gray-300 md:text-3xl">
+            Search All Saskatchewan Land Listings
+          </h2>
 
-          {/* Search form */}
-          <div className="mx-auto mt-8 max-w-3xl rounded-xl bg-white p-4 shadow-2xl md:p-6">
-            <div className="grid gap-3 md:grid-cols-4">
-              {/* Location search with autocomplete */}
-              <div className="relative md:col-span-2">
-                <label className="mb-1 block text-left text-xs font-medium text-gray-500">
-                  Location / RM
-                </label>
-                <input
-                  type="text"
-                  value={query}
-                  onChange={(e) => { setQuery(e.target.value); setShowSuggestions(true); }}
-                  onFocus={() => setShowSuggestions(true)}
-                  onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-                  placeholder="Search by RM, city, or MLS#..."
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 placeholder-gray-400 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
-                />
-                {showSuggestions && filteredRMs.length > 0 && (
-                  <ul className="absolute left-0 right-0 top-full z-20 mt-1 max-h-48 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
-                    {filteredRMs.map((rm) => (
-                      <li key={rm}>
-                        <button
-                          type="button"
-                          onMouseDown={() => { setQuery(rm); setShowSuggestions(false); }}
-                          className="w-full px-3 py-2 text-left text-sm text-gray-700 hover:bg-green-50"
-                        >
-                          RM of {rm}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+          <div className="grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 md:grid-cols-5 md:items-end">
+            {/* RM Name */}
+            <div>
+              <label className="mb-1 block text-sm font-bold text-gray-700">RM Name</label>
+              <select
+                value={rmName}
+                onChange={(e) => setRmName(e.target.value)}
+                className="w-full rounded border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
+              >
+                <option>All Rm&apos;s</option>
+                {rmList.map((rm) => (
+                  <option key={rm} value={rm}>RM of {rm}</option>
+                ))}
+              </select>
+            </div>
 
-              {/* Property type */}
-              <div>
-                <label className="mb-1 block text-left text-xs font-medium text-gray-500">
-                  Property Type
-                </label>
+            {/* Major Type */}
+            <div>
+              <label className="mb-1 block text-sm font-bold text-gray-700">Major Type</label>
+              <select
+                value={majorType}
+                onChange={(e) => setMajorType(e.target.value)}
+                className="w-full rounded border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
+              >
+                {majorTypes.map((t) => (
+                  <option key={t}>{t}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Price - two fields */}
+            <div>
+              <label className="mb-1 block text-sm font-bold text-gray-700">Price</label>
+              <div className="flex items-center gap-1">
                 <select
-                  value={propertyType}
-                  onChange={(e) => setPropertyType(e.target.value)}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
+                  value={priceLow}
+                  onChange={(e) => setPriceLow(e.target.value)}
+                  className="w-full rounded border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
                 >
-                  {propertyTypes.map((t) => (
-                    <option key={t} value={t}>{t}</option>
+                  {priceLowOptions.map((p) => (
+                    <option key={p}>{p}</option>
                   ))}
                 </select>
-              </div>
-
-              {/* Price range */}
-              <div>
-                <label className="mb-1 block text-left text-xs font-medium text-gray-500">
-                  Price Range
-                </label>
+                <span className="shrink-0 text-sm font-bold text-gray-600">TO</span>
                 <select
-                  value={priceRange}
-                  onChange={(e) => setPriceRange(e.target.value)}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-800 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20"
+                  value={priceHigh}
+                  onChange={(e) => setPriceHigh(e.target.value)}
+                  className="w-full rounded border border-gray-300 px-2 py-2 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
                 >
-                  {priceRanges.map((r) => (
-                    <option key={r.label} value={r.label}>{r.label}</option>
+                  {priceHighOptions.map((p) => (
+                    <option key={p}>{p}</option>
                   ))}
                 </select>
               </div>
             </div>
 
-            <button className="mt-4 w-full rounded-lg bg-green-700 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-800 md:w-auto">
-              Search Listings
-            </button>
+            {/* Search button */}
+            <div className="flex items-end">
+              <button className="w-full rounded bg-green-700 px-8 py-2 text-base font-bold text-white transition-colors hover:bg-green-800">
+                Search
+              </button>
+            </div>
           </div>
 
-          {/* Quick stats */}
-          <div className="mx-auto mt-8 flex max-w-lg justify-center gap-8 text-center">
+          {/* Second row */}
+          <div className="mt-3 flex flex-wrap items-end gap-x-6 gap-y-3">
+            {/* Min Acres */}
             <div>
-              <p className="text-2xl font-bold text-gold drop-shadow">280+</p>
-              <p className="text-xs text-gray-200 drop-shadow">Rural Municipalities</p>
+              <label className="mb-1 block text-sm font-bold text-gray-700">Min Acres</label>
+              <select
+                value={minAcres}
+                onChange={(e) => setMinAcres(e.target.value)}
+                className="rounded border border-gray-300 px-3 py-2 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
+              >
+                {minAcresOptions.map((a) => (
+                  <option key={a}>{a}</option>
+                ))}
+              </select>
             </div>
-            <div>
-              <p className="text-2xl font-bold text-gold drop-shadow">500+</p>
-              <p className="text-xs text-gray-200 drop-shadow">Active Listings</p>
+
+            {/* Property Type */}
+            <div className="flex items-center gap-2 pb-2">
+              <span className="text-sm font-bold text-gray-700">Property Type</span>
+              <label className="flex items-center gap-1.5">
+                <input
+                  type="checkbox"
+                  checked={farmChecked}
+                  onChange={(e) => setFarmChecked(e.target.checked)}
+                  className="h-4 w-4 rounded border-gray-300 text-green-700 focus:ring-green-600"
+                />
+                <span className="text-sm text-gray-700">Farm</span>
+              </label>
             </div>
-            <div>
-              <p className="text-2xl font-bold text-gold drop-shadow">15+</p>
-              <p className="text-xs text-gray-200 drop-shadow">Years Experience</p>
+
+            {/* Advanced Search link */}
+            <div className="ml-auto pb-2">
+              <a href="/search" className="text-sm text-gray-600 underline hover:text-green-800">
+                Advanced Search
+              </a>
             </div>
           </div>
         </div>
