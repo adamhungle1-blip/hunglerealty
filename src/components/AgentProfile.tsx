@@ -1,18 +1,93 @@
+import Image from "next/image";
+
 export default function AgentProfile() {
   return (
     <>
-      {/* Bio Section */}
+      {/* Dark "Meet Your Agent" hero-style section */}
+      <section className="bg-gray-900 text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-4 py-14 md:flex-row md:gap-12 md:py-20">
+          {/* Photo */}
+          <div className="relative shrink-0">
+            <div className="relative h-[340px] w-[280px] overflow-hidden rounded-lg shadow-2xl md:h-[420px] md:w-[320px]">
+              <Image
+                src="/adam-hungle.png"
+                alt="Adam Hungle — Saskatchewan Farm Real Estate Specialist"
+                fill
+                className="object-cover object-top"
+                sizes="320px"
+                priority
+              />
+            </div>
+            {/* Subtle green accent bar at bottom of photo */}
+            <div className="absolute -bottom-1 left-4 right-4 h-1 rounded-full bg-green-600" />
+          </div>
+
+          {/* Text content */}
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl font-bold md:text-4xl">Adam Hungle</h2>
+            <p className="mt-1 text-lg text-green-400">REALTOR® · Saskatchewan Land Specialist</p>
+            <p className="mt-1 text-sm text-gray-400">Sutton Group Results Realty</p>
+
+            <div className="mt-6 space-y-3 text-base leading-relaxed text-gray-300">
+              <p>
+                Over 20 years helping Saskatchewan farmers buy and sell land. A top 5% producer
+                with $100M+ in closed transactions — Adam grew up on the Prairies and understands
+                the land from the ground up.
+              </p>
+            </div>
+
+            {/* Stats row */}
+            <div className="mt-6 flex flex-wrap justify-center gap-6 md:justify-start">
+              <div className="text-center">
+                <p className="text-2xl font-bold text-green-400">20+</p>
+                <p className="text-xs uppercase tracking-wide text-gray-500">Years Experience</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-bold text-green-400">$100M+</p>
+                <p className="text-xs uppercase tracking-wide text-gray-500">Closed Sales</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-bold text-green-400">Top 5%</p>
+                <p className="text-xs uppercase tracking-wide text-gray-500">Producer</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-bold text-green-400">280+</p>
+                <p className="text-xs uppercase tracking-wide text-gray-500">RMs Covered</p>
+              </div>
+            </div>
+
+            {/* CTA buttons */}
+            <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+              <a
+                href="tel:3065318854"
+                className="inline-flex items-center gap-2 rounded-lg bg-green-700 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-green-600"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                306.531.8854
+              </a>
+              <a
+                href="mailto:adam@hunglerealty.ca"
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-green-500 hover:text-green-400"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                Send a Message
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bio details section */}
       <section className="mx-auto max-w-7xl px-4 py-10">
         <h2 className="mb-4 text-xl font-bold text-green-800">
           Saskatchewan&apos;s Farm Sales Specialist
         </h2>
         <div className="space-y-4 text-base leading-relaxed text-gray-700">
-          <p>
-            Adam Hungle has been helping Saskatchewan farmers buy and sell land for over 20 years.
-            A top 5% producer with more than $100 million in closed transactions, Adam brings the kind
-            of local knowledge that only comes from growing up on the Prairies — his parents were
-            grain farmers, and he understands the land from the ground up.
-          </p>
           <p>
             Whether you&apos;re looking to expand your operation, invest in agricultural land, or sell
             your family farm, Adam and his team — Adam &amp; Kristy Hungle, with the resources of

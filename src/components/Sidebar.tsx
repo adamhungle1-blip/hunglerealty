@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { rmList } from "@/data/rm-list";
 
@@ -59,6 +60,16 @@ export default function Sidebar() {
       {/* Why List With Adam? */}
       <div className="rounded border border-gray-200 bg-white p-6">
         <h3 className="mb-4 text-center text-lg font-bold text-gray-900">Why List With Adam?</h3>
+        {/* Agent photo */}
+        <div className="mx-auto mb-4 h-28 w-28 overflow-hidden rounded-full border-2 border-green-700">
+          <Image
+            src="/adam-hungle.png"
+            alt="Adam Hungle"
+            width={112}
+            height={112}
+            className="h-full w-full object-cover object-top"
+          />
+        </div>
         <ul className="space-y-3 text-sm text-gray-700">
           <li>
             <span className="font-bold">Saskatchewan Land Specialist</span> — Dedicated to agricultural real estate
