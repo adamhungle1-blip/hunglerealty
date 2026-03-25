@@ -85,31 +85,45 @@ export default function Hero() {
           </h2>
 
           <div className="grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
-            {/* RM Name - Autocomplete */}
+            {/* RM Name - Dropdown + Autocomplete combo */}
             <div ref={rmRef} className="relative">
               <label className="mb-1 block text-sm font-bold text-gray-700">RM Name</label>
-              <input
-                type="text"
-                value={rmQuery}
-                placeholder="All RM's — type to search"
-                onChange={(e) => {
-                  setRmQuery(e.target.value);
-                  setRmName("");
-                  setRmOpen(true);
-                }}
-                onFocus={() => setRmOpen(true)}
-                className="w-full rounded border border-gray-300 px-3 py-2.5 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
-              />
-              {rmName && (
+              <div className="relative">
+                <input
+                  type="text"
+                  value={rmQuery}
+                  placeholder="All RM's — type to search"
+                  onChange={(e) => {
+                    setRmQuery(e.target.value);
+                    setRmName("");
+                    setRmOpen(true);
+                  }}
+                  onFocus={() => setRmOpen(true)}
+                  className="w-full rounded border border-gray-300 py-2.5 pl-3 pr-16 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
+                />
+                {/* Clear button */}
+                {rmName && (
+                  <button
+                    type="button"
+                    onClick={() => { setRmName(""); setRmQuery(""); }}
+                    className="absolute right-8 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                    aria-label="Clear selection"
+                  >
+                    ✕
+                  </button>
+                )}
+                {/* Dropdown toggle arrow */}
                 <button
                   type="button"
-                  onClick={() => { setRmName(""); setRmQuery(""); }}
-                  className="absolute right-2 top-[34px] text-gray-400 hover:text-gray-600"
-                  aria-label="Clear selection"
+                  onClick={() => setRmOpen(!rmOpen)}
+                  className="absolute right-0 top-0 flex h-full w-8 items-center justify-center rounded-r border-l border-gray-300 text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                  aria-label="Toggle RM dropdown"
                 >
-                  ✕
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform ${rmOpen ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                  </svg>
                 </button>
-              )}
+              </div>
               {rmOpen && filteredRMs.length > 0 && (
                 <ul className="absolute z-50 mt-1 max-h-52 w-full overflow-y-auto rounded border border-gray-200 bg-white shadow-lg">
                   {filteredRMs.slice(0, 50).map((rm) => (
