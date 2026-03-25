@@ -8,6 +8,8 @@ const navLinks = [
   { label: "Buying", href: "/buying" },
   { label: "Selling", href: "/selling" },
   { label: "About", href: "/about" },
+  { label: "Acreages", href: "/acreages" },
+  { label: "Residential", href: "/residential" },
   { label: "Map Search", href: "/map" },
 ];
 
