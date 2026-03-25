@@ -71,7 +71,7 @@ const realtorReasons = [
   },
   {
     title: "Negotiation Expertise",
-    text: "We've closed over $100 million in transactions. We know how to structure offers, negotiate terms, and protect your interests. The cost of a Realtor is almost always recovered through better pricing and avoided pitfalls.",
+    text: "We've closed over $100 million in transactions. We know how to structure offers, negotiate terms, and protect your interests. The cost of a REALTOR® is almost always recovered through better pricing and avoided pitfalls.",
   },
   {
     title: "Financing Connections",
@@ -160,7 +160,7 @@ export default function BuyingPage() {
       <section className="py-14">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="mb-4 text-center text-3xl font-bold text-green-800">
-            Why You Need a Realtor When Buying Farmland
+            Why You Need a REALTOR&reg; When Buying Farmland
           </h2>
           <p className="mx-auto mb-10 max-w-3xl text-center text-gray-600">
             Some buyers think they can save money by going directly to a seller or handling the deal
