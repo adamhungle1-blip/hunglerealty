@@ -60,6 +60,24 @@
 - [ ] Implement actual filter logic
 - [ ] Draw-to-search polygon functionality
 
+## Session 5.5 — Supabase Backend & Contact Form ✅
+
+- [x] Supabase project created (ID: `xebzjsipuggshlalruti`, region: us-east-1)
+- [x] Database schema: 5 tables with RLS, triggers, indexes
+  - `leads` — contact form submissions (name, phone, email, rm, message, source, status)
+  - `profiles` — extends auth.users (auto-created on signup via trigger)
+  - `saved_searches` — user saved search criteria (JSONB filters)
+  - `favorites` — user favorited listings
+  - `blog_views` — blog analytics (slug, referrer, user_agent)
+- [x] Row Level Security (RLS) policies on all tables
+- [x] Supabase client utility (`src/lib/supabase.ts`) — service + browser clients
+- [x] Contact form API route rewritten with Supabase + Resend integration
+- [x] Resend account created, API key configured in Vercel
+- [x] 4 environment variables in Vercel: NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY
+- [x] End-to-end test: form submission → Supabase insert ✅ → Resend email API ✅
+
+**Note:** Resend emails currently use sandbox sender (`onboarding@resend.dev`). Add hunglerealty.ca domain to Resend for production email delivery.
+
 ## Session 6 — User Accounts & Alerts ❌ NOT STARTED
 
 - [ ] Supabase Auth (email + Google sign-in)
@@ -124,7 +142,7 @@ The sitemap at `/sitemap.xml` currently generates **300+ URLs**:
 ## Technical Notes
 
 - **Git push workflow:** Create classic PAT on GitHub → set remote URL with token → push → remove token from URL → delete PAT
-- **Contact form:** API route at `/api/contact` logs to console. Uncomment Resend + Supabase code when credentials are ready. Target email: hunglerealestate@outlook.com
+- **Contact form:** API route at `/api/contact` saves leads to Supabase and sends email via Resend. Graceful fallback if env vars missing. Target email: hunglerealestate@outlook.com
 - **Mapbox:** Requires `NEXT_PUBLIC_MAPBOX_TOKEN` env var. Map shows placeholder until configured.
 - **Images:** Hero images are placeholder. Replace with full-res drone/farm photos.
 - **Scheduled tasks:** Two SEO cron jobs exist but are paused (not needed until new site is primary)
@@ -133,7 +151,7 @@ The sitemap at `/sitemap.xml` currently generates **300+ URLs**:
 
 1. **Get MLS/RESO API credentials** from SRA (unlocks Session 4 — real listings)
 2. **Get Mapbox token** and add to Vercel env vars (unlocks live map)
-3. **Set up Resend** for contact form email delivery
+3. **Add hunglerealty.ca domain to Resend** for production email delivery (sandbox working)
 4. **Connect hunglerealty.ca** domain to Vercel
 5. **Set up GA4 + Facebook Pixel** once on real domain
 6. **Add real property photos** to replace placeholders

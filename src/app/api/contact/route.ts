@@ -45,7 +45,7 @@ export async function POST(request: Request) {
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
           from: "Hungle Realty <onboarding@resend.dev>",
-          to: "hunglerealestate@outlook.com",
+          to: "adamhungle1@gmail.com",
           subject: `New Lead: ${name}${rm ? ` - ${rm}` : ""}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px;">
