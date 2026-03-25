@@ -14,7 +14,7 @@ export default function ResidentialPage() {
       {/* Hero */}
       <section className="relative h-[260px] overflow-hidden md:h-[320px]">
         <Image
-          src="/hero/slide1.jpg"
+          src="/hero/residential.jpg"
           alt="Saskatchewan residential property"
           fill
           className="object-cover"
