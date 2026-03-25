@@ -135,7 +135,7 @@ export default function SellingPage() {
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
-              href="/contact"
+              href="/sell"
               className="rounded bg-white px-8 py-3 font-bold text-green-800 transition-colors hover:bg-green-50"
             >
               Request Free Valuation

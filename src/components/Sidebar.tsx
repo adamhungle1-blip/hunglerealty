@@ -29,7 +29,7 @@ export default function Sidebar() {
           Get a free, confidential valuation from Saskatchewan&apos;s dedicated farm real estate specialist.
         </p>
         <a
-          href="/selling"
+          href="/sell"
           className="mt-4 inline-block rounded-full border-2 border-white bg-transparent px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-white hover:text-green-800"
         >
           Request Free Valuation
