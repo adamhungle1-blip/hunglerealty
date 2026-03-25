@@ -5,7 +5,7 @@ import { Resend } from "resend";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, phone, email, rm, message } = body;
+    const { name, phone, email, rm, message, source } = body;
 
     // Basic validation
     if (!name || !phone || !email) {
@@ -14,6 +14,8 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    const leadSource = source || "contact-form";
 
     // 1. Save lead to Supabase
     if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
@@ -25,7 +27,7 @@ export async function POST(request: Request) {
           email,
           rm: rm || null,
           message: message || null,
-          source: "contact-form",
+          source: leadSource,
           status: "new",
         });
 
@@ -46,10 +48,10 @@ export async function POST(request: Request) {
         await resend.emails.send({
           from: "Hungle Realty <onboarding@resend.dev>",
           to: "adamhungle1@gmail.com",
-          subject: `New Lead: ${name}${rm ? ` - ${rm}` : ""}`,
+          subject: `New ${leadSource === "seller-form" ? "Seller" : "Lead"}: ${name}${rm ? ` - ${rm}` : ""}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px;">
-              <h2 style="color: #15803d;">New Contact Form Submission</h2>
+              <h2 style="color: #15803d;">New ${leadSource === "seller-form" ? "Seller Inquiry" : "Contact Form Submission"}</h2>
               <table style="width: 100%; border-collapse: collapse;">
                 <tr>
                   <td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; width: 120px;">Name</td>
@@ -85,7 +87,7 @@ export async function POST(request: Request) {
     }
 
     // Always log to console as fallback
-    console.log("New lead:", { name, phone, email, rm, message, timestamp: new Date().toISOString() });
+    console.log("New lead:", { name, phone, email, rm, message, source: leadSource, timestamp: new Date().toISOString() });
 
     return NextResponse.json({ success: true });
   } catch (error) {
