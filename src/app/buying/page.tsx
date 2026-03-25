@@ -214,10 +214,10 @@ export default function BuyingPage() {
         </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/contact"
+            href="/buy"
             className="rounded bg-green-700 px-8 py-3 text-center font-bold text-white transition-colors hover:bg-green-800"
           >
-            Request Free Valuation
+            Start Your Farm Search
           </Link>
           <Link
             href="/"
