@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllRMSlugs } from "@/data/rm-data";
+import { getAllBlogSlugs } from "@/data/blog-posts";
 
 const BASE = "https://hunglerealty.vercel.app";
 
@@ -15,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/acreages`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/residential`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE}/map`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   // RM area pages (280+)
@@ -25,5 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...rmPages];
+  // Blog posts
+  const blogPages: MetadataRoute.Sitemap = getAllBlogSlugs().map((slug) => ({
+    url: `${BASE}/blog/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...rmPages, ...blogPages];
 }
