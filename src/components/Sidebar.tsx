@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { rmList } from "@/data/rm-list";
 
@@ -55,42 +54,6 @@ export default function Sidebar() {
         <a href="#" className="mt-2 inline-block text-sm text-gray-600 hover:text-green-800">
           Register as a Buyer →
         </a>
-      </div>
-
-      {/* Why List With Adam? */}
-      <div className="rounded border border-gray-200 bg-white p-6">
-        <h3 className="mb-4 text-center text-lg font-bold text-gray-900">Why List With Adam?</h3>
-        {/* Agent photo */}
-        <div className="mx-auto mb-4 h-28 w-28 overflow-hidden rounded-full border-2 border-green-700">
-          <Image
-            src="/adam-hungle.png"
-            alt="Adam Hungle"
-            width={112}
-            height={112}
-            className="h-full w-full object-cover object-top"
-          />
-        </div>
-        <ul className="space-y-3 text-sm text-gray-700">
-          <li>
-            <span className="font-bold">Saskatchewan Land Specialist</span> — Dedicated to agricultural real estate
-          </li>
-          <li>
-            <span className="font-bold">Province-Wide Reach</span> — Buyers from every RM
-          </li>
-          <li>
-            <span className="font-bold">Proven Results</span> — $24M+ in active inventory
-          </li>
-          <li>
-            <span className="font-bold">No Obligation</span> — Free valuation, your timeline
-          </li>
-        </ul>
-        <div className="mt-5 text-center">
-          <p className="font-bold text-gray-900">Adam Hungle, REALTOR®</p>
-          <p className="text-sm text-gray-500">Sutton Group - Results Realty</p>
-          <p className="mt-1 text-lg font-bold text-green-800">
-            <a href="tel:3065318854">306.531.8854</a>
-          </p>
-        </div>
       </div>
 
       {/* RM Quick Search */}
