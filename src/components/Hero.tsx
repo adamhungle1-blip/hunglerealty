@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { rmList } from "@/data/rm-list";
 
@@ -19,12 +19,31 @@ const priceLowOptions = ["No Limit", "$100,000", "$250,000", "$500,000", "$1,000
 const priceHighOptions = ["No Limit", "$500,000", "$1,000,000", "$2,500,000", "$5,000,000", "$10,000,000", "$10,000,000+"];
 
 export default function Hero() {
-  const [rmName, setRmName] = useState("All Rm's");
+  const [rmName, setRmName] = useState("");
+  const [rmQuery, setRmQuery] = useState("");
+  const [rmOpen, setRmOpen] = useState(false);
+  const rmRef = useRef<HTMLDivElement>(null);
   const [majorType, setMajorType] = useState("No Preference");
   const [priceLow, setPriceLow] = useState("No Limit");
   const [priceHigh, setPriceHigh] = useState("No Limit");
   const [minAcres, setMinAcres] = useState("No Preference");
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Filter RMs based on query
+  const filteredRMs = rmQuery.trim()
+    ? rmList.filter((rm) => rm.toLowerCase().includes(rmQuery.toLowerCase()))
+    : rmList;
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (rmRef.current && !rmRef.current.contains(e.target as Node)) {
+        setRmOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroImages.length);
@@ -66,19 +85,55 @@ export default function Hero() {
           </h2>
 
           <div className="grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
-            {/* RM Name */}
-            <div>
+            {/* RM Name - Autocomplete */}
+            <div ref={rmRef} className="relative">
               <label className="mb-1 block text-sm font-bold text-gray-700">RM Name</label>
-              <select
-                value={rmName}
-                onChange={(e) => setRmName(e.target.value)}
+              <input
+                type="text"
+                value={rmQuery}
+                placeholder="All RM's — type to search"
+                onChange={(e) => {
+                  setRmQuery(e.target.value);
+                  setRmName("");
+                  setRmOpen(true);
+                }}
+                onFocus={() => setRmOpen(true)}
                 className="w-full rounded border border-gray-300 px-3 py-2.5 text-sm text-gray-700 focus:border-green-600 focus:outline-none"
-              >
-                <option>All Rm&apos;s</option>
-                {rmList.map((rm) => (
-                  <option key={rm} value={rm}>RM of {rm}</option>
-                ))}
-              </select>
+              />
+              {rmName && (
+                <button
+                  type="button"
+                  onClick={() => { setRmName(""); setRmQuery(""); }}
+                  className="absolute right-2 top-[34px] text-gray-400 hover:text-gray-600"
+                  aria-label="Clear selection"
+                >
+                  ✕
+                </button>
+              )}
+              {rmOpen && filteredRMs.length > 0 && (
+                <ul className="absolute z-50 mt-1 max-h-52 w-full overflow-y-auto rounded border border-gray-200 bg-white shadow-lg">
+                  {filteredRMs.slice(0, 50).map((rm) => (
+                    <li key={rm}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setRmName(rm);
+                          setRmQuery(`RM of ${rm}`);
+                          setRmOpen(false);
+                        }}
+                        className="w-full px-3 py-2 text-left text-sm text-gray-700 hover:bg-green-50 hover:text-green-800"
+                      >
+                        RM of {rm}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {rmOpen && rmQuery.trim() && filteredRMs.length === 0 && (
+                <div className="absolute z-50 mt-1 w-full rounded border border-gray-200 bg-white px-3 py-3 text-center text-sm text-gray-500 shadow-lg">
+                  No RMs found
+                </div>
+              )}
             </div>
 
             {/* Major Type */}
