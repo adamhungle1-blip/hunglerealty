@@ -64,7 +64,7 @@ export default function AboutPage() {
           <div className="flex justify-center md:justify-start">
             <div className="relative h-80 w-64 overflow-hidden rounded-lg shadow-lg">
               <Image
-                src="/adam-headshot.jpg"
+                src="/adam-hungle.png"
                 alt="Adam Hungle - Saskatchewan Farm Sales Specialist"
                 fill
                 className="object-cover"
