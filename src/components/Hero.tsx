@@ -13,7 +13,7 @@ const heroImages = [
   "/hero/slide7.jpg",
 ];
 
-const majorTypes = ["No Preference", "Grain", "Pasture", "Mixed", "Development", "Recreational"];
+const majorTypes = ["No Preference", "Grain", "Hay", "Mixed", "Hobby", "Ranch"];
 const minAcresOptions = ["No Preference", "40+", "80+", "160+", "320+", "640+", "1000+"];
 const priceLowOptions = ["No Limit", "$100,000", "$250,000", "$500,000", "$1,000,000", "$2,500,000", "$5,000,000"];
 const priceHighOptions = ["No Limit", "$500,000", "$1,000,000", "$2,500,000", "$5,000,000", "$10,000,000", "$10,000,000+"];
@@ -24,7 +24,6 @@ export default function Hero() {
   const [priceLow, setPriceLow] = useState("No Limit");
   const [priceHigh, setPriceHigh] = useState("No Limit");
   const [minAcres, setMinAcres] = useState("No Preference");
-  const [farmChecked, setFarmChecked] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -141,18 +140,14 @@ export default function Hero() {
               </select>
             </div>
 
-            {/* Property Type */}
-            <div className="flex items-center gap-2 self-end pb-2.5">
-              <span className="text-sm font-bold text-gray-700">Property Type</span>
-              <label className="flex items-center gap-1.5">
-                <input
-                  type="checkbox"
-                  checked={farmChecked}
-                  onChange={(e) => setFarmChecked(e.target.checked)}
-                  className="h-4 w-4 rounded border-gray-300 text-green-700 focus:ring-green-600"
-                />
-                <span className="text-sm text-gray-700">Farm</span>
-              </label>
+            {/* Map Search link */}
+            <div className="self-end pb-2.5">
+              <a href="/map-search" className="inline-flex items-center gap-1.5 text-sm font-bold text-green-700 hover:text-green-900">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                Map Search
+              </a>
             </div>
 
             {/* Advanced Search link */}
