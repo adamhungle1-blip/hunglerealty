@@ -8,7 +8,7 @@ import Image from "next/image";
 /*  Types & Constants                                                  */
 /* ------------------------------------------------------------------ */
 
-const propertyTypes = ["All Types", "Agriculture", "Single Family", "Townhouse", "Condominium"];
+const propertyTypes = ["All Types", "Agriculture", "Single Family", "Multi-family", "Vacant Land", "Business"];
 const priceRanges = [
   { label: "Any Price", min: "", max: "" },
   { label: "Under $500K", min: "", max: "500000" },
