@@ -19,7 +19,7 @@ export default function FeaturedListings() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/listings?top=12&sort=${sortBy}`);
+      const res = await fetch(`/api/listings?top=12&sort=${sortBy}&propertyType=Agriculture`);
       if (!res.ok) throw new Error("Failed to load listings");
       const data = await res.json();
       setListings(data.value || []);
@@ -44,11 +44,11 @@ export default function FeaturedListings() {
           <div className="mb-6 flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">
-                Saskatchewan Listings
+                View Saskatchewan New Farm Land Listings
               </h2>
               {totalCount > 0 && (
                 <p className="mt-1 text-sm text-gray-500">
-                  {totalCount.toLocaleString()} active listings
+                  {totalCount.toLocaleString()} active farm listings
                 </p>
               )}
             </div>
@@ -120,10 +120,10 @@ export default function FeaturedListings() {
               {totalCount > 12 && (
                 <div className="mt-8 text-center">
                   <Link
-                    href="/search"
+                    href="/search?propertyType=Agriculture"
                     className="inline-block rounded-lg bg-green-800 px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-700"
                   >
-                    View All {totalCount.toLocaleString()} Listings
+                    View All {totalCount.toLocaleString()} Farm Listings
                   </Link>
                 </div>
               )}
