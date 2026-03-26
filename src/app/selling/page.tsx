@@ -92,8 +92,8 @@ export default function SellingPage() {
       {/* Hero */}
       <section className="relative h-[260px] overflow-hidden md:h-[320px]">
         <Image
-          src="/hero/slide5.jpg"
-          alt="Saskatchewan farmland for sale"
+          src="/hero/selling.jpg"
+          alt="Selling Saskatchewan farmland"
           fill
           className="object-cover"
           priority

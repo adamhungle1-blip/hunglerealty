@@ -10,7 +10,6 @@ const heroImages = [
   "/hero/slide4.jpg",
   "/hero/slide5.jpg",
   "/hero/slide6.jpg",
-  "/hero/slide7.jpg",
 ];
 
 const majorTypes = ["No Preference", "Grain", "Hay", "Mixed", "Hobby", "Ranch"];
