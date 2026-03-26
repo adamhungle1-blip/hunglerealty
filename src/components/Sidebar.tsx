@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { rmList } from "@/data/rm-list";
+import { toSlug } from "@/data/rm-data";
 
 // Pick ~40 popular RMs alphabetically for the quick search
 const quickSearchRMs = rmList.slice(0, 40);
@@ -65,7 +66,7 @@ export default function Sidebar() {
           {quickSearchRMs.map((rm) => (
             <li key={rm}>
               <Link
-                href={`/search?rm=${encodeURIComponent(rm)}`}
+                href={`/rm/${toSlug(rm)}`}
                 className="text-sm text-green-700 hover:text-green-900 hover:underline"
               >
                 Rm of {rm}

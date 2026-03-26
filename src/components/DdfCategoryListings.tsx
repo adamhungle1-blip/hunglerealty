@@ -1,14 +1,31 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { useSearchParams } from "next/navigation";
-import DdfListingCard from "@/components/DdfListingCard";
+import DdfListingCard from "./DdfListingCard";
 import type { DdfListing } from "@/lib/ddf";
 
 type SortOption = "newest" | "price_desc" | "price_asc";
 
-export default function SearchListings() {
-  const searchParams = useSearchParams();
+interface DdfCategoryListingsProps {
+  /** Property types to filter by (comma-separated for API) */
+  propertyType?: string;
+  /** RM name to filter by (used in contains() on address) */
+  rm?: string;
+  /** City to filter by */
+  city?: string;
+  /** Heading text */
+  heading: string;
+  /** Number of listings per page */
+  pageSize?: number;
+}
+
+export default function DdfCategoryListings({
+  propertyType,
+  rm,
+  city,
+  heading,
+  pageSize = 24,
+}: DdfCategoryListingsProps) {
   const [listings, setListings] = useState<DdfListing[]>([]);
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -16,32 +33,6 @@ export default function SearchListings() {
   const [error, setError] = useState<string | null>(null);
   const [sort, setSort] = useState<SortOption>("newest");
   const [page, setPage] = useState(0);
-  const pageSize = 24;
-
-  // Read filters from URL params
-  const propertyType = searchParams.get("propertyType") || "";
-  const rm = searchParams.get("rm") || "";
-  const priceMin = searchParams.get("priceMin") || "";
-  const priceMax = searchParams.get("priceMax") || "";
-  const minAcres = searchParams.get("minAcres") || "";
-  const search = searchParams.get("search") || "";
-
-  const buildUrl = useCallback(
-    (sortBy: SortOption, pageNum: number) => {
-      const params = new URLSearchParams();
-      params.set("top", String(pageSize));
-      params.set("skip", String(pageNum * pageSize));
-      params.set("sort", sortBy);
-      if (propertyType) params.set("propertyType", propertyType);
-      if (rm) params.set("rm", rm);
-      if (priceMin) params.set("priceMin", priceMin);
-      if (priceMax) params.set("priceMax", priceMax);
-      if (minAcres) params.set("minAcres", minAcres);
-      if (search) params.set("search", search);
-      return `/api/listings?${params.toString()}`;
-    },
-    [propertyType, rm, priceMin, priceMax, minAcres, search]
-  );
 
   const fetchData = useCallback(
     async (sortBy: SortOption, pageNum: number, append = false) => {
@@ -52,7 +43,16 @@ export default function SearchListings() {
       }
       setError(null);
       try {
-        const res = await fetch(buildUrl(sortBy, pageNum));
+        const params = new URLSearchParams({
+          top: String(pageSize),
+          skip: String(pageNum * pageSize),
+          sort: sortBy,
+        });
+        if (propertyType) params.set("propertyType", propertyType);
+        if (rm) params.set("rm", rm);
+        if (city) params.set("city", city);
+
+        const res = await fetch(`/api/listings?${params.toString()}`);
         if (!res.ok) throw new Error("Failed to load listings");
         const data = await res.json();
         if (append) {
@@ -68,7 +68,7 @@ export default function SearchListings() {
         setLoadingMore(false);
       }
     },
-    [buildUrl]
+    [propertyType, rm, city, pageSize]
   );
 
   useEffect(() => {
@@ -84,53 +84,24 @@ export default function SearchListings() {
 
   const hasMore = listings.length < totalCount;
 
-  // Build a description of active filters
-  const filterParts: string[] = [];
-  if (propertyType) filterParts.push(propertyType);
-  if (rm) filterParts.push(`RM of ${rm}`);
-  if (priceMin) filterParts.push(`Min $${Number(priceMin).toLocaleString()}`);
-  if (priceMax) filterParts.push(`Max $${Number(priceMax).toLocaleString()}`);
-  if (minAcres) filterParts.push(`${minAcres}+ acres`);
-  if (search) filterParts.push(`"${search}"`);
-
   return (
-    <section className="mx-auto max-w-7xl px-4 py-6">
-      {/* Active filters */}
-      {filterParts.length > 0 && (
-        <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="text-sm font-medium text-gray-500">Filters:</span>
-          {filterParts.map((f) => (
-            <span
-              key={f}
-              className="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800"
-            >
-              {f}
-            </span>
-          ))}
-          <a
-            href="/search"
-            className="ml-2 text-xs text-red-600 hover:text-red-800 hover:underline"
-          >
-            Clear all
-          </a>
-        </div>
-      )}
-
-      {/* Sort + count bar */}
+    <section className="mx-auto max-w-7xl px-4 py-8">
+      {/* Header */}
       <div className="mb-6 flex items-center justify-between">
-        <p className="text-sm text-gray-600">
-          {totalCount > 0
-            ? `Showing ${listings.length.toLocaleString()} of ${totalCount.toLocaleString()} listings`
-            : loading
-              ? "Loading..."
-              : "No listings found"}
-        </p>
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">{heading}</h2>
+          {totalCount > 0 && (
+            <p className="mt-1 text-sm text-gray-500">
+              {totalCount.toLocaleString()} listing{totalCount !== 1 ? "s" : ""} found
+            </p>
+          )}
+        </div>
         <div className="flex items-center gap-2">
-          <label htmlFor="search-sort" className="text-sm text-gray-600">
-            Sort by:
+          <label htmlFor="cat-sort" className="text-sm text-gray-600">
+            Sort:
           </label>
           <select
-            id="search-sort"
+            id="cat-sort"
             value={sort}
             onChange={(e) => setSort(e.target.value as SortOption)}
             className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
@@ -142,10 +113,10 @@ export default function SearchListings() {
         </div>
       </div>
 
-      {/* Loading state */}
+      {/* Loading */}
       {loading && (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {Array.from({ length: 24 }).map((_, i) => (
+          {Array.from({ length: 12 }).map((_, i) => (
             <div
               key={i}
               className="animate-pulse overflow-hidden rounded-xl border border-gray-200 bg-white"
@@ -183,7 +154,6 @@ export default function SearchListings() {
             ))}
           </div>
 
-          {/* Load more */}
           {hasMore && (
             <div className="mt-8 text-center">
               <button
@@ -201,7 +171,7 @@ export default function SearchListings() {
       {/* No results */}
       {!loading && !error && listings.length === 0 && (
         <div className="rounded-lg border border-gray-200 bg-gray-50 p-10 text-center">
-          <p className="text-gray-600">No listings found matching your criteria.</p>
+          <p className="text-gray-600">No listings found in this category right now.</p>
           <a
             href="/search"
             className="mt-4 inline-block rounded-lg bg-green-800 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-700"
@@ -210,6 +180,13 @@ export default function SearchListings() {
           </a>
         </div>
       )}
+
+      {/* CREA Disclaimer */}
+      <div className="mt-8 border-t border-gray-200 pt-4 text-xs leading-relaxed text-gray-500">
+        The listing data is provided under copyright by the Canadian Real Estate
+        Association (CREA). The information is deemed reliable but is not
+        guaranteed and should be independently verified.
+      </div>
     </section>
   );
 }

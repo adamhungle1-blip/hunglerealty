@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { rmData, getRMBySlug, getAllRMSlugs } from "@/data/rm-data";
+import RmListings from "@/components/RmListings";
 
 /* ---------- static generation ---------- */
 
@@ -101,18 +102,8 @@ export default async function RMPage({
               soil analysis, and market insight specific to this RM.
             </p>
 
-            {/* Listings placeholder */}
-            <div className="mb-8 rounded-lg border-2 border-dashed border-gray-300 p-8 text-center">
-              <p className="text-gray-500">
-                MLS® listings for RM of {rm.name} will appear here once the IDX feed is connected.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-4 inline-block rounded bg-green-700 px-6 py-2.5 text-sm font-bold text-white hover:bg-green-800"
-              >
-                Ask About Available Listings
-              </Link>
-            </div>
+            {/* DDF Listings for this RM */}
+            <RmListings rmName={rm.name} />
 
             {/* What to know */}
             <h3 className="mb-3 text-xl font-bold text-gray-900">

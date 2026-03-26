@@ -13,7 +13,6 @@ function formatPrice(price: number): string {
 
 function getMainPhoto(listing: DdfListing): string | null {
   if (!listing.Media || listing.Media.length === 0) return null;
-  // Prefer the one marked as preferred, then order 0, then first
   const preferred = listing.Media.find((m) => m.PreferredPhotoYN);
   if (preferred) return preferred.MediaURL;
   const first = listing.Media.sort((a, b) => a.Order - b.Order)[0];
@@ -43,14 +42,32 @@ function formatLotSize(listing: DdfListing): string | null {
   return `${listing.LotSizeArea.toLocaleString()} ${listing.LotSizeUnits || "sqft"}`;
 }
 
+function getListingUrl(listing: DdfListing): string {
+  if (listing.ListingURL) {
+    // Ensure it starts with https://
+    const url = listing.ListingURL.startsWith("http")
+      ? listing.ListingURL
+      : `https://${listing.ListingURL}`;
+    return url;
+  }
+  // Fallback: search on realtor.ca
+  return `https://www.realtor.ca/map#view=list&Sort=6-D&GeoIds=g30_f241e8fe&GeoName=Saskatchewan&PropertyTypeGroupID=1&PropertySearchTypeId=0&TransactionTypeId=2&PriceMin=0&PriceMax=0&BedRange=0-0&BathRange=0-0&keyword=${listing.ListingId || listing.ListingKey}`;
+}
+
 export default function DdfListingCard({ listing }: { listing: DdfListing }) {
   const photo = getMainPhoto(listing);
   const daysAgo = getDaysAgo(listing.OriginalEntryTimestamp);
   const address = getAddress(listing);
   const lotSize = formatLotSize(listing);
+  const listingUrl = getListingUrl(listing);
 
   return (
-    <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
+    <a
+      href={listingUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
+    >
       {/* Photo */}
       <div className="relative aspect-[4/3] bg-gray-100">
         {photo ? (
@@ -151,6 +168,6 @@ export default function DdfListingCard({ listing }: { listing: DdfListing }) {
           MLS® #{listing.ListingId || listing.ListingKey}
         </p>
       </div>
-    </div>
+    </a>
   );
 }

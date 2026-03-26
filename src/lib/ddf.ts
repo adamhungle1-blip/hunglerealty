@@ -74,6 +74,10 @@ export interface DdfListing {
   ModificationTimestamp?: string;
   OriginalEntryTimestamp?: string;
   StandardStatus?: string;
+  ListingURL?: string;
+  Latitude?: number;
+  Longitude?: number;
+  ListAgentKey?: string;
   Media?: Array<{
     MediaURL: string;
     Order: number;
@@ -87,6 +91,34 @@ export interface DdfResponse {
   "@odata.nextLink"?: string;
   value: DdfListing[];
 }
+
+/** Selected fields to request from the DDF API */
+const DDF_SELECT_FIELDS = [
+  "ListingKey",
+  "ListingId",
+  "ListPrice",
+  "UnparsedAddress",
+  "City",
+  "StateOrProvince",
+  "PostalCode",
+  "PropertySubType",
+  "BedroomsTotal",
+  "BathroomsTotalInteger",
+  "LivingArea",
+  "LotSizeArea",
+  "LotSizeUnits",
+  "PublicRemarks",
+  "ListOfficeKey",
+  "ModificationTimestamp",
+  "OriginalEntryTimestamp",
+  "StandardStatus",
+  "PhotosCount",
+  "ListingURL",
+  "Latitude",
+  "Longitude",
+  "ListAgentKey",
+  "Media",
+].join(",");
 
 /**
  * Fetch Saskatchewan listings from the DDF.
@@ -118,28 +150,7 @@ export async function fetchListings({
     $skip: String(skip),
     $orderby: orderby,
     $count: "true",
-    $select: [
-      "ListingKey",
-      "ListingId",
-      "ListPrice",
-      "UnparsedAddress",
-      "City",
-      "StateOrProvince",
-      "PostalCode",
-      "PropertySubType",
-      "BedroomsTotal",
-      "BathroomsTotalInteger",
-      "LivingArea",
-      "LotSizeArea",
-      "LotSizeUnits",
-      "PublicRemarks",
-      "ListOfficeKey",
-      "ModificationTimestamp",
-      "OriginalEntryTimestamp",
-      "StandardStatus",
-      "PhotosCount",
-      "Media",
-    ].join(","),
+    $select: DDF_SELECT_FIELDS,
   });
 
   const res = await ddfFetch(`/Property?${params.toString()}`);

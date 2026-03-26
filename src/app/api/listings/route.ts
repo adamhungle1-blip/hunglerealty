@@ -12,6 +12,11 @@ export async function GET(request: NextRequest) {
   const priceMin = searchParams.get("priceMin");
   const priceMax = searchParams.get("priceMax");
   const propertyType = searchParams.get("propertyType");
+  const city = searchParams.get("city");
+  const rm = searchParams.get("rm");
+  const minAcres = searchParams.get("minAcres");
+  const agentKey = searchParams.get("agentKey");
+  const search = searchParams.get("search");
 
   // Build orderby from sort param
   let orderby = "ModificationTimestamp desc";
@@ -31,7 +36,23 @@ export async function GET(request: NextRequest) {
   const filters: string[] = [];
   if (priceMin) filters.push(`ListPrice ge ${priceMin}`);
   if (priceMax) filters.push(`ListPrice le ${priceMax}`);
-  if (propertyType) filters.push(`PropertySubType eq '${propertyType}'`);
+  if (propertyType) {
+    // Support comma-separated types for multi-type filtering
+    const types = propertyType.split(",").map((t) => t.trim());
+    if (types.length === 1) {
+      filters.push(`PropertySubType eq '${types[0]}'`);
+    } else {
+      const typeFilters = types.map((t) => `PropertySubType eq '${t}'`).join(" or ");
+      filters.push(`(${typeFilters})`);
+    }
+  }
+  if (city) filters.push(`contains(City,'${city}')`);
+  if (rm) filters.push(`contains(UnparsedAddress,'${rm}')`);
+  if (minAcres) filters.push(`LotSizeArea ge ${minAcres}`);
+  if (agentKey) filters.push(`ListAgentKey eq '${agentKey}'`);
+  if (search) {
+    filters.push(`(contains(UnparsedAddress,'${search}') or contains(City,'${search}'))`);
+  }
 
   try {
     const data = await fetchListings({

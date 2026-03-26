@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { rmList } from "@/data/rm-list";
 
@@ -17,7 +18,22 @@ const minAcresOptions = ["No Preference", "40+", "80+", "160+", "320+", "640+", 
 const priceLowOptions = ["No Limit", "$100,000", "$250,000", "$500,000", "$1,000,000", "$2,500,000", "$5,000,000"];
 const priceHighOptions = ["No Limit", "$500,000", "$1,000,000", "$2,500,000", "$5,000,000", "$10,000,000", "$10,000,000+"];
 
+function parsePriceStr(str: string): string | null {
+  if (str === "No Limit") return null;
+  const cleaned = str.replace(/[$,+]/g, "");
+  const num = parseInt(cleaned, 10);
+  return isNaN(num) ? null : String(num);
+}
+
+function parseAcresStr(str: string): string | null {
+  if (str === "No Preference") return null;
+  const cleaned = str.replace(/[+]/g, "");
+  const num = parseInt(cleaned, 10);
+  return isNaN(num) ? null : String(num);
+}
+
 export default function Hero() {
+  const router = useRouter();
   const [rmName, setRmName] = useState("");
   const [rmQuery, setRmQuery] = useState("");
   const [rmOpen, setRmOpen] = useState(false);
@@ -53,6 +69,28 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, [nextSlide]);
 
+  /** Build URL params and navigate to the search page (farm-only) */
+  const handleSearch = () => {
+    const params = new URLSearchParams();
+
+    // Always filter to farm/agriculture property types
+    params.set("propertyType", "Agriculture");
+
+    if (rmName) params.set("rm", rmName);
+    if (majorType !== "No Preference") params.set("farmType", majorType);
+
+    const priceMinVal = parsePriceStr(priceLow);
+    if (priceMinVal) params.set("priceMin", priceMinVal);
+
+    const priceMaxVal = parsePriceStr(priceHigh);
+    if (priceMaxVal) params.set("priceMax", priceMaxVal);
+
+    const acresVal = parseAcresStr(minAcres);
+    if (acresVal) params.set("minAcres", acresVal);
+
+    router.push(`/search?${params.toString()}`);
+  };
+
   return (
     <section className="relative">
       {/* Background slideshow */}
@@ -80,7 +118,7 @@ export default function Hero() {
       <div className="relative mx-auto -mt-16 max-w-5xl px-4">
         <div className="rounded bg-[#1a3c2a] px-6 pb-6 pt-5 shadow-lg backdrop-blur">
           <h2 className="mb-4 text-center text-2xl font-bold text-white md:text-3xl">
-            Search All Saskatchewan Land Listings
+            Search Saskatchewan Farmland Listings
           </h2>
 
           <div className="grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
@@ -210,7 +248,7 @@ export default function Hero() {
 
             {/* Map Search link */}
             <div className="self-end pb-2.5">
-              <a href="/map-search" className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-300 hover:text-emerald-100">
+              <a href="/map" className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-300 hover:text-emerald-100">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
@@ -227,8 +265,11 @@ export default function Hero() {
 
             {/* Search button */}
             <div className="flex items-end">
-              <button className="w-full rounded bg-amber-500 px-8 py-2.5 text-base font-bold text-gray-900 transition-colors hover:bg-amber-400">
-                Search
+              <button
+                onClick={handleSearch}
+                className="w-full rounded bg-amber-500 px-8 py-2.5 text-base font-bold text-gray-900 transition-colors hover:bg-amber-400"
+              >
+                Search Farmland
               </button>
             </div>
           </div>

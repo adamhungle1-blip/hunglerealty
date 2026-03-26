@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import SearchListings from "./SearchListings";
 
 export const metadata: Metadata = {
@@ -22,8 +23,30 @@ export default function SearchPage() {
         </div>
       </section>
 
-      {/* Listings */}
-      <SearchListings />
+      {/* Listings - Suspense needed for useSearchParams */}
+      <Suspense
+        fallback={
+          <div className="mx-auto max-w-7xl px-4 py-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="animate-pulse overflow-hidden rounded-xl border border-gray-200 bg-white"
+                >
+                  <div className="aspect-[4/3] bg-gray-200" />
+                  <div className="space-y-3 p-4">
+                    <div className="h-5 w-24 rounded bg-gray-200" />
+                    <div className="h-4 w-full rounded bg-gray-200" />
+                    <div className="h-3 w-32 rounded bg-gray-200" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        }
+      >
+        <SearchListings />
+      </Suspense>
 
       {/* Disclaimer */}
       <section className="mx-auto max-w-7xl px-4 pb-10">
