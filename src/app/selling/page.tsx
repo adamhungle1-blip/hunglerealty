@@ -90,21 +90,16 @@ export default function SellingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[260px] overflow-hidden md:h-[320px]">
+      <section className="relative h-[300px] overflow-hidden md:h-[380px]">
         <Image
           src="/hero/selling.jpg"
           alt="Selling Saskatchewan farmland"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-center text-4xl font-bold text-white drop-shadow-lg md:text-5xl">
-            Selling Saskatchewan Farmland
-          </h1>
-        </div>
+        <div className="absolute inset-0 bg-black/15" />
       </section>
 
       {/* Intro */}
