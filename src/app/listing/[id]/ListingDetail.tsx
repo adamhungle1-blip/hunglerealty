@@ -167,6 +167,132 @@ function PhotoGallery({ media }: { media: DdfListing["Media"] }) {
   );
 }
 
+/* ─── Enquiry Form ─── */
+function EnquiryForm({
+  mlsNumber,
+  address,
+}: {
+  mlsNumber: string;
+  address: string;
+}) {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          message: `[Listing Enquiry — MLS® #${mlsNumber}]\n${address}\n\n${form.message}`,
+          source: "listing-enquiry",
+        }),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="rounded-xl border border-green-200 bg-green-50 p-6 text-center">
+        <p className="font-bold text-green-800">Thank you!</p>
+        <p className="mt-1 text-sm text-green-700">
+          Adam will be in touch about MLS® #{mlsNumber} within 24 hours.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <h3 className="mb-1 text-base font-bold text-gray-900">
+        Enquire About This Listing
+      </h3>
+      <p className="mb-4 text-xs text-gray-500">
+        MLS® #{mlsNumber}
+      </p>
+
+      {status === "error" && (
+        <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-xs text-red-700">
+          Something went wrong. Please try again or call 306.531.8854.
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="space-y-3">
+        <input
+          name="name"
+          type="text"
+          required
+          value={form.name}
+          onChange={handleChange}
+          placeholder="Full Name *"
+          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-700 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600"
+        />
+        <div className="grid grid-cols-2 gap-3">
+          <input
+            name="email"
+            type="email"
+            required
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Email *"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-700 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600"
+          />
+          <input
+            name="phone"
+            type="tel"
+            value={form.phone}
+            onChange={handleChange}
+            placeholder="Phone"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-700 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600"
+          />
+        </div>
+        <textarea
+          name="message"
+          rows={3}
+          value={form.message}
+          onChange={handleChange}
+          placeholder="I'm interested in this property..."
+          className="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm text-gray-700 focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600"
+        />
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="w-full rounded-lg bg-green-700 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-800 disabled:opacity-50"
+        >
+          {status === "sending" ? "Sending..." : "Send Enquiry"}
+        </button>
+        <p className="text-center text-[10px] text-gray-400">
+          Your information is kept strictly confidential.
+        </p>
+      </form>
+    </div>
+  );
+}
+
 /* ─── Main Detail Component ─── */
 export default function ListingDetail({ listingId }: { listingId: string }) {
   const [listing, setListing] = useState<DdfListing | null>(null);
@@ -517,25 +643,17 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
         {/* Right column — Contact Sidebar (1/3 width) */}
         <div className="lg:col-span-1">
           <div className="sticky top-6 space-y-6">
-            {/* Contact Card */}
+            {/* Contact Card with Photo */}
             <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="text-center">
-                <div className="mx-auto mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-green-800">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
+                <Image
+                  src="/adam-hungle.png"
+                  alt="Adam Hungle, REALTOR®"
+                  width={80}
+                  height={80}
+                  className="mx-auto mb-3 h-20 w-20 rounded-full object-cover"
+                  unoptimized
+                />
                 <h3 className="text-lg font-bold text-gray-900">
                   Adam Hungle
                 </h3>
@@ -545,66 +663,22 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
                 </p>
               </div>
 
-              <div className="mt-5 space-y-3">
-                <a
-                  href="tel:3065318854"
-                  className="flex items-center justify-center gap-2 rounded-lg bg-green-800 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  306.531.8854
-                </a>
-                <a
-                  href="mailto:adam@hunglerealty.ca"
-                  className="flex items-center justify-center gap-2 rounded-lg border border-green-800 px-4 py-3 text-sm font-semibold text-green-800 transition hover:bg-green-50"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  Send Email
-                </a>
-              </div>
-            </div>
-
-            {/* Request Info Card */}
-            <div className="rounded-xl border border-gray-200 bg-green-800 p-6 text-white shadow-sm">
-              <h3 className="text-center text-lg font-bold">
-                Interested in this property?
-              </h3>
-              <p className="mt-2 text-center text-sm text-green-100">
-                Get a free, confidential consultation from Saskatchewan&apos;s
-                dedicated farm real estate specialist.
-              </p>
               <a
                 href="tel:3065318854"
-                className="mt-4 block rounded-lg bg-white px-4 py-3 text-center text-sm font-bold text-green-800 transition hover:bg-green-50"
+                className="mt-5 flex items-center justify-center gap-2 rounded-lg bg-green-800 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-700"
               >
-                Request Information
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                306.531.8854
               </a>
             </div>
+
+            {/* Listing Enquiry Form */}
+            <EnquiryForm
+              mlsNumber={listing.ListingId || listing.ListingKey}
+              address={address}
+            />
 
             {/* Quick actions */}
             <div className="flex gap-3">
