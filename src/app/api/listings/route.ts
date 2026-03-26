@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { fetchListings } from "@/lib/ddf";
+import { fetchListings, fetchOfficeNames } from "@/lib/ddf";
 
 export const revalidate = 300; // ISR: revalidate every 5 minutes
 
@@ -61,6 +61,23 @@ export async function GET(request: NextRequest) {
       orderby,
       filter: filters.length > 0 ? filters.join(" and ") : undefined,
     });
+
+    // Resolve office names for the courtesy line
+    const officeKeys = [
+      ...new Set(
+        data.value
+          .map((l) => l.ListOfficeKey)
+          .filter((k): k is string => !!k)
+      ),
+    ];
+    if (officeKeys.length > 0) {
+      const officeNames = await fetchOfficeNames(officeKeys);
+      for (const listing of data.value) {
+        if (listing.ListOfficeKey && officeNames.has(listing.ListOfficeKey)) {
+          listing.ListOfficeName = officeNames.get(listing.ListOfficeKey);
+        }
+      }
+    }
 
     return NextResponse.json(data, {
       headers: {

@@ -163,10 +163,15 @@ export default function DdfListingCard({ listing }: { listing: DdfListing }) {
           )}
         </div>
 
-        {/* Brokerage attribution */}
-        <p className="mt-3 border-t border-gray-100 pt-2 text-[10px] text-gray-400">
-          MLS® #{listing.ListingId || listing.ListingKey}
-        </p>
+        {/* MLS & Brokerage attribution */}
+        <div className="mt-3 border-t border-gray-100 pt-2 text-[10px] text-gray-400">
+          <p>MLS® #{listing.ListingId || listing.ListingKey}</p>
+          {listing.ListOfficeName && (
+            <p className="mt-0.5 italic">
+              Courtesy of {listing.ListOfficeName}
+            </p>
+          )}
+        </div>
       </div>
     </a>
   );

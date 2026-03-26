@@ -78,6 +78,7 @@ export interface DdfListing {
   Latitude?: number;
   Longitude?: number;
   ListAgentKey?: string;
+  ListOfficeName?: string; // Resolved from Office endpoint
   Media?: Array<{
     MediaURL: string;
     Order: number;
@@ -161,4 +162,55 @@ export async function fetchListings({
   }
 
   return res.json();
+}
+
+/** In-memory cache for office names (OfficeKey → OfficeName) */
+const officeNameCache = new Map<string, string>();
+
+/**
+ * Fetch office names for a list of OfficeKeys.
+ * Uses an in-memory cache to avoid repeated lookups.
+ */
+export async function fetchOfficeNames(
+  officeKeys: string[]
+): Promise<Map<string, string>> {
+  const result = new Map<string, string>();
+  const uncachedKeys: string[] = [];
+
+  for (const key of officeKeys) {
+    if (officeNameCache.has(key)) {
+      result.set(key, officeNameCache.get(key)!);
+    } else {
+      uncachedKeys.push(key);
+    }
+  }
+
+  if (uncachedKeys.length === 0) return result;
+
+  // Batch fetch: OData filter with 'or' for up to ~20 keys at a time
+  const batchSize = 20;
+  for (let i = 0; i < uncachedKeys.length; i += batchSize) {
+    const batch = uncachedKeys.slice(i, i + batchSize);
+    const filterParts = batch.map((k) => `OfficeKey eq '${k}'`).join(" or ");
+    const params = new URLSearchParams({
+      $filter: filterParts,
+      $select: "OfficeKey,OfficeName",
+      $top: String(batch.length),
+    });
+
+    try {
+      const res = await ddfFetch(`/Office?${params.toString()}`);
+      if (res.ok) {
+        const data = await res.json();
+        for (const office of data.value || []) {
+          officeNameCache.set(office.OfficeKey, office.OfficeName);
+          result.set(office.OfficeKey, office.OfficeName);
+        }
+      }
+    } catch {
+      // Silently fail — courtesy line just won't show
+    }
+  }
+
+  return result;
 }
