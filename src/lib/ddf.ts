@@ -61,7 +61,6 @@ export interface DdfListing {
   City?: string;
   StateOrProvince?: string;
   PostalCode?: string;
-  PropertyType?: string;
   PropertySubType?: string;
   BedroomsTotal?: number;
   BathroomsTotalInteger?: number;
@@ -69,7 +68,9 @@ export interface DdfListing {
   LotSizeArea?: number;
   LotSizeUnits?: string;
   PublicRemarks?: string;
-  ListOfficeName?: string;
+  ListOfficeKey?: string;
+  ListingId?: string;
+  PhotosCount?: number;
   ModificationTimestamp?: string;
   OriginalEntryTimestamp?: string;
   StandardStatus?: string;
@@ -119,12 +120,12 @@ export async function fetchListings({
     $count: "true",
     $select: [
       "ListingKey",
+      "ListingId",
       "ListPrice",
       "UnparsedAddress",
       "City",
       "StateOrProvince",
       "PostalCode",
-      "PropertyType",
       "PropertySubType",
       "BedroomsTotal",
       "BathroomsTotalInteger",
@@ -132,10 +133,11 @@ export async function fetchListings({
       "LotSizeArea",
       "LotSizeUnits",
       "PublicRemarks",
-      "ListOfficeName",
+      "ListOfficeKey",
       "ModificationTimestamp",
       "OriginalEntryTimestamp",
       "StandardStatus",
+      "PhotosCount",
       "Media",
     ].join(","),
   });

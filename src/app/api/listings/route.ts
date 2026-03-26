@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
   const filters: string[] = [];
   if (priceMin) filters.push(`ListPrice ge ${priceMin}`);
   if (priceMax) filters.push(`ListPrice le ${priceMax}`);
-  if (propertyType) filters.push(`PropertyType eq '${propertyType}'`);
+  if (propertyType) filters.push(`PropertySubType eq '${propertyType}'`);
 
   try {
     const data = await fetchListings({

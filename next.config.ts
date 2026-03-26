@@ -5,15 +5,15 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "ddfcdn.realtor.ca",
+      },
+      {
+        protocol: "https",
         hostname: "**.realtor.ca",
       },
       {
         protocol: "https",
         hostname: "**.crea.ca",
-      },
-      {
-        protocol: "http",
-        hostname: "**.realtor.ca",
       },
     ],
   },
