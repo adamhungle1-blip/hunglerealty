@@ -27,7 +27,7 @@ export default function AcreagesPage() {
             Acreages for Sale near Regina
           </h1>
           <p className="mt-2 text-base text-green-200">
-            Rural properties within reach of the city — or search any area
+            Browse acreages on the map — click a pin to see details
           </p>
         </div>
       </section>
