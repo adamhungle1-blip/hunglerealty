@@ -68,7 +68,7 @@ export default function AcreageListings() {
           top: String(append ? pageSize : 100), // Fetch more for map on first load
           skip: String(append ? pageNum * pageSize : 0),
           sort: sortBy,
-          propertyType: "Acreage",
+          propertyType: "Single Family,Multi-family",
         });
         const range = priceRanges[priceIdx];
         if (range.min) params.set("priceMin", range.min);
