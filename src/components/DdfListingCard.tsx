@@ -43,15 +43,9 @@ function formatLotSize(listing: DdfListing): string | null {
 }
 
 function getListingUrl(listing: DdfListing): string {
-  if (listing.ListingURL) {
-    // Ensure it starts with https://
-    const url = listing.ListingURL.startsWith("http")
-      ? listing.ListingURL
-      : `https://${listing.ListingURL}`;
-    return url;
-  }
-  // Fallback: search on realtor.ca
-  return `https://www.realtor.ca/map#view=list&Sort=6-D&GeoIds=g30_f241e8fe&GeoName=Saskatchewan&PropertyTypeGroupID=1&PropertySearchTypeId=0&TransactionTypeId=2&PriceMin=0&PriceMax=0&BedRange=0-0&BathRange=0-0&keyword=${listing.ListingId || listing.ListingKey}`;
+  // Link to our own listing detail page
+  const id = listing.ListingId || listing.ListingKey;
+  return `/listing/${id}`;
 }
 
 export default function DdfListingCard({ listing }: { listing: DdfListing }) {
@@ -64,8 +58,6 @@ export default function DdfListingCard({ listing }: { listing: DdfListing }) {
   return (
     <a
       href={listingUrl}
-      target="_blank"
-      rel="noopener noreferrer"
       className="group block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
     >
       {/* Photo */}

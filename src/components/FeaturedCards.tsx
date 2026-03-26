@@ -34,12 +34,8 @@ function getDaysAgo(timestamp?: string): number | null {
 }
 
 function getListingUrl(listing: DdfListing): string {
-  if (listing.ListingURL) {
-    return listing.ListingURL.startsWith("http")
-      ? listing.ListingURL
-      : `https://${listing.ListingURL}`;
-  }
-  return `https://www.realtor.ca/map#keyword=${listing.ListingId || listing.ListingKey}`;
+  const id = listing.ListingId || listing.ListingKey;
+  return `/listing/${id}`;
 }
 
 export default function FeaturedCards() {
@@ -166,8 +162,6 @@ export default function FeaturedCards() {
               <a
                 key={`${listing.ListingKey}-${currentIndex}-${idx}`}
                 href={getListingUrl(listing)}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group overflow-hidden rounded-lg border border-gray-200 transition-shadow hover:shadow-lg"
               >
                 {/* Green accent bar */}

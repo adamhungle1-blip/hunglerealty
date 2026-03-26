@@ -164,6 +164,25 @@ export async function fetchListings({
   return res.json();
 }
 
+/**
+ * Fetch a single listing by its MLS® ID (e.g. SK031210).
+ */
+export async function fetchListingById(
+  listingId: string
+): Promise<DdfListing | null> {
+  const params = new URLSearchParams({
+    $filter: `ListingId eq '${listingId}'`,
+    $top: "1",
+    $select: DDF_SELECT_FIELDS,
+  });
+
+  const res = await ddfFetch(`/Property?${params.toString()}`);
+  if (!res.ok) return null;
+
+  const data: DdfResponse = await res.json();
+  return data.value[0] || null;
+}
+
 /** In-memory cache for office names (OfficeKey → OfficeName) */
 const officeNameCache = new Map<string, string>();
 
