@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import FeaturedListingsSidebar from "@/components/FeaturedListingsSidebar";
 
 export const metadata: Metadata = {
   title: "Buying Farmland in Saskatchewan | Hungle Realty",
@@ -119,22 +120,26 @@ export default function BuyingPage() {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="mx-auto max-w-4xl px-4 py-12">
-        <p className="text-lg leading-relaxed text-gray-700">
-          Deciding to buy farmland is one of the biggest investments you'll ever make &mdash; and
-          finding the right property at the right price takes more than just browsing listings. You
-          need someone who knows the land, knows the market, and will make sure you don't leave money
-          on the table. That's where we come in. With 20 years of experience, expert local knowledge,
-          and a network of professional contacts, Adam and Kristy Hungle will help you find and
-          purchase farmland in Saskatchewan with confidence. Many farms and parcels of land are for
-          sale but never make it to the open market &mdash; contact us to find out about these
-          back-pocket listings.
-        </p>
-      </section>
+      {/* Main content + sidebar */}
+      <div className="mx-auto max-w-7xl px-4 py-12 lg:flex lg:gap-10">
+        {/* Main content */}
+        <div className="flex-1 min-w-0">
+          {/* Intro */}
+          <section className="max-w-4xl">
+            <p className="text-lg leading-relaxed text-gray-700">
+              Deciding to buy farmland is one of the biggest investments you'll ever make &mdash; and
+              finding the right property at the right price takes more than just browsing listings. You
+              need someone who knows the land, knows the market, and will make sure you don't leave money
+              on the table. That's where we come in. With 20 years of experience, expert local knowledge,
+              and a network of professional contacts, Adam and Kristy Hungle will help you find and
+              purchase farmland in Saskatchewan with confidence. Many farms and parcels of land are for
+              sale but never make it to the open market &mdash; contact us to find out about these
+              back-pocket listings.
+            </p>
+          </section>
 
       {/* Why Saskatchewan Farmland */}
-      <section className="bg-gray-50 py-14">
+      <section className="mt-10 rounded-xl bg-gray-50 py-14">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="mb-10 text-center text-3xl font-bold text-green-800">
             Why Saskatchewan Farmland Is a Smart Investment
@@ -183,7 +188,7 @@ export default function BuyingPage() {
       </section>
 
       {/* How We Help */}
-      <section className="bg-green-800 py-14 text-white">
+      <section className="mt-10 rounded-xl bg-green-800 py-14 text-white">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="mb-10 text-center text-3xl font-bold">
             How We Help You Find the Right Farm
@@ -200,7 +205,7 @@ export default function BuyingPage() {
       </section>
 
       {/* Closing */}
-      <section className="mx-auto max-w-4xl px-4 py-14">
+      <section className="max-w-4xl py-14">
         <h2 className="mb-4 text-center text-2xl font-bold text-green-800">
           Whether You're a Seasoned Farmer or a First-Time Buyer
         </h2>
@@ -233,6 +238,15 @@ export default function BuyingPage() {
           </a>
         </div>
       </section>
+        </div>
+
+        {/* Sidebar - Featured Listings */}
+        <aside className="hidden w-[340px] shrink-0 lg:block">
+          <div className="sticky top-20">
+            <FeaturedListingsSidebar />
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }

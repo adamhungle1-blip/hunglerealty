@@ -14,7 +14,7 @@ export default function FeaturedListings() {
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [sort, setSort] = useState<SortOption>("newest");
+  const [sort, setSort] = useState<SortOption>("price_desc");
 
   const fetchData = useCallback(async (sortBy: SortOption) => {
     setLoading(true);

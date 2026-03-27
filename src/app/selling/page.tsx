@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import FeaturedListingsSidebar from "@/components/FeaturedListingsSidebar";
 
 export const metadata: Metadata = {
   title: "Selling Saskatchewan Farmland | Hungle Realty",
@@ -102,24 +103,28 @@ export default function SellingPage() {
         <div className="absolute inset-0 bg-black/15" />
       </section>
 
-      {/* Intro */}
-      <section className="mx-auto max-w-4xl px-4 py-12">
-        <p className="mb-6 text-lg leading-relaxed text-gray-700">
-          Selling farm land is a major decision, and you only get one chance to get it right. With
-          over 20 years of real estate experience, Adam and Kristy Hungle will help you capitalize on
-          every dollar of your hard-earned equity.
-        </p>
-        <p className="text-lg leading-relaxed text-gray-700">
-          We're a family team who specialize in selling farm and ranch real estate. We've sold
-          hundreds of properties across Saskatchewan and have seen almost every real estate situation
-          there is. We have "Acres of Experience." We believe in using the latest technology and
-          marketing to get your farm in front of the right buyers &mdash; but we also value the
-          importance of doing business with a smile and a handshake.
-        </p>
-      </section>
+      {/* Main content + sidebar */}
+      <div className="mx-auto max-w-7xl px-4 py-12 lg:flex lg:gap-10">
+        {/* Main content */}
+        <div className="flex-1 min-w-0">
+          {/* Intro */}
+          <section className="max-w-4xl">
+            <p className="mb-6 text-lg leading-relaxed text-gray-700">
+              Selling farm land is a major decision, and you only get one chance to get it right. With
+              over 20 years of real estate experience, Adam and Kristy Hungle will help you capitalize on
+              every dollar of your hard-earned equity.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700">
+              We&apos;re a family team who specialize in selling farm and ranch real estate. We&apos;ve sold
+              hundreds of properties across Saskatchewan and have seen almost every real estate situation
+              there is. We have &ldquo;Acres of Experience.&rdquo; We believe in using the latest technology and
+              marketing to get your farm in front of the right buyers &mdash; but we also value the
+              importance of doing business with a smile and a handshake.
+            </p>
+          </section>
 
       {/* Why Now */}
-      <section className="bg-green-800 py-14 text-white">
+      <section className="mt-10 rounded-xl bg-green-800 py-14 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="mb-6 text-3xl font-bold">Why Now Is the Time to Sell</h2>
           <p className="mb-8 text-lg leading-relaxed text-green-100">
@@ -161,7 +166,7 @@ export default function SellingPage() {
       </section>
 
       {/* Tax Info */}
-      <section className="bg-gray-50 py-14">
+      <section className="mt-10 rounded-xl bg-gray-50 py-14">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="mb-6 text-center text-3xl font-bold text-green-800">
             Important Tax Information for Sellers
@@ -210,7 +215,7 @@ export default function SellingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gray-50 py-14">
+      <section className="mt-10 rounded-xl bg-gray-50 py-14">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="mb-10 text-center text-3xl font-bold text-green-800">
             What Our Clients Say
@@ -257,6 +262,15 @@ export default function SellingPage() {
           </a>
         </div>
       </section>
+        </div>
+
+        {/* Sidebar - Featured Listings */}
+        <aside className="hidden w-[340px] shrink-0 lg:block">
+          <div className="sticky top-20">
+            <FeaturedListingsSidebar />
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }
