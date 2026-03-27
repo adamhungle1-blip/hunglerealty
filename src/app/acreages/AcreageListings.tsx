@@ -1,8 +1,19 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import dynamic from "next/dynamic";
 import DdfListingCard from "@/components/DdfListingCard";
 import type { DdfListing } from "@/lib/ddf";
+
+// Leaflet needs `window` — dynamically import to avoid SSR crash
+const AcreageMap = dynamic(() => import("@/components/AcreageMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full w-full items-center justify-center bg-gray-100 text-sm text-gray-500">
+      Loading map…
+    </div>
+  ),
+});
 
 type SortOption = "newest" | "price_desc" | "price_asc";
 
@@ -84,16 +95,14 @@ export default function AcreageListings() {
       {/* ─── Map Section ─── */}
       <section className="relative">
         <div className="h-[400px] w-full lg:h-[500px]">
-          <iframe
-            src="https://www.google.com/maps?q=Regina,+Saskatchewan&z=9&output=embed"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Acreages near Regina, Saskatchewan"
-          />
+          <AcreageMap listings={listings} />
         </div>
+        {!loading && listings.length > 0 && (
+          <div className="absolute bottom-3 left-3 z-[1000] rounded-lg bg-white/90 px-3 py-1.5 text-xs font-medium text-gray-700 shadow backdrop-blur">
+            {listings.filter((l) => l.Latitude && l.Longitude).length} of{" "}
+            {totalCount.toLocaleString()} listings on map
+          </div>
+        )}
       </section>
 
       {/* ─── Listings Grid ─── */}
