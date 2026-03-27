@@ -125,15 +125,15 @@ export default function Hero() {
 
       {/* Search form overlapping the bottom of slideshow */}
       <div className="relative mx-auto -mt-16 max-w-5xl px-4">
-        <div className="rounded bg-[#1a3c2a] px-6 pb-6 pt-5 shadow-lg backdrop-blur">
-          <h2 className="mb-4 text-center text-2xl font-bold text-white md:text-3xl">
+        <div className="rounded bg-[#1a3a1a] px-6 pb-6 pt-5 shadow-lg backdrop-blur">
+          <h2 className="mb-4 text-center text-2xl font-bold text-[#c8a951] md:text-3xl">
             Search Saskatchewan Farmland Listings
           </h2>
 
           <div className="grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
             {/* RM Name - Dropdown + Autocomplete combo */}
             <div ref={rmRef} className="relative">
-              <label className="mb-1 block text-sm font-bold text-emerald-200">RM Name</label>
+              <label className="mb-1 block text-sm font-bold text-[#c8a951]">RM Name</label>
               <div className="relative">
                 <input
                   type="text"
@@ -145,7 +145,7 @@ export default function Hero() {
                     setRmOpen(true);
                   }}
                   onFocus={() => setRmOpen(true)}
-                  className="w-full rounded border border-white/20 bg-white/10 py-2.5 pl-3 pr-16 text-sm text-white placeholder-white/50 focus:border-emerald-400 focus:outline-none"
+                  className="w-full rounded border border-[#c8a951]/30 bg-white/10 py-2.5 pl-3 pr-8 text-sm text-white placeholder-[#c8a951]/60 focus:border-[#c8a951] focus:outline-none"
                 />
                 {/* Clear button */}
                 {rmName && (
@@ -181,7 +181,7 @@ export default function Hero() {
                           setRmQuery(`RM of ${rm}`);
                           setRmOpen(false);
                         }}
-                        className="w-full px-3 py-2 text-left text-sm text-gray-700 hover:bg-green-50 hover:text-green-800"
+                        className="w-full px-3 py-2 text-left text-sm text-gray-700 hover:bg-[#f0ead4] hover:text-[#1a3a1a]"
                       >
                         RM of {rm}
                       </button>
@@ -198,11 +198,11 @@ export default function Hero() {
 
             {/* Major Type */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-emerald-200">Major Type</label>
+              <label className="mb-1 block text-sm font-bold text-[#c8a951]">Major Type</label>
               <select
                 value={majorType}
                 onChange={(e) => setMajorType(e.target.value)}
-                className="w-full rounded border border-white/20 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-emerald-400 focus:outline-none"
+                className="w-full rounded border border-[#c8a951]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#c8a951] focus:outline-none"
               >
                 {majorTypes.map((t) => (
                   <option key={t} className="bg-white text-gray-800">{t}</option>
@@ -212,11 +212,11 @@ export default function Hero() {
 
             {/* Price Low */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-emerald-200">Min Price</label>
+              <label className="mb-1 block text-sm font-bold text-[#c8a951]">Min Price</label>
               <select
                 value={priceLow}
                 onChange={(e) => setPriceLow(e.target.value)}
-                className="w-full rounded border border-white/20 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-emerald-400 focus:outline-none"
+                className="w-full rounded border border-[#c8a951]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#c8a951] focus:outline-none"
               >
                 {priceLowOptions.map((p) => (
                   <option key={p} className="bg-white text-gray-800">{p}</option>
@@ -226,11 +226,11 @@ export default function Hero() {
 
             {/* Price High */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-emerald-200">Max Price</label>
+              <label className="mb-1 block text-sm font-bold text-[#c8a951]">Max Price</label>
               <select
                 value={priceHigh}
                 onChange={(e) => setPriceHigh(e.target.value)}
-                className="w-full rounded border border-white/20 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-emerald-400 focus:outline-none"
+                className="w-full rounded border border-[#c8a951]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#c8a951] focus:outline-none"
               >
                 {priceHighOptions.map((p) => (
                   <option key={p} className="bg-white text-gray-800">{p}</option>
@@ -243,11 +243,11 @@ export default function Hero() {
           <div className="mt-3 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
             {/* Min Acres */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-emerald-200">Min Acres</label>
+              <label className="mb-1 block text-sm font-bold text-[#c8a951]">Min Acres</label>
               <select
                 value={minAcres}
                 onChange={(e) => setMinAcres(e.target.value)}
-                className="w-full rounded border border-white/20 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-emerald-400 focus:outline-none"
+                className="w-full rounded border border-[#c8a951]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#c8a951] focus:outline-none"
               >
                 {minAcresOptions.map((a) => (
                   <option key={a} className="bg-white text-gray-800">{a}</option>
@@ -257,7 +257,7 @@ export default function Hero() {
 
             {/* Map Search link */}
             <div className="self-end pb-2.5">
-              <a href="/map?propertyType=Agriculture" className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-300 hover:text-emerald-100">
+              <a href="/map?propertyType=Agriculture" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#c8a951] hover:text-[#ddc476]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
@@ -267,7 +267,7 @@ export default function Hero() {
 
             {/* Advanced Search link */}
             <div className="self-end pb-2.5">
-              <a href="/advanced-search" className="text-sm text-emerald-300 underline hover:text-emerald-100">
+              <a href="/advanced-search" className="text-sm text-[#c8a951] underline hover:text-[#ddc476]">
                 Advanced Search
               </a>
             </div>
@@ -276,7 +276,7 @@ export default function Hero() {
             <div className="flex items-end">
               <button
                 onClick={handleSearch}
-                className="w-full rounded bg-amber-500 px-8 py-2.5 text-base font-bold text-gray-900 transition-colors hover:bg-amber-400"
+                className="w-full rounded border-2 border-[#c8a951] bg-gradient-to-b from-[#c8a951] to-[#a8893a] px-8 py-2.5 text-base font-bold text-[#1a3a1a] shadow-md transition-all hover:from-[#d4b85c] hover:to-[#c8a951]"
               >
                 Search Farmland
               </button>
