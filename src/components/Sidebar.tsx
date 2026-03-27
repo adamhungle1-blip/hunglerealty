@@ -24,19 +24,19 @@ export default function Sidebar() {
       </div>
 
       {/* What Is Your Farmland Worth? */}
-      <div className="rounded-lg bg-green-800 p-6 text-center text-white">
-        <h3 className="text-xl font-bold">What Is Your Farmland Worth?</h3>
-        <p className="mt-3 text-sm leading-relaxed text-green-100">
-          Get a free, confidential valuation from Saskatchewan&apos;s dedicated farm real estate specialist.
+      <div className="rounded-lg bg-[#1a3a1a] p-6 text-center">
+        <h3 className="text-2xl font-bold italic text-[#d4a520]">What Is Your Farmland Worth?</h3>
+        <p className="mt-3 text-sm leading-relaxed text-gray-300">
+          Get a confidential valuation from Saskatchewan&apos;s dedicated farm real estate specialist.
         </p>
         <a
           href="/sell"
-          className="mt-4 inline-block rounded-full border-2 border-white bg-transparent px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-white hover:text-green-800"
+          className="mt-4 inline-block rounded border-2 border-[#d4a520] bg-gradient-to-b from-[#d4a520] to-[#b8891a] px-6 py-2.5 text-sm font-bold text-[#1a3a1a] shadow-md transition-all hover:from-[#e0b830] hover:to-[#d4a520]"
         >
-          Request Free Valuation
+          Request Valuation
         </a>
-        <p className="mt-3 text-sm text-green-200">
-          Or call <a href="tel:3065318854" className="font-bold underline">306.531.8854</a>
+        <p className="mt-3 text-sm text-gray-300">
+          Or call <a href="tel:3065318854" className="font-bold text-white underline">306.531.8854</a>
         </p>
       </div>
 
