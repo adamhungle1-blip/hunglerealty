@@ -124,25 +124,29 @@ export default function SellingPage() {
           </section>
 
       {/* Why Now */}
-      <section className="mt-10 rounded-xl bg-green-800 py-14 text-white">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-6 text-3xl font-bold">Why Now Is the Time to Sell</h2>
-          <p className="mb-8 text-lg leading-relaxed text-green-100">
-            Saskatchewan farmland values are at all-time highs. FCC reported a 13.1% increase in
-            2024 (highest in Canada), and mid-2025 data shows values up another 12% year-over-year.
-            Inventory is tight, demand is high, and buyers are competing for good land. If you've been
-            thinking about selling, the market is working in your favour.
+      <section className="mt-10 overflow-hidden rounded-xl bg-gradient-to-br from-[#1a2a10] via-[#1a3a1a] to-[#0d1f0d] py-12 text-white">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="mb-6 text-3xl font-bold italic text-[#d4a520] md:text-4xl">
+            Why Now Is the Time to Sell
+          </h2>
+          <p className="mb-8 text-[15px] leading-relaxed text-gray-300">
+            Saskatchewan farmland values are at all-time highs. FCC reported a 13.1
+            % increase in 2024 (highest in Canada), and mid-2025 data shows values
+            up another 12% year-over-year. Inventory is tight, demand is high, and
+            buyers are competing for good land. If you&apos;ve been thinking about selling,
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/sell"
-              className="rounded bg-white px-8 py-3 font-bold text-green-800 transition-colors hover:bg-green-50"
+              className="rounded border-2 border-white px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-white hover:text-[#1a3a1a]"
             >
               Request Valuation
             </Link>
-            <a href="tel:3065318854" className="text-sm font-medium text-green-200 hover:text-white">
-              Or call 306.531.8854
-            </a>
+            <span className="text-sm text-gray-400">Or call{" "}
+              <a href="tel:3065318854" className="font-semibold text-white hover:text-[#d4a520]">
+                306.531.8854
+              </a>
+            </span>
           </div>
         </div>
       </section>
