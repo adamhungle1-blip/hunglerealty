@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import DdfListingCard from "@/components/DdfListingCard";
 import type { DdfListing } from "@/lib/ddf";
 import type { MapPin } from "@/components/AcreageMap";
+import SraDisclaimer from "@/components/SraDisclaimer";
 
 // Leaflet needs `window` — dynamically import to avoid SSR crash
 const AcreageMap = dynamic(() => import("@/components/AcreageMap"), {
@@ -245,13 +246,7 @@ export default function AcreageListings() {
           </div>
         )}
 
-        {/* CREA Disclaimer */}
-        <div className="mt-8 border-t border-gray-200 pt-4 text-xs leading-relaxed text-gray-500">
-          The listing data is provided under copyright by the Canadian
-          Real Estate Association (CREA). The information is deemed
-          reliable but is not guaranteed and should be independently
-          verified.
-        </div>
+        <SraDisclaimer />
       </section>
     </div>
   );

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { DdfListing } from "@/lib/ddf";
+import SraDisclaimer from "@/components/SraDisclaimer";
 
 function formatPrice(price: number): string {
   return new Intl.NumberFormat("en-CA", {
@@ -637,10 +638,7 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
                 Listing courtesy of {listing.ListOfficeName}.
               </p>
             )}
-            <p className="mt-1">
-              The information contained in this listing is believed to be
-              accurate but is not guaranteed. Data provided by the CREA DDF®.
-            </p>
+            <SraDisclaimer />
           </div>
         </div>
 

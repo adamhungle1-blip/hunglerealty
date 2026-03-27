@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import SearchListings from "./SearchListings";
+import SraDisclaimer from "@/components/SraDisclaimer";
 
 export const metadata: Metadata = {
   title: "Search Saskatchewan Listings | Hungle Realty",
@@ -50,16 +51,7 @@ export default function SearchPage() {
 
       {/* Disclaimer */}
       <section className="mx-auto max-w-7xl px-4 pb-10">
-        <div className="border-t border-gray-200 pt-4 text-xs leading-relaxed text-gray-500">
-          The listing data is provided under copyright by the Canadian Real
-          Estate Association (CREA). The information is deemed reliable but is
-          not guaranteed and should be independently verified. The trademarks
-          REALTOR®, REALTORS®, and the REALTOR® logo are controlled by CREA and
-          identify real estate professionals who are members of CREA. The
-          trademarks MLS®, Multiple Listing Service® and the associated logos
-          are owned by CREA and identify the quality of services provided by
-          real estate professionals who are members of CREA.
-        </div>
+        <SraDisclaimer />
       </section>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import DdfListingCard from "./DdfListingCard";
+import SraDisclaimer from "./SraDisclaimer";
 import type { DdfListing } from "@/lib/ddf";
 
 type SortOption = "newest" | "price_desc" | "price_asc";
@@ -181,12 +182,7 @@ export default function DdfCategoryListings({
         </div>
       )}
 
-      {/* CREA Disclaimer */}
-      <div className="mt-8 border-t border-gray-200 pt-4 text-xs leading-relaxed text-gray-500">
-        The listing data is provided under copyright by the Canadian Real Estate
-        Association (CREA). The information is deemed reliable but is not
-        guaranteed and should be independently verified.
-      </div>
+      <SraDisclaimer />
     </section>
   );
 }

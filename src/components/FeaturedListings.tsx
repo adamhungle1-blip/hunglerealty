@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import DdfListingCard from "./DdfListingCard";
+import SraDisclaimer from "./SraDisclaimer";
 import Sidebar from "./Sidebar";
 import type { DdfListing } from "@/lib/ddf";
 import Link from "next/link";
@@ -130,17 +131,7 @@ export default function FeaturedListings() {
             </>
           )}
 
-          {/* DDF® Disclaimer */}
-          <div className="mt-8 border-t border-gray-200 pt-4 text-xs leading-relaxed text-gray-500">
-            The listing data is provided under copyright by the Canadian Real
-            Estate Association (CREA). The information is deemed reliable but is
-            not guaranteed and should be independently verified. The trademarks
-            REALTOR®, REALTORS®, and the REALTOR® logo are controlled by CREA
-            and identify real estate professionals who are members of CREA. The
-            trademarks MLS®, Multiple Listing Service® and the associated logos
-            are owned by CREA and identify the quality of services provided by
-            real estate professionals who are members of CREA.
-          </div>
+          <SraDisclaimer />
         </div>
 
         {/* Right sidebar */}
