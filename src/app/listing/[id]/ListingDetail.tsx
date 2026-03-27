@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { DdfListing } from "@/lib/ddf";
 import SraDisclaimer from "@/components/SraDisclaimer";
+import FarmLandDetails from "@/components/FarmLandDetails";
 
 function formatPrice(price: number): string {
   return new Intl.NumberFormat("en-CA", {
@@ -465,6 +466,15 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
               </div>
             )}
           </div>
+
+          {/* Farm Land Details (parsed from remarks) */}
+          {listing.PropertySubType === "Agriculture" && (
+            <FarmLandDetails
+              remarks={listing.PublicRemarks}
+              totalAcres={listing.LotSizeArea}
+              listPrice={listing.ListPrice}
+            />
+          )}
 
           {/* Property Description */}
           {listing.PublicRemarks && (
