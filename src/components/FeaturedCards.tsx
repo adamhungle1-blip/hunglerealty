@@ -259,10 +259,10 @@ export default function FeaturedCards() {
 
       <div className="mt-8 text-center">
         <a
-          href="/search"
+          href="/featured"
           className="inline-flex items-center gap-2 rounded-full bg-green-700 px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-green-800"
         >
-          View All Saskatchewan Listings →
+          View All Featured Listings →
         </a>
       </div>
     </section>

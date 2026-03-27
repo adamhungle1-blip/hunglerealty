@@ -25,6 +25,8 @@ export default function SearchListings() {
   const priceMax = searchParams.get("priceMax") || "";
   const minAcres = searchParams.get("minAcres") || "";
   const search = searchParams.get("search") || "";
+  const featured = searchParams.get("featured") === "true";
+  const agentKey = featured ? "1659834" : "";
 
   const buildUrl = useCallback(
     (sortBy: SortOption, pageNum: number) => {
@@ -38,9 +40,10 @@ export default function SearchListings() {
       if (priceMax) params.set("priceMax", priceMax);
       if (minAcres) params.set("minAcres", minAcres);
       if (search) params.set("search", search);
+      if (agentKey) params.set("agentKey", agentKey);
       return `/api/listings?${params.toString()}`;
     },
-    [propertyType, rm, priceMin, priceMax, minAcres, search]
+    [propertyType, rm, priceMin, priceMax, minAcres, search, agentKey]
   );
 
   const fetchData = useCallback(
@@ -86,6 +89,7 @@ export default function SearchListings() {
 
   // Build a description of active filters
   const filterParts: string[] = [];
+  if (featured) filterParts.push("Featured Listings");
   if (propertyType) filterParts.push(propertyType);
   if (rm) filterParts.push(`RM of ${rm}`);
   if (priceMin) filterParts.push(`Min $${Number(priceMin).toLocaleString()}`);
