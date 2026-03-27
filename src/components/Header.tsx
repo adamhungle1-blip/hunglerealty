@@ -27,7 +27,7 @@ export default function Header() {
             alt="Hungle Realty – 306-531-8854"
             width={160}
             height={100}
-            className="h-12 w-auto sm:h-14"
+            className="h-16 w-auto sm:h-20"
             priority
           />
         </Link>
