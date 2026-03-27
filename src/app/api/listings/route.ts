@@ -47,7 +47,15 @@ export async function GET(request: NextRequest) {
     }
   }
   if (city) filters.push(`contains(City,'${city}')`);
-  if (rm) filters.push(`(contains(City,'${rm}') or contains(UnparsedAddress,'${rm}'))`);
+  if (rm) {
+    // Match the RM name in the City field using the DDF format "Name Rm No. ###"
+    // This avoids matching street names or towns with the same name
+    filters.push(`contains(City,'${rm} Rm No')`);
+    // Only show agriculture/farm listings for RM pages
+    if (!propertyType) {
+      filters.push(`PropertySubType eq 'Agriculture'`);
+    }
+  }
   if (minAcres) {
     // DDF has mixed units — filter for listings where LotSizeUnits is 'acres'
     filters.push(`LotSizeUnits eq 'acres' and LotSizeArea ge ${minAcres}`);
