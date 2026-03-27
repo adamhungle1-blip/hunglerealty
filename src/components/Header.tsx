@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Advanced Farm Search", href: "/search" },
+  { label: "Advanced Farm Search", href: "/advanced-search" },
   { label: "Buying", href: "/buying" },
   { label: "Selling", href: "/selling" },
   { label: "About", href: "/about" },
