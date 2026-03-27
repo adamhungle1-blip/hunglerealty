@@ -118,7 +118,7 @@ export default async function RMPage({
             </p>
             <p className="leading-relaxed text-gray-700">
               Sellers in RM of {rm.name} benefit from Saskatchewan's all-time-high farmland values and
-              Adam's extensive buyer database. If you're thinking about selling, request a free,
+              Adam's extensive buyer database. If you're thinking about selling, request a
               no-obligation valuation.
             </p>
           </div>
@@ -127,7 +127,7 @@ export default async function RMPage({
           <aside className="space-y-6">
             {/* CTA */}
             <div className="rounded-lg bg-green-800 p-5 text-white">
-              <h3 className="mb-2 text-lg font-bold">Free Valuation</h3>
+              <h3 className="mb-2 text-lg font-bold">Request Valuation</h3>
               <p className="mb-4 text-sm text-green-100">
                 Find out what your land in RM of {rm.name} is worth. No obligation.
               </p>

@@ -110,7 +110,7 @@ export default function AgentProfile() {
           the time to find out what your farm is worth.
         </p>
         <p className="mt-3 font-semibold text-gray-800">
-          Call Adam at 306.531.8854 for a free, no-obligation farm valuation. With 20 years of
+          Call Adam at 306.531.8854 for a no-obligation farm valuation. With 20 years of
           experience and a proven marketing system, Adam will get your farm in front of the right
           buyers and get you the best price.
         </p>
@@ -121,7 +121,7 @@ export default function AgentProfile() {
         <div className="rounded-lg bg-green-700 px-6 py-10 text-center text-white">
           <h2 className="text-2xl font-bold md:text-3xl">What Is Your Farmland Worth?</h2>
           <p className="mx-auto mt-3 max-w-xl text-base text-green-100">
-            Get a free, confidential valuation based on recent comparable sales in your RM.
+            Get a confidential valuation based on recent comparable sales in your RM.
           </p>
           <p className="mt-1 text-sm text-green-200">
             No obligation. No pressure. Just honest, market-based insight.
@@ -130,7 +130,7 @@ export default function AgentProfile() {
             href="/selling"
             className="mt-5 inline-block rounded-full border-2 border-white bg-transparent px-8 py-3 text-base font-bold text-white transition-colors hover:bg-white hover:text-green-800"
           >
-            Request My Free Valuation
+            Request My Valuation
           </a>
           <p className="mt-3 text-sm text-green-200">
             Or call <a href="tel:3065318854" className="font-bold underline">306.531.8854</a> to speak with Adam directly.

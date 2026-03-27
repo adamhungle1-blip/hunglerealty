@@ -62,7 +62,7 @@ export default function SellPage() {
             Sell Your Farmland
           </h1>
           <p className="mt-2 text-lg text-green-200">
-            Free, confidential market valuation
+            Confidential market valuation
           </p>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function SellPage() {
             disabled={status === "sending"}
             className="mt-6 w-full rounded-lg bg-green-700 px-8 py-3.5 text-base font-bold text-white transition-colors hover:bg-green-800 disabled:opacity-50"
           >
-            {status === "sending" ? "Submitting..." : "Request My Free Valuation"}
+            {status === "sending" ? "Submitting..." : "Request My Valuation"}
           </button>
 
           <p className="mt-3 text-center text-xs text-gray-400">

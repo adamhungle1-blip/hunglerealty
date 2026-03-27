@@ -166,7 +166,7 @@ export default function AboutPage() {
         <h2 className="mb-4 text-2xl font-bold text-green-800">Ready to Get Started?</h2>
         <p className="mx-auto mb-8 max-w-2xl text-gray-600">
           Whether you're buying or selling farmland in Saskatchewan, Adam is here to help. Get in
-          touch today for a free, no-obligation conversation.
+          touch today for a no-obligation conversation.
         </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link

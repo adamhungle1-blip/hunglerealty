@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
       <h3>2026 Outlook</h3>
       <p>Demand remains strong from multiple buyer types: existing farmers expanding, young farmers starting out, out-of-province investors, and even institutional buyers. With limited supply and continued agricultural profitability, most analysts expect Saskatchewan farmland values to continue appreciating, though perhaps at a more moderate pace than the double-digit gains of recent years.</p>
 
-      <p>Want to know what your specific land is worth? <a href="/contact">Request a free, confidential valuation</a> from Adam Hungle.</p>
+      <p>Want to know what your specific land is worth? <a href="/contact">Request a confidential valuation</a> from Adam Hungle.</p>
     `,
   },
   {

@@ -6,7 +6,7 @@ import FeaturedListingsSidebar from "@/components/FeaturedListingsSidebar";
 export const metadata: Metadata = {
   title: "Selling Saskatchewan Farmland | Hungle Realty",
   description:
-    "Sell your Saskatchewan farmland for top dollar. MLS® exposure, drone photography, buyer database access, and expert negotiation. Free valuation with Adam Hungle, REALTOR®.",
+    "Sell your Saskatchewan farmland for top dollar. MLS® exposure, drone photography, buyer database access, and expert negotiation. Confidential valuation with Adam Hungle, REALTOR®.",
 };
 
 const services = [
@@ -138,7 +138,7 @@ export default function SellingPage() {
               href="/sell"
               className="rounded bg-white px-8 py-3 font-bold text-green-800 transition-colors hover:bg-green-50"
             >
-              Request Free Valuation
+              Request Valuation
             </Link>
             <a href="tel:3065318854" className="text-sm font-medium text-green-200 hover:text-white">
               Or call 306.531.8854
@@ -255,7 +255,7 @@ export default function SellingPage() {
             href="/contact"
             className="rounded bg-green-700 px-8 py-3 font-bold text-white transition-colors hover:bg-green-800"
           >
-            Request My Free Valuation
+            Request My Valuation
           </Link>
           <a href="tel:3065318854" className="text-sm font-medium text-gray-500 hover:text-green-700">
             Or call 306.531.8854

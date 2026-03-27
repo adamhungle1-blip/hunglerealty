@@ -114,7 +114,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="mt-2 text-lg text-green-200">
-            Free, no-obligation farmland valuation
+            No-obligation farmland valuation
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function ContactPage() {
         <div className="grid gap-10 md:grid-cols-5">
           {/* Form */}
           <div className="md:col-span-3">
-            <h2 className="mb-2 text-2xl font-bold text-green-800">Request a Free Valuation</h2>
+            <h2 className="mb-2 text-2xl font-bold text-green-800">Request a Valuation</h2>
             <p className="mb-6 text-gray-600">
               Fill out the form below and Adam will get back to you within 24 hours with a
               confidential, market-based valuation of your farmland.
