@@ -92,11 +92,11 @@ export default function FeaturedCards() {
 
   if (loading) {
     return (
-      <section className="bg-white px-4 py-12">
-        <h2 className="text-center text-2xl font-bold text-green-800 md:text-3xl">
-          Adam&apos;s Featured Listings
+      <section id="featured-listings" className="bg-white px-4 py-12">
+        <h2 className="text-center text-2xl font-bold text-[#B8944E] md:text-3xl">
+          Featured Listings
         </h2>
-        <div className="mx-auto mt-1 h-0.5 w-14 rounded bg-green-700" />
+        <div className="mx-auto mt-1 h-0.5 w-14 rounded bg-[#B8944E]" />
         <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-5 px-8 sm:grid-cols-2 lg:grid-cols-4">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="animate-pulse overflow-hidden rounded-lg border border-gray-200">
@@ -120,11 +120,11 @@ export default function FeaturedCards() {
   const visibleCards = getVisibleCards();
 
   return (
-    <section className="bg-white px-4 py-12">
-      <h2 className="text-center text-2xl font-bold text-green-800 md:text-3xl">
-        Adam&apos;s Featured Listings
+    <section id="featured-listings" className="bg-white px-4 py-12">
+      <h2 className="text-center text-2xl font-bold text-[#B8944E] md:text-3xl">
+        Featured Listings
       </h2>
-      <div className="mx-auto mt-1 h-0.5 w-14 rounded bg-green-700" />
+      <div className="mx-auto mt-1 h-0.5 w-14 rounded bg-[#B8944E]" />
       <p className="mt-3 text-center text-sm text-gray-500">
         {totalCards} active listing{totalCards !== 1 ? "s" : ""} by Adam Hungle, REALTOR®
       </p>

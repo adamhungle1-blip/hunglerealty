@@ -47,7 +47,7 @@ export default function Sidebar() {
           Adam Hungle works exclusively in Saskatchewan farmland — grain, pasture, mixed-use &amp; development land.
         </p>
         <a
-          href="/search"
+          href="/#featured-listings"
           className="mt-4 inline-block w-full rounded bg-green-700 px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-800"
         >
           View Featured Listings
