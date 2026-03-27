@@ -186,9 +186,36 @@ export default function AcreageListings({ activeCity, lat, lng, radius }: Acreag
         {/* Filters bar */}
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">
-              Acreage Listings
-            </h2>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <h2 className="text-2xl font-bold text-gray-900">
+                Acreage Listings
+              </h2>
+              <div className="flex flex-wrap items-center gap-1.5">
+                <Link
+                  href="/acreages"
+                  className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                    !activeCity
+                      ? "bg-green-800 text-white"
+                      : "bg-gray-100 text-gray-600 hover:bg-green-50 hover:text-green-800"
+                  }`}
+                >
+                  All
+                </Link>
+                {ACREAGE_CITIES.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`/acreages/${city.slug}`}
+                    className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                      activeCity === city.slug
+                        ? "bg-green-800 text-white"
+                        : "bg-gray-100 text-gray-600 hover:bg-green-50 hover:text-green-800"
+                    }`}
+                  >
+                    {city.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
             {!loading && totalCount > 0 && (
               <p className="mt-1 text-sm text-gray-500">
                 {totalCount.toLocaleString()} acreage
