@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
 import DdfListingCard from "@/components/DdfListingCard";
 import type { DdfListing } from "@/lib/ddf";
+import type { MapPin } from "@/components/AcreageMap";
 
 // Leaflet needs `window` — dynamically import to avoid SSR crash
 const AcreageMap = dynamic(() => import("@/components/AcreageMap"), {
@@ -27,6 +28,7 @@ const priceRanges = [
 
 export default function AcreageListings() {
   const [listings, setListings] = useState<DdfListing[]>([]);
+  const [mapPins, setMapPins] = useState<MapPin[]>([]);
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -35,6 +37,23 @@ export default function AcreageListings() {
   const [priceIdx, setPriceIdx] = useState(0);
   const [page, setPage] = useState(0);
   const pageSize = 24;
+
+  // Fetch ALL pins for the map (runs once on mount)
+  useEffect(() => {
+    async function loadMapPins() {
+      try {
+        const res = await fetch(
+          "/api/listings/map?propertyType=Single%20Family&minAcres=2"
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+        setMapPins(data.pins || []);
+      } catch {
+        // Map pins are non-critical — fail silently
+      }
+    }
+    loadMapPins();
+  }, []);
 
   const fetchData = useCallback(
     async (sortBy: SortOption, pageNum: number, append = false) => {
@@ -95,12 +114,11 @@ export default function AcreageListings() {
       {/* ─── Map Section ─── */}
       <section className="relative">
         <div className="h-[400px] w-full lg:h-[500px]">
-          <AcreageMap listings={listings} />
+          <AcreageMap pins={mapPins} />
         </div>
-        {!loading && listings.length > 0 && (
+        {mapPins.length > 0 && (
           <div className="absolute bottom-3 left-3 z-[1000] rounded-lg bg-white/90 px-3 py-1.5 text-xs font-medium text-gray-700 shadow backdrop-blur">
-            {listings.filter((l) => l.Latitude && l.Longitude).length} of{" "}
-            {totalCount.toLocaleString()} listings on map
+            {mapPins.length.toLocaleString()} listings on map
           </div>
         )}
       </section>

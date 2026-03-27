@@ -3,9 +3,18 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import type { DdfListing } from "@/lib/ddf";
 
-// Fix Leaflet default marker icons (they break in bundlers)
+export interface MapPin {
+  id: string;
+  lat: number;
+  lng: number;
+  price: number;
+  address: string;
+  acres: number;
+  photo: string | null;
+}
+
+// Green drop-pin SVG icon
 const markerIcon = L.divIcon({
   className: "",
   html: `<svg width="28" height="40" viewBox="0 0 28 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,10 +33,10 @@ function formatPrice(price: number): string {
 }
 
 interface AcreageMapProps {
-  listings: DdfListing[];
+  pins: MapPin[];
 }
 
-export default function AcreageMap({ listings }: AcreageMapProps) {
+export default function AcreageMap({ pins }: AcreageMapProps) {
   const mapRef = useRef<L.Map | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const markersRef = useRef<L.LayerGroup | null>(null);
@@ -37,8 +46,8 @@ export default function AcreageMap({ listings }: AcreageMapProps) {
     if (!containerRef.current || mapRef.current) return;
 
     const map = L.map(containerRef.current, {
-      center: [50.45, -104.62], // Regina, SK
-      zoom: 7,
+      center: [52.0, -106.0], // Center of Saskatchewan
+      zoom: 6,
       scrollWheelZoom: false,
     });
 
@@ -57,62 +66,52 @@ export default function AcreageMap({ listings }: AcreageMapProps) {
     };
   }, []);
 
-  // Update markers when listings change
+  // Update markers when pins change
   useEffect(() => {
     if (!mapRef.current || !markersRef.current) return;
 
     markersRef.current.clearLayers();
 
-    const validListings = listings.filter(
-      (l) => l.Latitude && l.Longitude && l.Latitude !== 0 && l.Longitude !== 0
-    );
+    if (pins.length === 0) return;
 
-    if (validListings.length === 0) return;
+    for (const pin of pins) {
+      const acresStr =
+        pin.acres > 0 ? `${pin.acres.toLocaleString()} acres` : "";
 
-    for (const listing of validListings) {
-      const address =
-        listing.UnparsedAddress ||
-        [listing.City, listing.StateOrProvince].filter(Boolean).join(", ") ||
-        "Acreage";
-
-      const acres = listing.LotSizeArea
-        ? listing.LotSizeUnits?.toLowerCase().includes("acre")
-          ? `${listing.LotSizeArea.toLocaleString()} acres`
-          : listing.LotSizeArea >= 43560
-            ? `${(listing.LotSizeArea / 43560).toFixed(1)} acres`
-            : `${listing.LotSizeArea.toLocaleString()} sqft`
+      const photoHtml = pin.photo
+        ? `<img src="${pin.photo}" alt="" style="width:100%;height:90px;object-fit:cover;border-radius:6px 6px 0 0;display:block;" />`
         : "";
 
       const popupHtml = `
-        <div style="min-width:180px;font-family:system-ui,sans-serif;">
-          <div style="font-weight:700;font-size:15px;color:#166534;">${formatPrice(listing.ListPrice)}</div>
-          <div style="font-size:13px;margin:4px 0;color:#333;">${address}</div>
-          ${acres ? `<div style="font-size:12px;color:#666;">${acres}</div>` : ""}
-          <a href="/listing/${listing.ListingId}"
-             style="display:inline-block;margin-top:6px;font-size:12px;color:#166534;font-weight:600;text-decoration:none;">
-            View Details →
-          </a>
+        <div style="width:220px;font-family:system-ui,sans-serif;overflow:hidden;margin:-13px -20px -13px -20px;">
+          ${photoHtml}
+          <div style="padding:8px 12px 10px;">
+            <div style="font-weight:700;font-size:15px;color:#166534;">${formatPrice(pin.price)}</div>
+            <div style="font-size:13px;margin:3px 0;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${pin.address}</div>
+            ${acresStr ? `<div style="font-size:12px;color:#666;">${acresStr}</div>` : ""}
+            <a href="/listing/${pin.id}"
+               style="display:inline-block;margin-top:5px;font-size:12px;color:#166534;font-weight:600;text-decoration:none;">
+              View Details &rarr;
+            </a>
+          </div>
         </div>
       `;
 
-      L.marker([listing.Latitude!, listing.Longitude!], { icon: markerIcon })
-        .bindPopup(popupHtml)
+      L.marker([pin.lat, pin.lng], { icon: markerIcon })
+        .bindPopup(popupHtml, { maxWidth: 220, minWidth: 220, className: "acreage-popup" })
         .addTo(markersRef.current!);
     }
 
     // Fit bounds to show all markers
-    if (validListings.length > 1) {
+    if (pins.length > 1) {
       const bounds = L.latLngBounds(
-        validListings.map((l) => [l.Latitude!, l.Longitude!] as L.LatLngTuple)
+        pins.map((p) => [p.lat, p.lng] as L.LatLngTuple)
       );
       mapRef.current.fitBounds(bounds, { padding: [40, 40], maxZoom: 10 });
-    } else if (validListings.length === 1) {
-      mapRef.current.setView(
-        [validListings[0].Latitude!, validListings[0].Longitude!],
-        10
-      );
+    } else if (pins.length === 1) {
+      mapRef.current.setView([pins[0].lat, pins[0].lng], 10);
     }
-  }, [listings]);
+  }, [pins]);
 
   return (
     <div
