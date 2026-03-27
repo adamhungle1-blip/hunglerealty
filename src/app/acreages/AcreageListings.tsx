@@ -8,6 +8,7 @@ import type { DdfListing } from "@/lib/ddf";
 import type { MapPin } from "@/components/AcreageMap";
 import SraDisclaimer from "@/components/SraDisclaimer";
 import { ACREAGE_CITIES } from "@/data/acreage-cities";
+import { ACREAGE_SEO } from "@/data/acreage-seo";
 
 // Leaflet needs `window` — dynamically import to avoid SSR crash
 const AcreageMap = dynamic(() => import("@/components/AcreageMap"), {
@@ -331,6 +332,24 @@ export default function AcreageListings({ activeCity, lat, lng, radius }: Acreag
         )}
 
         <SraDisclaimer />
+
+        {/* ─── SEO Content Section ─── */}
+        {(() => {
+          const seo = ACREAGE_SEO[activeCity || "all"];
+          if (!seo) return null;
+          return (
+            <div className="mt-12 border-t border-gray-200 pt-10">
+              <h2 className="mb-4 text-2xl font-bold text-gray-900">
+                {seo.heading}
+              </h2>
+              {seo.paragraphs.map((p, i) => (
+                <p key={i} className="mb-4 leading-relaxed text-gray-700">
+                  {p}
+                </p>
+              ))}
+            </div>
+          );
+        })()}
       </section>
     </div>
   );
