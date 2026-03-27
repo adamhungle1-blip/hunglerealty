@@ -36,10 +36,18 @@ function getAddress(listing: DdfListing): string {
 function formatLotSize(listing: DdfListing): string | null {
   if (!listing.LotSizeArea) return null;
   const units = listing.LotSizeUnits?.toLowerCase() || "";
-  if (units.includes("acre") || listing.LotSizeArea > 10) {
+  if (units.includes("acre")) {
     return `${listing.LotSizeArea.toLocaleString()} acres`;
   }
-  return `${listing.LotSizeArea.toLocaleString()} ${listing.LotSizeUnits || "sqft"}`;
+  if (units.includes("square") || units.includes("sqft") || units.includes("sq ft") || !units) {
+    // Convert sq ft to acres if large enough (1 acre = 43,560 sq ft)
+    if (listing.LotSizeArea >= 43560) {
+      const acres = (listing.LotSizeArea / 43560).toFixed(1);
+      return `${acres} acres`;
+    }
+    return `${listing.LotSizeArea.toLocaleString()} sqft`;
+  }
+  return `${listing.LotSizeArea.toLocaleString()} ${listing.LotSizeUnits}`;
 }
 
 function getListingUrl(listing: DdfListing): string {

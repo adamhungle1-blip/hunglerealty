@@ -353,7 +353,11 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
 
   const daysOnMarket = getDaysAgo(listing.OriginalEntryTimestamp);
   const lotSize = listing.LotSizeArea
-    ? `${listing.LotSizeArea.toLocaleString()} acres`
+    ? listing.LotSizeUnits?.toLowerCase().includes("acre")
+      ? `${listing.LotSizeArea.toLocaleString()} acres`
+      : listing.LotSizeArea >= 43560
+        ? `${(listing.LotSizeArea / 43560).toFixed(1)} acres`
+        : `${listing.LotSizeArea.toLocaleString()} sqft`
     : null;
 
   return (
