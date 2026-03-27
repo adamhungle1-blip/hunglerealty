@@ -79,6 +79,18 @@ export interface DdfListing {
   Longitude?: number;
   ListAgentKey?: string;
   ListOfficeName?: string; // Resolved from Office endpoint
+  // Farm / property detail fields
+  LotFeatures?: string[];
+  Fencing?: string[];
+  Heating?: string[];
+  WaterSource?: string[];
+  YearBuilt?: number;
+  Stories?: number;
+  Basement?: string[];
+  ParkingFeatures?: string[];
+  CommunityFeatures?: string[];
+  Directions?: string;
+  CurrentUse?: string[];
   Media?: Array<{
     MediaURL: string;
     Order: number;
@@ -118,6 +130,17 @@ const DDF_SELECT_FIELDS = [
   "Latitude",
   "Longitude",
   "ListAgentKey",
+  "LotFeatures",
+  "Fencing",
+  "Heating",
+  "WaterSource",
+  "YearBuilt",
+  "Stories",
+  "Basement",
+  "ParkingFeatures",
+  "CommunityFeatures",
+  "Directions",
+  "CurrentUse",
   "Media",
 ].join(",");
 

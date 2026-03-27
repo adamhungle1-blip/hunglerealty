@@ -467,12 +467,23 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
             )}
           </div>
 
-          {/* Farm Land Details (parsed from remarks) */}
+          {/* Farm Land Details (parsed from remarks + API fields) */}
           {listing.PropertySubType === "Agriculture" && (
             <FarmLandDetails
               remarks={listing.PublicRemarks}
               totalAcres={listing.LotSizeArea}
               listPrice={listing.ListPrice}
+              lotFeatures={listing.LotFeatures}
+              fencing={listing.Fencing}
+              heating={listing.Heating}
+              waterSource={listing.WaterSource}
+              yearBuilt={listing.YearBuilt}
+              basement={listing.Basement}
+              parkingFeatures={listing.ParkingFeatures}
+              communityFeatures={listing.CommunityFeatures}
+              directions={listing.Directions}
+              currentUse={listing.CurrentUse}
+              city={listing.City}
             />
           )}
 
