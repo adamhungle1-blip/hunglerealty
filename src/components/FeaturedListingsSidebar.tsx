@@ -128,7 +128,7 @@ export default function FeaturedListingsSidebar() {
               )}
               <div className="text-center">
                 <Link
-                  href={`/listing/${listing.ListingKey}`}
+                  href={`/listing/${listing.ListingId || listing.ListingKey}`}
                   className="inline-block rounded bg-green-700 px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-green-800"
                 >
                   Listing Details
