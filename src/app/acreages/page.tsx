@@ -27,7 +27,7 @@ export default function AcreagesPage() {
             Acreages for Sale near Regina
           </h1>
           <p className="mt-2 text-base text-green-200">
-            Browse acreages on the map — click a pin to see details
+            Rural properties with 2+ acres near Regina and across Saskatchewan
           </p>
         </div>
       </section>
