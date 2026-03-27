@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -20,16 +21,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-center leading-tight">
-          <span className="text-xl font-extrabold uppercase tracking-wide text-green-900">
-            Adam Hungle
-          </span>
-          <span className="text-xs font-bold uppercase tracking-widest text-green-800">
-            REALTOR®
-          </span>
-          <span className="text-[10px] italic text-gray-500">
-            Sutton Group Results Realty
-          </span>
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src="/hungle-realty-logo.png"
+            alt="Hungle Realty – 306-531-8854"
+            width={160}
+            height={100}
+            className="h-12 w-auto sm:h-14"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
