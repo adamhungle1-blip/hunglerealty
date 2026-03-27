@@ -169,8 +169,8 @@ function PhotoGallery({ media }: { media: DdfListing["Media"] }) {
   );
 }
 
-/* ─── Enquiry Form ─── */
-function EnquiryForm({
+/* ─── Inquiry Form ─── */
+function InquiryForm({
   mlsNumber,
   address,
 }: {
@@ -202,8 +202,8 @@ function EnquiryForm({
           name: form.name,
           phone: form.phone,
           email: form.email,
-          message: `[Listing Enquiry — MLS® #${mlsNumber}]\n${address}\n\n${form.message}`,
-          source: "listing-enquiry",
+          message: `[Listing Inquiry — MLS® #${mlsNumber}]\n${address}\n\n${form.message}`,
+          source: "listing-inquiry",
         }),
       });
       if (res.ok) {
@@ -231,7 +231,7 @@ function EnquiryForm({
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
       <h3 className="mb-1 text-base font-bold text-gray-900">
-        Enquire About This Listing
+        Inquire About This Listing
       </h3>
       <p className="mb-4 text-xs text-gray-500">
         MLS® #{mlsNumber}
@@ -285,7 +285,7 @@ function EnquiryForm({
           disabled={status === "sending"}
           className="w-full rounded-lg bg-green-700 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-green-800 disabled:opacity-50"
         >
-          {status === "sending" ? "Sending..." : "Send Enquiry"}
+          {status === "sending" ? "Sending..." : "Send Inquiry"}
         </button>
         <p className="text-center text-[10px] text-gray-400">
           Your information is kept strictly confidential.
@@ -381,25 +381,30 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
       </nav>
 
       {/* Title row */}
-      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
-            {address}
-          </h1>
-          <p className="mt-1 text-sm text-gray-500">
-            {[listing.City, listing.StateOrProvince, listing.PostalCode]
-              .filter(Boolean)
-              .join(", ")}
-          </p>
+      <div className="mb-6">
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
+              {address}
+            </h1>
+            <p className="text-2xl font-bold text-green-800 md:text-3xl">
+              {formatPrice(listing.ListPrice)}
+            </p>
+          </div>
+          <Link
+            href="/search?propertyType=Agriculture"
+            className="hidden shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50 sm:flex"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Search Results
+          </Link>
         </div>
-        <div className="text-right">
-          <p className="text-3xl font-bold text-green-800">
-            {formatPrice(listing.ListPrice)}
-          </p>
-          <p className="mt-1 text-sm text-gray-500">
-            MLS® #{listing.ListingId || listing.ListingKey}
-          </p>
-        </div>
+        <p className="mt-1 text-sm text-gray-500">
+          {[listing.City, listing.StateOrProvince].filter(Boolean).join(", ")}
+          {" — "}MLS® #{listing.ListingId || listing.ListingKey}
+        </p>
       </div>
 
       {/* Two-column layout */}
@@ -677,8 +682,8 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
               </a>
             </div>
 
-            {/* Listing Enquiry Form */}
-            <EnquiryForm
+            {/* Listing Inquiry Form */}
+            <InquiryForm
               mlsNumber={listing.ListingId || listing.ListingKey}
               address={address}
             />
