@@ -32,7 +32,7 @@ export default function AdvancedSearchPage() {
           style={{ minHeight: "800px" }}
         >
           <iframe
-            src="https://matrix.skmls.ca/Matrix/public/IDX.aspx?idx=931a478"
+            src="https://matrix.skmls.ca/Matrix/public/IDX.aspx?idx=6470477"
             width="100%"
             height="100%"
             style={{ border: 0, minHeight: "800px" }}

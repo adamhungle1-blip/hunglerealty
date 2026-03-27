@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
     }
   }
   if (city) filters.push(`contains(City,'${city}')`);
-  if (rm) filters.push(`contains(UnparsedAddress,'${rm}')`);
+  if (rm) filters.push(`(contains(City,'${rm}') or contains(UnparsedAddress,'${rm}'))`);
   if (minAcres) {
     // DDF has mixed units — filter for listings where LotSizeUnits is 'acres'
     filters.push(`LotSizeUnits eq 'acres' and LotSizeArea ge ${minAcres}`);

@@ -203,10 +203,10 @@ export default function SearchListings() {
         <div className="rounded-lg border border-gray-200 bg-gray-50 p-10 text-center">
           <p className="text-gray-600">No listings found matching your criteria.</p>
           <a
-            href="/search"
+            href="/search?propertyType=Agriculture"
             className="mt-4 inline-block rounded-lg bg-green-800 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-700"
           >
-            View All Listings
+            View All Farm Listings
           </a>
         </div>
       )}

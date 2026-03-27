@@ -1,14 +1,28 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import type { DdfListing } from "@/lib/ddf";
-import Image from "next/image";
+import { useState, useEffect, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
+import dynamic from "next/dynamic";
+import type { MapPin } from "@/components/AcreageMap";
+import SraDisclaimer from "@/components/SraDisclaimer";
 
-/* ------------------------------------------------------------------ */
-/*  Types & Constants                                                  */
-/* ------------------------------------------------------------------ */
+const AcreageMap = dynamic(() => import("@/components/AcreageMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full w-full items-center justify-center bg-gray-100 text-sm text-gray-500">
+      Loading map…
+    </div>
+  ),
+});
 
-const propertyTypes = ["All Types", "Agriculture", "Single Family", "Multi-family", "Vacant Land", "Business"];
+const propertyTypes = [
+  "All Types",
+  "Agriculture",
+  "Single Family",
+  "Multi-family",
+  "Vacant Land",
+  "Business",
+];
 const priceRanges = [
   { label: "Any Price", min: "", max: "" },
   { label: "Under $500K", min: "", max: "500000" },
@@ -17,160 +31,98 @@ const priceRanges = [
   { label: "$2M+", min: "2000000", max: "" },
 ];
 
-function formatPrice(price: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    maximumFractionDigits: 0,
-  }).format(price);
+interface MapApiPin {
+  id: string;
+  lat: number;
+  lng: number;
+  price: number;
+  address: string;
+  acres: number;
+  photo: string | null;
 }
-
-function getMainPhoto(listing: DdfListing): string | null {
-  if (!listing.Media || listing.Media.length === 0) return null;
-  const preferred = listing.Media.find((m) => m.PreferredPhotoYN);
-  if (preferred) return preferred.MediaURL;
-  const first = listing.Media.sort((a, b) => a.Order - b.Order)[0];
-  return first?.MediaURL || null;
-}
-
-function getListingUrl(listing: DdfListing): string {
-  if (listing.ListingURL) {
-    return listing.ListingURL.startsWith("http")
-      ? listing.ListingURL
-      : `https://${listing.ListingURL}`;
-  }
-  return `https://www.realtor.ca/map#keyword=${listing.ListingId || listing.ListingKey}`;
-}
-
-/* ------------------------------------------------------------------ */
-/*  Component                                                          */
-/* ------------------------------------------------------------------ */
 
 export default function MapSearchPage() {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const mapRef = useRef<any>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const markersRef = useRef<any[]>([]);
-  const [mapLoaded, setMapLoaded] = useState(false);
-  const [selectedListing, setSelectedListing] = useState<DdfListing | null>(null);
-  const [propertyType, setPropertyType] = useState("All Types");
+  const searchParams = useSearchParams();
+  const initialType = searchParams.get("propertyType") || "All Types";
+  const [propertyType, setPropertyType] = useState(initialType);
   const [priceIdx, setPriceIdx] = useState(0);
-  const [listings, setListings] = useState<DdfListing[]>([]);
+  const [pins, setPins] = useState<MapPin[]>([]);
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  /* Fetch listings from the API */
-  const fetchListings = useCallback(async () => {
+  const fetchPins = useCallback(async () => {
     setLoading(true);
     try {
+      // Build filters for the standard listings API
       const params = new URLSearchParams({ top: "100", sort: "newest" });
       if (propertyType !== "All Types") params.set("propertyType", propertyType);
       const range = priceRanges[priceIdx];
       if (range.min) params.set("priceMin", range.min);
       if (range.max) params.set("priceMax", range.max);
 
-      const res = await fetch(`/api/listings?${params.toString()}`);
-      if (!res.ok) throw new Error("Failed");
-      const data = await res.json();
-      setListings(data.value || []);
-      setTotalCount(data["@odata.count"] || 0);
+      // Paginate through all results to get every pin
+      const allPins: MapPin[] = [];
+      let skip = 0;
+      let total = 0;
+
+      while (true) {
+        params.set("skip", String(skip));
+        const res = await fetch(`/api/listings?${params.toString()}`);
+        if (!res.ok) break;
+        const data = await res.json();
+        total = data["@odata.count"] || 0;
+        const listings = data.value || [];
+        if (listings.length === 0) break;
+
+        for (const l of listings) {
+          if (!l.Latitude || !l.Longitude) continue;
+          const photo =
+            l.Media && l.Media.length > 0
+              ? (l.Media.find((m: { PreferredPhotoYN?: boolean }) => m.PreferredPhotoYN)?.MediaURL ||
+                l.Media.sort((a: { Order: number }, b: { Order: number }) => a.Order - b.Order)[0]?.MediaURL ||
+                null)
+              : null;
+          const acres =
+            l.LotSizeUnits === "acres" && l.LotSizeArea ? l.LotSizeArea : 0;
+          allPins.push({
+            id: l.ListingKey,
+            lat: l.Latitude,
+            lng: l.Longitude,
+            price: l.ListPrice || 0,
+            address: l.UnparsedAddress || l.City || "Saskatchewan",
+            acres,
+            photo,
+          });
+        }
+
+        skip += 100;
+        if (skip >= total) break;
+      }
+
+      setPins(allPins);
+      setTotalCount(total);
     } catch {
-      console.error("Failed to load map listings");
+      console.error("Failed to load map pins");
     } finally {
       setLoading(false);
     }
   }, [propertyType, priceIdx]);
 
   useEffect(() => {
-    fetchListings();
-  }, [fetchListings]);
-
-  /* Load Mapbox GL JS from CDN */
-  useEffect(() => {
-    if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).mapboxgl) {
-      initMap();
-      return;
-    }
-
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css";
-    document.head.appendChild(link);
-
-    const script = document.createElement("script");
-    script.src = "https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js";
-    script.onload = () => initMap();
-    document.head.appendChild(script);
-
-    return () => {
-      if (mapRef.current) mapRef.current.remove();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const initMap = useCallback(() => {
-    if (!mapContainer.current) return;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mapboxgl = (window as any).mapboxgl;
-    if (!mapboxgl) return;
-
-    const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "pk.placeholder";
-    mapboxgl.accessToken = token;
-
-    const map = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: "mapbox://styles/mapbox/outdoors-v12",
-      center: [-105.5, 51.0], // Saskatchewan center
-      zoom: 5.5,
-    });
-
-    mapRef.current = map;
-    map.on("load", () => setMapLoaded(true));
-  }, []);
-
-  /* Update markers whenever listings change */
-  useEffect(() => {
-    if (!mapRef.current || !mapLoaded) return;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mapboxgl = (window as any).mapboxgl;
-    if (!mapboxgl) return;
-
-    // Clear existing markers
-    markersRef.current.forEach((m) => m.remove());
-    markersRef.current = [];
-
-    // Add new markers for listings with coordinates
-    listings.forEach((listing) => {
-      if (!listing.Latitude || !listing.Longitude) return;
-
-      const el = document.createElement("div");
-      el.style.cssText =
-        "width:28px;height:28px;background:#15803d;border:2px solid #fff;border-radius:50%;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;";
-      el.innerHTML =
-        '<svg width="14" height="14" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>';
-
-      el.addEventListener("click", () => setSelectedListing(listing));
-
-      const marker = new mapboxgl.Marker({ element: el })
-        .setLngLat([listing.Longitude, listing.Latitude])
-        .addTo(mapRef.current);
-
-      markersRef.current.push(marker);
-    });
-  }, [listings, mapLoaded]);
-
-  const listingsWithCoords = listings.filter((l) => l.Latitude && l.Longitude);
+    fetchPins();
+  }, [fetchPins]);
 
   return (
     <div className="flex h-[calc(100vh-64px)] flex-col lg:flex-row">
-      {/* Sidebar filters */}
+      {/* Sidebar */}
       <div className="w-full shrink-0 overflow-y-auto border-b border-gray-200 bg-white p-4 lg:w-80 lg:border-b-0 lg:border-r">
         <h1 className="mb-4 text-xl font-bold text-green-800">Map Search</h1>
 
         <div className="space-y-3">
           <div>
-            <label className="mb-1 block text-xs font-bold text-gray-600">Property Type</label>
+            <label className="mb-1 block text-xs font-bold text-gray-600">
+              Property Type
+            </label>
             <select
               value={propertyType}
               onChange={(e) => setPropertyType(e.target.value)}
@@ -182,7 +134,9 @@ export default function MapSearchPage() {
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-xs font-bold text-gray-600">Price Range</label>
+            <label className="mb-1 block text-xs font-bold text-gray-600">
+              Price Range
+            </label>
             <select
               value={priceIdx}
               onChange={(e) => setPriceIdx(Number(e.target.value))}
@@ -199,9 +153,18 @@ export default function MapSearchPage() {
 
         {/* Quick city links */}
         <div className="mt-6">
-          <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-500">Quick Search</h3>
+          <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-500">
+            Quick Search
+          </h3>
           <div className="flex flex-wrap gap-1.5">
-            {["Regina", "Saskatoon", "Moose Jaw", "Prince Albert", "Swift Current", "Yorkton"].map((city) => (
+            {[
+              "Regina",
+              "Saskatoon",
+              "Moose Jaw",
+              "Prince Albert",
+              "Swift Current",
+              "Yorkton",
+            ].map((city) => (
               <a
                 key={city}
                 href={`/search?search=${encodeURIComponent(city)}`}
@@ -217,87 +180,30 @@ export default function MapSearchPage() {
         <div className="mt-6 rounded bg-gray-50 p-3 text-center">
           <p className="text-sm text-gray-600">
             {loading ? (
-              "Loading..."
+              "Loading listings…"
             ) : (
               <>
-                <span className="font-bold text-green-700">{listingsWithCoords.length}</span> pins on map
+                <span className="font-bold text-green-700">{pins.length}</span>{" "}
+                pins on map
                 {totalCount > 0 && (
-                  <span className="text-xs text-gray-400"> ({totalCount.toLocaleString()} total)</span>
+                  <span className="text-xs text-gray-400">
+                    {" "}
+                    ({totalCount.toLocaleString()} total)
+                  </span>
                 )}
               </>
             )}
           </p>
         </div>
 
-        {/* Selected listing card */}
-        {selectedListing && (
-          <div className="mt-4 rounded-lg border border-green-200 bg-green-50 p-4">
-            {getMainPhoto(selectedListing) && (
-              <div className="relative mb-3 h-32 w-full overflow-hidden rounded-md bg-gray-200">
-                <Image
-                  src={getMainPhoto(selectedListing)!}
-                  alt={selectedListing.UnparsedAddress || "Listing"}
-                  fill
-                  className="object-cover"
-                  unoptimized
-                />
-              </div>
-            )}
-            <h3 className="text-sm font-bold text-gray-900">
-              {selectedListing.UnparsedAddress || "Address unavailable"}
-            </h3>
-            <p className="mt-1 text-lg font-bold text-green-700">
-              {formatPrice(selectedListing.ListPrice)}
-            </p>
-            <p className="text-xs text-gray-500">
-              {selectedListing.City} · MLS® {selectedListing.ListingId || selectedListing.ListingKey}
-            </p>
-            {selectedListing.PropertySubType && (
-              <span className="mt-1 inline-block rounded bg-gray-200 px-2 py-0.5 text-xs text-gray-600">
-                {selectedListing.PropertySubType}
-              </span>
-            )}
-            <div className="mt-3 flex gap-2">
-              <a
-                href={getListingUrl(selectedListing)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded bg-green-700 px-3 py-1.5 text-xs font-bold text-white hover:bg-green-800"
-              >
-                View Details
-              </a>
-              <button
-                onClick={() => setSelectedListing(null)}
-                className="rounded border border-gray-300 px-3 py-1.5 text-xs text-gray-600 hover:bg-gray-100"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
+        <div className="mt-4">
+          <SraDisclaimer />
+        </div>
       </div>
 
       {/* Map */}
-      <div className="relative flex-1">
-        <div ref={mapContainer} className="h-full w-full" />
-
-        {/* Mapbox token notice overlay */}
-        {!mapLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <div className="rounded-lg bg-white p-8 text-center shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto mb-4 h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
-              </svg>
-              <h3 className="mb-2 text-lg font-bold text-gray-900">Interactive Map</h3>
-              <p className="text-sm text-gray-500">
-                Map will load once Mapbox token is configured.
-              </p>
-              <p className="mt-2 text-xs text-gray-400">
-                Set NEXT_PUBLIC_MAPBOX_TOKEN in your environment variables.
-              </p>
-            </div>
-          </div>
-        )}
+      <div className="relative flex-1" style={{ minHeight: "400px" }}>
+        <AcreageMap pins={pins} />
       </div>
     </div>
   );
