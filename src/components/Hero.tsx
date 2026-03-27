@@ -49,15 +49,22 @@ export default function Hero() {
     ? rmList.filter((rm) => rm.toLowerCase().includes(rmQuery.toLowerCase()))
     : rmList;
 
-  // Close dropdown on outside click
+  // Close dropdown on outside click or page scroll
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (rmRef.current && !rmRef.current.contains(e.target as Node)) {
         setRmOpen(false);
       }
     }
+    function handleScroll() {
+      setRmOpen(false);
+    }
     document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
+    window.addEventListener("scroll", handleScroll, true);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      window.removeEventListener("scroll", handleScroll, true);
+    };
   }, []);
 
   const nextSlide = useCallback(() => {

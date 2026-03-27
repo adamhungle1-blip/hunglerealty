@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
   const search = searchParams.get("search");
 
   // Build orderby from sort param
-  let orderby = "ModificationTimestamp desc";
+  let orderby = "OriginalEntryTimestamp desc";
   switch (sort) {
     case "price_asc":
       orderby = "ListPrice asc";
@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
       break;
     case "newest":
     default:
-      orderby = "ModificationTimestamp desc";
+      orderby = "OriginalEntryTimestamp desc";
   }
 
   // Build additional filters
