@@ -56,7 +56,9 @@ export default function Hero() {
         setRmOpen(false);
       }
     }
-    function handleScroll() {
+    function handleScroll(e: Event) {
+      // Only close when the PAGE scrolls, not when the dropdown list scrolls
+      if (rmRef.current && rmRef.current.contains(e.target as Node)) return;
       setRmOpen(false);
     }
     document.addEventListener("mousedown", handleClick);
