@@ -592,20 +592,10 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
                   {listing.City && (
                     <tr className="border-b border-gray-100">
                       <td className="px-4 py-3 font-medium text-gray-600">
-                        City
+                        RM
                       </td>
                       <td className="px-4 py-3 text-gray-900">
                         {listing.City}
-                      </td>
-                    </tr>
-                  )}
-                  {listing.PostalCode && (
-                    <tr className="border-b border-gray-100 bg-gray-50">
-                      <td className="px-4 py-3 font-medium text-gray-600">
-                        Postal Code
-                      </td>
-                      <td className="px-4 py-3 text-gray-900">
-                        {listing.PostalCode}
                       </td>
                     </tr>
                   )}
@@ -617,16 +607,6 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
                       {formatDate(listing.OriginalEntryTimestamp)}
                     </td>
                   </tr>
-                  {listing.ListOfficeName && (
-                    <tr className="bg-gray-50">
-                      <td className="px-4 py-3 font-medium text-gray-600">
-                        Listing Brokerage
-                      </td>
-                      <td className="px-4 py-3 italic text-gray-600">
-                        {listing.ListOfficeName}
-                      </td>
-                    </tr>
-                  )}
                 </tbody>
               </table>
             </div>
