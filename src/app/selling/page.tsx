@@ -91,16 +91,16 @@ export default function SellingPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[300px] overflow-hidden md:h-[380px]">
+      <section className="relative overflow-hidden">
         <Image
-          src="/hero/selling.jpg"
-          alt="Selling Saskatchewan farmland"
-          fill
-          className="object-cover object-center"
+          src="/hero/selling-new.png"
+          alt="Selling Saskatchewan Farm Land – Your land deserves more than a listing, it deserves a strategy. Adam Hungle, Saskatchewan Land Specialist."
+          width={1500}
+          height={844}
+          className="w-full h-auto"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/15" />
       </section>
 
       {/* Main content + sidebar */}
