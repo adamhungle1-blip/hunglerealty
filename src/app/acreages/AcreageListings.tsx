@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import DdfListingCard from "@/components/DdfListingCard";
 import type { DdfListing } from "@/lib/ddf";
 import type { MapPin } from "@/components/AcreageMap";
 import SraDisclaimer from "@/components/SraDisclaimer";
+import { ACREAGE_CITIES } from "@/data/acreage-cities";
 
 // Leaflet needs `window` — dynamically import to avoid SSR crash
 const AcreageMap = dynamic(() => import("@/components/AcreageMap"), {
@@ -27,7 +29,18 @@ const priceRanges = [
   { label: "$2M+", min: "2000000", max: "" },
 ];
 
-export default function AcreageListings() {
+interface AcreageListingsProps {
+  /** Optional city slug for highlighting the active quick link */
+  activeCity?: string;
+  /** Geo-filter: center latitude */
+  lat?: number;
+  /** Geo-filter: center longitude */
+  lng?: number;
+  /** Geo-filter: radius in km */
+  radius?: number;
+}
+
+export default function AcreageListings({ activeCity, lat, lng, radius }: AcreageListingsProps = {}) {
   const [listings, setListings] = useState<DdfListing[]>([]);
   const [mapPins, setMapPins] = useState<MapPin[]>([]);
   const [totalCount, setTotalCount] = useState(0);
@@ -39,13 +52,20 @@ export default function AcreageListings() {
   const [page, setPage] = useState(0);
   const pageSize = 24;
 
-  // Fetch ALL pins for the map (runs once on mount)
+  // Fetch ALL pins for the map (runs once on mount, scoped to city if provided)
   useEffect(() => {
     async function loadMapPins() {
       try {
-        const res = await fetch(
-          "/api/listings/map?propertyType=Single%20Family&minAcres=2"
-        );
+        const mapParams = new URLSearchParams({
+          propertyType: "Single Family",
+          minAcres: "2",
+        });
+        if (lat && lng && radius) {
+          mapParams.set("lat", String(lat));
+          mapParams.set("lng", String(lng));
+          mapParams.set("radius", String(radius));
+        }
+        const res = await fetch(`/api/listings/map?${mapParams.toString()}`);
         if (!res.ok) return;
         const data = await res.json();
         setMapPins(data.pins || []);
@@ -54,7 +74,7 @@ export default function AcreageListings() {
       }
     }
     loadMapPins();
-  }, []);
+  }, [lat, lng, radius]);
 
   const fetchData = useCallback(
     async (sortBy: SortOption, pageNum: number, append = false) => {
@@ -75,6 +95,11 @@ export default function AcreageListings() {
         const range = priceRanges[priceIdx];
         if (range.min) params.set("priceMin", range.min);
         if (range.max) params.set("priceMax", range.max);
+        if (lat && lng && radius) {
+          params.set("lat", String(lat));
+          params.set("lng", String(lng));
+          params.set("radius", String(radius));
+        }
 
         const res = await fetch(`/api/listings?${params.toString()}`);
         if (!res.ok) throw new Error("Failed to load listings");
@@ -94,7 +119,7 @@ export default function AcreageListings() {
         setLoadingMore(false);
       }
     },
-    [priceIdx]
+    [priceIdx, lat, lng, radius]
   );
 
   useEffect(() => {
@@ -112,6 +137,38 @@ export default function AcreageListings() {
 
   return (
     <div>
+      {/* ─── City Quick Links ─── */}
+      <section className="border-b border-gray-200 bg-gray-50">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3">
+          <span className="mr-1 text-xs font-bold uppercase tracking-wide text-gray-500">
+            Acreages Near:
+          </span>
+          <Link
+            href="/acreages"
+            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+              !activeCity
+                ? "bg-green-800 text-white"
+                : "bg-white text-gray-700 border border-gray-300 hover:bg-green-50 hover:border-green-600 hover:text-green-800"
+            }`}
+          >
+            All Saskatchewan
+          </Link>
+          {ACREAGE_CITIES.map((city) => (
+            <Link
+              key={city.slug}
+              href={`/acreages/${city.slug}`}
+              className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+                activeCity === city.slug
+                  ? "bg-green-800 text-white"
+                  : "bg-white text-gray-700 border border-gray-300 hover:bg-green-50 hover:border-green-600 hover:text-green-800"
+              }`}
+            >
+              {city.name}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* ─── Map Section ─── */}
       <section className="relative">
         <div className="h-[400px] w-full lg:h-[500px]">

@@ -12,12 +12,25 @@ export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const propertyType = searchParams.get("propertyType") || "Single Family";
   const minAcres = searchParams.get("minAcres") || "2";
+  const lat = searchParams.get("lat");
+  const lng = searchParams.get("lng");
+  const radius = searchParams.get("radius"); // in km
 
   const filters: string[] = [];
   filters.push(`PropertySubType eq '${propertyType}'`);
   filters.push(`LotSizeUnits eq 'acres' and LotSizeArea ge ${minAcres}`);
   // Only fetch listings that have coordinates
   filters.push("Latitude ne null and Longitude ne null");
+
+  if (lat && lng && radius) {
+    const latNum = parseFloat(lat);
+    const lngNum = parseFloat(lng);
+    const radiusKm = parseFloat(radius);
+    const latDelta = radiusKm / 111;
+    const lngDelta = radiusKm / (111 * Math.cos((latNum * Math.PI) / 180));
+    filters.push(`Latitude ge ${(latNum - latDelta).toFixed(4)} and Latitude le ${(latNum + latDelta).toFixed(4)}`);
+    filters.push(`Longitude ge ${(lngNum - lngDelta).toFixed(4)} and Longitude le ${(lngNum + lngDelta).toFixed(4)}`);
+  }
 
   try {
     const allPins: Array<{

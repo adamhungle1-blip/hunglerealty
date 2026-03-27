@@ -17,6 +17,9 @@ export async function GET(request: NextRequest) {
   const minAcres = searchParams.get("minAcres");
   const agentKey = searchParams.get("agentKey");
   const search = searchParams.get("search");
+  const lat = searchParams.get("lat");
+  const lng = searchParams.get("lng");
+  const radius = searchParams.get("radius"); // in km
 
   // Build orderby from sort param
   let orderby = "OriginalEntryTimestamp desc";
@@ -63,6 +66,16 @@ export async function GET(request: NextRequest) {
   if (agentKey) filters.push(`ListAgentKey eq '${agentKey}'`);
   if (search) {
     filters.push(`(contains(UnparsedAddress,'${search}') or contains(City,'${search}'))`);
+  }
+  if (lat && lng && radius) {
+    // Bounding box approximation: 1 degree lat ≈ 111km, 1 degree lng ≈ 111km * cos(lat)
+    const latNum = parseFloat(lat);
+    const lngNum = parseFloat(lng);
+    const radiusKm = parseFloat(radius);
+    const latDelta = radiusKm / 111;
+    const lngDelta = radiusKm / (111 * Math.cos((latNum * Math.PI) / 180));
+    filters.push(`Latitude ge ${(latNum - latDelta).toFixed(4)} and Latitude le ${(latNum + latDelta).toFixed(4)}`);
+    filters.push(`Longitude ge ${(lngNum - lngDelta).toFixed(4)} and Longitude le ${(lngNum + lngDelta).toFixed(4)}`);
   }
 
   try {
