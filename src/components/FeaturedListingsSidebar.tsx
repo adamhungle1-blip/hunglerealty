@@ -40,7 +40,7 @@ export default function FeaturedListingsSidebar() {
     async function load() {
       try {
         const res = await fetch(
-          "/api/listings?top=4&sort=price_desc&propertyType=Agriculture"
+          "/api/listings?top=4&sort=price_desc&agentKey=1659834"
         );
         if (!res.ok) return;
         const data = await res.json();
