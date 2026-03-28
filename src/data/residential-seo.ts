@@ -278,4 +278,478 @@ export const RESIDENTIAL_SEO: Record<string, ResidentialSeoContent> = {
       "Contact Adam Hungle to explore available homes in the Uplands neighbourhood and find the right property for your family and budget.",
     ],
   },
+
+  /* ── Remaining Regina Neighbourhoods ── */
+
+  "albert-park": {
+    heading: "Albert Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Albert Park is a well-established south Regina neighbourhood situated along Albert Street, one of the city's main commercial corridors. The area offers a mix of affordable bungalows and split-level homes built primarily in the 1960s and 1970s, many on generous lots with mature trees and developed yards. Residents enjoy quick access to shopping, restaurants, and transit along Albert Street, as well as proximity to Wascana Creek pathways and nearby schools.",
+      "For buyers searching for affordable homes for sale in Albert Park, the neighbourhood delivers solid value in a convenient south-end location. Contact Adam Hungle at 306.531.8854 to view current Albert Park listings.",
+    ],
+  },
+
+  "argyle-park": {
+    heading: "Argyle Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Argyle Park is a mature north-end neighbourhood in Regina with tree-lined streets and a strong sense of community. The area features a mix of character bungalows, bi-levels, and updated homes that appeal to first-time buyers and families looking for affordability without sacrificing location. Argyle Park is close to schools, Broad Street amenities, and the Pasqua Street corridor.",
+      "If you're looking for homes for sale in Argyle Park, you'll find approachable pricing and a neighbourhood with roots. Adam Hungle can help you find the right property — call 306.531.8854.",
+    ],
+  },
+
+  "arnhem-place": {
+    heading: "Arnhem Place Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Arnhem Place is a quiet residential pocket in east Regina, known for its well-maintained homes, family-friendly streets, and proximity to Arnhem Park. The neighbourhood offers a mix of bungalows and two-storey homes, many built in the 1970s and 1980s, with mature landscaping and good-sized lots. It's a short drive to the Victoria Avenue East shopping corridor and east-end schools.",
+      "Buyers looking for homes for sale in Arnhem Place will appreciate the neighbourhood's affordability and established feel. Contact Adam Hungle to explore what's available.",
+    ],
+  },
+
+  "broders-annex": {
+    heading: "Broders Annex Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Broders Annex is a compact east-side neighbourhood in Regina offering affordable homes within easy reach of downtown and the Victoria Avenue corridor. The area features a variety of older character homes and updated properties, making it attractive for first-time buyers, investors, and anyone who values central convenience at an accessible price point.",
+      "For affordable homes for sale in Broders Annex, reach out to Adam Hungle at 306.531.8854 for a current market update.",
+    ],
+  },
+
+  "churchill-downs": {
+    heading: "Churchill Downs Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Churchill Downs is a northeast Regina neighbourhood that offers newer construction and modern floor plans at competitive prices. Developed primarily in the 2000s and 2010s, the area features energy-efficient homes, wide streets, and family-oriented parks. Churchill Downs is well-connected to Rochdale Boulevard shopping, schools, and Ring Road access.",
+      "If you're searching for homes for sale in Churchill Downs, this growing neighbourhood is worth considering. Contact Adam Hungle to see the latest listings.",
+    ],
+  },
+
+  cityview: {
+    heading: "Cityview Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Cityview is a northeast Regina neighbourhood offering a range of housing from affordable starter homes to mid-range family properties. The area is close to schools, parks, and Rochdale Boulevard commercial amenities, making it a practical choice for families and young professionals. Cityview's relatively newer housing stock and accessible pricing make it one of the more approachable neighbourhoods in the north end.",
+      "Browse homes for sale in Cityview by contacting Adam Hungle at 306.531.8854 for current MLS® listings and market advice.",
+    ],
+  },
+
+  "coronation-park": {
+    heading: "Coronation Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Coronation Park is a well-established northwest Regina neighbourhood known for its quiet crescent streets, mature trees, and community parks. The area offers primarily single-family bungalows and bi-levels built in the 1960s and 1970s, with many homes featuring updated interiors and large backyards. Coronation Park residents enjoy proximity to Normanview Mall, local schools, and easy access to Lewvan Drive.",
+      "For homes for sale in Coronation Park, Adam Hungle can provide up-to-date listings and neighbourhood insights. Call 306.531.8854.",
+    ],
+  },
+
+  "dieppe-place": {
+    heading: "Dieppe Place Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Dieppe Place is a west-side Regina neighbourhood featuring a mix of single-family homes and multi-family dwellings in a quiet residential setting. The area offers affordable housing options close to Lewvan Drive, west-end shopping, and several parks and green spaces. Dieppe Place appeals to buyers who want a settled neighbourhood with convenient city access.",
+      "Contact Adam Hungle to explore homes for sale in Dieppe Place and find the right property for your budget.",
+    ],
+  },
+
+  "dominion-heights": {
+    heading: "Dominion Heights Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Dominion Heights is an east Regina neighbourhood offering affordable residential properties near the Victoria Avenue East corridor. The area features a mix of older homes and updated properties on modest lots, making it a practical option for first-time buyers and investors. Residents have quick access to east-end shopping, schools, and major transit routes.",
+      "For homes for sale in Dominion Heights, Adam Hungle can help you navigate this affordable corner of east Regina. Call 306.531.8854.",
+    ],
+  },
+
+  "douglas-place": {
+    heading: "Douglas Place Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Douglas Place is a quiet residential neighbourhood in southeast Regina, offering single-family homes near University Park and the University of Regina campus. The area features modest bungalows and bi-levels on well-kept lots, with easy access to Wascana Parkway and south-end amenities. Douglas Place is a good fit for buyers who value proximity to the university and established neighbourhood infrastructure.",
+      "Search homes for sale in Douglas Place with Adam Hungle — call 306.531.8854 for current listings.",
+    ],
+  },
+
+  "downtown-district": {
+    heading: "Downtown District Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Regina's Downtown District is the city's urban core, offering condominiums, loft conversions, and heritage buildings for buyers who want a walkable, amenity-rich lifestyle. The area is home to the Cornwall Centre, Victoria Park, and a growing roster of restaurants, cafés, and entertainment venues. Downtown living appeals to professionals, downsizers, and anyone who wants to be in the heart of the action.",
+      "If you're looking for homes and condos for sale in Downtown Regina, Adam Hungle can help you find the right urban property. Call 306.531.8854.",
+    ],
+  },
+
+  "east-pointe-estates": {
+    heading: "East Pointe Estates Homes for Sale — Regina, SK",
+    paragraphs: [
+      "East Pointe Estates is one of Regina's newer southeast developments, featuring modern homes with contemporary designs, open floor plans, and energy-efficient construction. The neighbourhood is ideal for families seeking newer builds with attached garages, finished basements, and proximity to southeast Regina schools and parks. Easy access to Ring Road makes commuting straightforward.",
+      "Browse homes for sale in East Pointe Estates by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  eastbrook: {
+    heading: "Eastbrook Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Eastbrook is a developing east-side neighbourhood in Regina offering newer home construction at competitive price points. The area appeals to families and first-time buyers who want modern amenities — open-concept layouts, attached garages, and newer mechanical systems — without the premium of Regina's most established south-end neighbourhoods.",
+      "For homes for sale in Eastbrook, Adam Hungle can provide current listings and honest market advice. Call 306.531.8854.",
+    ],
+  },
+
+  eastview: {
+    heading: "Eastview Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Eastview is a well-established east Regina neighbourhood with a blend of affordable bungalows, bi-levels, and updated family homes. The area is close to the Victoria Avenue commercial strip, several schools, and community parks. Eastview's central-east location provides good access to both downtown and the Ring Road, making it convenient for commuters.",
+      "Contact Adam Hungle to explore homes for sale in Eastview — one of east Regina's most accessible neighbourhoods. Call 306.531.8854.",
+    ],
+  },
+
+  edgewater: {
+    heading: "Edgewater Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Edgewater is a newer west-end neighbourhood in Regina offering modern homes and family-friendly living near the Wascana Creek corridor. The development features single-family homes and townhouses with contemporary designs, walking paths, and park spaces. Edgewater is close to west Regina shopping, schools, and Lewvan Drive access.",
+      "For homes for sale in Edgewater, contact Adam Hungle at 306.531.8854 to see the latest available properties.",
+    ],
+  },
+
+  englewood: {
+    heading: "Englewood Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Englewood is a north-end Regina neighbourhood offering affordable homes on well-treed lots. The area features a mix of older bungalows and updated properties, with proximity to north-end shopping along Pasqua Street and Rochdale Boulevard. Englewood appeals to buyers looking for value in an established part of the city with easy Ring Road access.",
+      "Search homes for sale in Englewood with Adam Hungle — call 306.531.8854 for current MLS® listings.",
+    ],
+  },
+
+  "fairways-west": {
+    heading: "Fairways West Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Fairways West is a desirable west Regina neighbourhood situated near the Tor Hill Golf Course, offering a mix of single-family homes, townhouses, and executive-style properties. The area is known for its quiet streets, green space, and proximity to west-end amenities along Rochdale Boulevard. Fairways West attracts families and professionals who value a well-maintained suburban setting.",
+      "For homes for sale in Fairways West, Adam Hungle can provide current listings and market insights. Call 306.531.8854.",
+    ],
+  },
+
+  "garden-ridge": {
+    heading: "Garden Ridge Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Garden Ridge is a newer northwest Regina development featuring modern single-family homes, townhouses, and duplexes. The neighbourhood offers fresh construction with current design standards, walkable streets, and new park spaces. Garden Ridge is well-positioned near Rochdale Boulevard shopping and north-end schools, making it popular with young families.",
+      "Browse homes for sale in Garden Ridge by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "gardiner-heights": {
+    heading: "Gardiner Heights Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Gardiner Heights is a family-oriented east Regina neighbourhood near the Gardiner Park area, offering single-family homes with a mix of updated older builds and newer infill. The area is close to schools, Greens on Gardiner, and east-end recreation facilities. Gardiner Heights provides a suburban feel with convenient access to Victoria Avenue East shopping.",
+      "For homes for sale in Gardiner Heights, contact Adam Hungle at 306.531.8854 to learn about current opportunities.",
+    ],
+  },
+
+  "gardiner-park": {
+    heading: "Gardiner Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Gardiner Park is an established east-side neighbourhood in Regina known for its parks, schools, and family-friendly atmosphere. The area features a range of single-family homes — from affordable starter properties to spacious family residences — many with mature trees and developed lots. Gardiner Park's central-east location offers quick access to both the university campus and east-end commercial districts.",
+      "Contact Adam Hungle to explore homes for sale in Gardiner Park. Call 306.531.8854 for a personalized search.",
+    ],
+  },
+
+  "general-hospital": {
+    heading: "General Hospital Homes for Sale — Regina, SK",
+    paragraphs: [
+      "The General Hospital neighbourhood is a central Regina area near the former Regina General Hospital site, offering a mix of character homes, updated properties, and multi-unit dwellings. Its location provides excellent walkability to downtown, the Warehouse District, and the Victoria Avenue corridor. The neighbourhood appeals to buyers who want urban convenience at an accessible price.",
+      "For homes for sale in the General Hospital area, Adam Hungle can help you find the right property. Call 306.531.8854.",
+    ],
+  },
+
+  "glen-elm-park": {
+    heading: "Glen Elm Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Glen Elm Park is a mature east Regina neighbourhood offering affordable single-family homes on quiet, tree-lined streets. The area features mostly bungalows and bi-levels built in the 1960s, with many homes updated over the years. Glen Elm Park is close to schools, community parks, and the Victoria Avenue shopping corridor — making it a practical choice for families and budget-conscious buyers.",
+      "Browse homes for sale in Glen Elm Park by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  glencairn: {
+    heading: "Glencairn Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Glencairn is a family-friendly east Regina neighbourhood offering a mix of single-family homes and townhouses near schools, parks, and east-end amenities. The area provides solid value for buyers looking for established homes with good lot sizes and proximity to the Ring Road and major transit routes. Glencairn's quiet residential streets and community feel make it a popular choice.",
+      "Contact Adam Hungle to see homes for sale in Glencairn. Call 306.531.8854 for current listings.",
+    ],
+  },
+
+  "glencairn-village": {
+    heading: "Glencairn Village Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Glencairn Village is a pocket neighbourhood in east Regina adjacent to Glencairn, offering affordable homes on well-maintained streets. The area features a mix of townhouses and single-family properties, making it suitable for first-time buyers and small families. Proximity to east-end schools, parks, and Ring Road access adds to the area's appeal.",
+      "For homes for sale in Glencairn Village, reach out to Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "greens-on-gardiner": {
+    heading: "Greens on Gardiner Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Greens on Gardiner is a newer southeast Regina development known for its modern homes, manicured streetscapes, and proximity to green spaces and walking trails. The neighbourhood features contemporary single-family homes and townhouses designed for today's families, with open floor plans, attached garages, and energy-efficient construction. Schools, parks, and east-end shopping are all nearby.",
+      "Browse homes for sale in Greens on Gardiner by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  hawkstone: {
+    heading: "Hawkstone Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Hawkstone is one of Regina's newest north-end developments, offering brand-new and recently built homes with modern designs and smart layouts. The neighbourhood is part of the city's expanding northeast, with new parks, pathways, and school sites planned for the growing community. Hawkstone appeals to families and move-up buyers who want new construction at competitive north-end pricing.",
+      "For homes for sale in Hawkstone, contact Adam Hungle at 306.531.8854 to get ahead of the market in this growing neighbourhood.",
+    ],
+  },
+
+  "highland-park": {
+    heading: "Highland Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Highland Park is a centrally located north-side neighbourhood in Regina offering affordable homes on mature, tree-lined streets. The area features a mix of bungalows, character homes, and updated properties, with convenient access to Broad Street shopping, schools, and the downtown core. Highland Park is a great option for buyers looking for value in a well-connected neighbourhood.",
+      "Search homes for sale in Highland Park with Adam Hungle — call 306.531.8854.",
+    ],
+  },
+
+  hillsdale: {
+    heading: "Hillsdale Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Hillsdale is a south-central Regina neighbourhood near the University of Regina campus, offering a mix of single-family homes and multi-unit properties. The area is popular with university staff, students, and families who value proximity to the campus, Wascana Centre, and the south-end commercial districts along Albert Street and Victoria Avenue East.",
+      "For homes for sale in Hillsdale, contact Adam Hungle at 306.531.8854 for current listings and neighbourhood guidance.",
+    ],
+  },
+
+  "kensington-green": {
+    heading: "Kensington Green Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Kensington Green is a newer southeast Regina neighbourhood offering modern homes with contemporary finishes and family-friendly amenities. The development features single-family homes and townhouses with open layouts, attached garages, and walkable streets. Kensington Green is close to southeast schools, parks, and has easy access to Ring Road for commuting.",
+      "Browse homes for sale in Kensington Green by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "lakeridge-addition": {
+    heading: "Lakeridge Addition Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Lakeridge Addition is a newer extension of the established Lakeridge neighbourhood in northwest Regina. The area offers modern construction with updated designs, parks, and pathways, while benefiting from the infrastructure and mature amenities of the surrounding Lakeridge community. Lakeridge Addition is close to Rochdale Boulevard shopping, schools, and recreation facilities.",
+      "For homes for sale in Lakeridge Addition, contact Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  lakeridge: {
+    heading: "Lakeridge Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Lakeridge is one of northwest Regina's most popular family neighbourhoods, featuring well-maintained homes on quiet crescents and cul-de-sacs. The area offers a mix of bungalows, two-storey homes, and bi-levels, many with mature landscaping and developed basements. Lakeridge residents enjoy nearby parks, schools, and easy access to Rochdale Boulevard and Pasqua Street shopping districts.",
+      "Contact Adam Hungle to explore homes for sale in Lakeridge. Call 306.531.8854 for a personalized search.",
+    ],
+  },
+
+  lakewood: {
+    heading: "Lakewood Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Lakewood is a northwest Regina neighbourhood offering a mix of single-family homes and multi-family dwellings near Wascana Creek and several community parks. The area is known for its quiet residential streets, proximity to schools, and convenient access to Rochdale Boulevard and west-end shopping. Lakewood provides a suburban lifestyle with good value for families.",
+      "For homes for sale in Lakewood, Adam Hungle can provide current listings and market guidance. Call 306.531.8854.",
+    ],
+  },
+
+  "maple-ridge": {
+    heading: "Maple Ridge Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Maple Ridge is a northwest Regina neighbourhood near Pasqua Street and Rochdale Boulevard, offering single-family homes and townhouses in a quiet, family-oriented setting. The area features homes built from the 1980s onward, with parks, schools, and shopping all within close reach. Maple Ridge appeals to families looking for a well-established northwest neighbourhood with solid amenities.",
+      "Browse homes for sale in Maple Ridge by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "mccarthy-park": {
+    heading: "McCarthy Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "McCarthy Park is a west-side Regina neighbourhood offering affordable homes near Lewvan Drive and the west-end commercial corridor. The area features a mix of single-family homes, townhouses, and multi-family dwellings in a quiet residential setting. McCarthy Park's proximity to west-end shopping, schools, and transit makes it a practical choice for families and budget-conscious buyers.",
+      "Contact Adam Hungle for homes for sale in McCarthy Park. Call 306.531.8854.",
+    ],
+  },
+
+  "mount-royal": {
+    heading: "Mount Royal Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Mount Royal is a mature west-side neighbourhood in Regina offering single-family homes on spacious lots with established trees and landscaping. The area is close to the Wascana Creek pathway system, west-end shopping, and several schools. Mount Royal provides a quiet, residential feel with the convenience of being centrally located in the city's west end.",
+      "For homes for sale in Mount Royal, contact Adam Hungle at 306.531.8854 to view current listings.",
+    ],
+  },
+
+  normanview: {
+    heading: "Normanview Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Normanview is a well-known northwest Regina neighbourhood offering affordable bungalows, bi-levels, and split-level homes on quiet streets. Built primarily in the 1960s and 1970s, many Normanview homes have been updated over the years while retaining their generous lot sizes and mature landscaping. The area is close to Normanview Mall, schools, and Lewvan Drive access.",
+      "Search homes for sale in Normanview with Adam Hungle — call 306.531.8854 for up-to-date listings.",
+    ],
+  },
+
+  "normanview-west": {
+    heading: "Normanview West Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Normanview West is the western extension of the Normanview neighbourhood, offering similar affordability and family-friendly living with slightly newer homes. The area features single-family properties, townhouses, and easy access to west-end shopping, parks, and schools. Normanview West is a solid choice for buyers who want northwest Regina convenience at approachable pricing.",
+      "For homes for sale in Normanview West, Adam Hungle can help. Call 306.531.8854.",
+    ],
+  },
+
+  parkridge: {
+    heading: "Parkridge Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Parkridge is an east-end Regina neighbourhood offering a range of housing styles from affordable bungalows to larger family homes. The area is near schools, parks, and the Victoria Avenue East corridor, providing residents with convenient access to shopping and services. Parkridge appeals to families and first-time buyers who want value in a well-connected east-side location.",
+      "Browse homes for sale in Parkridge by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "parliament-place": {
+    heading: "Parliament Place Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Parliament Place is a south Regina neighbourhood near the Legislative Building and Wascana Centre, offering attractive homes in one of the city's most scenic settings. The area features a mix of mid-century homes and newer infill properties, many within walking distance of Wascana Lake's pathways and green spaces. Parliament Place appeals to buyers who value location and proximity to Regina's premier parkland.",
+      "For homes for sale in Parliament Place, contact Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "pioneer-village": {
+    heading: "Pioneer Village Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Pioneer Village is a centrally located Regina neighbourhood west of Albert Street, offering affordable homes with convenient access to shopping, transit, and schools. The area features a mix of character homes and updated properties on modest lots. Pioneer Village is a practical option for buyers who want a central location without a premium price tag.",
+      "Contact Adam Hungle to explore homes for sale in Pioneer Village. Call 306.531.8854.",
+    ],
+  },
+
+  "richmond-place": {
+    heading: "Richmond Place Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Richmond Place is a southeast Regina neighbourhood offering single-family homes near the University of Regina and the Wascana Parkway corridor. The area provides a quiet residential setting with good access to south-end schools, parks, and the Victoria Avenue East commercial strip. Richmond Place appeals to families and university-affiliated buyers looking for a well-located suburban pocket.",
+      "For homes for sale in Richmond Place, reach out to Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "river-bend": {
+    heading: "River Bend Homes for Sale — Regina, SK",
+    paragraphs: [
+      "River Bend is a newer east Regina development near the Wascana Creek corridor, offering contemporary homes with modern floor plans and finishes. The neighbourhood features single-family homes and townhouses in a park-like setting with walking trails and green space. River Bend is close to east-end schools, shopping, and Ring Road access, making it a top choice for families seeking newer construction.",
+      "Browse homes for sale in River Bend by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "river-heights": {
+    heading: "River Heights Homes for Sale — Regina, SK",
+    paragraphs: [
+      "River Heights is a well-regarded south-central Regina neighbourhood near the Wascana Creek, offering a mix of established homes and updated properties on attractive lots. The area is close to Wascana Park, Albert Street shopping, and several schools. River Heights' central location and mature streetscape make it a popular choice for families who want both convenience and character.",
+      "For homes for sale in River Heights, Adam Hungle can provide current MLS® listings and market advice. Call 306.531.8854.",
+    ],
+  },
+
+  "rochdale-park": {
+    heading: "Rochdale Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Rochdale Park is a northwest Regina neighbourhood near the Rochdale Boulevard commercial corridor, offering convenient shopping, dining, and services right at your doorstep. The area features a mix of single-family homes, townhouses, and condos, making it suitable for a variety of buyers. Rochdale Park's accessibility and amenity-rich location make it one of the more practical northwest neighbourhoods.",
+      "Contact Adam Hungle to explore homes for sale in Rochdale Park. Call 306.531.8854.",
+    ],
+  },
+
+  rosemont: {
+    heading: "Rosemont Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Rosemont is a central-west Regina neighbourhood offering mature homes on well-treed lots near Albert Street and the city's main commercial corridors. The area features a variety of bungalows, two-storey homes, and character properties that attract buyers looking for established living with central convenience. Rosemont residents enjoy easy access to Wascana Centre, downtown, and west-side shopping.",
+      "For homes for sale in Rosemont, contact Adam Hungle at 306.531.8854 to get a current market snapshot.",
+    ],
+  },
+
+  "sherwood-estates": {
+    heading: "Sherwood Estates Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Sherwood Estates is a desirable northwest Regina neighbourhood known for its larger executive-style homes, wide streets, and well-maintained properties. The area appeals to families and move-up buyers looking for spacious living in a quiet, established setting. Sherwood Estates is close to Rochdale Boulevard shopping, schools, and recreation facilities, with easy access to Lewvan Drive and Ring Road.",
+      "Browse homes for sale in Sherwood Estates by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "spruce-meadows": {
+    heading: "Spruce Meadows Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Spruce Meadows is a newer east Regina neighbourhood offering modern single-family homes with contemporary designs and energy-efficient features. The area is part of Regina's expanding east-side residential development, with new parks, pathways, and school access. Spruce Meadows appeals to families and first-time buyers looking for new construction at competitive pricing.",
+      "For homes for sale in Spruce Meadows, contact Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "the-creeks": {
+    heading: "The Creeks Homes for Sale — Regina, SK",
+    paragraphs: [
+      "The Creeks is one of Regina's newest southeast developments, offering brand-new homes with the latest in residential design, energy efficiency, and neighbourhood planning. The community features walking trails, storm water management ponds, and planned park spaces that create an attractive suburban setting. The Creeks is close to Ring Road and southeast schools, making it a top pick for growing families.",
+      "Browse homes for sale in The Creeks by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "the-towns": {
+    heading: "The Towns Homes for Sale — Regina, SK",
+    paragraphs: [
+      "The Towns is a newer east Regina development offering townhouse-style and single-family homes in a modern, well-planned community. The area is designed for walkability and community connection, with shared green spaces and contemporary streetscapes. The Towns appeals to young professionals, small families, and downsizers who want new construction in a connected east-end location.",
+      "For homes for sale in The Towns, contact Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "transition-area": {
+    heading: "Transition Area Homes for Sale — Regina, SK",
+    paragraphs: [
+      "The Transition Area is a central Regina neighbourhood adjacent to downtown, offering a diverse mix of housing including character homes, renovated properties, and new infill development. The area is undergoing gradual revitalization, making it attractive for buyers who see value in emerging urban neighbourhoods with walkable access to downtown amenities, transit, and the Warehouse District.",
+      "Explore homes for sale in the Transition Area with Adam Hungle. Call 306.531.8854 for current listings.",
+    ],
+  },
+
+  "university-park": {
+    heading: "University Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "University Park is a south Regina neighbourhood adjacent to the University of Regina campus and the Research Park. The area offers a mix of single-family homes, townhouses, and multi-unit properties that appeal to university staff, students, and families. Residents enjoy proximity to Wascana Creek pathways, campus amenities, and the south-end commercial corridors.",
+      "For homes for sale in University Park, Adam Hungle can help you find the right fit. Call 306.531.8854.",
+    ],
+  },
+
+  "university-park-east": {
+    heading: "University Park East Homes for Sale — Regina, SK",
+    paragraphs: [
+      "University Park East is a newer extension of the University Park area in southeast Regina, offering modern homes and townhouses near the university campus. The neighbourhood features contemporary construction, green spaces, and easy access to Wascana Parkway and east-end shopping. University Park East is ideal for buyers who want newer builds close to campus and south-end amenities.",
+      "Browse homes for sale in University Park East by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "varsity-park": {
+    heading: "Varsity Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Varsity Park is a southeast Regina neighbourhood near the University of Regina, offering affordable homes that are popular with university-affiliated buyers, young families, and first-time purchasers. The area features a mix of bungalows, bi-levels, and townhouses, with parks, schools, and Wascana Creek pathways nearby. Varsity Park delivers solid value in a well-connected south-end location.",
+      "For homes for sale in Varsity Park, contact Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "warehouse-district": {
+    heading: "Warehouse District Homes for Sale — Regina, SK",
+    paragraphs: [
+      "The Warehouse District is Regina's emerging urban village, transforming former industrial buildings into stylish loft condos, modern apartments, and mixed-use spaces. Located just north of Victoria Avenue near downtown, the area offers walkable access to restaurants, breweries, shops, and cultural venues. The Warehouse District appeals to buyers who want an urban lifestyle in one of Regina's most dynamic and evolving neighbourhoods.",
+      "Explore homes and condos for sale in the Warehouse District with Adam Hungle. Call 306.531.8854.",
+    ],
+  },
+
+  "washington-park": {
+    heading: "Washington Park Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Washington Park is a mature north-central Regina neighbourhood with tree-lined streets and affordable character homes. The area features a mix of bungalows and two-storey homes, many with updated interiors and developed yards. Washington Park is close to Albert Street shopping, schools, and transit routes, providing a convenient and budget-friendly option for city-centre living.",
+      "Contact Adam Hungle for homes for sale in Washington Park. Call 306.531.8854.",
+    ],
+  },
+
+  westerra: {
+    heading: "Westerra Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Westerra is a newer west-end Regina development offering modern single-family homes and townhouses in a growing community setting. The neighbourhood features contemporary designs, walking paths, and planned green spaces, with convenient access to Lewvan Drive and west-end shopping. Westerra is a strong option for families and first-time buyers looking for new construction on the west side.",
+      "For homes for sale in Westerra, contact Adam Hungle at 306.531.8854 to see the latest listings.",
+    ],
+  },
+
+  westhill: {
+    heading: "Westhill Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Westhill is a northwest Regina neighbourhood offering a range of housing from affordable starter homes to mid-range family properties. The area is close to Rochdale Boulevard and Pasqua Street shopping corridors, with schools, parks, and recreation centres nearby. Westhill provides a quiet suburban setting with the convenience of northwest Regina's amenity-rich location.",
+      "Browse homes for sale in Westhill by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "wood-meadows": {
+    heading: "Wood Meadows Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Wood Meadows is a newer southeast Regina neighbourhood offering modern homes in a family-friendly setting near green spaces and walking trails. The development features single-family homes with contemporary floor plans, attached garages, and energy-efficient construction. Wood Meadows is close to southeast schools and has easy access to Ring Road for commuters.",
+      "For homes for sale in Wood Meadows, contact Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  "woodland-grove": {
+    heading: "Woodland Grove Homes for Sale — Regina, SK",
+    paragraphs: [
+      "Woodland Grove is a developing southeast Regina community offering new home construction with modern amenities and attractive streetscapes. The neighbourhood is designed for families, with planned parks, school access, and walking paths. Woodland Grove's newer builds and competitive southeast pricing make it an appealing option for first-time buyers and growing families.",
+      "Browse homes for sale in Woodland Grove by contacting Adam Hungle at 306.531.8854.",
+    ],
+  },
 };
