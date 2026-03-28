@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import { soldListings } from "@/data/sold-listings";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -16,7 +16,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const listing = soldListings.find((l) => l.slug === params.slug);
+  const { slug } = await params;
+  const listing = soldListings.find((l) => l.slug === slug);
 
   if (!listing) {
     return {
@@ -41,8 +42,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function SoldListingPage({ params }: Props) {
-  const listing = soldListings.find((l) => l.slug === params.slug);
+export default async function SoldListingPage({ params }: Props) {
+  const { slug } = await params;
+  const listing = soldListings.find((l) => l.slug === slug);
 
   if (!listing) {
     return (

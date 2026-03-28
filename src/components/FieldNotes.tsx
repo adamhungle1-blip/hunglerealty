@@ -84,11 +84,11 @@ export default function FieldNotes() {
                   {post.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
-                  {post.excerpt}
+                  {"excerpt" in post ? post.excerpt : post.blurb}
                 </p>
 
                 {/* Quick stats - only for market report */}
-                {post.stats && (
+                {"stats" in post && post.stats && (
                   <div className="mt-4 grid grid-cols-3 gap-2 rounded-lg bg-white/5 p-3">
                     {post.stats.map((stat) => (
                       <div key={stat.label} className="text-center">
