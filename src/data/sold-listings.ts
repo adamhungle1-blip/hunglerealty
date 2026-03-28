@@ -24,12 +24,12 @@ export const soldListings: SoldListing[] = [
     date: "2025-12-15",
     category: "Sold",
     blurb:
-      "This beautiful 39.96-acre parcel in Sherwood RM #159 showcases pristine Black and Grade A soils perfect for grain and oilseed operations. Strategic location near grain handling corridors with excellent road access and future development potential in this high-demand agricultural region.",
-    image: "/hero/slide1.jpg",
+      "This 39.96-acre parcel sits directly on Regina's southern Eastern boundary, only ½ mile south of Regina Siast. The land offers a prime location close to the University of Regina and Highway #1, making it an excellent opportunity for a small business, hobby farm, horse boarding operation, or other rural-residential or commercial ventures.",
+    image: "/sold/sk020293-sherwood-39acres.jpg",
     mls: "SK020293",
     location: "Sherwood Rm No 159, Saskatchewan",
     propertyType: "Land",
-    thankYou: "Thank you to our wonderful clients for trusting us with this sale. It was a pleasure helping you navigate the sale of this premium farmland and connecting you with a buyer who shares your commitment to agricultural excellence.",
+    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
   },
   {
     slug: "sk-020291-sherwood-agriculture",
