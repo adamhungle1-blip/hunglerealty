@@ -202,30 +202,6 @@ export default async function SoldListingPage({ params }: Props) {
           </p>
         </div>
 
-        {/* Call-to-Action */}
-        <div className="rounded-xl bg-gradient-to-r from-[#2d6a4f] to-[#1a3a1a] p-8 text-center">
-          <h2 className="text-2xl font-bold text-white">
-            Looking to buy or sell?
-          </h2>
-          <p className="mt-2 text-gray-300">
-            Get expert guidance from Adam Hungle, Sutton Group Results Realty
-          </p>
-          <a
-            href="tel:3065318854"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#c49a2a] px-6 py-3 font-bold text-[#0f1a0f] transition-all hover:bg-[#d4a520] hover:shadow-lg"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.793.894c.067.463.141.927.223 1.39.282 1.668.454 3.334.454 5.011 0 1.677-.172 3.343-.454 5.011-.082.463-.156.927-.223 1.39l1.793.894a1 1 0 01.54 1.06l-.74 4.435a1 1 0 01-.986.836H3a1 1 0 01-1-1V3z" />
-            </svg>
-            Call Adam at 306.531.8854
-          </a>
-        </div>
-
         {/* Back Link */}
         <div className="mt-12 text-center">
           <Link
