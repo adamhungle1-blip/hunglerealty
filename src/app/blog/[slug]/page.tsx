@@ -39,7 +39,7 @@ export default async function BlogPostPage({
       <nav className="mb-6 text-sm text-gray-400">
         <Link href="/" className="hover:text-green-700">Home</Link>
         <span className="mx-2">/</span>
-        <Link href="/blog" className="hover:text-green-700">Blog</Link>
+        <Link href="/field-notes" className="hover:text-green-700">Field Notes</Link>
         <span className="mx-2">/</span>
         <span className="text-gray-600">{post.title}</span>
       </nav>

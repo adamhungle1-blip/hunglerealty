@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { soldListings } from "@/data/sold-listings";
+import { getSortedPosts } from "@/data/blog-posts";
 
 export const metadata: Metadata = {
   title: "Field Notes — Market Insights & Sold Listings",
@@ -25,8 +26,31 @@ const marketReport = {
   ],
 };
 
+// Blog article images mapped by category
+const blogCategoryImages: Record<string, string> = {
+  "Tax & Finance": "/hero/slide3.jpg",
+  "Investment Guide": "/hero/slide1.jpg",
+  "Acreage Guide": "/hero/slide2.jpg",
+  "Buying Guide": "/hero/slide1.jpg",
+  "Market Analysis": "/hero/slide3.jpg",
+  "Market Insights": "/hero/slide2.jpg",
+  "RM Spotlight": "/hero/slide1.jpg",
+  "Market Report": "/hero/slide3.jpg",
+};
+
 export default function FieldNotesPage() {
-  const allPosts = [marketReport, ...soldListings];
+  // Map blog posts to the same shape as other posts
+  const blogArticles = getSortedPosts().map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    date: post.date,
+    category: post.category,
+    excerpt: post.excerpt,
+    image: blogCategoryImages[post.category] || "/hero/slide1.jpg",
+    _type: "blog" as const,
+  }));
+
+  const allPosts = [marketReport, ...blogArticles, ...soldListings];
 
   return (
     <div className="bg-[#0f1a0f]">
@@ -56,7 +80,9 @@ export default function FieldNotesPage() {
               href={
                 post.slug === "farmland-market-report-2025"
                   ? `/field-notes/${post.slug}`
-                  : `/field-notes/sold/${post.slug}`
+                  : "_type" in post && post._type === "blog"
+                    ? `/blog/${post.slug}`
+                    : `/field-notes/sold/${post.slug}`
               }
               className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[#c49a2a]/40 hover:bg-white/[0.08]"
             >
@@ -106,7 +132,9 @@ export default function FieldNotesPage() {
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#c49a2a] transition-colors group-hover:text-[#e0b830]">
                   {post.slug === "farmland-market-report-2025"
                     ? "Read Full Report"
-                    : "View Details"}
+                    : "_type" in post && post._type === "blog"
+                      ? "Read Article"
+                      : "View Details"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"
