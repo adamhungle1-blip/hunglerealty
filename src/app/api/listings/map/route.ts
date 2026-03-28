@@ -4,21 +4,40 @@ import { fetchListings } from "@/lib/ddf";
 export const revalidate = 300;
 
 /**
- * Lightweight endpoint that returns ALL acreage listings with only the
- * fields needed for map pins (lat, lng, price, address, photo, lot size).
+ * Lightweight endpoint that returns listings with only the fields needed
+ * for map pins (lat, lng, price, address, photo, lot size).
  * Paginates through DDF's 100-per-page limit automatically.
  */
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const propertyType = searchParams.get("propertyType") || "Single Family";
-  const minAcres = searchParams.get("minAcres") || "2";
+  const minAcres = searchParams.get("minAcres");
+  const city = searchParams.get("city");
+  const neighbourhood = searchParams.get("neighbourhood");
   const lat = searchParams.get("lat");
   const lng = searchParams.get("lng");
   const radius = searchParams.get("radius"); // in km
 
   const filters: string[] = [];
-  filters.push(`PropertySubType eq '${propertyType}'`);
-  filters.push(`LotSizeUnits eq 'acres' and LotSizeArea ge ${minAcres}`);
+
+  // Support comma-separated property types
+  const types = propertyType.split(",").map((t) => t.trim());
+  if (types.length === 1) {
+    filters.push(`PropertySubType eq '${types[0]}'`);
+  } else {
+    const typeFilters = types.map((t) => `PropertySubType eq '${t}'`).join(" or ");
+    filters.push(`(${typeFilters})`);
+  }
+
+  if (minAcres) {
+    filters.push(`LotSizeUnits eq 'acres' and LotSizeArea ge ${minAcres}`);
+  }
+  if (city) {
+    filters.push(`contains(City,'${city}')`);
+  }
+  if (neighbourhood) {
+    filters.push(`SubdivisionName eq '${neighbourhood}'`);
+  }
   // Only fetch listings that have coordinates
   filters.push("Latitude ne null and Longitude ne null");
 
@@ -60,7 +79,6 @@ export async function GET(request: NextRequest) {
 
       for (const l of data.value) {
         if (!l.Latitude || !l.Longitude) continue;
-        // Get first photo thumbnail
         const photo =
           l.Media && l.Media.length > 0
             ? l.Media.sort((a, b) => a.Order - b.Order)[0].MediaURL
@@ -74,7 +92,7 @@ export async function GET(request: NextRequest) {
           address:
             l.UnparsedAddress ||
             [l.City, l.StateOrProvince].filter(Boolean).join(", ") ||
-            "Acreage",
+            "Property",
           acres: l.LotSizeArea || 0,
           photo,
         });

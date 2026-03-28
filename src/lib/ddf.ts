@@ -91,6 +91,7 @@ export interface DdfListing {
   CommunityFeatures?: string[];
   Directions?: string;
   CurrentUse?: string[];
+  SubdivisionName?: string;
   Media?: Array<{
     MediaURL: string;
     Order: number;
@@ -141,6 +142,7 @@ const DDF_SELECT_FIELDS = [
   "CommunityFeatures",
   "Directions",
   "CurrentUse",
+  "SubdivisionName",
   "Media",
 ].join(",");
 
