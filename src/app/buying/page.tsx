@@ -204,6 +204,27 @@ export default function BuyingPage() {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <section className="py-10">
+        <div className="mx-auto max-w-4xl px-4 text-center text-sm text-gray-500">
+          <p>
+            Thinking of selling your farm?{" "}
+            <Link href="/selling" className="text-green-700 underline hover:text-green-900">
+              Find out what your farmland is worth
+            </Link>
+            .{" "}
+            <Link href="/search" className="text-green-700 underline hover:text-green-900">
+              Search all Saskatchewan farm listings
+            </Link>{" "}
+            or{" "}
+            <Link href="/about" className="text-green-700 underline hover:text-green-900">
+              learn more about Adam Hungle
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
       {/* Closing */}
       <section className="max-w-4xl py-14">
         <h2 className="mb-4 text-center text-2xl font-bold text-green-800">

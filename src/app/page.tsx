@@ -4,6 +4,7 @@ import FeaturedCards from "@/components/FeaturedCards";
 import FeaturedListings from "@/components/FeaturedListings";
 import FarmlandMapSection from "@/components/FarmlandMapSection";
 import FieldNotes from "@/components/FieldNotes";
+import HomeSEOContent from "@/components/HomeSEOContent";
 
 export const metadata: Metadata = {
   title: "Saskatchewan Farmland & Real Estate | Adam Hungle, REALTOR® — Hungle Realty",
@@ -28,6 +29,7 @@ export default function Home() {
       <FeaturedListings />
       <FarmlandMapSection />
       <FieldNotes />
+      <HomeSEOContent />
     </>
   );
 }

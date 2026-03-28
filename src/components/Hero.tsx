@@ -5,12 +5,12 @@ import Image from "next/image";
 import { rmList } from "@/data/rm-list";
 
 const heroImages = [
-  "/hero/slide1.jpg",
-  "/hero/slide2.jpg",
-  "/hero/slide3.jpg",
-  "/hero/slide4.jpg",
-  "/hero/slide5.jpg",
-  "/hero/slide6.jpg",
+  { src: "/hero/slide1.jpg", alt: "Saskatchewan grain farmland at sunset with golden wheat fields" },
+  { src: "/hero/slide2.jpg", alt: "Aerial view of Saskatchewan farmland sections and country roads" },
+  { src: "/hero/slide3.jpg", alt: "Green canola field in rural Saskatchewan with blue sky" },
+  { src: "/hero/slide4.jpg", alt: "Saskatchewan pasture land with rolling hills and fencing" },
+  { src: "/hero/slide5.jpg", alt: "Harvested Saskatchewan farmland with grain bins in the distance" },
+  { src: "/hero/slide6.jpg", alt: "Mixed-use Saskatchewan farm property with buildings and cropland" },
 ];
 
 const majorTypes = ["No Preference", "Grain", "Hay", "Mixed", "Hobby", "Ranch"];
@@ -104,15 +104,15 @@ export default function Hero() {
     <section className="relative">
       {/* Background slideshow */}
       <div className="relative h-[280px] overflow-hidden md:h-[340px]">
-        {heroImages.map((src, index) => (
+        {heroImages.map((img, index) => (
           <div
-            key={src}
+            key={img.src}
             className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
             style={{ opacity: index === currentSlide ? 1 : 0 }}
           >
             <Image
-              src={src}
-              alt={`Saskatchewan landscape ${index + 1}`}
+              src={img.src}
+              alt={img.alt}
               fill
               className="object-cover"
               priority={index === 0}

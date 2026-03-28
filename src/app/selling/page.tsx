@@ -245,6 +245,27 @@ export default function SellingPage() {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <section className="py-10">
+        <div className="mx-auto max-w-4xl px-4 text-center text-sm text-gray-500">
+          <p>
+            Looking to buy instead?{" "}
+            <Link href="/buying" className="text-green-700 underline hover:text-green-900">
+              Learn about buying farmland in Saskatchewan
+            </Link>
+            .{" "}
+            <Link href="/search" className="text-green-700 underline hover:text-green-900">
+              Search all MLS® farm listings
+            </Link>{" "}
+            or{" "}
+            <Link href="/about" className="text-green-700 underline hover:text-green-900">
+              learn more about Adam Hungle
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-14 text-center">
         <h2 className="mb-4 text-2xl font-bold text-green-800">

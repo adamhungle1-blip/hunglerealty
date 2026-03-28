@@ -274,6 +274,19 @@ export default function AboutPage() {
             Or call 306.531.8854
           </a>
         </div>
+        <p className="mt-6 text-sm text-gray-500">
+          <Link href="/selling" className="text-green-700 underline hover:text-green-900">
+            Selling your farm?
+          </Link>
+          {" · "}
+          <Link href="/buying" className="text-green-700 underline hover:text-green-900">
+            Buying farmland?
+          </Link>
+          {" · "}
+          <Link href="/search" className="text-green-700 underline hover:text-green-900">
+            Search all listings
+          </Link>
+        </p>
       </section>
     </div>
   );
