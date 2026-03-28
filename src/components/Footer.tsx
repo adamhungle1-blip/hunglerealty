@@ -40,7 +40,7 @@ export default function Footer() {
                 Deep Roots. Proven Results.
               </h2>
               <p className="mt-1.5 text-sm text-gray-400">
-                Over 20 years helping Saskatchewan farmers buy and sell land.
+                Over 15 years helping Saskatchewan farmers buy and sell land.
               </p>
             </div>
 

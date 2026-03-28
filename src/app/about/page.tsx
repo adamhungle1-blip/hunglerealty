@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Adam Hungle | Farm Sales Specialist | Hungle Realty",
+  title: "About Adam Hungle | Farm Sales Specialist",
   description:
     "Meet Adam Hungle — top 5% Saskatchewan REALTOR® with 15+ years experience and over $100M in closed farm transactions. Sutton Group Results Realty.",
 };

@@ -199,12 +199,12 @@ export default async function RMPage({
             <p className="mb-4 leading-relaxed text-gray-700">
               Farmland pricing in Saskatchewan is hyper-local. Two quarters in the same RM can vary
               significantly based on soil class, drainage, access, and improvements. Before making an
-              offer, Adam will provide a detailed comparable sales analysis for the RM of {rm.name} so
-              you know exactly what the land is worth. He&apos;ll also check for mineral rights, surface
+              offer, Adam will provide a detailed comparable sales analysis for the RM of {rm.name}{" "}
+              so you know exactly what the land is worth. He&apos;ll also check for mineral rights, surface
               leases, environmental considerations, and other factors that could affect your purchase.
             </p>
             <p className="mb-6 leading-relaxed text-gray-700">
-              Sellers in RM of {rm.name} benefit from Saskatchewan&apos;s all-time-high farmland values and
+              Sellers in RM of {rm.name}{" "}benefit from Saskatchewan&apos;s all-time-high farmland values and
               Adam&apos;s extensive buyer database. If you&apos;re thinking about selling, request a
               no-obligation valuation.
             </p>

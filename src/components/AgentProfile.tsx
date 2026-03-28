@@ -30,7 +30,7 @@ export default function AgentProfile() {
 
             <div className="mt-6 space-y-3 text-base leading-relaxed text-gray-300">
               <p>
-                Over 20 years helping Saskatchewan farmers buy and sell land. A top 5% producer
+                Over 15 years helping Saskatchewan farmers buy and sell land. A top 5% producer
                 with $100M+ in closed transactions — Adam grew up on the Prairies and understands
                 the land from the ground up.
               </p>
@@ -39,7 +39,7 @@ export default function AgentProfile() {
             {/* Stats row */}
             <div className="mt-6 flex flex-wrap justify-center gap-6 md:justify-start">
               <div className="text-center">
-                <p className="text-2xl font-bold text-green-400">20+</p>
+                <p className="text-2xl font-bold text-green-400">15+</p>
                 <p className="text-xs uppercase tracking-wide text-gray-500">Years Experience</p>
               </div>
               <div className="text-center">
@@ -94,7 +94,7 @@ export default function AgentProfile() {
             Sutton Group Results Realty — are here to help.
           </p>
           <ul className="ml-4 list-inside space-y-1">
-            <li>✓ Over 20 Years of Saskatchewan Farm Sales Experience</li>
+            <li>✓ Over 15 Years of Saskatchewan Farm Sales Experience</li>
             <li>✓ Top 5% Producer, $100M+ in Closed Transactions</li>
             <li>✓ Province-Wide Network — Buyers and Sellers from Every RM</li>
             <li>✓ The Best Farm Search in the Province — updated every 5 minutes, search by RM, acreage, price, and type</li>
@@ -110,7 +110,7 @@ export default function AgentProfile() {
           the time to find out what your farm is worth.
         </p>
         <p className="mt-3 font-semibold text-gray-800">
-          Call Adam at 306.531.8854 for a no-obligation farm valuation. With 20 years of
+          Call Adam at 306.531.8854 for a no-obligation farm valuation. With 15+ years of
           experience and a proven marketing system, Adam will get your farm in front of the right
           buyers and get you the best price.
         </p>

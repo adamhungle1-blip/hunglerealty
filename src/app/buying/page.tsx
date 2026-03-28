@@ -6,7 +6,7 @@ import FeaturedListingsSidebar from "@/components/FeaturedListingsSidebar";
 export const metadata: Metadata = {
   title: "Buying Farmland in Saskatchewan | Hungle Realty",
   description:
-    "Expert guidance for buying Saskatchewan farmland. Access off-market listings, comparable sales data, and 20+ years of local knowledge with Adam Hungle, REALTOR®.",
+    "Expert guidance for buying Saskatchewan farmland. Access off-market listings, comparable sales data, and 15+ years of local knowledge with Adam Hungle, REALTOR®.",
 };
 
 const investmentReasons = [
@@ -64,7 +64,7 @@ const realtorReasons = [
   },
   {
     title: "Access to Off-Market Listings",
-    text: "Not every farm for sale ends up on MLS\u00ae. After 20 years in the business, we have a network of landowners, retiring farmers, and estate contacts that give our buyers first crack at properties before they hit the public market.",
+    text: "Not every farm for sale ends up on MLS\u00ae. After 15+ years in the business, we have a network of landowners, retiring farmers, and estate contacts that give our buyers first crack at properties before they hit the public market.",
   },
   {
     title: "Due Diligence Protection",
@@ -130,7 +130,7 @@ export default function BuyingPage() {
               Deciding to buy farmland is one of the biggest investments you'll ever make &mdash; and
               finding the right property at the right price takes more than just browsing listings. You
               need someone who knows the land, knows the market, and will make sure you don't leave money
-              on the table. That's where we come in. With 20 years of experience, expert local knowledge,
+              on the table. That's where we come in. With 15+ years of experience, expert local knowledge,
               and a network of professional contacts, Adam and Kristy Hungle will help you find and
               purchase farmland in Saskatchewan with confidence. Many farms and parcels of land are for
               sale but never make it to the open market &mdash; contact us to find out about these
@@ -232,7 +232,7 @@ export default function BuyingPage() {
         </h2>
         <p className="mb-8 text-center text-gray-600 leading-relaxed">
           If you're looking in a specific RM or you're not sure which areas are best suited to your
-          operation, Adam can help. With 20 years of local knowledge &mdash; especially around Regina and
+          operation, Adam can help. With 15+ years of local knowledge &mdash; especially around Regina and
           southern Saskatchewan &mdash; he'll help you evaluate your options based on soil quality,
           proximity, price, and growth potential. Whether you're a seasoned investor adding to your
           portfolio, a young farmer looking to expand, or someone relocating to Saskatchewan, let us
