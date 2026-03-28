@@ -77,16 +77,6 @@ export default async function SoldListingPage({ params }: Props) {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a0f] via-transparent to-transparent" />
 
-        {/* SOLD Banner - Diagonal Red Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="absolute h-32 w-96 rotate-45 transform bg-[#dc2626]" />
-          <div className="relative z-10">
-            <span className="text-5xl font-black text-white drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]">
-              SOLD
-            </span>
-          </div>
-        </div>
-
         {/* Back to field notes link - top left */}
         <div className="absolute left-4 top-4 z-20">
           <Link

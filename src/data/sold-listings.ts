@@ -33,16 +33,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-020291-sherwood-agriculture",
-    title: "SK020291 | Sherwood Rm No 159 | Agriculture Sold",
+    title: "SK020291 | Sherwood Rm No 159 | 120 Acres | Agriculture Sold",
     date: "2025-12-12",
     category: "Sold",
     blurb:
-      "This productive agricultural parcel in Sherwood RM #159 features excellent soil classification and established operational systems. With access to modern grain handling infrastructure and strong market connectivity, this property provided an ideal foundation for a growing farming operation.",
-    image: "/hero/slide2.jpg",
+      "This 120-acre parcel offers a rare combination of prime location and high-quality farmland, featuring Class B Regina Heavy Clay soil, well known for its productivity and long-term value. Situated only ½ mile south of Regina SIast and directly bordering Regina's city limits, the property is strategically positioned near major traffic corridors, including Highway #1 and the University of Regina, making it highly desirable for a wide range of future uses. The land is currently zoned Agricultural (AG) but holds strong redevelopment potential with RM approval. Possible opportunities include commercial, industrial, residential, or mixed-use development, making it an exceptional holding property for investors with vision.",
+    image: "/sold/sk020291-sherwood-120acres.jpg",
     mls: "SK020291",
     location: "Sherwood Rm No 159, Saskatchewan",
     propertyType: "Agriculture",
-    thankYou: "We're grateful for the opportunity to facilitate this transaction and connect the seller with a buyer eager to build on this property's strong agricultural legacy. Congratulations to the new owners!",
+    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
   },
   {
     slug: "sk-022480-acreage",

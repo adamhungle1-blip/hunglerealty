@@ -62,18 +62,6 @@ export default function FieldNotes() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a0f] via-transparent to-transparent" />
 
-                {/* SOLD Badge for sold listings - Large Diagonal Banner */}
-                {post.slug !== "farmland-market-report-2025" && (
-                  <div className="absolute inset-0 flex items-center justify-end overflow-hidden">
-                    <div className="relative h-24 w-32 -rotate-45 transform bg-[#dc2626]" />
-                    <div className="absolute right-1 top-2">
-                      <span className="text-lg font-black uppercase tracking-widest text-white drop-shadow-lg">
-                        Sold
-                      </span>
-                    </div>
-                  </div>
-                )}
-
                 {/* Category badge */}
                 <span className="absolute left-3 top-3 rounded-full bg-[#c49a2a] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0f1a0f]">
                   {post.category}
