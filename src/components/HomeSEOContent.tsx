@@ -9,7 +9,7 @@ export default function HomeSEOContent() {
           Hungle Realty is Saskatchewan&apos;s dedicated farmland brokerage. Whether you are searching
           for grain land in the Regina Plains, pasture near Swift Current, mixed-use acreage in the
           Yorkton region, or development land on the outskirts of Saskatoon, our MLS&reg;-connected
-          search updates every five minutes so you never miss a new listing. We cover all 294 Rural
+          search updates every five minutes so you never miss a new listing. We cover all 296 Rural
           Municipalities — from the fertile Black soil zone in the parkland belt to the Brown soil
           zone along the Montana border.
         </p>
