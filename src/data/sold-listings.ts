@@ -198,12 +198,12 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-005331-rouleau-drysdale",
-    title: "SK005331 | 104 Drysdale Street, Rouleau | 4 Bed | 3 Bath | Detached Sold",
+    title: "SK005331 | 104 Drysdale Street, Rouleau | 4 Bed | 3 Bath | Sold",
     date: "2025-09-20",
     category: "Sold",
     blurb:
-      "This well-built 4-bedroom, 3-bathroom detached home in Rouleau perfectly blends small-town charm with modern comfort and conveniences. The spacious layout, updated mechanical systems, and quiet street made it ideal for families seeking authentic rural community living with proximity to schools and services.",
-    image: "/hero/residential.jpg",
+      "Welcome to this charming 1.5 storey home in the welcoming town of Rouleau. With 4 bedrooms and 3 bathrooms, this well-kept property offers flexible living for a growing family—or the perfect setup for retirement. The main floor features a spacious bedroom, full 4-piece bathroom, and convenient main floor laundry, making it ideal for those seeking single-level living. Situated on a private 50'x120' lot backing onto open fields, you'll love the peaceful prairie views and added privacy. There's ample space to park your RV, camper, or boat, and the 24x24 insulated detached garage provides extra storage and year-round workspace Inside, you're greeted by a bright porch, cozy eat-in kitchen, and a generously sized living room, perfect for relaxing or entertaining. The upper level includes two more bedrooms and a 3-piece bathroom—an ideal setup for guests or kids. The basement, poured in the 1980s with concrete for lasting durability, was recently finished and adds even more living space with a fourth bedroom, a den, a 3-piece bath, and a storage room. Enjoy the outdoors from your large backyard deck or explore all Rouleau has to offer, including a town-wide water osmosis system, ensuring clean, drinkable water. Amenities like the community hall, skating and curling rinks, drop-in centre, library, spray park, and school are all nearby. Located just a short commute to both Regina and Moose Jaw, this home offers small-town charm with city convenience. Recent upgrades include the roof, flooring, furnace, bathrooms, and basement—this is a move-in-ready home that shows true pride of ownership.",
+    image: "/sold/sk005331-rouleau-house.jpg",
     mls: "SK005331",
     location: "104 Drysdale Street, Rouleau, Saskatchewan",
     propertyType: "Detached",
@@ -212,7 +212,7 @@ export const soldListings: SoldListing[] = [
       baths: 3,
       sqft: 1288,
     },
-    thankYou: "Thank you to our clients for the privilege of selling this special Rouleau home. We're thrilled we could help your family find your next chapter. Warmest wishes to the new owners in their tight-knit community!",
+    thankYou: "Small-town living at its finest — congrats to all and welcome to Rouleau!",
   },
   {
     slug: "sk-000233-bethune-wilton",
