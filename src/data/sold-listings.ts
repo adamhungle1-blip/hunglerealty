@@ -216,12 +216,12 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-000233-bethune-wilton",
-    title: "SK000233 | 319 Wilton Street, Bethune | 5 Bed | 3 Bath | Detached Sold",
+    title: "SK000233 | 319 Wilton Street, Bethune | 5 Bed | 3 Bath | Sold",
     date: "2025-09-15",
     category: "Sold",
     blurb:
-      "This spacious 5-bedroom, 3-bathroom detached home on Wilton Street in Bethune provided exceptional room for growing families. The established, safe neighbourhood combined with convenient rural access and strong local schools made it an outstanding choice for families seeking both comfort and community.",
-    image: "/hero/residential.jpg",
+      "Welcome to this beautifully maintained 1388 sqft 5-bedroom bungalow built in 2008 in the thriving town of Bethune, ideally located on a 12196.8 sqft (.28 acre) lot at the end of a quiet street and surrounded by open fields for added privacy. This spacious home offers a functional layout with 3 generous bedrooms on the main floor and 2 additional bedrooms in the partially finished basement, perfect for families or those needing extra space. Step inside to find an inviting living room filled with natural light, featuring a cozy gas fireplace as its focal point. The heart of the home is the Texas-sized kitchen, complete with a large center island, an abundance of cabinetry, a convenient pantry, and an adjoining dining area that walks out to a large deck overlooking the well-manicured backyard and patio. The main floor also includes a 3-piece ensuite in the primary bedroom, a full bathroom, and main floor laundry for added convenience. Downstairs, the basement is partially finished with a spacious rec room, two bedrooms, a half bath, and ample storage space to meet your needs. Additional highlights include an oversized double detached garage, recently replaced shingles (2020). This home is move in ready and a pleasure to view.",
+    image: "/sold/sk000233-bethune-house.jpg",
     mls: "SK000233",
     location: "319 Wilton Street, Bethune, Saskatchewan",
     propertyType: "Detached",
@@ -230,7 +230,7 @@ export const soldListings: SoldListing[] = [
       baths: 3,
       sqft: 1388,
     },
-    thankYou: "We're honoured to have helped our clients transition from this beloved Bethune home. Thank you for trusting us throughout the process. Best wishes to the new family—we know they'll love this wonderful space!",
+    thankYou: "Thrilled for the new family settling into Bethune — what a great spot to call home!",
   },
   {
     slug: "sk-993872-regina-apartment",
