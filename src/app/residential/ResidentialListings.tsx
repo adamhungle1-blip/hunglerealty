@@ -229,18 +229,6 @@ export default function ResidentialListings({
         </section>
       )}
 
-      {/* ─── Map ─── */}
-      <section className="relative">
-        <div className="h-[400px] w-full lg:h-[500px]">
-          <ResidentialMap pins={mapPins} />
-        </div>
-        {mapPins.length > 0 && (
-          <div className="absolute bottom-3 left-3 z-[1000] rounded-lg bg-white/90 px-3 py-1.5 text-xs font-medium text-gray-700 shadow backdrop-blur">
-            {mapPins.length.toLocaleString()} homes on map
-          </div>
-        )}
-      </section>
-
       {/* ─── Listings Grid ─── */}
       <section className="mx-auto max-w-7xl px-4 py-8">
         {/* Filters bar */}
@@ -367,6 +355,18 @@ export default function ResidentialListings({
             </div>
           );
         })()}
+      </section>
+
+      {/* ─── Map ─── */}
+      <section className="relative">
+        <div className="h-[400px] w-full lg:h-[500px]">
+          <ResidentialMap pins={mapPins} />
+        </div>
+        {mapPins.length > 0 && (
+          <div className="absolute bottom-3 left-3 z-[1000] rounded-lg bg-white/90 px-3 py-1.5 text-xs font-medium text-gray-700 shadow backdrop-blur">
+            {mapPins.length.toLocaleString()} homes on map
+          </div>
+        )}
       </section>
     </div>
   );

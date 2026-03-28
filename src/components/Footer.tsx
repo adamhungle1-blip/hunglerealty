@@ -8,7 +8,7 @@ const footerNavLinks = [
   { label: "Selling", href: "/selling" },
   { label: "About", href: "/about" },
   { label: "Acreages", href: "/acreages" },
-  { label: "Residential", href: "/residential" },
+  { label: "Residential", href: "/residential/regina" },
 ];
 
 export default function Footer() {
