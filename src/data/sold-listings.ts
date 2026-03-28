@@ -251,16 +251,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-984930-agriculture-operations",
-    title: "SK984930 | Agriculture Sold",
+    title: "SK984930 | RM of Storthoaks | 480.83 Acres | Land Sold",
     date: "2025-09-01",
     category: "Sold",
     blurb:
-      "This productive agricultural operation sits in Saskatchewan's premium grain belt with award-winning soils and a track record of consistent yields. Well-maintained equipment and systems, plus established market relationships, made it an outstanding succession opportunity for farming families.",
-    image: "/hero/slide4.jpg",
+      "Here are three quarter sections in the RM of Storthoaks. The land is located 7 miles North and 1 mile East of the town of Carievale. There are 480.83 title acres, 248 cultivated acres, & 165 pasture acres according to the SAMA records. The soil is Oxbow loam and the SCIC soil class is H for the NE & SW quarters, and J for the SE quarter. The SAMA assessments are $190,600, $127,800, and $187,900. The legal land descriptions are NE, SE & SW 10-04-31 W1. There are 14 surface oil leases included in the sale with an annual income of $38,375. The land is leased for the 2025 crop year. There is more land available in the area for sale as well.",
+    image: "/sold/sk984930-storthoaks-land.jpg",
     mls: "SK984930",
-    location: "Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "It was our pleasure to guide our clients through the sale of this established agricultural operation. Thank you for allowing us to be part of this important transition. We wish the new farming family abundant harvests and long-term success.",
+    location: "RM of Storthoaks, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "A solid deal all around — thanks to our clients and best of luck to the new owners!",
   },
   {
     slug: "sk-992807-regina-mcara",
