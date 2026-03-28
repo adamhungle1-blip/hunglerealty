@@ -130,12 +130,12 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-020765-regina-attached",
-    title: "SK020765 | 35 Quincy Drive, Regina | 3 Bed | 3 Bath | Attached Sold",
+    title: "SK020765 | 35 Quincy Drive, Regina | Quincy Greene Townhouse | Sold",
     date: "2025-10-18",
     category: "Sold",
     blurb:
-      "This charming 3-bedroom, 3-bathroom attached home on Quincy Drive features contemporary updates, hardwood flooring, and an open-concept kitchen. Located in one of Regina's most vibrant neighbourhoods with walkable access to trendy cafes, award-winning schools, and beautiful parks.",
-    image: "/hero/residential.jpg",
+      "Discover Quincy Greene, a highly desirable townhouse condo community set in a peaceful location just steps from Wascana Lake, the University of Regina, and only a quick drive to downtown. Surrounded by mature trees and meticulously landscaped grounds, this property blends tranquility with everyday convenience. The inviting foyer offers direct access to the single attached garage. From here, step into the spacious living room, featuring 12-foot ceilings and a garden door that opens to a private patio—an ideal space for relaxing or entertaining. Just above, the dining area overlooks the living room and is enhanced by striking 17-foot ceilings. The kitchen is designed for functionality with abundant cabinetry, generous counter space, and a large window that fills the room with natural light. An adjoining dining nook with built-in cabinetry provides extra versatility—whether used as is or transformed into a stylish butler's pantry. A convenient two-piece bathroom completes this level. Upstairs offers three comfortable bedrooms plus a bonus room, along with a full four-piece bath. The primary suite is highlighted by a walk-in closet and its own two-piece ensuite. The lower level adds valuable living space, perfect for a family room, home gym, or office, along with laundry and plenty of storage. Quincy Greene residents also enjoy exclusive amenities, including an outdoor pool, tennis courts, a playground, and community garden plots. Notable upgrades include triple-pane windows, Hardie Board siding with added insulation, a new driveway, updated kitchen countertops, hardwood flooring on the main level, new vinyl plank flooring in the bedrooms, and fresh paint throughout most of the condo. This is a rare opportunity to own a spacious, beautifully maintained home in a prime location—truly move-in ready.",
+    image: "/sold/sk020765-quincy-greene-condo.jpg",
     mls: "SK020765",
     location: "35 Quincy Drive, Regina, Saskatchewan",
     propertyType: "Attached",
@@ -144,7 +144,7 @@ export const soldListings: SoldListing[] = [
       baths: 3,
       sqft: 1606,
     },
-    thankYou: "We're grateful for the opportunity to help our clients sell this wonderful urban home. Thank you for your trust—we wish the new owners countless memories and a warm welcome to this fantastic community.",
+    thankYou: "Congrats to the new owners on a beautiful home — enjoy Quincy Greene!",
   },
   {
     slug: "sk-020772-regina-battel",
