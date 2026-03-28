@@ -342,13 +342,13 @@ export const soldListings: SoldListing[] = [
     thankYou: "It was an honour to help our clients sell this premium agricultural asset. Thank you for entrusting us with this significant transaction. We wish the new farming partners years of excellent crops and agricultural achievement.",
   },
   {
-    slug: "sk-983254-regina-wellband",
+    slug: "sk-983254-regina-lakewood",
     title: "SK983254 | 6238 Wellband Drive, Regina | 4 Bed | 4 Bath | Detached Sold",
     date: "2025-07-20",
     category: "Sold",
     blurb:
-      "This premium 4-bedroom, 4-bathroom detached home on prestigious Wellband Drive features luxury finishes, high-end appliances, radiant heating, and custom millwork throughout. Set on a beautifully landscaped lot in Regina's most exclusive neighbourhood—a true showcase home.",
-    image: "/hero/residential.jpg",
+      "Well maintained 2 storey home located in the desirable neighborhood of Lakewood. This home is located directly across from Ewart Park and offers 4 bedrooms and 4 bathrooms. Main floor includes a spacious living room and kitchen with eat in dining, and a 2 piece bathroom. Upstairs you will find 3 bedrooms, 4 piece bathroom and the primary bedroom which features a walk in closet and 3 piece ensuite. The fully finished basement includes a 4th bedroom, 3 piece bathroom and a large family room. Enjoy the outdoors from the 2 tiered deck and large fenced backyard. Double attached garage with additional parking on the driveway. Close to schools, shopping and public transportation.",
+    image: "/sold/sk983254-regina-lakewood.jpg",
     mls: "SK983254",
     location: "6238 Wellband Drive, Regina, Saskatchewan",
     propertyType: "Detached",
@@ -357,7 +357,7 @@ export const soldListings: SoldListing[] = [
       baths: 4,
       sqft: 1585,
     },
-    thankYou: "We're honoured to have represented the sale of this exceptional home. Thank you to our clients for their trust and grace throughout this process. Warmest congratulations to the new owners on this spectacular residence!",
+    thankYou: "Thanks to our clients for a smooth transaction — enjoy your new neighbourhood across from Ewart Park!",
   },
   {
     slug: "sk-981375-sherwood-acreage",
