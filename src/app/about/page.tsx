@@ -245,7 +245,7 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-3xl px-6 py-14 text-center">
           <h2 className="mb-5 text-3xl font-bold italic text-[#c49a2a]">Mission Statement</h2>
           <p className="text-base leading-relaxed text-gray-200">
-            As a licensed Realtor with over 15 years of experience, I make buying and selling
+            As a licensed REALTOR® with over 15 years of experience, I make buying and selling
             farmland in Saskatchewan a simple and stress-free process. I believe in honest advice,
             strong work ethic, and putting clients first. My goal is to provide exceptional service,
             expert guidance, and proven results — every step of the way.

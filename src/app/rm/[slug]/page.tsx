@@ -213,7 +213,7 @@ export default async function RMPage({
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">
-                    Do I need a realtor to buy farmland in Saskatchewan?
+                    Do I need a REALTOR® to buy farmland in Saskatchewan?
                   </h4>
                   <p className="mt-1 text-sm text-gray-600">
                     While not legally required, working with a farmland specialist like Adam Hungle gives
@@ -322,7 +322,7 @@ export default async function RMPage({
               },
               {
                 "@type": "Question",
-                name: "Do I need a realtor to buy farmland in Saskatchewan?",
+                name: "Do I need a REALTOR® to buy farmland in Saskatchewan?",
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "While not legally required, working with a farmland specialist gives you access to comparable sales data, mineral rights verification, soil analysis, and expert negotiation — all at no cost to the buyer.",

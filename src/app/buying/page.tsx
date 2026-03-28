@@ -161,7 +161,7 @@ export default function BuyingPage() {
         </div>
       </section>
 
-      {/* Why You Need a Realtor */}
+      {/* Why You Need a REALTOR® */}
       <section className="py-14">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="mb-4 text-center text-3xl font-bold text-green-800">

@@ -165,7 +165,7 @@ export default function AgentProfile() {
 
 const testimonials = [
   {
-    text: "Adam provided the best experience that I have had with any realtor. He is very thorough in all aspects of his work ethic as well as being a kind, caring, and considerate individual who truly listens to his client's needs. I would not hesitate to recommend Adam Hungle for any and all of your real estate needs.",
+    text: "Adam provided the best experience that I have had with any REALTOR®. He is very thorough in all aspects of his work ethic as well as being a kind, caring, and considerate individual who truly listens to his client's needs. I would not hesitate to recommend Adam Hungle for any and all of your real estate needs.",
     author: "A. Gutell, Lang, SK",
   },
   {

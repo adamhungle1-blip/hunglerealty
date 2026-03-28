@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Hungle Realty",
     "Regina real estate",
     "acreages near Regina",
-    "Saskatchewan farm realtor",
+    "Saskatchewan farm REALTOR®",
     "Adam Hungle",
     "farmland for sale SK",
     "buy farmland Saskatchewan",

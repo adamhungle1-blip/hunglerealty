@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
       <p>Farm Credit Canada (FCC) is the primary lender for agricultural land purchases, but credit unions and chartered banks also offer farm mortgages. Down payments typically range from 25\u201340% for farmland purchases. Speak with a farm lending specialist early in your search \u2014 pre-approval gives you a competitive edge.</p>
 
       <h3>The Purchase Process</h3>
-      <p>Working with a farm-specialized Realtor ensures you don\u2019t miss critical steps: soil testing, mineral rights verification, surface lease review, environmental assessment, and comparable sales analysis. Adam Hungle has closed over $100M in farm transactions and can guide you through every step.</p>
+      <p>Working with a farm-specialized REALTOR® ensures you don\u2019t miss critical steps: soil testing, mineral rights verification, surface lease review, environmental assessment, and comparable sales analysis. Adam Hungle has closed over $100M in farm transactions and can guide you through every step.</p>
 
       <h3>Due Diligence Checklist</h3>
       <p>Before making an offer, verify: soil classification, assessment value, crop history, mineral rights ownership, surface leases or easements, environmental liabilities, drainage patterns, access roads, and proximity to grain elevators and services.</p>
