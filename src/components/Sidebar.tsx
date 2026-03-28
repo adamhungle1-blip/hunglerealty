@@ -13,10 +13,10 @@ export default function Sidebar() {
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-gray-600">Like or Share</span>
           <div className="flex gap-2">
-            <a href="#" className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877f2] text-white" aria-label="Facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.hunglerealty.ca" target="_blank" rel="noopener noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1877f2] text-white" aria-label="Share on Facebook">
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/></svg>
             </a>
-            <a href="#" className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white" aria-label="X">
+            <a href="https://x.com/intent/tweet?url=https://www.hunglerealty.ca&text=Saskatchewan%20Farmland%20For%20Sale%20%7C%20Hungle%20Realty" target="_blank" rel="noopener noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white" aria-label="Share on X">
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>

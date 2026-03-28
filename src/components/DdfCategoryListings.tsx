@@ -166,6 +166,15 @@ export default function DdfCategoryListings({
               </button>
             </div>
           )}
+
+          <div className="mt-8 text-center">
+            <a
+              href="/search?propertyType=Agriculture"
+              className="inline-block rounded-lg border-2 border-green-800 px-8 py-3 text-sm font-semibold text-green-800 transition-colors hover:bg-green-800 hover:text-white"
+            >
+              View All Farm Listings
+            </a>
+          </div>
         </>
       )}
 
@@ -174,10 +183,10 @@ export default function DdfCategoryListings({
         <div className="rounded-lg border border-gray-200 bg-gray-50 p-10 text-center">
           <p className="text-gray-600">No listings found in this category right now.</p>
           <a
-            href="/search"
+            href="/search?propertyType=Agriculture"
             className="mt-4 inline-block rounded-lg bg-green-800 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-700"
           >
-            View All Listings
+            View All Farm Listings
           </a>
         </div>
       )}
