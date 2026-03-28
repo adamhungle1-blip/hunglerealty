@@ -313,12 +313,12 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-985622-regina-harding",
-    title: "SK985622 | 3115 Harding Street, Regina | 4 Bed | 3 Bath | Detached Sold",
+    title: "SK985622 | 3115 Harding Street, Regina | 4 Bed | 3 Bath | Gardiner Heights Sold",
     date: "2025-08-03",
     category: "Sold",
     blurb:
-      "This well-appointed 4-bedroom, 3-bathroom detached home on Harding Street features meticulous updates, designer finishes, and contemporary systems throughout. The convenient east-end location, mature trees, and quality construction make it an ideal choice for discerning families.",
-    image: "/hero/residential.jpg",
+      "Discover this beautifully maintained 1,302 sqft bungalow with a double attached garage, nestled in the desirable Gardiner Heights neighborhood. Step into a warm and inviting family room featuring a charming wood-burning fireplace, perfect for cozy evenings. The spacious dining room and kitchen boast garden doors that lead you to a large deck, overlooking a fully landscaped and fenced backyard, ideal for outdoor entertaining. The kitchen is designed with ample counter space, an island, and a generously sized pantry. This residence offers three comfortable bedrooms on the main level, including a sizable primary bedroom complete with a 3-piece en-suite. The main 4-piece bathroom rounds out this level. The basement is 90% finished, providing two expansive rec areas, a roomy fourth bedroom, a 3-piece bathroom, and laundry room. Recent updates include new shingles installed approximately three years ago and this living room window has been replaced. This home has been lovingly cared for and is ready for you to move in. Enjoy the perks of living in this fantastic east-side Regina community!",
+    image: "/sold/sk985622-regina-gardiner.jpg",
     mls: "SK985622",
     location: "3115 Harding Street, Regina, Saskatchewan",
     propertyType: "Detached",
@@ -327,7 +327,7 @@ export const soldListings: SoldListing[] = [
       baths: 3,
       sqft: 1302,
     },
-    thankYou: "Thank you to our clients for the privilege of selling this beautifully maintained home. We're delighted we could help you transition to your next chapter. Best wishes to the new owners in this wonderful east-end home!",
+    thankYou: "Lovely home in a lovely neighbourhood — thanks to all involved and enjoy Gardiner Heights!",
   },
   {
     slug: "sk-984099-agriculture-prime",
