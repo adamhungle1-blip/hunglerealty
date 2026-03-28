@@ -226,10 +226,11 @@ export default function AcreageListings({ activeCity, lat, lng, radius }: Acreag
           </div>
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
-              <label className="text-xs font-bold text-gray-600">
+              <label htmlFor="acreage-price" className="text-xs font-bold text-gray-600">
                 Price:
               </label>
               <select
+                id="acreage-price"
                 value={priceIdx}
                 onChange={(e) => setPriceIdx(Number(e.target.value))}
                 className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
@@ -242,10 +243,11 @@ export default function AcreageListings({ activeCity, lat, lng, radius }: Acreag
               </select>
             </div>
             <div className="flex items-center gap-2">
-              <label className="text-xs font-bold text-gray-600">
+              <label htmlFor="acreage-sort" className="text-xs font-bold text-gray-600">
                 Sort:
               </label>
               <select
+                id="acreage-sort"
                 value={sort}
                 onChange={(e) => setSort(e.target.value as SortOption)}
                 className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 shadow-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"

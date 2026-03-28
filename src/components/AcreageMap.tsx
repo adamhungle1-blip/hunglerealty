@@ -49,7 +49,14 @@ export default function AcreageMap({ pins }: AcreageMapProps) {
       center: [52.0, -106.0], // Center of Saskatchewan
       zoom: 6,
       scrollWheelZoom: false,
+      zoomControl: false,
     });
+
+    // Add zoom control with accessible labels
+    L.control.zoom({
+      zoomInTitle: "Zoom in",
+      zoomOutTitle: "Zoom out",
+    }).addTo(map);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
@@ -119,6 +126,8 @@ export default function AcreageMap({ pins }: AcreageMapProps) {
     <div
       ref={containerRef}
       className="h-full w-full"
+      role="application"
+      aria-label="Interactive map showing property listings"
       style={{ minHeight: "400px" }}
     />
   );

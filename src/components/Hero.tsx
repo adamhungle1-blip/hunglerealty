@@ -152,7 +152,7 @@ export default function Hero() {
                   <button
                     type="button"
                     onClick={() => { setRmName(""); setRmQuery(""); }}
-                    className="absolute right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white"
+                    className="absolute right-8 top-1/2 -translate-y-1/2 p-1 text-white/50 hover:text-white"
                     aria-label="Clear selection"
                   >
                     ✕
@@ -198,8 +198,9 @@ export default function Hero() {
 
             {/* Major Type */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-[#d4a520]">Major Type</label>
+              <label htmlFor="hero-major-type" className="mb-1 block text-sm font-bold text-[#d4a520]">Major Type</label>
               <select
+                id="hero-major-type"
                 value={majorType}
                 onChange={(e) => setMajorType(e.target.value)}
                 className="w-full rounded border border-[#d4a520]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#d4a520] focus:outline-none"
@@ -212,8 +213,9 @@ export default function Hero() {
 
             {/* Price Low */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-[#d4a520]">Min Price</label>
+              <label htmlFor="hero-min-price" className="mb-1 block text-sm font-bold text-[#d4a520]">Min Price</label>
               <select
+                id="hero-min-price"
                 value={priceLow}
                 onChange={(e) => setPriceLow(e.target.value)}
                 className="w-full rounded border border-[#d4a520]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#d4a520] focus:outline-none"
@@ -226,8 +228,9 @@ export default function Hero() {
 
             {/* Price High */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-[#d4a520]">Max Price</label>
+              <label htmlFor="hero-max-price" className="mb-1 block text-sm font-bold text-[#d4a520]">Max Price</label>
               <select
+                id="hero-max-price"
                 value={priceHigh}
                 onChange={(e) => setPriceHigh(e.target.value)}
                 className="w-full rounded border border-[#d4a520]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#d4a520] focus:outline-none"
@@ -243,8 +246,9 @@ export default function Hero() {
           <div className="mt-3 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
             {/* Min Acres */}
             <div>
-              <label className="mb-1 block text-sm font-bold text-[#d4a520]">Min Acres</label>
+              <label htmlFor="hero-min-acres" className="mb-1 block text-sm font-bold text-[#d4a520]">Min Acres</label>
               <select
+                id="hero-min-acres"
                 value={minAcres}
                 onChange={(e) => setMinAcres(e.target.value)}
                 className="w-full rounded border border-[#d4a520]/30 bg-white/10 px-3 py-2.5 text-sm text-white focus:border-[#d4a520] focus:outline-none"

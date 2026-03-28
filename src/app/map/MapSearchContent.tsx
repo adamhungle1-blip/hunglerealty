@@ -120,10 +120,11 @@ export default function MapSearchContent() {
 
         <div className="space-y-3">
           <div>
-            <label className="mb-1 block text-xs font-bold text-gray-600">
+            <label htmlFor="map-property-type" className="mb-1 block text-xs font-bold text-gray-600">
               Property Type
             </label>
             <select
+              id="map-property-type"
               value={propertyType}
               onChange={(e) => setPropertyType(e.target.value)}
               className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-green-600 focus:outline-none"
@@ -134,10 +135,11 @@ export default function MapSearchContent() {
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-xs font-bold text-gray-600">
+            <label htmlFor="map-price-range" className="mb-1 block text-xs font-bold text-gray-600">
               Price Range
             </label>
             <select
+              id="map-price-range"
               value={priceIdx}
               onChange={(e) => setPriceIdx(Number(e.target.value))}
               className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-green-600 focus:outline-none"
