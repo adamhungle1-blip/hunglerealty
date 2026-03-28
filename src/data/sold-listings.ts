@@ -104,16 +104,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-010215-lajord-agriculture",
-    title: "SK010215 | Lajord Rm No 128 | Agriculture Sold",
+    title: "SK010215 | RM of Lajord | 319.34 Acres | Land Sold",
     date: "2025-10-30",
     category: "Sold",
     blurb:
-      "This well-established agricultural operation in Lajord RM #128 carries a legacy of strong historical yields and solid management practices. Direct access to professional grain handling infrastructure and a thriving local farming community made it an ideal transition property.",
-    image: "/hero/slide4.jpg",
+      "Here are two quarter sections of land in the RM of Lajord, located 3/4 of a mile north of Hwy 33 and the town of Lajord. There is a quality tenant currently farming the land for the 2025 crop season. There are 295.75 cultivated acres according to the SAMA field reports and 319.34 ISC titled acres. This would make a good investment as the tenant would like to continue to farm the land.",
+    image: "/sold/sk010215-lajord-land.jpg",
     mls: "SK010215",
-    location: "Lajord Rm No 128, Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "We're grateful for the trust our clients placed in us to represent this established farming operation. Congratulations to the new owners—we wish you a prosperous and rewarding agricultural journey ahead.",
+    location: "RM of Lajord, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
   },
   {
     slug: "sk-020404-agriculture-opportunity",
