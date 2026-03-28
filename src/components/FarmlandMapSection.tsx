@@ -23,7 +23,12 @@ export default function FarmlandMapSection() {
         const res = await fetch("/api/listings/map?propertyType=Agriculture");
         if (!res.ok) return;
         const data = await res.json();
-        setPins(data.pins || []);
+        // Filter to Saskatchewan bounding box — some listings have bad coordinates
+        const skPins = (data.pins || []).filter(
+          (p: MapPin) =>
+            p.lat >= 49 && p.lat <= 60 && p.lng >= -110 && p.lng <= -101
+        );
+        setPins(skPins);
       } catch {
         // fail silently
       }
