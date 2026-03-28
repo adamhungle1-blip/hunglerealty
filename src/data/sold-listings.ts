@@ -65,16 +65,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-022451-agriculture-sold",
-    title: "SK022451 | Agriculture Sold",
+    title: "SK022451 | RM of South Qu'Appelle | 142.49 Acres | Land Sold",
     date: "2025-11-20",
     category: "Sold",
     blurb:
-      "This productive agricultural parcel boasts a strong track record of excellent yields with well-maintained operational infrastructure. Located in Saskatchewan's prime grain belt with established drainage systems and direct market access—a turnkey opportunity for experienced farmers.",
-    image: "/hero/slide4.jpg",
+      "Here are 142.49 Acres in the Rm of South Qu'appelle located 1.5 miles East of the town of Qu'appelle and 30 minutes from Regina. There are approximately 110 cultivable acres and more acres could be broken up. Buyers are encouraged to do their own due diligence on the amount of cultivable land. The SCIC soil class is G and the SAMA assessment is $229,600 with a final soil rating of 59.22. The land is currently in grass and alfalfa but was cultivated in the past. The property also offers multiple building spots for a buyer looking to build their country retreat.",
+    image: "/sold/sk022451-south-quappelle-land.jpg",
     mls: "SK022451",
-    location: "Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "We're honored to have helped our clients transition this quality farmland to new stewards. Thank you for trusting us with this important sale. Wishing the new operators a successful and prosperous farming future.",
+    location: "RM of South Qu'Appelle, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
   },
   {
     slug: "sk-020394-grayson-agriculture",
