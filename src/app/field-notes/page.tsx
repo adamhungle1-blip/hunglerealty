@@ -71,11 +71,14 @@ export default function FieldNotesPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a0f] via-transparent to-transparent" />
 
-                {/* SOLD Banner for sold listings */}
+                {/* SOLD Banner for sold listings - Large Diagonal Banner */}
                 {post.slug !== "farmland-market-report-2025" && (
-                  <div className="absolute inset-0 flex items-center justify-end px-3 py-3">
-                    <div className="rounded-full bg-[#dc2626] px-3 py-1 text-xs font-black text-white">
-                      SOLD
+                  <div className="absolute inset-0 flex items-center justify-end overflow-hidden">
+                    <div className="relative h-24 w-32 -rotate-45 transform bg-[#dc2626]" />
+                    <div className="absolute right-1 top-2">
+                      <span className="text-lg font-black uppercase tracking-widest text-white drop-shadow-lg">
+                        Sold
+                      </span>
                     </div>
                   </div>
                 )}

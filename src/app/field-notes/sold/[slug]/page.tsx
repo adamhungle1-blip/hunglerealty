@@ -199,6 +199,19 @@ export default async function SoldListingPage({ params }: Props) {
           </p>
         </div>
 
+        {/* Thank You Message */}
+        <div className="mb-10 rounded-xl border-l-4 border-[#c49a2a] bg-gradient-to-r from-[#c49a2a]/10 to-transparent p-6">
+          <p className="text-lg leading-relaxed italic text-gray-200">
+            "{listing.thankYou}"
+          </p>
+          <p className="mt-4 text-right text-base font-semibold text-[#c49a2a]">
+            — Adam Hungle<br />
+            <span className="text-sm font-normal text-gray-400">
+              Sutton Group Results Realty
+            </span>
+          </p>
+        </div>
+
         {/* Call-to-Action */}
         <div className="rounded-xl bg-gradient-to-r from-[#2d6a4f] to-[#1a3a1a] p-8 text-center">
           <h2 className="text-2xl font-bold text-white">
