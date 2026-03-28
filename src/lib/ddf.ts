@@ -92,6 +92,8 @@ export interface DdfListing {
   Directions?: string;
   CurrentUse?: string[];
   SubdivisionName?: string;
+  /** Neighbourhood / Sublocation — the DDF field that maps to MLS neighbourhood */
+  CityRegion?: string;
   Media?: Array<{
     MediaURL: string;
     Order: number;
@@ -143,6 +145,7 @@ const DDF_SELECT_FIELDS = [
   "Directions",
   "CurrentUse",
   "SubdivisionName",
+  "CityRegion",
   "Media",
 ].join(",");
 

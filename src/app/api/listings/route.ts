@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
     filters.push(`(contains(UnparsedAddress,'${search}') or contains(City,'${search}'))`);
   }
   if (neighbourhood) {
-    filters.push(`SubdivisionName eq '${neighbourhood}'`);
+    filters.push(`CityRegion eq '${neighbourhood}'`);
   }
   if (lat && lng && radius) {
     // Bounding box approximation: 1 degree lat ≈ 111km, 1 degree lng ≈ 111km * cos(lat)

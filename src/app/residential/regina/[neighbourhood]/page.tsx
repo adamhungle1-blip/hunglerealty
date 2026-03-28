@@ -60,9 +60,8 @@ export default async function NeighbourhoodPage({
       <ResidentialListings
         activeCommunity="regina"
         activeNeighbourhood={hood.slug}
-        lat={hood.lat}
-        lng={hood.lng}
-        radius={hood.radius}
+        cityFilter="Regina"
+        neighbourhoodFilter={hood.mlsName}
         showNeighbourhoods
       />
     </div>

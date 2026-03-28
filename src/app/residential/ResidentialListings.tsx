@@ -38,7 +38,7 @@ interface ResidentialListingsProps {
   activeNeighbourhood?: string;
   /** City name for DDF City filter */
   cityFilter?: string;
-  /** MLS SubdivisionName for neighbourhood filtering */
+  /** MLS CityRegion (Neighbourhood/Sublocation) for neighbourhood filtering */
   neighbourhoodFilter?: string;
   /** Geo-filter center latitude */
   lat?: number;

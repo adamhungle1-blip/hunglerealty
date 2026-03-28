@@ -36,7 +36,7 @@ export async function GET(request: NextRequest) {
     filters.push(`contains(City,'${city}')`);
   }
   if (neighbourhood) {
-    filters.push(`SubdivisionName eq '${neighbourhood}'`);
+    filters.push(`CityRegion eq '${neighbourhood}'`);
   }
   // Only fetch listings that have coordinates
   filters.push("Latitude ne null and Longitude ne null");
