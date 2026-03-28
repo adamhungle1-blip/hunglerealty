@@ -251,7 +251,7 @@ export const rmContentBatch4: Record<string, RMContent> = {
   },
   "rocanville": {
     description: "The RM of Rocanville No. 151 is located in southern eastern Saskatchewan. The nearest major centre is Yorkton, ~92 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Rocanville"],
+    towns: ["Rocanville", "Welwyn"],
     highways: [],
     soilType: "Dark brown soil zone — productive grain and oilseed land",
     nearestCity: "Yorkton, ~92 km",
@@ -363,7 +363,7 @@ export const rmContentBatch4: Record<string, RMContent> = {
   },
   "sherwood": {
     description: "The RM of Sherwood No. 159 is located in southern Saskatchewan. The nearest major centre is Regina, ~2 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Sherwood"],
+    towns: ["Grand Coulee", "Regina"],
     highways: [],
     soilType: "Dark brown soil zone — productive grain and oilseed land",
     nearestCity: "Regina, ~2 km",
@@ -379,7 +379,7 @@ export const rmContentBatch4: Record<string, RMContent> = {
   },
   "sliding-hills": {
     description: "The RM of Sliding Hills No. 273 is located in central eastern Saskatchewan. The nearest major centre is Yorkton, ~38 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Sliding Hills"],
+    towns: ["Mikado", "Burgis"],
     highways: [],
     soilType: "Black soil zone — excellent grain and canola land",
     nearestCity: "Yorkton, ~38 km",
@@ -411,7 +411,7 @@ export const rmContentBatch4: Record<string, RMContent> = {
   },
   "spalding": {
     description: "The RM of Spalding No. 368 is located in central eastern Saskatchewan. The nearest major centre is Humboldt, ~51 km. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Spalding"],
+    towns: ["Spalding", "Naicam"],
     highways: [],
     soilType: "Dark grey/black soil zone — mixed grain and forage land",
     nearestCity: "Humboldt, ~51 km",
@@ -459,7 +459,7 @@ export const rmContentBatch4: Record<string, RMContent> = {
   },
   "st-phillips": {
     description: "Located in east-central Saskatchewan, the RM of St. Phillips encompasses productive agricultural lands featuring gently rolling terrain ideal for grain and livestock farming. The region's landscape combines cultivated grain fields with quality pastureland supporting diverse farming enterprises. Highway 16 provides important transportation for marketing agricultural products. Nearby Tisdale functions as a primary trading center with grain elevators and services. Local schools serve farming families. The dark loam soils support excellent cereal and oilseed production. The landscape offers diverse field conditions. Producers in St. Phillips benefit from supportive agricultural infrastructure, cooperative grain marketing facilities, and proximity to quality services.",
-    towns: ["Tisdale", "Arborfield", "Melfort"],
+    towns: ["Springside"],
     highways: ["16", "5"],
     soilType: "Dark loam soil with good fertility",
     nearestCity: "Tisdale, approximately 20 km",

@@ -93,7 +93,7 @@ export const rmContentBatch3: Record<string, RMContent> = {
 
   "king-george": {
     description: "The RM of King George No. 256 is located in central Saskatchewan. The nearest major centre is Swift Current, ~97 km. The municipality is served by Highway 42, Highway 646 and Highway 751, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["King George"],
+    towns: ["Dinsmore", "Wiseton"],
     highways: ["Highway 42", "Highway 646", "Highway 751"],
     soilType: "Black soil zone — excellent grain and canola land",
     nearestCity: "Swift Current, ~97 km",
@@ -145,7 +145,7 @@ export const rmContentBatch3: Record<string, RMContent> = {
   "lake-johnson": {
     description:
       "Lake Johnson Rural Municipality exemplifies Saskatchewan's productive agricultural heartland in the south-central region, featuring exceptional black soil conditions ideal for large-scale grain operations. The municipality is characterized by well-drained soils with natural fertility supporting consistent wheat, barley, and canola production. The community of Lake Johnson and surrounding agricultural area provide cooperative grain handling and essential farm services. Highway 6 serves as a principal north-south corridor, facilitating convenient grain transportation to regional markets and processing facilities. Located approximately 80 kilometers north of Regina, Lake Johnson offers outstanding agricultural productivity with excellent provincial accessibility. The region's established farming infrastructure, consistent production record, and quality soil conditions attract grain farmers and agricultural investors. Strong cooperative networks and modern farming practices characterize this productive agricultural region.",
-    towns: ["Lake Johnson", "Strasbourg", "Imperial"],
+    towns: ["Mossbank"],
     highways: ["Highway 6", "Highway 340"],
     soilType: "Dark black soil, highly fertile",
     nearestCity: "Regina, 80 km north",
@@ -178,7 +178,7 @@ export const rmContentBatch3: Record<string, RMContent> = {
 
   "lakeland": {
     description: "The RM of Lakeland No. 521 is located in central Saskatchewan. The area falls within the mixed soil zone, grain and oilseed crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Lakeland"],
+    towns: ["Christopher Lake", "Emma Lake"],
     highways: [],
     soilType: "Mixed soil zone",
     nearestCity: "Regina, 200 km northwest",

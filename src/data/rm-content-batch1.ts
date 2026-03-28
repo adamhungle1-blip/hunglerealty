@@ -66,7 +66,7 @@ export const rmContentBatch1: Record<string, RMContent> = {
   },
   "auvergne": {
     description: "The RM of Auvergne No. 76 is located in southern Saskatchewan. The nearest major centre is Swift Current, ~74 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Auvergne"],
+    towns: ["Ponteix", "Aneroid"],
     highways: [],
     soilType: "Brown soil zone — suited to grain and pulse crops",
     nearestCity: "Swift Current, ~74 km",
@@ -194,8 +194,8 @@ export const rmContentBatch1: Record<string, RMContent> = {
   },
   "bratts-lake": {
     description: "The RM of Bratt's Lake No. 129 is located in southern Saskatchewan. The nearest major centre is Regina, ~32 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Bratt's Lake"],
-    highways: [],
+    towns: ["Wilcox", "Corinne", "Estlin"],
+    highways: ["Highway 6", "Highway 39"],
     soilType: "Dark brown soil zone — productive grain and oilseed land",
     nearestCity: "Regina, ~32 km",
     keywords: ["RM Bratt's Lake farmland for sale", "black soil grain belt", "south Saskatchewan premium farmland", "RM Bratt's Lake agricultural property"]
@@ -274,7 +274,7 @@ export const rmContentBatch1: Record<string, RMContent> = {
   },
   "cana": {
     description: "The RM of Cana No. 214 is located in southern eastern Saskatchewan. The nearest major centre is Yorkton, ~30 km. The municipality is served by Highway 47, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Cana"],
+    towns: ["Melville", "Fenwood"],
     highways: ["Highway 47"],
     soilType: "Black soil zone — excellent grain and canola land",
     nearestCity: "Yorkton, ~30 km",
@@ -346,7 +346,7 @@ export const rmContentBatch1: Record<string, RMContent> = {
   },
   "clayton": {
     description: "Clayton RM encompasses productive grain land in west-central Saskatchewan with strong agricultural foundation and established market access. The municipality's location provides good connectivity to Highway 16 and commodity networks. Black soil supports intensive grain production, particularly wheat and canola. Nearby communities provide local agricultural services while larger trading centers offer comprehensive support and commodity trading. Clayton attracts grain operators seeking reliable farmland with good infrastructure, proven soil conditions, and strong commodity market access in Saskatchewan's established grain belt.",
-    towns: ["Biggar", "Macklin", "Delisle"],
+    towns: ["Norquay", "Hyas", "Stenen"],
     highways: ["Highway 16", "Highway 14"],
     soilType: "Black soil — grain land",
     nearestCity: "Biggar, 18 km",

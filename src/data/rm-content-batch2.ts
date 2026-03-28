@@ -99,7 +99,7 @@ export const rmContentBatch2: Record<string, RMContent> = {
   },
   "enfield": {
     description: "The RM of Enfield No. 194 is located in southern Saskatchewan. The nearest major centre is Moose Jaw, ~87 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Enfield"],
+    towns: ["Central Butte"],
     highways: [],
     soilType: "Dark brown soil zone — productive grain and oilseed land",
     nearestCity: "Moose Jaw, ~87 km",
@@ -259,7 +259,7 @@ export const rmContentBatch2: Record<string, RMContent> = {
   },
   "glen-mcpherson": {
     description: "The RM of Glen McPherson No. 46 is located in southern Saskatchewan. The nearest major centre is Swift Current, ~103 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Glen McPherson"],
+    towns: ["Mankota", "Reliance"],
     highways: [],
     soilType: "Brown soil zone — suited to grain and pulse crops",
     nearestCity: "Swift Current, ~103 km",
@@ -315,7 +315,7 @@ export const rmContentBatch2: Record<string, RMContent> = {
   },
   "grassy-creek": {
     description: "The RM of Grassy Creek No. 78 is located in southern western Saskatchewan. The nearest major centre is Swift Current, ~83 km. The municipality is served by Highway 13, providing market access and transportation connections. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Grassy Creek"],
+    towns: ["Shaunavon", "Eastend"],
     highways: ["Highway 13"],
     soilType: "Brown soil zone — suited to grain and pulse crops",
     nearestCity: "Swift Current, ~83 km",
@@ -395,7 +395,7 @@ export const rmContentBatch2: Record<string, RMContent> = {
   },
   "hazelwood": {
     description: "The RM of Hazelwood No. 94 is located in southern eastern Saskatchewan. The nearest major centre is Estevan, ~83 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
-    towns: ["Hazelwood"],
+    towns: ["Kipling"],
     highways: [],
     soilType: "Dark brown soil zone — productive grain and oilseed land",
     nearestCity: "Estevan, ~83 km",
