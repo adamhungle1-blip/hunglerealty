@@ -11,7 +11,6 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Acreages", href: "/acreages" },
   { label: "Residential", href: "/residential/regina" },
-  { label: "Map Search", href: "/map" },
 ];
 
 export default function Header() {
