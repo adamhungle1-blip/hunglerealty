@@ -329,17 +329,20 @@ export const soldListings: SoldListing[] = [
     thankYou: "Lovely home in a lovely neighbourhood — thanks to all involved and enjoy Gardiner Heights!",
   },
   {
-    slug: "sk-984099-agriculture-prime",
-    title: "SK984099 | Agriculture Sold",
+    slug: "sk-984099-storthoaks-farmland",
+    title: "SK984099 | RM of Storthoaks | 320 Acres | Farmland Sold",
     date: "2025-07-27",
     category: "Sold",
     blurb:
-      "This prime agricultural property boasts exceptional soil classification and a proven operational history of consistent yields. Located in Saskatchewan's productive corridor with established relationships with grain buyers and reliable access to agricultural services and technology.",
-    image: "/hero/slide2.jpg",
+      "Here are two quarter sections available for the 2025 farming season in the RM of Storthoaks. The land is located 1.5 miles North and 1 mile east of the town of Storthoaks. There are 320.62 title acres and 265 cultivated acres according to the SAMA records. The soil is Oxbow loam and the SCIC soil class is G. The final soil ratings are 56.06 and 57.33. The SAMA assessments are $196,000 and $208,100. The legal land descriptions are NE & NW 23-05-31-1. There are two surface oil leases included in the sale with an annual income of $6500.",
+    image: "/sold/sk984099-storthoaks-farmland.jpg",
     mls: "SK984099",
-    location: "Saskatchewan",
+    location: "RM of Storthoaks, Saskatchewan",
     propertyType: "Agriculture",
-    thankYou: "It was an honour to help our clients sell this premium agricultural asset. Thank you for entrusting us with this significant transaction. We wish the new farming partners years of excellent crops and agricultural achievement.",
+    details: {
+      acres: 320.62,
+    },
+    thankYou: "Congrats to both buyer and seller on closing this Storthoaks farmland deal — wishing a great 2025 season ahead!",
   },
   {
     slug: "sk-983254-regina-lakewood",
