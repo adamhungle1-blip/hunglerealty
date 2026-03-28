@@ -178,7 +178,7 @@ export const rmNumbers: Record<string, number> = {
   "oakdale": 320,
   "old-post": 43,
   "orkney": 244,
-  "paddockwood": 160,
+  "paddockwood": 520,
   "perdue": 346,
   "piapot": 110,
   "pinto-creek": 169,

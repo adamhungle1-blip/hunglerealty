@@ -53,10 +53,10 @@ function getNearbyRMs(currentSlug: string, count = 6) {
     return nearby.slice(0, count);
   }
 
-  // Saskatchewan RMs sit on an 18-column grid (rows go south→north).
-  // Geographic distance ≈ grid distance where col = num % 18, row = Math.floor(num / 18).
-  const col = currentNum % 18;
-  const row = Math.floor(currentNum / 18);
+  // Saskatchewan RMs sit on a ~30-column grid (rows go south→north, columns east→west).
+  // Verified: Sherwood(159)↔Lumsden(189) and Edenwold(158)↔Lajord(128) differ by 30 (N-S).
+  const col = currentNum % 30;
+  const row = Math.floor(currentNum / 30);
 
   const scored = rmData
     .filter((rm) => rm.slug !== currentSlug && rmNumbers[rm.slug] !== undefined)
