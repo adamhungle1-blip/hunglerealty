@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="relative -mb-0 hidden shrink-0 md:block">
             <div className="relative h-[190px] w-[150px]">
               <Image
-                src="/adam-hungle.png"
+                src="/adam-hungle.jpg"
                 alt="Adam Hungle — Saskatchewan Farm Real Estate Specialist"
                 fill
                 className="object-cover object-top"

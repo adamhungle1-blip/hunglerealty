@@ -10,7 +10,7 @@ export default function AgentProfile() {
           <div className="relative shrink-0">
             <div className="relative h-[340px] w-[280px] overflow-hidden rounded-lg shadow-2xl md:h-[420px] md:w-[320px]">
               <Image
-                src="/adam-hungle.png"
+                src="/adam-hungle.jpg"
                 alt="Adam Hungle — Saskatchewan Farm Real Estate Specialist"
                 fill
                 className="object-cover object-top"

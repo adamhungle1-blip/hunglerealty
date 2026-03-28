@@ -93,7 +93,7 @@ export default function SellingPage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <Image
-          src="/hero/selling-new.png"
+          src="/hero/selling-new.jpg"
           alt="Selling Saskatchewan Farm Land – Your land deserves more than a listing, it deserves a strategy. Adam Hungle, Saskatchewan Land Specialist."
           width={1500}
           height={844}

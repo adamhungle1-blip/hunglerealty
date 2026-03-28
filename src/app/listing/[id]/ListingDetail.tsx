@@ -657,7 +657,7 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
             <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="text-center">
                 <Image
-                  src="/adam-hungle.png"
+                  src="/adam-hungle.jpg"
                   alt="Adam Hungle, REALTOR®"
                   width={80}
                   height={80}
