@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Saskatchewan Farmland Market Report 2025 | Hungle Realty",
+  title: "Saskatchewan Farmland Market Report 2025",
   description:
     "2025 year-end data and 2026 outlook for Saskatchewan farmland values. Regional breakdowns, rental rates, irrigated land prices, and market trends from Adam Hungle.",
 };

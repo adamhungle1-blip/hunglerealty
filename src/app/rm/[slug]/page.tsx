@@ -26,7 +26,7 @@ export async function generateMetadata({
     ? `${content.soilType}. Farmland for sale in RM of ${rm.name}, Saskatchewan. Nearby towns: ${content.towns.slice(0, 3).join(", ")}. Contact Adam Hungle, REALTOR® — 306.531.8854.`
     : `Browse farmland, acreages, and rural properties for sale in the Rural Municipality of ${rm.name}, Saskatchewan. Contact Adam Hungle, REALTOR® for expert local guidance.`;
   return {
-    title: `Farmland for Sale in RM of ${rm.name} | Hungle Realty`,
+    title: `Farmland for Sale in RM of ${rm.name}`,
     description: desc,
     openGraph: {
       title: `RM of ${rm.name} — Saskatchewan Farmland for Sale`,

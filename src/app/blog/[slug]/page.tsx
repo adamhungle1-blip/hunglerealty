@@ -16,7 +16,7 @@ export async function generateMetadata({
   const post = getBlogPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Hungle Realty Blog`,
+    title: post.title,
     description: post.excerpt,
     openGraph: { title: post.title, description: post.excerpt },
   };

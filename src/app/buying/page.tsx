@@ -4,7 +4,7 @@ import Image from "next/image";
 import FeaturedListingsSidebar from "@/components/FeaturedListingsSidebar";
 
 export const metadata: Metadata = {
-  title: "Buying Farmland in Saskatchewan | Hungle Realty",
+  title: "Buying Farmland in Saskatchewan",
   description:
     "Expert guidance for buying Saskatchewan farmland. Access off-market listings, comparable sales data, and 15+ years of local knowledge with Adam Hungle, REALTOR®.",
 };

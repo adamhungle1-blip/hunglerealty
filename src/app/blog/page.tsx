@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getSortedPosts, formatDate } from "@/data/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Blog — Saskatchewan Farmland News & Insights | Hungle Realty",
+  title: "Blog — Saskatchewan Farmland News & Insights",
   description:
     "Expert articles on Saskatchewan farmland market trends, buying guides, selling strategies, and RM spotlights from Adam Hungle, REALTOR®.",
 };

@@ -19,9 +19,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { neighbourhood: slug } = await params;
   const hood = getNeighbourhoodBySlug(slug);
-  if (!hood) return { title: "Residential | Hungle Realty" };
+  if (!hood) return { title: "Residential" };
   return {
-    title: `${hood.name} Homes for Sale — Regina | Hungle Realty`,
+    title: `${hood.name} Homes for Sale — Regina`,
     description: `Browse homes for sale in ${hood.name}, Regina, Saskatchewan. MLS® listings with map search. Adam Hungle, REALTOR®.`,
     openGraph: {
       title: `${hood.name} Homes for Sale — Regina, SK`,

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sell Your Saskatchewan Property | Hungle Realty",
+  title: "Sell Your Saskatchewan Property",
   description: "Selling farmland, an acreage, or a home in Saskatchewan? Adam Hungle provides expert market analysis, strategic pricing, and proven results. Get your free property valuation.",
   openGraph: {
     title: "Sell Your Saskatchewan Property | Hungle Realty",

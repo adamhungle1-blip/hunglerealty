@@ -4,7 +4,7 @@ import SearchListings from "./SearchListings";
 import SraDisclaimer from "@/components/SraDisclaimer";
 
 export const metadata: Metadata = {
-  title: "Search Saskatchewan Listings | Hungle Realty",
+  title: "Search Saskatchewan Listings",
   description:
     "Search all MLS® listings across Saskatchewan. Filter by price, property type, location, and more. Powered by CREA DDF® data.",
 };

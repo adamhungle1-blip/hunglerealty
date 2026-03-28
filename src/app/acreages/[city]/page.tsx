@@ -15,9 +15,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { city: slug } = await params;
   const city = getCityBySlug(slug);
-  if (!city) return { title: "Acreages | Hungle Realty" };
+  if (!city) return { title: "Acreages" };
   return {
-    title: `Acreages for Sale near ${city.name} | Hungle Realty`,
+    title: `Acreages for Sale near ${city.name}`,
     description: `Browse acreages for sale within 50 km of ${city.name}, Saskatchewan. Interactive map search with Adam Hungle, REALTOR®.`,
     openGraph: {
       title: `Acreages for Sale near ${city.name}, Saskatchewan`,

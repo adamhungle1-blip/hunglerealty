@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { soldListings } from "@/data/sold-listings";
 
 export const metadata: Metadata = {
-  title: "Field Notes | Hungle Realty - Market Insights & Sold Listings",
+  title: "Field Notes — Market Insights & Sold Listings",
   description:
     "Read Adam Hungle's latest market reports, farmland insights, and view recent sold listings across Saskatchewan. Expert real estate analysis and sales.",
 };

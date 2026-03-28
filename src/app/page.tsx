@@ -7,7 +7,7 @@ import FieldNotes from "@/components/FieldNotes";
 import HomeSEOContent from "@/components/HomeSEOContent";
 
 export const metadata: Metadata = {
-  title: "Saskatchewan Farmland & Real Estate | Adam Hungle, REALTOR® — Hungle Realty",
+  title: "Saskatchewan Farmland & Real Estate | Adam Hungle, REALTOR®",
   description:
     "Search Saskatchewan farmland, acreages, and homes for sale. Adam Hungle is a top 5% REALTOR® specializing in farm sales, grain land, and rural property across SK. Call 306.531.8854.",
   openGraph: {

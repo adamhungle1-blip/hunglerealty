@@ -20,9 +20,9 @@ export async function generateMetadata({
   const { community: slug } = await params;
   const community = getCommunityBySlug(slug);
   if (!community)
-    return { title: "Residential | Hungle Realty" };
+    return { title: "Residential" };
   return {
-    title: `Homes for Sale in ${community.name} | Hungle Realty`,
+    title: `Homes for Sale in ${community.name}`,
     description: `Browse homes for sale in ${community.name}, Saskatchewan. Interactive map search with Adam Hungle, REALTOR®.`,
     openGraph: {
       title: `Homes for Sale in ${community.name}, Saskatchewan`,

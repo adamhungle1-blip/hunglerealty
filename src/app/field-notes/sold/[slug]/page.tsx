@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!listing) {
     return {
-      title: "Listing Not Found | Hungle Realty",
+      title: "Listing Not Found",
     };
   }
 
   return {
-    title: `${listing.title} | Hungle Realty - Adam Hungle`,
+    title: listing.title,
     description: listing.blurb,
     openGraph: {
       title: listing.title,

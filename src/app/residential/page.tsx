@@ -4,7 +4,7 @@ import Link from "next/link";
 import ResidentialListings from "./ResidentialListings";
 
 export const metadata: Metadata = {
-  title: "Residential Real Estate in Regina | Homes for Sale | Hungle Realty",
+  title: "Residential Real Estate in Regina | Homes for Sale",
   description:
     "Browse homes for sale in Regina and surrounding communities. Interactive map search, neighbourhood guides, and expert advice from Adam Hungle, REALTOR®.",
 };

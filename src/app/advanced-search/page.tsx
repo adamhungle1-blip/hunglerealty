@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SraDisclaimer from "@/components/SraDisclaimer";
 
 export const metadata: Metadata = {
-  title: "Advanced Property Search | Hungle Realty",
+  title: "Advanced Property Search",
   description:
     "Search every MLS® listing in Saskatchewan — farmland, acreages, residential, commercial, and more. Powered by the Saskatchewan REALTORS® Association IDX.",
 };

@@ -3,7 +3,7 @@ import Image from "next/image";
 import AcreageListings from "./AcreageListings";
 
 export const metadata: Metadata = {
-  title: "Acreages for Sale near Regina | Hungle Realty",
+  title: "Acreages for Sale near Regina",
   description:
     "Browse acreages for sale near Regina, Saskatchewan and surrounding communities. Interactive map search with Adam Hungle, REALTOR®.",
 };

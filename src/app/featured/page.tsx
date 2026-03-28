@@ -3,7 +3,7 @@ import FeaturedListingsGrid from "./FeaturedListingsGrid";
 import SraDisclaimer from "@/components/SraDisclaimer";
 
 export const metadata: Metadata = {
-  title: "Featured Listings | Adam Hungle — Hungle Realty",
+  title: "Featured Listings | Adam Hungle",
   description:
     "View Adam Hungle's featured Saskatchewan farmland listings. Grain land, pasture, mixed-use & development land across Saskatchewan.",
 };
