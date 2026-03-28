@@ -46,21 +46,22 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-022480-acreage",
-    title: "SK022480 | 4 Bed | 2 Bath | 1,212 Sqft | Acreage Sold",
+    title: "SK022480 | 20 Acres | 3+1 Bed | 2 Bath | 1,212 Sqft | Acreage Sold",
     date: "2025-11-28",
     category: "Sold",
     blurb:
-      "This charming 4-bedroom, 2-bathroom acreage home sits on a generous rural lot with mature trees, well-established landscaping, and breathtaking countryside views. The open-concept living spaces and modern kitchen make it perfect for families who value space, privacy, and the peaceful pace of country living.",
-    image: "/hero/slide6.jpg",
+      "Welcome to your prairie retreat — a 20-acre acreage with tons of potential just 30 minutes east of Regina, perfectly set up for horse lovers, hobby farmers, or anyone seeking a peaceful country living with modern comfort. Located just 1.5 miles East of the town of Qu'Appelle, this property offers wide-open views, versatility, and the space to live your dream rural lifestyle. The 1,212 sq ft bungalow features 3 bedrooms up and 1 down, with spacious living room and a bright kitchen showcasing quartz countertops, vinyl plank floors, and a spectacular view of the land. The home sits on a solid ICF foundation with a 9' high basement and is equipped with a reliable geothermal heating and cooling system—offering efficient comfort year-round. The home was moved onto the foundation in 2009. Outside, the acreage is turnkey for equestrian use or small-scale livestock. You'll find a massive 80' x 160' outdoor riding arena, a 70' round pen, 4 fenced pastures, a powered 36'x 50' pole barn with an insulated and heated tack room that measures 20'x12', and a 30' x 50' Coverall Quonset with a 16' overhead door and 22' ceilings. There is also a 24' x 30' double detached garage for extra parking and workspace. The property also has a chicken coop and multiple small storage sheds. The strong-flowing well, combined with reverse osmosis filtration, provides excellent drinking water. Kids play structure is included; trampoline optional. Negotiable items include portable corral panels, roping chute, and dummy. With the perfect balance of rural tranquility and convenience, this acreage is ready for its next owner to build memories and live their country dream.",
+    image: "/sold/sk022480-quappelle-acreage.jpg",
     mls: "SK022480",
-    location: "Acreage, Saskatchewan",
+    location: "Qu'Appelle, Saskatchewan",
     propertyType: "Acreage",
     details: {
       beds: 4,
       baths: 2,
       sqft: 1212,
+      acres: 20,
     },
-    thankYou: "It was a pleasure working with our clients on this special property sale. Thank you for allowing us to help your family transition to the next chapter—we wish the new owners and their family many happy years of acreage living.",
+    thankYou: "Congratulations to the sellers and the new buyers!",
   },
   {
     slug: "sk-022451-agriculture-sold",
