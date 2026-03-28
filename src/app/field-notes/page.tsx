@@ -1,6 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
 import { soldListings } from "@/data/sold-listings";
+
+export const metadata: Metadata = {
+  title: "Field Notes | Hungle Realty - Market Insights & Sold Listings",
+  description:
+    "Read Adam Hungle's latest market reports, farmland insights, and view recent sold listings across Saskatchewan. Expert real estate analysis and sales.",
+};
 
 // Market report data
 const marketReport = {
@@ -18,30 +25,32 @@ const marketReport = {
   ],
 };
 
-export default function FieldNotes() {
-  // Get 3 most recent sold listings
-  const recentSolds = soldListings.slice(0, 3);
-
-  // Combine market report with recent sold listings
-  const displayPosts = [marketReport, ...recentSolds];
+export default function FieldNotesPage() {
+  const allPosts = [marketReport, ...soldListings];
 
   return (
-    <section className="border-t-[3px] border-[#c49a2a] bg-[#0f1a0f]">
-      <div className="mx-auto max-w-7xl px-4 py-14">
-        {/* Section heading */}
-        <div className="mb-2 text-center">
+    <div className="bg-[#0f1a0f]">
+      {/* Hero Section */}
+      <div className="border-t-[3px] border-[#c49a2a] px-4 py-12">
+        <div className="mx-auto max-w-7xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#c49a2a]">
             Field Notes
           </p>
-          <h2 className="mt-1 text-3xl font-bold text-white md:text-4xl">
-            Latest Posts
-          </h2>
-          <div className="mx-auto mt-3 h-0.5 w-16 bg-gradient-to-r from-transparent via-[#c49a2a] to-transparent" />
+          <h1 className="mt-1 text-4xl font-bold text-white md:text-5xl">
+            Market Insights & Sold Listings
+          </h1>
+          <div className="mx-auto mt-4 h-0.5 w-16 bg-gradient-to-r from-transparent via-[#c49a2a] to-transparent" />
+          <p className="mt-6 text-lg text-gray-400">
+            Explore Adam Hungle's latest market analysis, regional trends, and
+            recent sales across Saskatchewan.
+          </p>
         </div>
+      </div>
 
-        {/* Posts grid */}
-        <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {displayPosts.map((post) => (
+      {/* Posts Grid */}
+      <div className="mx-auto max-w-7xl px-4 py-14">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {allPosts.map((post) => (
             <Link
               key={post.slug}
               href={
@@ -62,12 +71,12 @@ export default function FieldNotes() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a0f] via-transparent to-transparent" />
 
-                {/* SOLD Badge for sold listings */}
+                {/* SOLD Banner for sold listings */}
                 {post.slug !== "farmland-market-report-2025" && (
-                  <div className="absolute right-3 top-3">
-                    <span className="rounded-full bg-[#dc2626] px-3 py-1 text-[11px] font-black uppercase tracking-wide text-white">
-                      Sold
-                    </span>
+                  <div className="absolute inset-0 flex items-center justify-end px-3 py-3">
+                    <div className="rounded-full bg-[#dc2626] px-3 py-1 text-xs font-black text-white">
+                      SOLD
+                    </div>
                   </div>
                 )}
 
@@ -123,51 +132,33 @@ export default function FieldNotes() {
               </div>
             </Link>
           ))}
-
-          {/* Placeholder cards for future posts */}
-          <div className="hidden overflow-hidden rounded-xl border border-dashed border-white/10 bg-white/[0.02] md:flex md:flex-col md:items-center md:justify-center md:p-8 md:text-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 text-white/10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={1.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-              />
-            </svg>
-            <p className="mt-3 text-sm font-medium text-white/20">
-              More posts coming soon
-            </p>
-          </div>
         </div>
 
-        {/* View All Sold Listings Link */}
-        <div className="mt-12 text-center">
-          <Link
-            href="/field-notes"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#c49a2a] px-6 py-3 font-semibold text-[#0f1a0f] transition-all hover:bg-[#d4a520] hover:shadow-lg"
+        {/* Footer CTA */}
+        <div className="mt-16 rounded-xl border border-white/10 bg-white/5 p-8 text-center">
+          <h2 className="text-2xl font-bold text-white">
+            Interested in any of these properties?
+          </h2>
+          <p className="mt-3 text-gray-400">
+            Contact Adam Hungle for more details or to discuss your real estate
+            goals
+          </p>
+          <a
+            href="tel:3065318854"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#c49a2a] px-6 py-3 font-bold text-[#0f1a0f] transition-all hover:bg-[#d4a520] hover:shadow-lg"
           >
-            View All Sold Listings
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-5 w-5"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.793.894c.067.463.141.927.223 1.39.282 1.668.454 3.334.454 5.011 0 1.677-.172 3.343-.454 5.011-.082.463-.156.927-.223 1.39l1.793.894a1 1 0 01.54 1.06l-.74 4.435a1 1 0 01-.986.836H3a1 1 0 01-1-1V3z" />
             </svg>
-          </Link>
+            Call Adam at 306.531.8854
+          </a>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
