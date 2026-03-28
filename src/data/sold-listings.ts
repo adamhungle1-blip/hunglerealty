@@ -29,7 +29,7 @@ export const soldListings: SoldListing[] = [
     mls: "SK020293",
     location: "Sherwood Rm No 159, Saskatchewan",
     propertyType: "Land",
-    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
+    thankYou: "A big thank you to our clients for trusting us with this one. Glad we could get it done!",
   },
   {
     slug: "sk-020291-sherwood-agriculture",
@@ -42,7 +42,7 @@ export const soldListings: SoldListing[] = [
     mls: "SK020291",
     location: "Sherwood Rm No 159, Saskatchewan",
     propertyType: "Agriculture",
-    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
+    thankYou: "Grateful to have been part of this transaction. Wishing everyone involved all the best!",
   },
   {
     slug: "sk-022480-acreage",
@@ -74,7 +74,7 @@ export const soldListings: SoldListing[] = [
     mls: "SK022451",
     location: "RM of South Qu'Appelle, Saskatchewan",
     propertyType: "Land",
-    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
+    thankYou: "Thanks to our clients for the opportunity — happy we could help make this happen.",
   },
   {
     slug: "sk-020394-grayson-agriculture",
@@ -87,7 +87,7 @@ export const soldListings: SoldListing[] = [
     mls: "SK020394",
     location: "RM of Grayson, Saskatchewan",
     propertyType: "Land",
-    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
+    thankYou: "Appreciate the trust from our clients on this one. Congrats to all parties!",
   },
   {
     slug: "sk-020391-saltcoats-agriculture",
@@ -100,7 +100,7 @@ export const soldListings: SoldListing[] = [
     mls: "SK020391",
     location: "RM of Saltcoats, Saskatchewan",
     propertyType: "Land",
-    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
+    thankYou: "Great working with our clients on this sale. Wishing the new owners every success!",
   },
   {
     slug: "sk-010215-lajord-agriculture",
@@ -113,7 +113,7 @@ export const soldListings: SoldListing[] = [
     mls: "SK010215",
     location: "RM of Lajord, Saskatchewan",
     propertyType: "Land",
-    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
+    thankYou: "Pleased to have helped our clients close on this property. All the best going forward!",
   },
   {
     slug: "sk-020404-agriculture-opportunity",
