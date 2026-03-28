@@ -62,8 +62,8 @@ function getNearbyRMs(currentSlug: string, count = 6) {
     .filter((rm) => rm.slug !== currentSlug && rmNumbers[rm.slug] !== undefined)
     .map((rm) => {
       const n = rmNumbers[rm.slug]!;
-      const nc = n % 18;
-      const nr = Math.floor(n / 18);
+      const nc = n % 30;
+      const nr = Math.floor(n / 30);
       const dist = Math.abs(nc - col) + Math.abs(nr - row); // Manhattan distance on the grid
       return { rm, dist };
     })
