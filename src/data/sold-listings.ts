@@ -295,12 +295,12 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-986995-regina-knowles",
-    title: "SK986995 | 65 Knowles Crescent, Regina | 4 Bed | 2 Bath | Detached Sold",
+    title: "SK986995 | 65 Knowles Crescent, Regina | 4 Bed | 2 Bath | Hillsdale Bungalow Sold",
     date: "2025-08-10",
     category: "Sold",
     blurb:
-      "This spacious 4-bedroom, 2-bathroom detached home on prestigious Knowles Crescent showcases beautiful landscaping and recent upgrades. Located in Regina's most sought-after south side neighbourhood with award-winning schools, manicured parks, and effortless access to shopping and dining.",
-    image: "/hero/residential.jpg",
+      "Meticulously maintained 1293 sqft bungalow located in desirable Hillsdale neighborhood. The main level is comprised of a spacious living room, kitchen/dining room plus an addition off the dining area that is currently used as a formal dining room with access to the deck through French doors. Completing the main level is 3 bedrooms, and a 4-piece bathroom, the basement is very comfortable and welcoming with a large Rec room, wet bar, spacious family room with a gas fireplace, a 4th bedroom, 3-piece bathroom, plus a laundry and storage room. The seller states there are original hardwood floors in the living room and bedrooms. Upgrades include updated vinyl windows throughout, French door installation (2023), New side entry door, sewer line replacement to street. The back yard features a two-tone low-maintenance composite deck, fully fenced yard with vinyl fencing on two sides, beautifully designed patio perfect for entertaining, pristine landscaping in both front and back. Storage shed and appliances are included.",
+    image: "/sold/sk986995-regina-hillsdale.jpg",
     mls: "SK986995",
     location: "65 Knowles Crescent, Regina, Saskatchewan",
     propertyType: "Detached",
@@ -309,7 +309,7 @@ export const soldListings: SoldListing[] = [
       baths: 2,
       sqft: 1293,
     },
-    thankYou: "We're grateful for the opportunity to represent this lovely south-side home. Thank you to our clients for their confidence in us. Wonderful congratulations to the new family on their beautiful new address!",
+    thankYou: "A real pleasure working with our clients on this beautiful Hillsdale home. Enjoy it!",
   },
   {
     slug: "sk-985622-regina-harding",
