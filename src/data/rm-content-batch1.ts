@@ -9,340 +9,340 @@ export interface RMContent {
 
 export const rmContentBatch1: Record<string, RMContent> = {
   "aberdeen": {
-    description: "The RM of Aberdeen, located in northeastern Saskatchewan's prairies, offers productive grain land within easy reach of the Prince Albert area. This rural municipality encompasses rolling terrain characteristic of Saskatchewan's transition zone, with excellent black soil suited to wheat, barley, and canola production. The region benefits from proximity to Highway 2, which connects communities throughout the northeast and provides efficient access to major markets. Aberdeen's farming operations range from heritage grain farms to diversified operations, with many producers taking advantage of the region's grain handling infrastructure. The community is well-positioned for investors seeking established agricultural land with strong transportation connections and access to regional co-ops and agricultural services.",
-    towns: ["Prince Albert", "Candle Lake", "Shellbrook"],
-    highways: ["Highway 2", "Highway 55"],
-    soilType: "Black soil zone — excellent grain and canola land",
-    nearestCity: "Prince Albert, 25 km",
-    keywords: ["farmland for sale RM Aberdeen", "grain land northeast Saskatchewan", "black soil farm land Prince Albert area", "RM Aberdeen agricultural property"]
+    description: "The RM of Aberdeen No. 373 is located in central Saskatchewan near Aberdeen and Edenburg. The nearest major centre is Saskatoon, ~41 km. The municipality is served by Highway 4, Highway 12, Highway 27, Highway 41 and Highway 784, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Aberdeen", "Edenburg"],
+    highways: ["Highway 4", "Highway 12", "Highway 27", "Highway 41", "Highway 784"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Saskatoon, ~41 km",
+    keywords: ["farmland for sale RM Aberdeen", "agricultural land Aberdeen area", "Saskatchewan farmland RM Aberdeen", "RM Aberdeen farm property"]
   },
   "abernethy": {
-    description: "Abernethy RM, situated in central Saskatchewan between Yorkton and Regina, represents a core grain belt region with excellent soil productivity and established commodity infrastructure. This municipality is traversed by Highway 16, Saskatchewan's major east-west corridor, connecting to grain terminals in both directions and providing straightforward market access. The landscape features gently rolling terrain typical of the dark brown and black soil transitional zone, supporting wheat, lentils, chickpeas, and canola operations. Communities like Melville provide nearby services, veterinary care, and agribusiness support. The region attracts both traditional family farms and investment operations seeking diversified crop production with access to pulse crop handling facilities and established rail infrastructure for commodity export.",
-    towns: ["Melville", "Yorkton", "Foam Lake"],
-    highways: ["Highway 16", "Highway 22"],
-    soilType: "Dark brown to black soil — pulse crops and cereals",
-    nearestCity: "Yorkton, 18 km",
-    keywords: ["farmland for sale RM Abernethy", "lentil and pulse crop land Saskatchewan", "Highway 16 grain operations", "RM Abernethy agricultural land"]
+    description: "The RM of Abernethy No. 186 is located in southern eastern Saskatchewan near Balcarres, Abernethy, and Katepwa. The nearest major centre is Regina, ~82 km. The municipality is served by Highway 10, Highway 22, Highway 310 and Highway 619, providing market access and transportation connections. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Balcarres", "Abernethy", "Katepwa", "Katepwa Beach"],
+    highways: ["Highway 10", "Highway 22", "Highway 310", "Highway 619"],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Regina, ~82 km",
+    keywords: ["farmland for sale RM Abernethy", "agricultural land Balcarres area", "Saskatchewan farmland RM Abernethy", "RM Abernethy farm property"]
   },
   "antelope-park": {
-    description: "The RM of Antelope Park spans north-central Saskatchewan with distinctive geographic features including parkland terrain and access to recreational opportunities alongside productive agricultural land. Located near Highway 102, the municipality sits within reasonable distance of both Prince Albert and the productive grain belt regions to the south. The landscape transitions between grassland and light forest, with soil types ranging from black to dark brown, supporting grain and cattle operations. Small communities within the RM provide basic services to local producers. Antelope Park attracts farmers seeking land with mixed-use potential, combining agricultural productivity with natural features and outdoor recreation amenities in a less-crowded setting.",
-    towns: ["Prince Albert", "Spiritwood", "Leask"],
-    highways: ["Highway 102", "Highway 95"],
-    soilType: "Black soil with parkland characteristics",
-    nearestCity: "Prince Albert, 35 km",
-    keywords: ["parkland farmland RM Antelope Park", "grain and cattle land Prince Albert area", "mixed-use agricultural property Saskatchewan", "RM Antelope Park real estate"]
+    description: "The RM of Antelope Park No. 322 is located in central western Saskatchewan near Court, Fusilier, and Hoosier. The nearest major centre is Kindersley, ~56 km. The municipality is served by Highway 51, Highway 317 and Highway 772, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Court", "Fusilier", "Hoosier", "Loverna"],
+    highways: ["Highway 51", "Highway 317", "Highway 772"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Kindersley, ~56 km",
+    keywords: ["farmland for sale RM Antelope Park", "agricultural land Court area", "Saskatchewan farmland RM Antelope Park", "RM Antelope Park farm property"]
   },
   "antler": {
-    description: "Antler RM, located in west-central Saskatchewan along the grain corridor, provides access to diverse agricultural operations and excellent transportation infrastructure. Highway 16 passes through this region, connecting directly to major grain handling facilities and western markets. The municipality features predominantly black soil ideal for wheat and canola production, with established farming traditions spanning generations. The nearby community of Denzil and proximity to larger service centers like Eston ensure farmers have ready access to equipment dealers, seed suppliers, and commodity services. This region appeals to operators seeking established grain land with strong infrastructure, good soil quality, and proven long-term agricultural viability.",
-    towns: ["Denzil", "Eston", "Luseland"],
-    highways: ["Highway 16", "Highway 14"],
-    soilType: "Black soil — premium grain land",
-    nearestCity: "Eston, 15 km",
-    keywords: ["farmland for sale RM Antler", "wheat and canola land Saskatchewan", "Highway 16 grain corridor", "RM Antler agricultural property"]
+    description: "The RM of Antler No. 61 is located in southern eastern Saskatchewan near Redvers, Antler, and Fry's. The nearest major centre is Estevan, ~99 km. The municipality is served by Highway 8, Highway 13, Highway 600 and Highway 601, providing market access and transportation connections. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Redvers", "Antler", "Fry's", "Wauchope"],
+    highways: ["Highway 8", "Highway 13", "Highway 600", "Highway 601"],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Estevan, ~99 km",
+    keywords: ["farmland for sale RM Antler", "agricultural land Redvers area", "Saskatchewan farmland RM Antler", "RM Antler farm property"]
   },
   "arborfield": {
-    description: "Arborfield RM sits within Saskatchewan's productive mixed farming region, characterized by mixed-wood forest transitions and agricultural land suitable for diversified operations. Located north of Highway 16 with access to major east-west transportation, the municipality benefits from proximity to trading centers and agricultural services. The terrain features a blend of cultivated land and natural forest cover, with black soil zones supporting grain and forage production. The small community of Arborfield provides basic local services, while larger centers like Tisdale offer expanded agricultural support and commodity handling. This region attracts producers interested in mixed farming operations with access to both grain markets and cattle-raising opportunities.",
-    towns: ["Arborfield", "Tisdale", "Shellbrook"],
-    highways: ["Highway 16", "Highway 905"],
-    soilType: "Black soil with mixed-wood forest — grain and forage",
-    nearestCity: "Tisdale, 12 km",
-    keywords: ["mixed farming RM Arborfield", "black soil farmland Tisdale area", "grain and forage land Saskatchewan", "RM Arborfield agricultural acreage"]
+    description: "The RM of Arborfield No. 456 is located in northern eastern Saskatchewan near Arborfield, Zenon Park, and Jordan River. The nearest major centre is Melfort, ~76 km. The municipality is served by Highway 23, Highway 335, Highway 679 and Highway 690, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Arborfield", "Zenon Park", "Jordan River"],
+    highways: ["Highway 23", "Highway 335", "Highway 679", "Highway 690"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Melfort, ~76 km",
+    keywords: ["farmland for sale RM Arborfield", "agricultural land Arborfield area", "Saskatchewan farmland RM Arborfield", "RM Arborfield farm property"]
   },
   "arlington": {
-    description: "Arlington RM encompasses excellent agricultural land in south-central Saskatchewan, positioned within the province's prime grain belt with outstanding soil resources. The municipality's location provides convenient access to grain handling infrastructure and commodity export routes. Black soil predominates throughout the region, making it ideal for high-value crop production including wheat, canola, and lentils. Nearby communities connected via Highway 1 corridor provide essential agricultural services and market connections. The landscape is characterized by open, productive prairie suitable for large-scale commodity operations or diversified farming ventures. Investors and established operators alike recognize Arlington for its soil quality, infrastructure accessibility, and strong agricultural economics.",
-    towns: ["Wapella", "Grenfell", "Indian Head"],
-    highways: ["Highway 1", "Highway 23"],
-    soilType: "Black soil zone — premium prairie farmland",
-    nearestCity: "Indian Head, 20 km",
-    keywords: ["black soil farmland RM Arlington", "grain belt property south Saskatchewan", "Highway 1 agricultural land", "RM Arlington premium farmland for sale"]
+    description: "The RM of Arlington No. 79 is located in southern western Saskatchewan near Dollard and South Fork. The nearest major centre is Swift Current, ~96 km. The municipality is served by Highway 3, Highway 13, Highway 18, Highway 37 and Highway 501, providing market access and transportation connections. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Dollard", "South Fork"],
+    highways: ["Highway 3", "Highway 13", "Highway 18", "Highway 37", "Highway 501"],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Swift Current, ~96 km",
+    keywords: ["farmland for sale RM Arlington", "agricultural land Dollard area", "Saskatchewan farmland RM Arlington", "RM Arlington farm property"]
   },
   "arm-river": {
-    description: "Arm River RM represents a well-established agricultural region in south-central Saskatchewan with strong soil productivity and excellent market access. The municipality sits near Highway 1, Saskatchewan's main east-west transportation corridor connecting to major grain terminals, processing facilities, and export markets. Rolling prairie terrain with black soil supports intensive grain production, particularly wheat and canola. The region's proximity to communities like Govan and Indian Head provides local services while larger centers offer expanded commodity handling and agricultural business support. Arm River's combination of superior soil, established infrastructure, and central location makes it attractive to operators seeking high-performance grain land with proven profitability.",
-    towns: ["Govan", "Indian Head", "Qu'Appelle"],
-    highways: ["Highway 1", "Highway 56"],
-    soilType: "Black soil — premium grain production zone",
-    nearestCity: "Indian Head, 18 km",
-    keywords: ["RM Arm River farmland for sale", "black soil grain land Highway 1", "south Saskatchewan premium farmland", "RM Arm River agricultural property"]
+    description: "The RM of Arm River No. 252 is located in central Saskatchewan near Davidson and Girvin. The nearest major centre is Moose Jaw, ~93 km. The municipality is served by Highway 11, Highway 653, Highway 747 and Highway 749, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Davidson", "Girvin"],
+    highways: ["Highway 11", "Highway 653", "Highway 747", "Highway 749"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Moose Jaw, ~93 km",
+    keywords: ["farmland for sale RM Arm River", "agricultural land Davidson area", "Saskatchewan farmland RM Arm River", "RM Arm River farm property"]
   },
   "auvergne": {
-    description: "Auvergne RM occupies a region of central Saskatchewan characterized by productive grain land and good infrastructure connectivity. Located in the province's established agricultural zone with access to Highway 14, the municipality benefits from established commodity handling networks and market access. The terrain features predominantly black soil with slight rolling characteristics, suitable for diversified crop production. Nearby communities provide agricultural services and local support while proximity to regional trading centers ensures efficient market access. The region attracts farmers and investors seeking established grain operations with reliable infrastructure, good soil conditions, and proven agricultural productivity over decades of operation.",
-    towns: ["Ponteix", "Pennant", "Bulyea"],
-    highways: ["Highway 14", "Highway 57"],
-    soilType: "Black soil with rolling terrain",
-    nearestCity: "Ponteix, 12 km",
+    description: "The RM of Auvergne No. 76 is located in southern Saskatchewan. The nearest major centre is Swift Current, ~74 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Auvergne"],
+    highways: [],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Swift Current, ~74 km",
     keywords: ["RM Auvergne farmland", "central Saskatchewan grain land", "black soil agricultural property", "Ponteix area farmland for sale"]
   },
   "baildon": {
-    description: "Baildon RM encompasses agricultural and mixed-use land in north-central Saskatchewan with access to diverse economic opportunities and natural resources. The municipality's location near Highway 102 provides connectivity to regional markets and services. The terrain transitions between productive grain land and light forest cover, with black soil supporting both crop and cattle operations. Communities within the RM and nearby centers like Leask provide essential agricultural services and equipment support. Baildon attracts producers interested in diversified operations combining crop production with livestock management or those seeking land with mixed-use potential in a developing region.",
-    towns: ["Leask", "Spiritwood", "Mayfield"],
-    highways: ["Highway 102", "Highway 767"],
-    soilType: "Black soil with parkland character",
-    nearestCity: "Leask, 8 km",
-    keywords: ["RM Baildon farmland for sale", "mixed farming Leask area", "parkland grain land Saskatchewan", "RM Baildon agricultural property"]
+    description: "The RM of Baildon No. 131 is located in southern Saskatchewan near Archive, Baildon, and Buttress. The nearest major centre is Moose Jaw, ~24 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Archive", "Baildon", "Buttress", "Crestwynd"],
+    highways: [],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Moose Jaw, ~24 km",
+    keywords: ["farmland for sale RM Baildon", "agricultural land Archive area", "Saskatchewan farmland RM Baildon", "RM Baildon farm property"]
   },
   "barrier-valley": {
-    description: "Barrier Valley RM represents a specialized agricultural region in southwestern Saskatchewan with unique geographic and economic characteristics. The municipality is located near Highway 4, connecting to provincial trading centers and grain handling infrastructure. The terrain features rolling prairie landscape with black to dark brown soil suited to grain and pulse crop production. The region's proximity to larger centers while maintaining rural character attracts farmers seeking productive land with modern convenience access. Barrier Valley's combination of good soil, established community infrastructure, and strategic location makes it appealing for diversified grain operations and investment-oriented purchasers.",
-    towns: ["Swift Current", "Maple Creek", "Gull Lake"],
-    highways: ["Highway 4", "Highway 21"],
-    soilType: "Black to dark brown soil",
-    nearestCity: "Swift Current, 22 km",
-    keywords: ["RM Barrier Valley farmland", "Swift Current area grain land", "southwestern Saskatchewan agricultural property", "RM Barrier Valley farmland for sale"]
+    description: "The RM of Barrier Valley No. 397 is located in central eastern Saskatchewan near Archerwill, Algrove, and Dahlton. The nearest major centre is Melfort, ~57 km. The municipality is served by Highway 35, Highway 349, Highway 652 and Highway 773, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Archerwill", "Algrove", "Dahlton", "Lightwoods"],
+    highways: ["Highway 35", "Highway 349", "Highway 652", "Highway 773"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Melfort, ~57 km",
+    keywords: ["farmland for sale RM Barrier Valley", "agricultural land Archerwill area", "Saskatchewan farmland RM Barrier Valley", "RM Barrier Valley farm property"]
   },
   "bayne": {
-    description: "Bayne RM occupies productive grain land in central Saskatchewan with excellent agricultural potential and established market infrastructure. The municipality benefits from proximity to Highway 16, the province's major transportation corridor linking to grain terminals and commodity markets throughout Saskatchewan. Black soil predominates, making the region ideal for wheat, canola, and pulse crop operations. Nearby communities provide local agricultural services while larger centers offer expanded facilities for equipment maintenance and commodity trading. Bayne attracts operators seeking productive farmland with strong transportation connections, reliable soil conditions, and access to established agricultural networks and market outlets.",
-    towns: ["Yorkton", "Foam Lake", "Melville"],
-    highways: ["Highway 16", "Highway 22"],
-    soilType: "Black soil — excellent grain land",
-    nearestCity: "Yorkton, 25 km",
-    keywords: ["RM Bayne farmland for sale", "grain land Highway 16 Saskatchewan", "Yorkton area agricultural property", "RM Bayne black soil farmland"]
+    description: "The RM of Bayne No. 371 is located in central Saskatchewan near Bremen, Dana, and Muskiki Springs. The nearest major centre is Humboldt, ~37 km. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Bremen", "Dana", "Muskiki Springs", "Peterson"],
+    highways: [],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Humboldt, ~37 km",
+    keywords: ["farmland for sale RM Bayne", "agricultural land Bremen area", "Saskatchewan farmland RM Bayne", "RM Bayne farm property"]
   },
   "beaver-river": {
-    description: "Beaver River RM stretches across northern Saskatchewan with a mix of productive agricultural land and natural resource characteristics. The municipality provides access to communities like Meadow Lake and Highway 4, connecting to provincial services and markets. The terrain transitions between grain-suitable black soil zones and mixed-wood forest, supporting diversified farming operations. The region appeals to farmers interested in mixed-use properties combining crop production with natural resource potential. Local and regional services ensure adequate support for agricultural operations while the developing northern economy offers long-term growth potential for property investors and agricultural operators.",
-    towns: ["Meadow Lake", "Green Lake", "Loon Lake"],
-    highways: ["Highway 4", "Highway 926"],
-    soilType: "Black soil with mixed-wood forest transition",
-    nearestCity: "Meadow Lake, 18 km",
-    keywords: ["RM Beaver River farmland", "northern Saskatchewan agricultural land", "mixed-use property Meadow Lake area", "RM Beaver River property for sale"]
+    description: "The RM of Beaver River No. 622 is located in northern western Saskatchewan near Goodsoil, Pierceland, and Big Island Lake Cree Territory. The nearest major centre is Meadow Lake, ~71 km. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Goodsoil", "Pierceland", "Big Island Lake Cree Territory", "Ministikwan 161A"],
+    highways: [],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Meadow Lake, ~71 km",
+    keywords: ["farmland for sale RM Beaver River", "agricultural land Goodsoil area", "Saskatchewan farmland RM Beaver River", "RM Beaver River farm property"]
   },
   "benson": {
-    description: "Benson RM represents a productive region within Saskatchewan's central grain belt with excellent soil characteristics and agricultural infrastructure. Located with access to Highway 14, the municipality benefits from established commodity handling networks and market connections throughout the province. The landscape features predominantly black soil with proven grain production history spanning multiple generations of farming operations. Nearby communities provide essential agricultural services and local support networks. The region attracts both traditional family farmers and agricultural investors seeking reliable, productive farmland with proven commodity export infrastructure and strong long-term agricultural performance records.",
-    towns: ["Pennant", "Ponteix", "Bulyea"],
-    highways: ["Highway 14", "Highway 365"],
-    soilType: "Black soil — established grain production",
-    nearestCity: "Ponteix, 15 km",
-    keywords: ["RM Benson farmland for sale", "grain belt property central Saskatchewan", "Ponteix area agricultural land", "RM Benson premium grain land"]
+    description: "The RM of Benson No. 35 is located in southern eastern Saskatchewan near Benson, Bryant, and Cullen. The nearest major centre is Estevan, ~28 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Benson", "Bryant", "Cullen", "Woodley"],
+    highways: [],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Estevan, ~28 km",
+    keywords: ["farmland for sale RM Benson", "agricultural land Benson area", "Saskatchewan farmland RM Benson", "RM Benson farm property"]
   },
   "big-arm": {
-    description: "Big Arm RM encompasses diverse agricultural and recreational landscape in central Saskatchewan with unique geographic positioning. The municipality's location near major communities provides access to modern agricultural services and commodity markets while maintaining rural character. The terrain features productive black soil suitable for grain operations alongside lighter soils supporting diversified farming approaches. Proximity to larger service centers ensures farmers have ready access to equipment dealers, veterinary services, and agricultural supplies. Big Arm attracts operators seeking land with agricultural productivity combined with lifestyle appeal and proximity to recreational opportunities and community services.",
-    towns: ["Sturgis", "Lanigan", "Humboldt"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil with productive capability",
-    nearestCity: "Lanigan, 12 km",
-    keywords: ["RM Big Arm farmland for sale", "central Saskatchewan grain land", "Lanigan area agricultural property", "RM Big Arm farming acreage"]
+    description: "The RM of Big Arm No. 251 is located in central Saskatchewan near Imperial, Liberty, and Etters Beach. The nearest major centre is Moose Jaw, ~97 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Imperial", "Liberty", "Etters Beach", "Hendersons Beach"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Moose Jaw, ~97 km",
+    keywords: ["farmland for sale RM Big Arm", "agricultural land Imperial area", "Saskatchewan farmland RM Big Arm", "RM Big Arm farm property"]
   },
   "big-quill": {
-    description: "Big Quill RM spans productive grain land in east-central Saskatchewan with established agricultural infrastructure and market access. The municipality is positioned near Highway 16, connecting directly to regional grain handling facilities and commodity markets. Black soil characterizes much of the region, making it ideal for wheat and canola production. Nearby communities like Arborfield and Tisdale provide local services and agricultural support networks. The region's proven agricultural productivity, established infrastructure, and strong commodity market connections make Big Quill attractive to operators seeking reliable grain land with historical production success and modern market access.",
-    towns: ["Arborfield", "Tisdale", "Foam Lake"],
-    highways: ["Highway 16", "Highway 905"],
-    soilType: "Black soil — proven grain production",
-    nearestCity: "Tisdale, 15 km",
-    keywords: ["RM Big Quill farmland for sale", "grain land Tisdale area", "east-central Saskatchewan agricultural property", "RM Big Quill grain belt land"]
+    description: "The RM of Big Quill No. 308 is located in central eastern Saskatchewan near Wynyard, Kandahar, and Dafoe. The nearest major centre is Humboldt, ~78 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Wynyard", "Kandahar", "Dafoe", "Copeland"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Humboldt, ~78 km",
+    keywords: ["farmland for sale RM Big Quill", "agricultural land Wynyard area", "Saskatchewan farmland RM Big Quill", "RM Big Quill farm property"]
   },
   "big-river": {
-    description: "Big River RM comprises agricultural and mixed-use land in west-central Saskatchewan with access to forestry and commodity production opportunities. Located near Highway 922 with reasonable access to regional trading centers, the municipality supports diversified economic activities beyond traditional grain farming. The terrain features productive soil suitable for grain and forage crops, interspersed with natural forest resources. Small communities within the RM provide basic local services while proximity to larger centers offers expanded agricultural support. Big River attracts operators interested in diversified operations combining agricultural production with other rural resource opportunities in an emerging economic region.",
-    towns: ["Debden", "North Battleford", "Maidstone"],
-    highways: ["Highway 922", "Highway 4"],
-    soilType: "Black soil with mixed-wood forest",
-    nearestCity: "Debden, 8 km",
-    keywords: ["RM Big River farmland for sale", "mixed-use property west Saskatchewan", "diversified farming operations", "RM Big River property"]
+    description: "The RM of Big River No. 555 is located in northern Saskatchewan near Big River, Nesslin Lake, and Phillips Grove. The nearest major centre is Meadow Lake, ~84 km. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Big River", "Nesslin Lake", "Phillips Grove", "Bodmin"],
+    highways: [],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Meadow Lake, ~84 km",
+    keywords: ["farmland for sale RM Big River", "agricultural land Big River area", "Saskatchewan farmland RM Big River", "RM Big River farm property"]
   },
   "big-stick": {
-    description: "Big Stick RM occupies prairie grain land in southwestern Saskatchewan with distinctive geographic character and established agricultural operations. The municipality's location near Highway 21 provides efficient access to commodity markets and trading centers throughout the province. Rolling prairie with black soil supports intensive grain production, particularly wheat and canola operations. The region benefits from proximity to larger service centers while maintaining rural agricultural character. Big Stick attracts operators seeking productive prairie farmland with good transportation access, proven soil productivity, and strong commodity market infrastructure.",
-    towns: ["Maple Creek", "Gull Lake", "Ensign"],
-    highways: ["Highway 21", "Highway 4"],
-    soilType: "Black soil — prairie grain land",
-    nearestCity: "Maple Creek, 20 km",
-    keywords: ["RM Big Stick farmland for sale", "prairie grain land southwestern Saskatchewan", "Maple Creek area agricultural property", "RM Big Stick grain operations"]
+    description: "The RM of Big Stick No. 141 is located in southern western Saskatchewan near Golden Prairie. The nearest major centre is Swift Current, ~124 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Golden Prairie"],
+    highways: [],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Swift Current, ~124 km",
+    keywords: ["farmland for sale RM Big Stick", "agricultural land Golden Prairie area", "Saskatchewan farmland RM Big Stick", "RM Big Stick farm property"]
   },
   "biggar": {
-    description: "Biggar RM encompasses productive grain land in west-central Saskatchewan with strong agricultural infrastructure and established commodity networks. The municipality is traversed by Highway 16, Saskatchewan's major east-west transportation corridor providing direct market access and efficient commodity export routes. Black soil predominates throughout the region, supporting wheat, canola, and lentil production. The town of Biggar provides comprehensive agricultural services, equipment dealers, and commodity trading facilities. The region's excellent infrastructure, proven soil productivity, and strategic Highway 16 location make it highly attractive to grain operators seeking reliable farmland with strong market access and established agricultural services.",
-    towns: ["Biggar", "Macklin", "Delisle"],
-    highways: ["Highway 16", "Highway 14"],
-    soilType: "Black soil — premium grain land",
-    nearestCity: "Biggar, 0 km",
-    keywords: ["RM Biggar farmland for sale", "Highway 16 grain belt", "west-central Saskatchewan agricultural land", "Biggar area premium farmland"]
+    description: "The RM of Biggar No. 347 is located in central western Saskatchewan near Biggar, Springwater, and Argo. The nearest major centre is North Battleford, ~75 km. The municipality is served by Highway 4, Highway 14, Highway 51, Highway 656 and Highway 658, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Biggar", "Springwater", "Argo", "Castlewood"],
+    highways: ["Highway 4", "Highway 14", "Highway 51", "Highway 656", "Highway 658"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "North Battleford, ~75 km",
+    keywords: ["farmland for sale RM Biggar", "agricultural land Biggar area", "Saskatchewan farmland RM Biggar", "RM Biggar farm property"]
   },
   "birch-hills": {
-    description: "Birch Hills RM spans north-central Saskatchewan with mixed agricultural and forest land offering diversified production opportunities. The municipality's location provides reasonable access to Highway 16 and regional trading centers. The terrain transitions between productive grain land with black soil and mixed-wood forest, supporting both crop and livestock operations. Communities within the region provide essential local services while proximity to larger centers offers expanded agricultural support. Birch Hills attracts producers interested in mixed-use operations combining grain production with cattle raising or those seeking land with natural resource diversity in a developing region.",
-    towns: ["Shellbrook", "Spiritwood", "Prince Albert"],
-    highways: ["Highway 16", "Highway 905"],
-    soilType: "Black soil with mixed-wood forest",
-    nearestCity: "Shellbrook, 12 km",
-    keywords: ["RM Birch Hills farmland for sale", "mixed farming north-central Saskatchewan", "forest and grain land", "RM Birch Hills agricultural property"]
+    description: "The RM of Birch Hills No. 460 is located in northern Saskatchewan near Birch Hills, Brancepeth, and Hagen. The nearest major centre is Prince Albert, ~24 km. The municipality is served by Highway 3, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Birch Hills", "Brancepeth", "Hagen", "Muskoday First Nation"],
+    highways: ["Highway 3"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Prince Albert, ~24 km",
+    keywords: ["farmland for sale RM Birch Hills", "agricultural land Birch Hills area", "Saskatchewan farmland RM Birch Hills", "RM Birch Hills farm property"]
   },
   "bjorkdale": {
-    description: "Bjorkdale RM encompasses productive grain land in east-central Saskatchewan within the established agricultural region. Located with access to Highway 16, the municipality benefits from established grain handling infrastructure and commodity market connections. Black soil characterizes the region, making it ideal for wheat and canola production. Nearby communities provide local agricultural services while proximity to larger trading centers ensures efficient market access and equipment support. The region attracts grain farmers seeking established agricultural land with proven productivity, reliable infrastructure, and strong commodity market connections in Saskatchewan's grain belt.",
-    towns: ["Melville", "Foam Lake", "Arborfield"],
-    highways: ["Highway 16", "Highway 22"],
-    soilType: "Black soil — grain production zone",
-    nearestCity: "Melville, 18 km",
-    keywords: ["RM Bjorkdale farmland for sale", "grain land east-central Saskatchewan", "Melville area agricultural property", "RM Bjorkdale black soil land"]
+    description: "The RM of Bjorkdale No. 426 is located in central eastern Saskatchewan near Bjorkdale, Mistatim, and Barrier Ford. The nearest major centre is Melfort, ~76 km. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Bjorkdale", "Mistatim", "Barrier Ford", "Chelan"],
+    highways: [],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Melfort, ~76 km",
+    keywords: ["farmland for sale RM Bjorkdale", "agricultural land Bjorkdale area", "Saskatchewan farmland RM Bjorkdale", "RM Bjorkdale farm property"]
   },
   "blaine-lake": {
-    description: "Blaine Lake RM encompasses productive grain land in central Saskatchewan with excellent soil characteristics and established market infrastructure. The municipality is positioned within the province's grain belt with access to Highway 14 and regional commodity networks. Black soil predominates, supporting wheat and canola operations with proven long-term productivity. The town of Blaine Lake provides essential agricultural services and local support while proximity to larger trading centers offers expanded commodity facilities. The region attracts operators seeking reliable, productive farmland with established infrastructure, proven agricultural economics, and strong long-term market access.",
-    towns: ["Blaine Lake", "Wilkie", "Battleford"],
-    highways: ["Highway 14", "Highway 40"],
-    soilType: "Black soil — proven grain production",
-    nearestCity: "Blaine Lake, 0 km",
-    keywords: ["RM Blaine Lake farmland for sale", "grain belt property central Saskatchewan", "Blaine Lake area agricultural land", "RM Blaine Lake premium farmland"]
+    description: "The RM of Blaine Lake No. 434 is located in central Saskatchewan near Blaine Lake and Marcelin. The nearest major centre is Saskatoon, ~77 km. The municipality is served by Highway 12 and Highway 40, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Blaine Lake", "Marcelin"],
+    highways: ["Highway 12", "Highway 40"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Saskatoon, ~77 km",
+    keywords: ["farmland for sale RM Blaine Lake", "agricultural land Blaine Lake area", "Saskatchewan farmland RM Blaine Lake", "RM Blaine Lake farm property"]
   },
   "blucher": {
-    description: "Blucher RM represents an agricultural region in central Saskatchewan with strong soil productivity and established infrastructure networks. Located with reasonable access to Highway 14, the municipality benefits from grain handling facilities and commodity market connections throughout the province. Black soil characterizes the region, making it well-suited for cereal and oilseed production. Small communities provide local agricultural services while proximity to larger centers ensures access to equipment dealers and modern agricultural support. Blucher attracts farmers and investors seeking productive farmland with reliable soil conditions, established infrastructure, and strong agricultural economics.",
-    towns: ["Lanigan", "Sturgis", "Humboldt"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil with agricultural heritage",
-    nearestCity: "Lanigan, 8 km",
-    keywords: ["RM Blucher farmland for sale", "central Saskatchewan grain land", "Lanigan area agricultural property", "RM Blucher farming acreage"]
+    description: "The RM of Blucher No. 343 is located in central Saskatchewan near Allan, Bradwell, and Clavet. The nearest major centre is Saskatoon, ~36 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Allan", "Bradwell", "Clavet", "Elstow"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Saskatoon, ~36 km",
+    keywords: ["farmland for sale RM Blucher", "agricultural land Allan area", "Saskatchewan farmland RM Blucher", "RM Blucher farm property"]
   },
   "bone-creek": {
-    description: "Bone Creek RM occupies agricultural land in south-central Saskatchewan within the province's established grain belt. The municipality's location provides access to Highway 1 and regional commodity networks connecting to major markets and export facilities. Black soil and rolling prairie characterize the landscape, ideal for high-intensity grain production. Nearby communities provide local services while larger trading centers offer comprehensive agricultural support and commodity trading. Bone Creek attracts grain operators seeking productive land with excellent transportation access, proven soil productivity, and strong commodity market infrastructure.",
-    towns: ["Indian Head", "Qu'Appelle", "Wapella"],
-    highways: ["Highway 1", "Highway 56"],
-    soilType: "Black soil — grain belt zone",
-    nearestCity: "Indian Head, 22 km",
-    keywords: ["RM Bone Creek farmland for sale", "grain belt property south Saskatchewan", "Highway 1 agricultural land", "RM Bone Creek premium farmland"]
+    description: "The RM of Bone Creek No. 108 is located in southern western Saskatchewan near Simmie, Illerbrun, and Instow. The nearest major centre is Swift Current, ~60 km. The municipality is served by Highway 13, Highway 343 and Highway 631, providing market access and transportation connections. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Simmie", "Illerbrun", "Instow", "Scotsguard"],
+    highways: ["Highway 13", "Highway 343", "Highway 631"],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Swift Current, ~60 km",
+    keywords: ["farmland for sale RM Bone Creek", "agricultural land Simmie area", "Saskatchewan farmland RM Bone Creek", "RM Bone Creek farm property"]
   },
   "bratts-lake": {
-    description: "Bratt's Lake RM encompasses productive grain land in south-central Saskatchewan with excellent soil resources and established infrastructure. The municipality sits within the province's premium grain belt with access to Highway 1 and regional commodity handling networks. Black soil predominates, supporting intensive wheat and canola operations with historically strong yields. The region's proximity to larger service centers provides access to modern agricultural equipment dealers and commodity trading facilities. Bratt's Lake attracts operators seeking high-performance grain land with proven productivity, excellent soil characteristics, and strong market access along Saskatchewan's main transportation corridor.",
-    towns: ["Indian Head", "Grenfell", "Wapella"],
-    highways: ["Highway 1", "Highway 23"],
-    soilType: "Black soil — premium grain land",
-    nearestCity: "Indian Head, 15 km",
+    description: "The RM of Bratt's Lake No. 129 is located in southern Saskatchewan. The nearest major centre is Regina, ~32 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Bratt's Lake"],
+    highways: [],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Regina, ~32 km",
     keywords: ["RM Bratt's Lake farmland for sale", "black soil grain belt", "south Saskatchewan premium farmland", "RM Bratt's Lake agricultural property"]
   },
   "britannia": {
-    description: "Britannia RM represents productive grain land in central Saskatchewan with strong agricultural foundation and established market access. Located within the grain belt with reasonable proximity to Highway 14, the municipality benefits from commodity handling infrastructure and market connections. Black soil characterizes the region, making it suitable for wheat and oilseed production. Small communities provide local services while larger trading centers offer expanded agricultural support and commodity facilities. Britannia attracts farmers seeking reliable farmland with proven productivity, established infrastructure, and strong agricultural economics in Saskatchewan's productive grain region.",
-    towns: ["Pennant", "Ponteix", "Bulyea"],
-    highways: ["Highway 14", "Highway 57"],
-    soilType: "Black soil — grain production zone",
-    nearestCity: "Ponteix, 18 km",
-    keywords: ["RM Britannia farmland for sale", "grain belt property central Saskatchewan", "Ponteix area agricultural land", "RM Britannia farming acreage"]
+    description: "The RM of Britannia No. 502 is located in northern western Saskatchewan near Statistics Canada. The nearest major centre is Lloydminster, ~32 km. The municipality is served by Highway 17, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Statistics Canada"],
+    highways: ["Highway 17"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Lloydminster, ~32 km",
+    keywords: ["farmland for sale RM Britannia", "agricultural land Statistics Canada area", "Saskatchewan farmland RM Britannia", "RM Britannia farm property"]
   },
   "brock": {
-    description: "Brock RM encompasses productive grain land in east-central Saskatchewan within the established agricultural region. The municipality's location provides access to Highway 16 and regional commodity networks serving major markets. Black soil supports cereal and oilseed production with proven long-term productivity. Nearby communities like Tisdale provide essential agricultural services and local support networks. The region attracts grain operators seeking established farmland with reliable infrastructure, proven soil productivity, and strong commodity market connections in Saskatchewan's productive grain belt.",
-    towns: ["Tisdale", "Arborfield", "Melville"],
-    highways: ["Highway 16", "Highway 905"],
-    soilType: "Black soil — proven productivity",
-    nearestCity: "Tisdale, 10 km",
-    keywords: ["RM Brock farmland for sale", "grain land east-central Saskatchewan", "Tisdale area agricultural property", "RM Brock black soil land"]
+    description: "The RM of Brock No. 64 is located in southern eastern Saskatchewan near Arcola, Kisbey, and Armilla. The nearest major centre is Estevan, ~65 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Arcola", "Kisbey", "Armilla"],
+    highways: [],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Estevan, ~65 km",
+    keywords: ["farmland for sale RM Brock", "agricultural land Arcola area", "Saskatchewan farmland RM Brock", "RM Brock farm property"]
   },
   "brokenshell": {
-    description: "Brokenshell RM represents diverse agricultural land in north-central Saskatchewan with mixed farming opportunities and natural resource characteristics. The municipality's location provides reasonable access to Highway 102 and regional trading centers. The terrain features productive soil suitable for grain and forage production, with some areas supporting cattle operations. Small communities provide local services while proximity to larger centers offers expanded agricultural support. Brokenshell attracts producers interested in diversified operations combining grain production with livestock management or those seeking mixed-use agricultural property.",
-    towns: ["Leask", "Spiritwood", "Prince Albert"],
-    highways: ["Highway 102", "Highway 95"],
-    soilType: "Black soil with mixed farming potential",
-    nearestCity: "Leask, 12 km",
-    keywords: ["RM Brokenshell farmland for sale", "mixed farming north-central Saskatchewan", "diversified operations property", "RM Brokenshell agricultural land"]
+    description: "The RM of Brokenshell No. 68 is located in southern eastern Saskatchewan near Trossachs, Abbott, and Axford. The nearest major centre is Weyburn, ~28 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Trossachs", "Abbott", "Axford", "Brightmore"],
+    highways: [],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Weyburn, ~28 km",
+    keywords: ["farmland for sale RM Brokenshell", "agricultural land Trossachs area", "Saskatchewan farmland RM Brokenshell", "RM Brokenshell farm property"]
   },
   "buchanan": {
-    description: "Buchanan RM occupies grain land in west-central Saskatchewan within the established agricultural region. The municipality benefits from proximity to Highway 16, Saskatchewan's major east-west corridor providing efficient market access. Black soil characterizes much of the region, supporting wheat and canola operations. Nearby communities provide local agricultural services while larger trading centers offer expanded commodity facilities and equipment support. Buchanan attracts grain operators seeking productive farmland with good transportation access, reliable soil conditions, and established market infrastructure.",
-    towns: ["Biggar", "Macklin", "Delisle"],
-    highways: ["Highway 16", "Highway 14"],
-    soilType: "Black soil — grain land",
-    nearestCity: "Biggar, 12 km",
-    keywords: ["RM Buchanan farmland for sale", "Highway 16 grain corridor", "west-central Saskatchewan agricultural land", "RM Buchanan farming property"]
+    description: "The RM of Buchanan No. 304 is located in central eastern Saskatchewan near Buchanan, Amsterdam, and Tadmore. The nearest major centre is Yorkton, ~59 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Buchanan", "Amsterdam", "Tadmore", "Mitchellview"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Yorkton, ~59 km",
+    keywords: ["farmland for sale RM Buchanan", "agricultural land Buchanan area", "Saskatchewan farmland RM Buchanan", "RM Buchanan farm property"]
   },
   "buckland": {
-    description: "Buckland RM encompasses productive grain land in central Saskatchewan with strong agricultural heritage and established infrastructure. Located with access to Highway 14, the municipality benefits from commodity handling networks and market connections throughout the province. Black soil supports cereal and oilseed production with proven yields. Small communities provide local services while proximity to larger trading centers ensures adequate agricultural support and equipment access. Buckland attracts farmers seeking reliable, productive farmland with established infrastructure, proven agricultural economics, and strong market connectivity.",
-    towns: ["Lanigan", "Sturgis", "Humboldt"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil with agricultural tradition",
-    nearestCity: "Lanigan, 10 km",
-    keywords: ["RM Buckland farmland for sale", "grain belt property central Saskatchewan", "Lanigan area agricultural land", "RM Buckland black soil land"]
+    description: "The RM of Buckland No. 491 is located in northern Saskatchewan near Alingly, Henribourg, and Little Red River IR #106C. The nearest major centre is Prince Albert, ~12 km. The municipality is served by Highway 2 and Highway 355, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Alingly", "Henribourg", "Little Red River IR #106C", "Redwing"],
+    highways: ["Highway 2", "Highway 355"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Prince Albert, ~12 km",
+    keywords: ["farmland for sale RM Buckland", "agricultural land Alingly area", "Saskatchewan farmland RM Buckland", "RM Buckland farm property"]
   },
   "buffalo": {
-    description: "Buffalo RM represents a developing agricultural region in northwest Saskatchewan with diverse land characteristics and emerging economic opportunities. The municipality's location provides reasonable access to Highway 4 and regional trading centers. The terrain features productive soil capable of supporting grain and forage operations, alongside natural resource characteristics. Communities within the RM provide basic local services while proximity to larger centers offers expanded support. Buffalo attracts operators interested in agricultural investment in a developing region, with potential for diversified operations and long-term property value appreciation.",
-    towns: ["Loon Lake", "Green Lake", "Meadow Lake"],
-    highways: ["Highway 4", "Highway 926"],
-    soilType: "Black soil with developing potential",
-    nearestCity: "Meadow Lake, 25 km",
-    keywords: ["RM Buffalo farmland for sale", "northwest Saskatchewan agricultural land", "developing region property investment", "RM Buffalo rural acreage"]
+    description: "The RM of Buffalo No. 409 is located in central western Saskatchewan near Wilkie, Bush, and Cloan. The nearest major centre is North Battleford, ~31 km. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Wilkie", "Bush", "Cloan", "Phippen"],
+    highways: [],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "North Battleford, ~31 km",
+    keywords: ["farmland for sale RM Buffalo", "agricultural land Wilkie area", "Saskatchewan farmland RM Buffalo", "RM Buffalo farm property"]
   },
   "calder": {
-    description: "Calder RM spans productive grain land in west-central Saskatchewan with strong agricultural foundation and established infrastructure. The municipality's proximity to Highway 16 provides efficient market access and commodity export connections. Black soil characterizes the region, supporting intensive wheat and canola production. Nearby communities provide agricultural services while larger trading centers offer comprehensive equipment and commodity facilities. Calder attracts operators seeking reliable grain land with good transportation access, proven soil productivity, and strong agricultural market infrastructure.",
-    towns: ["Biggar", "Macklin", "Wilkie"],
-    highways: ["Highway 16", "Highway 14"],
-    soilType: "Black soil — premium grain land",
-    nearestCity: "Biggar, 15 km",
-    keywords: ["RM Calder farmland for sale", "grain belt property west-central Saskatchewan", "Highway 16 agricultural land", "RM Calder premium farmland"]
+    description: "The RM of Calder No. 241 is located in central eastern Saskatchewan near Calder, Kessock, and Wroxton. The nearest major centre is Yorkton, ~51 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Calder", "Kessock", "Wroxton"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Yorkton, ~51 km",
+    keywords: ["farmland for sale RM Calder", "agricultural land Calder area", "Saskatchewan farmland RM Calder", "RM Calder farm property"]
   },
   "caledonia": {
-    description: "Caledonia RM encompasses productive grain land in south-central Saskatchewan within the province's established grain belt. Located with access to Highway 1, the municipality benefits from direct market access and regional commodity networks. Black soil with rolling prairie characterizes the landscape, ideal for high-yield grain operations. Nearby trading centers provide essential agricultural services and commodity trading facilities. The region attracts grain operators seeking productive farmland with excellent infrastructure, proven soil performance, and strong commodity market connections in Saskatchewan's premium agricultural zone.",
-    towns: ["Wapella", "Indian Head", "Grenfell"],
-    highways: ["Highway 1", "Highway 23"],
-    soilType: "Black soil — grain belt zone",
-    nearestCity: "Indian Head, 18 km",
-    keywords: ["RM Caledonia farmland for sale", "grain belt property south Saskatchewan", "Highway 1 agricultural land", "RM Caledonia black soil land"]
+    description: "The RM of Caledonia No. 99 is located in southern Saskatchewan near Milestone, Parry, and Dummer. The nearest major centre is Regina, ~62 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Milestone", "Parry", "Dummer"],
+    highways: [],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Regina, ~62 km",
+    keywords: ["farmland for sale RM Caledonia", "agricultural land Milestone area", "Saskatchewan farmland RM Caledonia", "RM Caledonia farm property"]
   },
   "cambria": {
-    description: "Cambria RM represents diverse agricultural land in north-central Saskatchewan with mixed farming and livestock opportunities. The municipality's location provides reasonable access to Highway 102 and regional services. The terrain features productive soil suitable for grain and forage crops, supporting both crop and cattle operations. Small communities within the RM provide local services while proximity to larger centers offers expanded agricultural support. Cambria attracts producers interested in mixed farming operations combining crop production with livestock management in a well-positioned rural setting.",
-    towns: ["Leask", "Spiritwood", "Prince Albert"],
-    highways: ["Highway 102", "Highway 95"],
-    soilType: "Black soil — mixed farming capability",
-    nearestCity: "Leask, 15 km",
-    keywords: ["RM Cambria farmland for sale", "mixed farming north-central Saskatchewan", "livestock property", "RM Cambria agricultural land"]
+    description: "The RM of Cambria No. 6 is located in southern eastern Saskatchewan near Torquay, Marienthal, and Outram. The nearest major centre is Estevan, ~31 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Torquay", "Marienthal", "Outram", "Rafferty"],
+    highways: [],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Estevan, ~31 km",
+    keywords: ["farmland for sale RM Cambria", "agricultural land Torquay area", "Saskatchewan farmland RM Cambria", "RM Cambria farm property"]
   },
   "cana": {
-    description: "Cana RM encompasses productive grain land in central Saskatchewan with strong agricultural infrastructure and market access. The municipality's location provides good connectivity to commodity networks and regional trading centers. Black soil characterizes much of the region, making it ideal for wheat and canola production. Local communities provide basic agricultural services while proximity to larger centers ensures access to modern equipment and commodity trading. Cana attracts grain operators seeking reliable farmland with proven productivity, established infrastructure, and strong agricultural economics.",
-    towns: ["Humboldt", "Lanigan", "Sturgis"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil — grain production zone",
-    nearestCity: "Humboldt, 12 km",
+    description: "The RM of Cana No. 214 is located in southern eastern Saskatchewan. The nearest major centre is Yorkton, ~30 km. The municipality is served by Highway 47, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Cana"],
+    highways: ["Highway 47"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Yorkton, ~30 km",
     keywords: ["RM Cana farmland for sale", "grain belt property central Saskatchewan", "Humboldt area agricultural land", "RM Cana farming acreage"]
   },
   "canaan": {
-    description: "Canaan RM represents productive grain land in central Saskatchewan within the established agricultural region. Located with access to Highway 14, the municipality benefits from grain handling infrastructure and market connections. Black soil supports cereal and oilseed production with proven yields. Nearby communities provide local agricultural services and support. The region attracts farmers seeking reliable farmland with established infrastructure, proven soil productivity, and strong commodity market access in Saskatchewan's grain belt.",
-    towns: ["Lanigan", "Sturgis", "Humboldt"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil — proven grain land",
-    nearestCity: "Lanigan, 8 km",
-    keywords: ["RM Canaan farmland for sale", "grain belt property central Saskatchewan", "Lanigan area agricultural property", "RM Canaan black soil land"]
+    description: "The RM of Canaan No. 225 is located in southern Saskatchewan near Lucky Lake, Bernard, and Greenbrie. The nearest major centre is Swift Current, ~81 km. The municipality is served by Highway 42, Highway 45, Highway 373, Highway 646 and Highway 737, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Lucky Lake", "Bernard", "Greenbrie"],
+    highways: ["Highway 42", "Highway 45", "Highway 373", "Highway 646", "Highway 737"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Swift Current, ~81 km",
+    keywords: ["farmland for sale RM Canaan", "agricultural land Lucky Lake area", "Saskatchewan farmland RM Canaan", "RM Canaan farm property"]
   },
   "canwood": {
-    description: "Canwood RM spans agricultural and mixed-use land in north-central Saskatchewan with access to diverse economic opportunities and natural features. The municipality's location near Highway 16 provides connectivity to major markets and trading centers. The terrain transitions between productive grain land with black soil and natural forest resources, supporting both crop and livestock operations. Small communities provide basic local services while larger centers offer expanded agricultural support. Canwood attracts producers interested in diversified operations or those seeking mixed-use property with agricultural and natural resource potential.",
-    towns: ["Shellbrook", "Spiritwood", "Prince Albert"],
-    highways: ["Highway 16", "Highway 905"],
-    soilType: "Black soil with mixed-wood forest",
-    nearestCity: "Shellbrook, 10 km",
-    keywords: ["RM Canwood farmland for sale", "mixed farming north-central Saskatchewan", "forest and grain land", "RM Canwood agricultural property"]
+    description: "The RM of Canwood No. 494 is located in northern Saskatchewan near Canwood, Debden, and Hawkeye. The nearest major centre is Prince Albert, ~76 km. The municipality is served by Highway 55, Highway 694 and Highway 793, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Canwood", "Debden", "Hawkeye", "Mont Nebo"],
+    highways: ["Highway 55", "Highway 694", "Highway 793"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Prince Albert, ~76 km",
+    keywords: ["farmland for sale RM Canwood", "agricultural land Canwood area", "Saskatchewan farmland RM Canwood", "RM Canwood farm property"]
   },
   "caron": {
-    description: "Caron RM encompasses productive grain land in south-central Saskatchewan with excellent soil resources and established market infrastructure. The municipality's location provides access to Highway 1 and regional commodity networks connecting to major markets. Black soil characterizes the region, supporting intensive wheat and canola operations. Nearby trading centers provide essential agricultural services and commodity trading facilities. Caron attracts grain operators seeking premium farmland with proven productivity, excellent soil characteristics, and strong market access in Saskatchewan's grain belt.",
-    towns: ["Indian Head", "Grenfell", "Wapella"],
-    highways: ["Highway 1", "Highway 23"],
-    soilType: "Black soil — grain belt zone",
-    nearestCity: "Indian Head, 20 km",
-    keywords: ["RM Caron farmland for sale", "black soil grain land south Saskatchewan", "Highway 1 agricultural property", "RM Caron premium farmland"]
+    description: "The RM of Caron No. 162 is located in southern Saskatchewan near Caronport and Caron. The nearest major centre is Moose Jaw, ~25 km. The municipality is served by Highway 1, providing market access and transportation connections. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Caronport", "Caron"],
+    highways: ["Highway 1"],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Moose Jaw, ~25 km",
+    keywords: ["farmland for sale RM Caron", "agricultural land Caronport area", "Saskatchewan farmland RM Caron", "RM Caron farm property"]
   },
   "carmichael": {
-    description: "Carmichael RM represents productive grain land in central Saskatchewan with strong agricultural heritage and established infrastructure. The municipality's location provides reasonable access to Highway 14 and commodity handling networks. Black soil supports cereal and oilseed production with proven agricultural productivity. Small communities provide local services while proximity to larger trading centers ensures adequate agricultural support and equipment access. Carmichael attracts farmers seeking reliable farmland with established infrastructure, proven soil conditions, and strong agricultural economics in Saskatchewan's productive grain region.",
-    towns: ["Humboldt", "Lanigan", "Sturgis"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil with heritage grain farms",
-    nearestCity: "Humboldt, 15 km",
-    keywords: ["RM Carmichael farmland for sale", "grain belt property central Saskatchewan", "Humboldt area agricultural land", "RM Carmichael farming acreage"]
+    description: "The RM of Carmichael No. 109 is located in southern western Saskatchewan near Carmichael, Garden Head, and Stone. The nearest major centre is Swift Current, ~73 km. The municipality is served by Highway 1, providing market access and transportation connections. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Carmichael", "Garden Head", "Stone"],
+    highways: ["Highway 1"],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Swift Current, ~73 km",
+    keywords: ["farmland for sale RM Carmichael", "agricultural land Carmichael area", "Saskatchewan farmland RM Carmichael", "RM Carmichael farm property"]
   },
   "chaplin": {
-    description: "Chaplin RM encompasses diverse agricultural land in south-central Saskatchewan with established grain operations and mixed farming opportunities. Located with reasonable access to Highway 1 and regional commodity networks, the municipality benefits from established market infrastructure. Black soil supports grain production while some areas provide grazing for cattle operations. Nearby communities provide local services while larger trading centers offer expanded agricultural support and commodity facilities. Chaplin attracts operators seeking productive farmland with reliable infrastructure, proven agricultural economics, and diverse production opportunities.",
-    towns: ["Grenfell", "Wapella", "Indian Head"],
-    highways: ["Highway 1", "Highway 23"],
-    soilType: "Black soil with mixed farming potential",
-    nearestCity: "Grenfell, 12 km",
-    keywords: ["RM Chaplin farmland for sale", "grain and cattle land south Saskatchewan", "Grenfell area agricultural property", "RM Chaplin farming acreage"]
+    description: "The RM of Chaplin No. 164 is located in southern Saskatchewan near Chaplin, Valjean, and Uren. The nearest major centre is Moose Jaw, ~77 km. The municipality is served by Highway 58, providing market access and transportation connections. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Chaplin", "Valjean", "Uren"],
+    highways: ["Highway 58"],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Moose Jaw, ~77 km",
+    keywords: ["farmland for sale RM Chaplin", "agricultural land Chaplin area", "Saskatchewan farmland RM Chaplin", "RM Chaplin farm property"]
   },
   "chester": {
-    description: "Chester RM represents productive grain land in central Saskatchewan with strong soil characteristics and established agricultural networks. The municipality's location provides good access to Highway 14 and regional commodity infrastructure. Black soil characterizes the region, making it ideal for wheat and canola production. Local communities provide basic agricultural services while larger centers offer comprehensive equipment and commodity trading facilities. Chester attracts grain operators seeking reliable farmland with proven productivity, established infrastructure, and strong commodity market connections.",
-    towns: ["Blaine Lake", "Wilkie", "Battleford"],
-    highways: ["Highway 14", "Highway 40"],
-    soilType: "Black soil — grain production zone",
-    nearestCity: "Blaine Lake, 10 km",
-    keywords: ["RM Chester farmland for sale", "grain belt property central Saskatchewan", "Blaine Lake area agricultural land", "RM Chester black soil land"]
+    description: "The RM of Chester No. 125 is located in southern eastern Saskatchewan near Glenavon, Peebles, and Baring. The nearest major centre is Weyburn, ~81 km. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Glenavon", "Peebles", "Baring", "Windthorst"],
+    highways: [],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Weyburn, ~81 km",
+    keywords: ["farmland for sale RM Chester", "agricultural land Glenavon area", "Saskatchewan farmland RM Chester", "RM Chester farm property"]
   },
   "chesterfield": {
-    description: "Chesterfield RM encompasses productive grain land in east-central Saskatchewan within the established agricultural region. Located with access to Highway 16, the municipality benefits from grain handling infrastructure and regional commodity networks. Black soil supports cereal and oilseed production with proven yields. Nearby communities provide local agricultural services and support. The region attracts grain farmers seeking established farmland with reliable infrastructure, proven soil productivity, and strong commodity market connections in Saskatchewan's grain belt.",
-    towns: ["Melville", "Foam Lake", "Arborfield"],
-    highways: ["Highway 16", "Highway 22"],
-    soilType: "Black soil — grain land zone",
-    nearestCity: "Melville, 15 km",
-    keywords: ["RM Chesterfield farmland for sale", "grain land east-central Saskatchewan", "Melville area agricultural property", "RM Chesterfield black soil land"]
+    description: "The RM of Chesterfield No. 261 is located in central western Saskatchewan near Eatonia, Mantario, and Laporte. The nearest major centre is Kindersley, ~60 km. The municipality is served by Highway 21, Highway 44 and Highway 635, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Eatonia", "Mantario", "Laporte", "Cuthbert"],
+    highways: ["Highway 21", "Highway 44", "Highway 635"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Kindersley, ~60 km",
+    keywords: ["farmland for sale RM Chesterfield", "agricultural land Eatonia area", "Saskatchewan farmland RM Chesterfield", "RM Chesterfield farm property"]
   },
   "churchbridge": {
-    description: "Churchbridge RM represents a grain-producing region in east-central Saskatchewan with excellent soil productivity and established infrastructure. The municipality's location near Highway 16 provides efficient access to commodity markets and grain handling facilities. Black soil characterizes the region, supporting wheat and canola operations with historically strong performance. Nearby communities provide agricultural services while larger trading centers offer expanded equipment and commodity facilities. Churchbridge attracts operators seeking reliable grain land with good transportation access, proven soil productivity, and strong agricultural market infrastructure.",
-    towns: ["Melville", "Foam Lake", "Yorkton"],
-    highways: ["Highway 16", "Highway 22"],
-    soilType: "Black soil — proven grain production",
-    nearestCity: "Melville, 18 km",
-    keywords: ["RM Churchbridge farmland for sale", "grain belt property east-central Saskatchewan", "Highway 16 agricultural land", "RM Churchbridge premium farmland"]
+    description: "The RM of Churchbridge No. 211 is located in southern eastern Saskatchewan near Churchbridge and MacNutt. The nearest major centre is Yorkton, ~54 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Churchbridge", "MacNutt"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Yorkton, ~54 km",
+    keywords: ["farmland for sale RM Churchbridge", "agricultural land Churchbridge area", "Saskatchewan farmland RM Churchbridge", "RM Churchbridge farm property"]
   },
   "clayton": {
     description: "Clayton RM encompasses productive grain land in west-central Saskatchewan with strong agricultural foundation and established market access. The municipality's location provides good connectivity to Highway 16 and commodity networks. Black soil supports intensive grain production, particularly wheat and canola. Nearby communities provide local agricultural services while larger trading centers offer comprehensive support and commodity trading. Clayton attracts grain operators seeking reliable farmland with good infrastructure, proven soil conditions, and strong commodity market access in Saskatchewan's established grain belt.",
@@ -353,91 +353,91 @@ export const rmContentBatch1: Record<string, RMContent> = {
     keywords: ["RM Clayton farmland for sale", "grain belt property west-central Saskatchewan", "Highway 16 agricultural land", "RM Clayton farming property"]
   },
   "clinworth": {
-    description: "Clinworth RM represents productive grain land in central Saskatchewan with strong agricultural heritage and established infrastructure. Located with reasonable access to Highway 14, the municipality benefits from commodity handling networks and market connections. Black soil characterizes the region, making it suitable for wheat and oilseed production. Small communities provide local services while proximity to larger trading centers ensures adequate agricultural support. Clinworth attracts farmers seeking reliable farmland with established infrastructure, proven soil productivity, and strong agricultural economics in Saskatchewan's grain region.",
-    towns: ["Lanigan", "Humboldt", "Sturgis"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil — grain production zone",
-    nearestCity: "Lanigan, 12 km",
-    keywords: ["RM Clinworth farmland for sale", "grain belt property central Saskatchewan", "Lanigan area agricultural land", "RM Clinworth farming acreage"]
+    description: "The RM of Clinworth No. 230 is located in southern western Saskatchewan near Sceptre, Lemsford, and Portreeve. The nearest major centre is Kindersley, ~53 km. The municipality is served by Highway 32 and Highway 649, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Sceptre", "Lemsford", "Portreeve"],
+    highways: ["Highway 32", "Highway 649"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Kindersley, ~53 km",
+    keywords: ["farmland for sale RM Clinworth", "agricultural land Sceptre area", "Saskatchewan farmland RM Clinworth", "RM Clinworth farm property"]
   },
   "coalfields": {
-    description: "Coalfields RM encompasses diverse land in northwestern Saskatchewan with agricultural and natural resource characteristics. The municipality's location provides reasonable access to Highway 4 and regional trading centers. The terrain features productive soil suitable for grain and forage production, with natural resource potential. Small communities provide basic local services while larger centers offer expanded support. Coalfields attracts operators interested in diversified operations or those seeking mixed-use property with agricultural and resource development opportunities in a growing region.",
-    towns: ["Lloydminster", "Cold Lake", "Meadow Lake"],
-    highways: ["Highway 4", "Highway 16"],
-    soilType: "Black soil with resource potential",
-    nearestCity: "Lloydminster, 35 km",
-    keywords: ["RM Coalfields farmland for sale", "northwest Saskatchewan agricultural land", "diversified operations property", "RM Coalfields rural acreage"]
+    description: "The RM of Coalfields No. 4 is located in southern eastern Saskatchewan near Bienfait, Frobisher, and North Portal. The nearest major centre is Estevan, ~24 km. The municipality is served by Highway 18, Highway 39, Highway 604, Highway 605 and Highway 703, providing market access and transportation connections. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Bienfait", "Frobisher", "North Portal", "Roche Percee"],
+    highways: ["Highway 18", "Highway 39", "Highway 604", "Highway 605", "Highway 703"],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Estevan, ~24 km",
+    keywords: ["farmland for sale RM Coalfields", "agricultural land Bienfait area", "Saskatchewan farmland RM Coalfields", "RM Coalfields farm property"]
   },
   "colonsay": {
-    description: "Colonsay RM represents productive grain land in central Saskatchewan with excellent agricultural infrastructure and established market networks. Located with good access to Highway 14, the municipality benefits from commodity handling facilities and regional trading connections. Black soil predominates, supporting wheat and canola operations with proven productivity. Nearby communities provide local agricultural services while larger centers offer comprehensive equipment and commodity support. Colonsay attracts grain operators seeking reliable farmland with good infrastructure, proven soil conditions, and strong commodity market access.",
-    towns: ["Lanigan", "Humboldt", "Sturgis"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil — grain belt zone",
-    nearestCity: "Lanigan, 10 km",
-    keywords: ["RM Colonsay farmland for sale", "grain belt property central Saskatchewan", "Lanigan area agricultural land", "RM Colonsay black soil land"]
+    description: "The RM of Colonsay No. 342 is located in central Saskatchewan near Colonsay, Meacham, and Arpiers. The nearest major centre is Saskatoon, ~53 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Colonsay", "Meacham", "Arpiers", "Neely"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Saskatoon, ~53 km",
+    keywords: ["farmland for sale RM Colonsay", "agricultural land Colonsay area", "Saskatchewan farmland RM Colonsay", "RM Colonsay farm property"]
   },
   "connaught": {
-    description: "Connaught RM encompasses agricultural land in north-central Saskatchewan with mixed farming and natural resource characteristics. The municipality's location near Highway 16 provides reasonable connectivity to regional markets and services. The terrain features productive black soil suitable for grain and forage crops, interspersed with natural forest cover. Communities within the RM provide basic local services while proximity to larger centers offers expanded agricultural support. Connaught attracts producers interested in mixed-use operations combining crop production with natural resource opportunities.",
-    towns: ["Shellbrook", "Spiritwood", "Prince Albert"],
-    highways: ["Highway 16", "Highway 905"],
-    soilType: "Black soil with mixed-wood forest",
-    nearestCity: "Shellbrook, 15 km",
-    keywords: ["RM Connaught farmland for sale", "mixed farming north-central Saskatchewan", "forest property Saskatchewan", "RM Connaught agricultural land"]
+    description: "The RM of Connaught No. 457 is located in northern eastern Saskatchewan near Ridgedale, Armley, and Carlea. The nearest major centre is Melfort, ~49 km. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Ridgedale", "Armley", "Carlea", "Leacross"],
+    highways: [],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Melfort, ~49 km",
+    keywords: ["farmland for sale RM Connaught", "agricultural land Ridgedale area", "Saskatchewan farmland RM Connaught", "RM Connaught farm property"]
   },
   "corman-park": {
-    description: "Corman Park RM represents an agricultural and developing region in central Saskatchewan with strong growth potential and proximity to major centers. Located near Saskatoon with access to Highway 14, the municipality combines agricultural land with emerging residential and commercial development opportunities. Black soil supports grain production while the region benefits from proximity to an expanding metropolitan area. The location attracts operators seeking farmland with strong long-term appreciation potential, combined with access to urban services and diversified economic opportunities in Saskatchewan's fastest-growing region.",
-    towns: ["Saskatoon", "Delvina", "Warman"],
-    highways: ["Highway 14", "Highway 7"],
-    soilType: "Black soil with development potential",
-    nearestCity: "Saskatoon, 15 km",
-    keywords: ["RM Corman Park farmland for sale", "agricultural property near Saskatoon", "development potential Saskatchewan", "RM Corman Park land investment"]
+    description: "The RM of Corman Park No. 344 is located in central Saskatchewan near Martensville, Saskatoon, and Warman. The nearest major centre is Saskatoon, ~12 km. The municipality is served by Highway 16 and Highway 219, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Martensville", "Saskatoon", "Warman", "Dalmeny"],
+    highways: ["Highway 16", "Highway 219"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "Saskatoon, ~12 km",
+    keywords: ["farmland for sale RM Corman Park", "agricultural land Martensville area", "Saskatchewan farmland RM Corman Park", "RM Corman Park farm property"]
   },
   "coteau": {
-    description: "Coteau RM encompasses productive grain land in south-central Saskatchewan within the province's premium agricultural zone. Located with excellent access to Highway 1, the municipality benefits from direct commodity market connections and regional infrastructure. Black soil with rolling prairie terrain supports intensive grain operations with historically strong yields. Nearby trading centers provide essential agricultural services and commodity trading facilities. Coteau attracts operators seeking premium farmland with outstanding soil characteristics, excellent transportation access, and strong long-term commodity market performance.",
-    towns: ["Indian Head", "Qu'Appelle", "Wapella"],
-    highways: ["Highway 1", "Highway 56"],
-    soilType: "Black soil — premium grain zone",
-    nearestCity: "Indian Head, 18 km",
-    keywords: ["RM Coteau farmland for sale", "premium grain land south Saskatchewan", "Highway 1 agricultural property", "RM Coteau black soil land"]
+    description: "The RM of Coteau No. 255 is located in central Saskatchewan near Coteau Beach, Hitchcock Bay, and Birsay. The nearest major centre is Saskatoon, ~109 km. The municipality is served by Highway 44, Highway 45, Highway 373 and Highway 646, providing market access and transportation connections. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Coteau Beach", "Hitchcock Bay", "Birsay", "Dunblane"],
+    highways: ["Highway 44", "Highway 45", "Highway 373", "Highway 646"],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Saskatoon, ~109 km",
+    keywords: ["farmland for sale RM Coteau", "agricultural land Coteau Beach area", "Saskatchewan farmland RM Coteau", "RM Coteau farm property"]
   },
   "coulee": {
-    description: "Coulee RM represents productive grain land in southwestern Saskatchewan with distinctive geographic character and strong agricultural tradition. The municipality's location near Highway 21 provides good access to regional trading centers and commodity markets. Rolling prairie with black soil supports wheat and canola operations. The region benefits from proximity to Maple Creek and other service centers while maintaining rural agricultural character. Coulee attracts grain operators seeking reliable farmland with good market access, proven soil productivity, and established agricultural infrastructure.",
-    towns: ["Maple Creek", "Gull Lake", "Ensign"],
-    highways: ["Highway 21", "Highway 4"],
-    soilType: "Black soil — prairie grain land",
-    nearestCity: "Maple Creek, 18 km",
-    keywords: ["RM Coulee farmland for sale", "prairie grain land southwestern Saskatchewan", "Maple Creek area agricultural property", "RM Coulee farming acreage"]
+    description: "The RM of Coulee No. 136 is located in southern Saskatchewan near Chortitz, Braddock, and Burnham. The nearest major centre is Swift Current, ~27 km. The municipality is served by Highway 363, Highway 609, Highway 721 and Highway 739, providing market access and transportation connections. The area falls within the dark brown soil zone, productive grain and oilseed land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Chortitz", "Braddock", "Burnham", "Hallonquist"],
+    highways: ["Highway 363", "Highway 609", "Highway 721", "Highway 739"],
+    soilType: "Dark brown soil zone — productive grain and oilseed land",
+    nearestCity: "Swift Current, ~27 km",
+    keywords: ["farmland for sale RM Coulee", "agricultural land Chortitz area", "Saskatchewan farmland RM Coulee", "RM Coulee farm property"]
   },
   "craik": {
-    description: "Craik RM encompasses productive grain land in south-central Saskatchewan with excellent agricultural infrastructure and market access. The municipality's location provides good connectivity to regional commodity networks and trading centers. Black soil characterizes the region, making it ideal for wheat and canola production. The small community of Craik provides local services while proximity to larger centers ensures access to comprehensive agricultural support. Craik attracts grain operators seeking reliable farmland with proven productivity, established infrastructure, and strong commodity market connections in Saskatchewan's grain belt.",
-    towns: ["Craik", "Qu'Appelle", "Indian Head"],
-    highways: ["Highway 1", "Highway 56"],
-    soilType: "Black soil — grain production zone",
-    nearestCity: "Qu'Appelle, 10 km",
-    keywords: ["RM Craik farmland for sale", "grain belt property south-central Saskatchewan", "Qu'Appelle area agricultural land", "RM Craik black soil land"]
+    description: "The RM of Craik No. 222 is located in southern Saskatchewan near Craik and Aylesbury. The nearest major centre is Moose Jaw, ~53 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Craik", "Aylesbury"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Moose Jaw, ~53 km",
+    keywords: ["farmland for sale RM Craik", "agricultural land Craik area", "Saskatchewan farmland RM Craik", "RM Craik farm property"]
   },
   "cupar": {
-    description: "Cupar RM represents productive grain land in east-central Saskatchewan within the established agricultural region. Located with access to Highway 16, the municipality benefits from grain handling infrastructure and regional commodity networks. Black soil supports cereal and oilseed production with proven yields. Nearby communities provide local agricultural services and support networks. The region attracts grain farmers seeking established farmland with reliable infrastructure, proven soil productivity, and strong commodity market connections in Saskatchewan's productive grain belt.",
-    towns: ["Melville", "Foam Lake", "Yorkton"],
-    highways: ["Highway 16", "Highway 22"],
-    soilType: "Black soil — proven grain land",
-    nearestCity: "Melville, 12 km",
-    keywords: ["RM Cupar farmland for sale", "grain land east-central Saskatchewan", "Melville area agricultural property", "RM Cupar black soil land"]
+    description: "The RM of Cupar No. 218 is located in southern eastern Saskatchewan near Southey, Cupar, and Markinch. The nearest major centre is Regina, ~49 km. The area falls within the black soil zone, excellent grain and canola land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Southey", "Cupar", "Markinch"],
+    highways: [],
+    soilType: "Black soil zone — excellent grain and canola land",
+    nearestCity: "Regina, ~49 km",
+    keywords: ["farmland for sale RM Cupar", "agricultural land Southey area", "Saskatchewan farmland RM Cupar", "RM Cupar farm property"]
   },
   "cut-knife": {
-    description: "Cut Knife RM encompasses productive grain land in west-central Saskatchewan with strong agricultural heritage and established market infrastructure. Located with good access to Highway 16, the municipality benefits from commodity handling networks and regional trading connections. Black soil supports intensive wheat and canola production. The town of Cut Knife provides local agricultural services while larger centers offer comprehensive equipment and commodity support. Cut Knife attracts grain operators seeking reliable farmland with good infrastructure, proven soil conditions, and strong commodity market access in Saskatchewan's established grain region.",
-    towns: ["Cut Knife", "Macklin", "Biggar"],
-    highways: ["Highway 16", "Highway 14"],
-    soilType: "Black soil — grain land",
-    nearestCity: "Cut Knife, 0 km",
-    keywords: ["RM Cut Knife farmland for sale", "grain belt property west-central Saskatchewan", "Highway 16 agricultural land", "RM Cut Knife premium farmland"]
+    description: "The RM of Cut Knife No. 439 is located in central western Saskatchewan near Cut Knife, Rockhaven, and Cutoff Junction. The nearest major centre is North Battleford, ~45 km. The municipality is served by Highway 21, Highway 40 and Highway 674, providing market access and transportation connections. The area falls within the dark grey/black soil zone, mixed grain and forage land. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Cut Knife", "Rockhaven", "Cutoff Junction", "Gallivan"],
+    highways: ["Highway 21", "Highway 40", "Highway 674"],
+    soilType: "Dark grey/black soil zone — mixed grain and forage land",
+    nearestCity: "North Battleford, ~45 km",
+    keywords: ["farmland for sale RM Cut Knife", "agricultural land Cut Knife area", "Saskatchewan farmland RM Cut Knife", "RM Cut Knife farm property"]
   },
   "cymri": {
-    description: "Cymri RM represents productive grain land in central Saskatchewan with strong agricultural foundation and established infrastructure networks. Located with reasonable access to Highway 14, the municipality benefits from commodity handling networks and market connections. Black soil characterizes the region, making it suitable for wheat and oilseed production. Small communities provide local services while proximity to larger trading centers ensures adequate agricultural support and equipment access. Cymri attracts farmers seeking reliable farmland with established infrastructure, proven soil productivity, and strong agricultural economics in Saskatchewan's productive grain region.",
-    towns: ["Lanigan", "Humboldt", "Sturgis"],
-    highways: ["Highway 14", "Highway 39"],
-    soilType: "Black soil — grain production zone",
-    nearestCity: "Lanigan, 15 km",
-    keywords: ["RM Cymri farmland for sale", "grain belt property central Saskatchewan", "Lanigan area agricultural land", "RM Cymri farming acreage"]
+    description: "The RM of Cymri No. 36 is located in southern eastern Saskatchewan near Midale, Halbrite, and Macoun. The nearest major centre is Weyburn, ~42 km. The area falls within the brown soil zone, suited to grain and pulse crops. The region supports a mix of grain, oilseed, and pulse crop operations, with local communities providing agricultural services and amenities to area producers.",
+    towns: ["Midale", "Halbrite", "Macoun", "Blewett"],
+    highways: [],
+    soilType: "Brown soil zone — suited to grain and pulse crops",
+    nearestCity: "Weyburn, ~42 km",
+    keywords: ["farmland for sale RM Cymri", "agricultural land Midale area", "Saskatchewan farmland RM Cymri", "RM Cymri farm property"]
   }
 };
