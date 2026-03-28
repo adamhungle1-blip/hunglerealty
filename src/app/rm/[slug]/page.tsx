@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { rmData, getRMBySlug, getAllRMSlugs } from "@/data/rm-data";
 import { getRMContent } from "@/data/rm-content";
+import { rmNumbers } from "@/data/rm-numbers";
 import RmListings from "@/components/RmListings";
 
 /* ---------- static generation ---------- */
@@ -36,16 +37,39 @@ export async function generateMetadata({
   };
 }
 
-/* ---------- nearby RMs helper ---------- */
+/* ---------- nearby RMs helper (geographic proximity via RM grid numbers) ---------- */
 
 function getNearbyRMs(currentSlug: string, count = 6) {
-  const idx = rmData.findIndex((rm) => rm.slug === currentSlug);
-  if (idx === -1) return rmData.slice(0, count);
-  const nearby: typeof rmData = [];
-  for (let i = Math.max(0, idx - 3); nearby.length < count && i < rmData.length; i++) {
-    if (i !== idx) nearby.push(rmData[i]);
+  const currentNum = rmNumbers[currentSlug];
+
+  // If we don't have an RM number, fall back to alphabetical neighbours
+  if (!currentNum) {
+    const idx = rmData.findIndex((rm) => rm.slug === currentSlug);
+    if (idx === -1) return rmData.slice(0, count);
+    const nearby: typeof rmData = [];
+    for (let i = Math.max(0, idx - 3); nearby.length < count && i < rmData.length; i++) {
+      if (i !== idx) nearby.push(rmData[i]);
+    }
+    return nearby.slice(0, count);
   }
-  return nearby.slice(0, count);
+
+  // Saskatchewan RMs sit on an 18-column grid (rows go south→north).
+  // Geographic distance ≈ grid distance where col = num % 18, row = Math.floor(num / 18).
+  const col = currentNum % 18;
+  const row = Math.floor(currentNum / 18);
+
+  const scored = rmData
+    .filter((rm) => rm.slug !== currentSlug && rmNumbers[rm.slug] !== undefined)
+    .map((rm) => {
+      const n = rmNumbers[rm.slug]!;
+      const nc = n % 18;
+      const nr = Math.floor(n / 18);
+      const dist = Math.abs(nc - col) + Math.abs(nr - row); // Manhattan distance on the grid
+      return { rm, dist };
+    })
+    .sort((a, b) => a.dist - b.dist);
+
+  return scored.slice(0, count).map((s) => s.rm);
 }
 
 /* ---------- page ---------- */
