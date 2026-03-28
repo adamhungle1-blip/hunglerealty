@@ -78,16 +78,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-020394-grayson-agriculture",
-    title: "SK020394 | Grayson Rm No 184 | Agriculture Sold",
+    title: "SK020394 | RM of Grayson | 158.92 Acres | Land Sold",
     date: "2025-11-15",
     category: "Sold",
     blurb:
-      "This exceptional agricultural property in Grayson RM #184 features outstanding soil classification and streamlined operational systems. Positioned near major grain handling hubs and essential transportation corridors, it provided significant competitive advantages for a modern farming operation.",
-    image: "/hero/slide5.jpg",
+      "Here is an excellent opportunity to acquire a quarter section of farmland in the RM of Grayson, ideally located just one mile east of Dubuc and east of Highway 22. The property offers good access and consists of 158.92 ISC titled acres, with 94 acres currently cultivated according to SAMA. The land is rated Soil Class H and has potential for additional acres to be brought into production. The farmland is available for the 2026 farming season. Offers to Purchase must be submitted in writing to the Seller's Brokerage by 4:00 p.m. on Wednesday, November 12th, 2025 and left open for acceptance until November 19th at 4:00 p.m. Highest or any offer will not necessarily be accepted. Please contact agent for more information.",
+    image: "/sold/sk020394-grayson-land.jpg",
     mls: "SK020394",
-    location: "Grayson Rm No 184, Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "It was an honour to represent our clients in this significant land transaction. Thank you for allowing us to connect you with a buyer committed to agricultural excellence. We wish the new operators outstanding success.",
+    location: "RM of Grayson, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
   },
   {
     slug: "sk-020391-saltcoats-agriculture",
