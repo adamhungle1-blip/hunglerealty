@@ -111,6 +111,12 @@ export default function RootLayout({
                     "Rural municipality land sales",
                     "Regina residential real estate",
                   ],
+                  sameAs: [
+                    "https://www.facebook.com/people/Adam-Hungle-Sutton-Group-Results-Realty/100063880312860/",
+                    "https://www.linkedin.com/in/adam-hungle",
+                    "https://www.google.com/maps/place/?q=place_id:ChIJGRE0YxceHFMRjWRsycS4QDM",
+                    "https://www.realtor.ca/agent/1659834/adam-hungle-3904-b-gordon-road-regina-saskatchewan-s4s6y3",
+                  ],
                   worksFor: {
                     "@type": "RealEstateAgent",
                     name: "Sutton Group Results Realty",
@@ -136,6 +142,11 @@ export default function RootLayout({
                     latitude: 50.4452,
                     longitude: -104.6189,
                   },
+                  sameAs: [
+                    "https://www.facebook.com/people/Adam-Hungle-Sutton-Group-Results-Realty/100063880312860/",
+                    "https://www.linkedin.com/in/adam-hungle",
+                    "https://www.google.com/maps/place/?q=place_id:ChIJGRE0YxceHFMRjWRsycS4QDM",
+                  ],
                   priceRange: "$$",
                   openingHoursSpecification: {
                     "@type": "OpeningHoursSpecification",

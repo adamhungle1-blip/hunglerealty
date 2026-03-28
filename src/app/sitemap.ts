@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { getAllRMSlugs } from "@/data/rm-data";
 import { getAllBlogSlugs } from "@/data/blog-posts";
 import { soldListings } from "@/data/sold-listings";
+import { RESIDENTIAL_COMMUNITIES } from "@/data/residential-communities";
+import { REGINA_NEIGHBOURHOODS } from "@/data/regina-neighbourhoods";
+import { ACREAGE_CITIES } from "@/data/acreage-cities";
 
 const BASE = "https://hunglerealty.ca";
 
@@ -51,5 +54,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...rmPages, ...blogPages, ...soldPages];
+  // Residential community pages (White City, Emerald Park, Lumsden, etc.)
+  const residentialCommunityPages: MetadataRoute.Sitemap = RESIDENTIAL_COMMUNITIES
+    .filter((c) => c.slug !== "regina") // regina has its own static entry
+    .map((community) => ({
+      url: `${BASE}/residential/${community.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
+
+  // Regina neighbourhood pages (Albert Park, Cathedral, Harbour Landing, etc.)
+  const neighbourhoodPages: MetadataRoute.Sitemap = REGINA_NEIGHBOURHOODS.map((hood) => ({
+    url: `${BASE}/residential/regina/${hood.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.5,
+  }));
+
+  // Acreage city pages (Regina, Saskatoon, Yorkton, etc.)
+  const acreageCityPages: MetadataRoute.Sitemap = ACREAGE_CITIES.map((city) => ({
+    url: `${BASE}/acreages/${city.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  return [
+    ...staticPages,
+    ...rmPages,
+    ...blogPages,
+    ...soldPages,
+    ...residentialCommunityPages,
+    ...neighbourhoodPages,
+    ...acreageCityPages,
+  ];
 }
