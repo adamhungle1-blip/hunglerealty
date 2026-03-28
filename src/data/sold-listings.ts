@@ -265,21 +265,20 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-992807-regina-mcara",
-    title: "SK992807 | 2652 Mcara Street, Regina | 4 Bed | 2 Bath | Detached Sold",
+    title: "SK992807 | 2652 Mcara Street, Regina | 4 Bed | 2 Bath | Bungalow Sold",
     date: "2025-08-25",
     category: "Sold",
     blurb:
-      "This 4-bedroom, 2-bathroom detached home on Mcara Street offered comfortable family living with a solid foundation and excellent bones. The established neighbourhood provides great schools, parks, and community character—perfect for first-time buyers or savvy investors.",
-    image: "/hero/residential.jpg",
+      "Situated in an excellent location directly across from Queen Elizabeth Park, this fully finished, move-in ready bungalow offers numerous upgrades and value-added features. The main floor boasts a renovated kitchen with sleek quartz countertops, an undermount sink, and upgraded stainless steel appliances. The pantry cupboard and pot rack are also included. The main floor offers two good sized bedrooms and an updated bathroom. The fully developed basement provides additional living space with a cozy living room, two extra bedrooms, and another updated bathroom. Plus, the projection TV and screen in the basement are included. There is a nice laundry area with an upgraded stackable washer and dryer, and extra cupboards for storage. Step outside to your private backyard retreat, perfect for entertaining. The expansive 16' x 20' deck w/ gazebo is ideal for relaxing or hosting guests. A 9' x 10' deck connects to the Jacuzzi hot tub, which is also included and purchased in August 2023. The backyard is fully fenced and features a large fire pit area with seating for 10-12 people. There is a single car garage with a upgraded garage door opener and door. The driveway can accommodate RV parking. Home upgrades include a high-efficiency furnace, sewer and water line (2018), shingles (2016), and stucco (2014). The home also features a new 10' x 16' front deck. Inclusions: Hot tub, gazebo, projection TV and screen, fridge, stove, washer, dryer, microwave, dishwasher, pantry cupboard, pot rack and TV in master bedroom. This home truly offers the best in comfort, convenience, and style!",
+    image: "/sold/sk992807-regina-bungalow.jpg",
     mls: "SK992807",
     location: "2652 Mcara Street, Regina, Saskatchewan",
     propertyType: "Detached",
     details: {
       beds: 4,
       baths: 2,
-      sqft: 748,
     },
-    thankYou: "Thank you to our clients for allowing us to represent this great starter home. We're pleased we could help you move forward. Warmest congratulations to the new family on their investment!",
+    thankYou: "So happy for the new homeowners — what a gem across from Queen Elizabeth Park!",
   },
   {
     slug: "sk-986054-agriculture-land",
