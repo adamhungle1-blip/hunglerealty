@@ -24,6 +24,11 @@ export async function generateMetadata({
   return {
     title: `Homes for Sale in ${community.name} | Hungle Realty`,
     description: `Browse homes for sale in ${community.name}, Saskatchewan. Interactive map search with Adam Hungle, REALTOR®.`,
+    openGraph: {
+      title: `Homes for Sale in ${community.name}, Saskatchewan`,
+      description: `Search MLS® listings in ${community.name}. Find your next home with Adam Hungle, top 5% Saskatchewan REALTOR®.`,
+      images: [{ url: "/hero/residential.jpg", width: 1200, height: 630 }],
+    },
   };
 }
 

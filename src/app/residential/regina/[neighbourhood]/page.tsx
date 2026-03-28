@@ -23,6 +23,11 @@ export async function generateMetadata({
   return {
     title: `${hood.name} Homes for Sale — Regina | Hungle Realty`,
     description: `Browse homes for sale in ${hood.name}, Regina, Saskatchewan. MLS® listings with map search. Adam Hungle, REALTOR®.`,
+    openGraph: {
+      title: `${hood.name} Homes for Sale — Regina, SK`,
+      description: `Find homes for sale in ${hood.name}, Regina. Interactive map search powered by MLS® data. Adam Hungle, REALTOR®.`,
+      images: [{ url: "/hero/residential.jpg", width: 1200, height: 630 }],
+    },
   };
 }
 

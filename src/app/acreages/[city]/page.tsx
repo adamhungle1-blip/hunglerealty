@@ -19,6 +19,11 @@ export async function generateMetadata({
   return {
     title: `Acreages for Sale near ${city.name} | Hungle Realty`,
     description: `Browse acreages for sale within 50 km of ${city.name}, Saskatchewan. Interactive map search with Adam Hungle, REALTOR®.`,
+    openGraph: {
+      title: `Acreages for Sale near ${city.name}, Saskatchewan`,
+      description: `Find acreages and rural properties near ${city.name}, SK. Map search powered by MLS® data. Adam Hungle, REALTOR®.`,
+      images: [{ url: "/hero/slide4.jpg", width: 1200, height: 630 }],
+    },
   };
 }
 
