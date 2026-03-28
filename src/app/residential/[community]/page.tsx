@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import {
   RESIDENTIAL_COMMUNITIES,
   getCommunityBySlug,
@@ -59,6 +60,12 @@ export default async function CommunityPage({
               ? "Browse every neighbourhood in Saskatchewan's capital"
               : `Residential properties in ${community.name}, Saskatchewan`}
           </p>
+          <Link
+            href="/residential/sell"
+            className="mt-4 inline-block rounded-lg bg-yellow-500 px-8 py-3 text-sm font-bold text-green-900 shadow-lg transition-colors hover:bg-yellow-400"
+          >
+            Get a Free Home Valuation
+          </Link>
         </div>
       </section>
 

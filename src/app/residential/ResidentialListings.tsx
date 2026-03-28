@@ -355,6 +355,21 @@ export default function ResidentialListings({
             </div>
           );
         })()}
+        {/* ─── Home Valuation CTA ─── */}
+        <div className="mt-12 rounded-xl bg-green-800 p-6 text-center md:p-8">
+          <h3 className="mb-2 text-xl font-bold text-white md:text-2xl">
+            Thinking About Selling Your Home?
+          </h3>
+          <p className="mx-auto mb-5 max-w-lg text-sm text-green-100">
+            Get a free, no-obligation home valuation from Adam Hungle. Honest advice, proven marketing, and a get-it-done approach.
+          </p>
+          <Link
+            href="/residential/sell"
+            className="inline-block rounded-lg bg-yellow-500 px-10 py-4 text-base font-bold text-green-900 shadow-lg transition-colors hover:bg-yellow-400"
+          >
+            Get a Free Home Valuation
+          </Link>
+        </div>
       </section>
 
       {/* ─── Map ─── */}

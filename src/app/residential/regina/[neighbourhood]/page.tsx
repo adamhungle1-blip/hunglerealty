@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import {
   REGINA_NEIGHBOURHOODS,
   getNeighbourhoodBySlug,
@@ -54,6 +55,12 @@ export default async function NeighbourhoodPage({
           <p className="mt-2 text-base text-green-200">
             Regina, Saskatchewan
           </p>
+          <Link
+            href="/residential/sell"
+            className="mt-4 inline-block rounded-lg bg-yellow-500 px-8 py-3 text-sm font-bold text-green-900 shadow-lg transition-colors hover:bg-yellow-400"
+          >
+            Get a Free Home Valuation
+          </Link>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ResidentialListings from "../ResidentialListings";
 
 export const metadata: Metadata = {
@@ -29,6 +30,12 @@ export default function ReginaResidentialPage() {
           <p className="mt-2 text-base text-green-200">
             Browse every neighbourhood in Saskatchewan&apos;s capital
           </p>
+          <Link
+            href="/residential/sell"
+            className="mt-4 inline-block rounded-lg bg-yellow-500 px-8 py-3 text-sm font-bold text-green-900 shadow-lg transition-colors hover:bg-yellow-400"
+          >
+            Get a Free Home Valuation
+          </Link>
         </div>
       </section>
 

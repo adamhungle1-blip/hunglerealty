@@ -31,18 +31,12 @@ export default function ResidentialPage() {
             Helping buyers and sellers navigate Regina homes, acreages, and family
             moves with honest advice and proven marketing.
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-6">
             <Link
-              href="#listings"
-              className="rounded bg-green-700 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-green-800"
+              href="/residential/sell"
+              className="inline-block rounded-lg bg-yellow-500 px-10 py-4 text-lg font-bold text-green-900 shadow-lg transition-colors hover:bg-yellow-400"
             >
-              Search Regina Homes
-            </Link>
-            <Link
-              href="/sell"
-              className="rounded border-2 border-white px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white hover:text-green-900"
-            >
-              Get a Home Valuation
+              Get a Free Home Valuation
             </Link>
           </div>
         </div>

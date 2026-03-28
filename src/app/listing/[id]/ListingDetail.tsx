@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import type { DdfListing } from "@/lib/ddf";
@@ -297,6 +298,7 @@ function InquiryForm({
 
 /* ─── Main Detail Component ─── */
 export default function ListingDetail({ listingId }: { listingId: string }) {
+  const router = useRouter();
   const [listing, setListing] = useState<DdfListing | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -391,15 +393,15 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
               {formatPrice(listing.ListPrice)}
             </p>
           </div>
-          <Link
-            href="/search?propertyType=Agriculture"
+          <button
+            onClick={() => router.back()}
             className="hidden shrink-0 items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50 sm:flex"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             Back to Search Results
-          </Link>
+          </button>
         </div>
         <p className="mt-1 text-sm text-gray-500">
           {[listing.City, listing.StateOrProvince].filter(Boolean).join(", ")}
@@ -735,12 +737,12 @@ export default function ListingDetail({ listingId }: { listingId: string }) {
             </div>
 
             {/* Back link */}
-            <Link
-              href="/search?propertyType=Agriculture"
-              className="block text-center text-sm font-medium text-green-700 hover:text-green-800"
+            <button
+              onClick={() => router.back()}
+              className="block w-full text-center text-sm font-medium text-green-700 hover:text-green-800"
             >
               ← Back to Search Results
-            </Link>
+            </button>
           </div>
         </div>
       </div>
