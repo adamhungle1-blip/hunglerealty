@@ -381,16 +381,19 @@ export const soldListings: SoldListing[] = [
     thankYou: "What a special property — thank you to our clients for trusting us with this one-of-a-kind acreage sale!",
   },
   {
-    slug: "sk-976915-agriculture-final",
-    title: "SK976915 | Agriculture Sold",
+    slug: "sk-976915-avonlea-farmland",
+    title: "SK976915 | RM of Caledonia & Elmsthorpe | 640 Acres | Farmland Sold",
     date: "2025-07-05",
     category: "Sold",
     blurb:
-      "This strategic agricultural holding features strong fundamentals with well-maintained operational infrastructure and outstanding market positioning. Excellent grain handling relationships, reliable input suppliers, and a supportive farming community made it ideal for expansion-minded operators.",
-    image: "/hero/slide6.jpg",
+      "Here is an excellent opportunity to acquire four quarter sections of productive farmland situated in a block in the RM's of Caledonia and Elmsthorpe, there is a total of 640 acres with 564 acres listed as cultivated according to SAMA records, although this appears to be conservative. The soil classes are H, J, and M, with a clay loam composition, the SAMA assessments are $188,500, $247,500, $198,000, and $134,000. A lease agreement is in effect until November 2025 which yields a base rent of $36,600 or $65 per cultivated acre annually. This property would be an excellent investment or addition to an existing agricultural operation. Conveniently located eight miles east of the Town of Avonlea on Hwy #334 and one mile south.",
+    image: "/sold/sk976915-avonlea-farmland.jpg",
     mls: "SK976915",
-    location: "Saskatchewan",
+    location: "RM of Caledonia & Elmsthorpe, Saskatchewan",
     propertyType: "Agriculture",
-    thankYou: "It was our privilege to help facilitate the sale of this strategic agricultural asset. Thank you to our clients for their trust and confidence. We wish the new farming operation tremendous success and abundant future harvests.",
+    details: {
+      acres: 640,
+    },
+    thankYou: "Happy to have helped close on this 640-acre block near Avonlea — thank you to everyone involved!",
   },
 ];
