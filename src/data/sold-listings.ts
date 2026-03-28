@@ -185,16 +185,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-003016-agriculture-holdings",
-    title: "SK003016 | Agriculture Sold",
+    title: "SK003016 | RM of South Qu'Appelle | 198.38 Acres | Land Sold",
     date: "2025-09-28",
     category: "Sold",
     blurb:
-      "This well-managed agricultural holding boasts years of solid production history with reliable crop performance and modern operational systems in place. The strategic location provides premium access to grain markets, input suppliers, and the services that successful farming operations depend on.",
-    image: "/hero/slide5.jpg",
+      "Here is a unique opportunity to acquire 198.38 acres of prime land in the Rm of South Qu'appelle. There are approximately 190 acres of cultivated land, buyers are encouraged to do their own due diligence on the amount of cultivated acres. The soil class is F and G and the total ag assessment is $269,500. This parcel is strategically located with half a mile of frontage on highway #1 and bordering the town of Qu'Appelle. The North portion closest to the town has been subdivided into 17 residential lots that range in size from .45 acres to ¾ of an acre. There are 140 acres of land that border the #1 highway and #35 highway entering Qu'Appelle that would work well for commercial/industrial use like a Co/op or Tim Hortons. This farmland makes a great investment as there is a quality tenant currently farming the land that would like to continue doing so and is renting the land for $100 dollars per acre. The land is available for the 2026 growing season.",
+    image: "/sold/sk003016-south-quappelle-land.jpg",
     mls: "SK003016",
-    location: "Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "It was an honour to represent our clients in selling this established agricultural holding. Thank you for your confidence in us—we wish the new operators tremendous prosperity and productive years ahead.",
+    location: "RM of South Qu'Appelle, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "Excited for all parties on this one — a truly unique piece of land with big potential!",
   },
   {
     slug: "sk-005331-rouleau-drysdale",
