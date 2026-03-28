@@ -78,18 +78,20 @@ export default function AcreageMap({ pins }: AcreageMapProps) {
       const acresStr =
         pin.acres > 0 ? `${pin.acres.toLocaleString()} acres` : "";
 
+      const listingUrl = `/listing/${pin.id}`;
+
       const photoHtml = pin.photo
-        ? `<img src="${pin.photo}" alt="" style="width:100%;height:90px;object-fit:cover;border-radius:6px 6px 0 0;display:block;" />`
+        ? `<a href="${listingUrl}" style="display:block;"><img src="${pin.photo}" alt="" style="width:100%;height:90px;object-fit:cover;border-radius:6px 6px 0 0;display:block;cursor:pointer;" /></a>`
         : "";
 
       const popupHtml = `
         <div style="width:220px;font-family:system-ui,sans-serif;overflow:hidden;margin:-13px -20px -13px -20px;">
           ${photoHtml}
           <div style="padding:8px 12px 10px;">
-            <div style="font-weight:700;font-size:15px;color:#166534;">${formatPrice(pin.price)}</div>
+            <a href="${listingUrl}" style="font-weight:700;font-size:15px;color:#166534;text-decoration:none;display:block;cursor:pointer;">${formatPrice(pin.price)}</a>
             <div style="font-size:13px;margin:3px 0;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${pin.address}</div>
             ${acresStr ? `<div style="font-size:12px;color:#666;">${acresStr}</div>` : ""}
-            <a href="/listing/${pin.id}"
+            <a href="${listingUrl}"
                style="display:inline-block;margin-top:5px;font-size:12px;color:#166534;font-weight:600;text-decoration:none;">
               View Details &rarr;
             </a>
