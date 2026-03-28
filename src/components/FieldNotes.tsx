@@ -19,8 +19,8 @@ const marketReport = {
 };
 
 export default function FieldNotes() {
-  // Get 3 most recent sold listings
-  const recentSolds = soldListings.slice(0, 3);
+  // Get 8 most recent sold listings to fill a 9-card grid with market report
+  const recentSolds = soldListings.slice(0, 8);
 
   // Combine market report with recent sold listings
   const displayPosts = [marketReport, ...recentSolds];
@@ -40,7 +40,7 @@ export default function FieldNotes() {
         </div>
 
         {/* Posts grid */}
-        <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {displayPosts.map((post) => (
             <Link
               key={post.slug}
@@ -69,12 +69,12 @@ export default function FieldNotes() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
+              <div className="p-4">
                 <p className="text-xs font-medium text-[#c49a2a]">{post.date}</p>
-                <h3 className="mt-1.5 text-lg font-bold leading-snug text-white transition-colors group-hover:text-[#c49a2a]">
+                <h3 className="mt-1 text-base font-bold leading-snug text-white transition-colors group-hover:text-[#c49a2a]">
                   {post.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
+                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-gray-400">
                   {"excerpt" in post ? post.excerpt : post.blurb}
                 </p>
 
@@ -115,35 +115,15 @@ export default function FieldNotes() {
             </Link>
           ))}
 
-          {/* Placeholder cards for future posts */}
-          <div className="hidden overflow-hidden rounded-xl border border-dashed border-white/10 bg-white/[0.02] md:flex md:flex-col md:items-center md:justify-center md:p-8 md:text-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 text-white/10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={1.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-              />
-            </svg>
-            <p className="mt-3 text-sm font-medium text-white/20">
-              More posts coming soon
-            </p>
-          </div>
         </div>
 
-        {/* View All Sold Listings Link */}
+        {/* View All Posts Link */}
         <div className="mt-12 text-center">
           <Link
             href="/field-notes"
             className="inline-flex items-center gap-2 rounded-lg bg-[#c49a2a] px-6 py-3 font-semibold text-[#0f1a0f] transition-all hover:bg-[#d4a520] hover:shadow-lg"
           >
-            View All Sold Listings
+            View All Posts
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
