@@ -139,6 +139,99 @@ export const blogPosts: BlogPost[] = [
       <p>For a personalized market analysis of your area, <a href="/contact">contact Adam Hungle</a> at 306.531.8854.</p>
     `,
   },
+  {
+    slug: "capital-gains-tax-selling-farmland-saskatchewan",
+    title: "Capital Gains Tax When Selling Farmland in Saskatchewan \u2014 What You Need to Know",
+    date: "2026-03-28",
+    excerpt:
+      "A plain-language overview of how capital gains tax applies to Saskatchewan farmland sales, including the lifetime capital gains exemption, intergenerational transfers, and strategies to reduce your tax bill.",
+    category: "Tax & Finance",
+    content: `
+      <p>Selling farmland can trigger a significant capital gains tax bill \u2014 but Canadian tax law includes several provisions specifically designed for farm property. Here\u2019s what Saskatchewan landowners should understand before listing.</p>
+
+      <h3>How Capital Gains Work on Farmland</h3>
+      <p>When you sell farmland for more than you paid (or more than its fair market value on Valuation Day if you\u2019ve owned it since before 1972), the difference is a capital gain. In Canada, only 50% of a capital gain is taxable \u2014 meaning half is included in your income for the year of sale. For gains above $250,000 in a year the inclusion rate rises to 66.7% under current rules, so tax planning around thresholds matters.</p>
+
+      <h3>Lifetime Capital Gains Exemption (LCGE)</h3>
+      <p>This is the single most valuable tax tool for farm sellers. Qualified farm property is eligible for the Lifetime Capital Gains Exemption, which as of 2026 shelters over $1.25 million in capital gains per individual from tax. If you and your spouse both qualify, that\u2019s potentially over $2.5 million of tax-free gain on your farm sale. To qualify, the property must have been used principally in farming by you, your spouse, or your children for at least two years before the sale.</p>
+
+      <h3>Intergenerational Farm Transfers</h3>
+      <p>Transferring the farm to your children? Special rollover provisions under the Income Tax Act allow you to transfer qualified farm property to children or grandchildren on a tax-deferred basis. This means the transfer can happen at your adjusted cost base rather than fair market value, deferring the capital gain until your child eventually sells. Recent changes have also expanded the definition of qualifying transfers.</p>
+
+      <h3>Capital Gains Reserve</h3>
+      <p>If the buyer is paying over time (common in farmland deals), you can spread the capital gain over up to five years using a capital gains reserve. This keeps you in a lower tax bracket each year rather than reporting the entire gain in one shot.</p>
+
+      <h3>Talk to Your Accountant First</h3>
+      <p>Every situation is different. The interaction between the LCGE, principal residence exemption, alternative minimum tax, and provincial tax credits means the optimal selling strategy varies widely. Work with an accountant who specializes in farm tax well before you list \u2014 not after you\u2019ve already signed an offer.</p>
+
+      <p>Thinking about selling? <a href="/selling">Get a confidential farmland valuation</a> from Adam Hungle, and connect with farm tax specialists who can help you keep more of your proceeds.</p>
+    `,
+  },
+  {
+    slug: "best-rural-municipalities-farmland-investment-saskatchewan",
+    title: "Best Rural Municipalities for Farmland Investment in Saskatchewan (2026)",
+    date: "2026-03-28",
+    excerpt:
+      "Analysis of the top-performing RMs for farmland investment based on soil quality, rental yields, price trends, and proximity to markets.",
+    category: "Investment Guide",
+    content: `
+      <p>Not all Saskatchewan farmland is created equal. For investors looking at agricultural land as a long-term asset, the rural municipality you choose matters enormously. Here\u2019s a data-informed look at where the strongest opportunities are in 2026.</p>
+
+      <h3>What Makes an RM Attractive for Investment</h3>
+      <p>The best farmland investments combine several factors: productive soil (Class 1\u20133), strong and stable rental demand, proximity to grain handling facilities, access to transportation corridors, and a track record of consistent value appreciation. You also want reasonable entry prices relative to earning potential \u2014 the most expensive land isn\u2019t always the best investment.</p>
+
+      <h3>Top RMs Near Regina</h3>
+      <p><strong>Sherwood (No. 159):</strong> Immediately surrounds Regina. Top-quality Black soil, excellent infrastructure, strong rental demand. Higher price per acre, but the combination of agricultural returns and long-term development potential makes this consistently appealing. <a href="/rm/sherwood">View Sherwood listings</a>.</p>
+      <p><strong>Edenwold (No. 158):</strong> East of Regina along Highway 1. Strong crop yields, growing acreage demand on the eastern fringe. <a href="/rm/edenwold">View Edenwold listings</a>.</p>
+      <p><strong>Lumsden (No. 189):</strong> The Qu\u2019Appelle Valley area offers scenic land, excellent soils, and strong demand for both agriculture and rural residential properties. <a href="/rm/lumsden">View Lumsden listings</a>.</p>
+
+      <h3>Top RMs for Value Investors</h3>
+      <p><strong>Indian Head (No. 156):</strong> East of Regina, this RM offers excellent soil at a lower price per acre than the immediate Regina ring. Home to the federal research farm, it has a strong agricultural heritage and consistent yields. <a href="/rm/indian-head">View Indian Head listings</a>.</p>
+      <p><strong>Humboldt (No. 370):</strong> Central Saskatchewan with productive Dark Brown to Black soils. Lower per-acre prices than the southern grain belt, with solid rental returns. <a href="/rm/humboldt">View Humboldt listings</a>.</p>
+      <p><strong>Moose Jaw (No. 161):</strong> West of Regina with good highway access and Class 2\u20133 soils. More affordable entry point with steady appreciation. <a href="/rm/moose-jaw">View Moose Jaw listings</a>.</p>
+
+      <h3>Top RMs Near Saskatoon</h3>
+      <p><strong>Corman Park (No. 344):</strong> Surrounds Saskatoon and is the most in-demand RM in central Saskatchewan. <a href="/rm/corman-park">View Corman Park listings</a>.</p>
+      <p><strong>Dundurn (No. 314):</strong> South of Saskatoon with excellent grain land and improving infrastructure. <a href="/rm/dundurn">View Dundurn listings</a>.</p>
+      <p><strong>Aberdeen (No. 373):</strong> North of Saskatoon, strong Black soil and lower prices than Corman Park. <a href="/rm/aberdeen">View Aberdeen listings</a>.</p>
+
+      <h3>What About Rental Yields?</h3>
+      <p>Cash rental rates in the best RMs range from $80\u2013$124 per acre. At current land values, that translates to a 2\u20134% annual cash yield before land appreciation. The highest yields tend to be in areas where land prices haven\u2019t fully caught up with rental rates \u2014 central and east-central Saskatchewan often offers the best rent-to-price ratios.</p>
+
+      <p>Want help identifying specific parcels in these RMs? <a href="/contact">Contact Adam Hungle</a> \u2014 he knows the landscape and can match you with opportunities before they hit the public market.</p>
+    `,
+  },
+  {
+    slug: "acreage-living-near-regina-saskatchewan-guide",
+    title: "Acreage Living Near Regina, Saskatchewan \u2014 The Complete Guide",
+    date: "2026-03-28",
+    excerpt:
+      "Everything you need to know about buying an acreage near Regina: popular communities, costs, water and septic, commute times, and lifestyle considerations.",
+    category: "Acreage Guide",
+    content: `
+      <p>More and more families are choosing acreage living near Regina for the space, privacy, and rural lifestyle \u2014 without giving up the convenience of city amenities. If you\u2019re considering the move, here\u2019s what you should know.</p>
+
+      <h3>Popular Acreage Communities</h3>
+      <p>The most sought-after acreage areas around Regina include the RM of Sherwood (south and west of the city), Edenwold (east along Highway 1), Lumsden (north along the Qu\u2019Appelle Valley), and Pense (west along the Trans-Canada). Each area has a different character \u2014 Lumsden offers valley views and proximity to Last Mountain Lake, while Sherwood and Edenwold provide quick commutes into the city.</p>
+
+      <h3>What Does an Acreage Cost?</h3>
+      <p>Acreage prices near Regina vary widely based on lot size, improvements, and location. A basic 5\u201310 acre parcel with a modest home typically starts around $350,000\u2013$500,000. Premium acreages with newer homes, shops, and landscaping can range from $600,000 to well over $1 million. Bare land acreage lots (ready to build) generally sell for $80,000\u2013$200,000 depending on servicing and location.</p>
+
+      <h3>Water and Septic</h3>
+      <p>Most acreages rely on a private well for water and a septic system for wastewater. Get a water test before buying \u2014 water quality varies significantly across the Regina Plains, and some areas have hard water, iron, or other mineral issues that require treatment. Septic systems should be inspected as part of your due diligence; replacement costs can be $15,000\u201330,000.</p>
+
+      <h3>Commute Times</h3>
+      <p>One of the biggest advantages of acreage living near Regina is the short commute. Most popular acreage areas are 15\u201330 minutes from downtown. Highways 1, 6, and 11 provide excellent access. Winter driving on gravel roads is the main consideration \u2014 ask about road maintenance in your specific RM.</p>
+
+      <h3>Schools and Services</h3>
+      <p>School bus service is available in most rural areas, with children attending schools in nearby towns or in Regina. High-speed internet is increasingly available via Starlink and SaskTel rural fibre expansion. Garbage collection varies by RM \u2014 some offer curbside pickup while others require trips to a transfer station.</p>
+
+      <h3>Is Acreage Life Right for You?</h3>
+      <p>Acreage living means more maintenance (snow clearing, lawn care, septic pumping, well maintenance), but the trade-off is space, quiet, and a connection to the land. Many families find it\u2019s the best of both worlds \u2014 rural peace with urban convenience just a short drive away.</p>
+
+      <p>Ready to explore acreage options? <a href="/acreages/regina">Browse acreages near Regina</a> or <a href="/contact">contact Adam</a> to discuss what\u2019s available in your preferred area.</p>
+    `,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
