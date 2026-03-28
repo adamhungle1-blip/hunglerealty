@@ -282,16 +282,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-986054-agriculture-land",
-    title: "SK986054 | Agriculture Sold",
+    title: "SK986054 | RM of Sarnia | 319.51 Acres | Land Sold",
     date: "2025-08-18",
     category: "Sold",
     blurb:
-      "This quality agricultural land in Saskatchewan's heart boasts strong production potential with consistently excellent crop performance. Modern drainage infrastructure and proximity to grain terminals and input suppliers made it an outstanding addition to any farming operation.",
-    image: "/hero/slide6.jpg",
+      "Good opportunity to acquire two quarter sections in the Rm of Sarnia #221, the ISC title acres are 319.51 and the SAMA cultivated acres are 290. The land is located 4.5 miles North and 2.5 miles East of Dilke, or 1 mile West of Wee Too Beach. The land descriptions are NE 06-23-23 W2 and SE 07-23-23 W2. The assessments are $148,300 and $141,200. The total assessment is $289,500. The land is currently in hay and can be broke and put into cultivation. The farmland is available for the 2025 farming season. This land would make a nice investment or addition onto an existing farm.",
+    image: "/sold/sk986054-sarnia-land.jpg",
     mls: "SK986054",
-    location: "Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "We're honoured to have helped facilitate the sale of this quality farmland. Thank you for trusting us with your agricultural asset. Best wishes to the new owners for exceptional harvests and agricultural prosperity.",
+    location: "RM of Sarnia, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "Thanks to our clients for a smooth transaction — wishing the new owners all the best with this land!",
   },
   {
     slug: "sk-986995-regina-knowles",
