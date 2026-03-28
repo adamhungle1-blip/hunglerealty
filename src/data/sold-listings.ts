@@ -363,13 +363,13 @@ export const soldListings: SoldListing[] = [
     thankYou: "Thanks to our clients for a smooth transaction — enjoy your new neighbourhood across from Ewart Park!",
   },
   {
-    slug: "sk-981375-sherwood-acreage",
+    slug: "sk-981375-regina-acreage",
     title: "SK981375 | Sherwood Rm No 159 | 4 Bed | 3 Bath | 2,160 Sqft | Acreage Sold",
     date: "2025-07-12",
     category: "Sold",
     blurb:
-      "This exceptional 4-bedroom, 3-bathroom acreage home with 2,160 sq ft sits on beautiful grounds in Sherwood RM #159 with mature tree plantings and pastoral views. Premium finishes, modern systems, and the perfect balance of rural tranquility and comfortable family living.",
-    image: "/hero/slide5.jpg",
+      "Exceptionally rare acreage located on the outskirts of Regina's East end. This property is just over a mile from Regina's east end and 2 miles from Costco, this is a rare blend of city convenience & country living. The property is situated on Tower Road between Hwy #1(1.3 miles) & Hwy #46 (1.1 miles). The meticulously landscaped acreage features a custom 4 bdrm home w/ numerous extras including a horse barn, shop, & abundant drinkable water from a well. Enjoy breathtaking sunset/sunrise views everyday, surrounded by a mature shelterbelt of poplar, blue spruce, caragana, & siberian elm trees. The landscaping design emphasizes easy maintenance, privacy, & protection from the elements w/ a variety of trees . The property boasts a well-maintained laneway, concrete pad/sidewalks & patio, professional lawn-edging, and a large garden. This R2000 energy-efficient home, was built in 1983, and offers 2160 sqft & 3240 livable space on 3 floors. The home features vinyl siding (2021), triple-pane vinyl clad windows, wood-burning fireplace & 3 season sunroom (2013). The main floor boasts a custom-designed floorplan, comfortable living room w/ a wood-burning fresh air fireplace, dining room, large kitchen w/ built-in pantry, multiple workspaces, & lots of natural light, family room/eating nook, home office, 1/2 bath, & ample closets accessible from the main entry & attached garage. The 2nd level includes 4 bdrms w/ custom closet organizers, a large laundry room, 3-pc bath, & 3-pc en suite w/ walk-in shower. Outbuildings include a 24x24 barn designed for horses, but versatile for other animals, wired & powered w/ skylights, a 30x48 shop w/ large workbench & a overhead door. The property is located adjacent to the City of Regina providing easy access to major hwys, golf courses, shopping & recreational amenities. A truly exceptional property capturing the essence of serene country living w/ modern conveniences.",
+    image: "/sold/sk981375-regina-acreage.jpg",
     mls: "SK981375",
     location: "Sherwood Rm No 159, Saskatchewan",
     propertyType: "Acreage",
@@ -378,7 +378,7 @@ export const soldListings: SoldListing[] = [
       baths: 3,
       sqft: 2160,
     },
-    thankYou: "Thank you to our clients for allowing us to represent this beautiful acreage property. We're thrilled we could help you transition to the next phase of your lives. Best wishes to the new family for wonderful years of rural living!",
+    thankYou: "What a special property — thank you to our clients for trusting us with this one-of-a-kind acreage sale!",
   },
   {
     slug: "sk-976915-agriculture-final",
