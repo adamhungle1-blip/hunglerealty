@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import FeaturedCards from "@/components/FeaturedCards";
 import FeaturedListings from "@/components/FeaturedListings";
+import FarmlandMapSection from "@/components/FarmlandMapSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <FeaturedCards />
       <FeaturedListings />
+      <FarmlandMapSection />
     </>
   );
 }
