@@ -234,21 +234,20 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-993872-regina-apartment",
-    title: "SK993872 | 3520 Hillsdale Street #908, Regina | 2 Bed | 2 Bath | Apartment Sold",
+    title: "SK993872 | Robert's Plaza #908, Regina | 2 Bed | 1.5 Bath | Condo Sold",
     date: "2025-09-08",
     category: "Sold",
     blurb:
-      "This modern 2-bedroom, 2-bathroom apartment in a prime central location offers vibrant urban living with spectacular city views. Walking distance to trendy restaurants, upscale retail, and entertainment—the perfect low-maintenance lifestyle for professionals and active downsizers.",
-    image: "/hero/residential.jpg",
+      "Professionally re-modelled 2 bedroom, 1.5 bath, Southwest facing condo on the 9th floor in Robert's Plaza. The interior has been totally re-done including new Triple glazed low-e windows, 8' patio door, all flooring and freshly painted with new style knockdown spraytex ceilings. Custom built White Lacquered kitchen cabinets, new counter tops, double stainless steel sink and taps. Sit down Centre Island complete with roll-out drawers. Whirlpool Appliances, including side-by-side fridge, convection smooth top stove, microwave/range hood and dishwasher. Bathrooms have new cabinets, counters, porcelain sinks, taps, mirrors and toilets and the main bath has a new fibreglass tub and wall unit. Primary bedroom has 1/2 bath ensuite and double 6' closet doors complete w/ space saving wire racking and new bifold doors. 2nd bedroom has new doors and space saving wire racking and both bedrooms are wired for cable and Internet connection. Storage room has shelving and been painted and new flooring to match the suite. Miami Louvered door used here for the style and look. All doors are new style 2 panel square top smooth sprayed in a white lacquer. New baseboards and casings throughout, light fixtures, fans, pewter door locks and window shades. New Air Conditioning unit. Amenities include: indoor saltwater swimming pool, large hot tub, racquetball court, sauna and a brand new State of the art Fitness Facility with 10+ workout stations that has extended hours. Hospitality room and guest suite is available at a great rate. There is also a rooftop deck available for summer tanning or to just enjoy the panoramic 21 storeys high views of the Summer Sky. Excellent location that is walking distance to Wascana Park, Legislative Buildings and University of Regina. This unit is completely move in ready!",
+    image: "/sold/sk993872-regina-roberts-plaza.jpg",
     mls: "SK993872",
     location: "3520 Hillsdale Street #908, Regina, Saskatchewan",
     propertyType: "Apartment",
     details: {
       beds: 2,
-      baths: 2,
-      sqft: 969,
+      baths: 1.5,
     },
-    thankYou: "We're grateful for the opportunity to help our clients sell this fantastic urban apartment. Thank you for your trust—we wish the new residents an exciting chapter filled with great dining, culture, and city vibrancy!",
+    thankYou: "What a stunning renovation — the new owners are in for a treat at Robert's Plaza!",
   },
   {
     slug: "sk-984930-agriculture-operations",
