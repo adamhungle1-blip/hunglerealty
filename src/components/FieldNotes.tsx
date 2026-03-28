@@ -9,12 +9,12 @@ const marketReport = {
   date: "March 2026",
   category: "Market Update",
   excerpt:
-    "SK farmland values climbed +12% year-over-year through mid-2025. Provincial avg cultivated price sits at ~$3,200–$3,500/acre with the northeast leading at $4,450+. Here's the full breakdown by region, plus rental rates, irrigated land, and the 2026 outlook.",
+    "SK farmland values rose 9.4% in 2025 (FCC full-year data), ranking third nationally behind Manitoba and Alberta. Provincial avg cultivated price sits at ~$3,200–$3,500/acre with the northeast leading at $4,450+. Full breakdown by region, plus rental rates, irrigated land, and the 2026 outlook.",
   image: "/hero/slide1.jpg",
   stats: [
-    { label: "YoY Growth", value: "+12%" },
+    { label: "YoY Growth", value: "+9.4%" },
     { label: "Avg $/Acre", value: "$3,210" },
-    { label: "SK Rank", value: "#1 in Canada" },
+    { label: "SK Rank", value: "#3 in Canada" },
   ],
 };
 

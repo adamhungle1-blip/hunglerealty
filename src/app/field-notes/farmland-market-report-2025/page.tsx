@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 /* ── Stat cards shown at top ────────────────────────────── */
 const heroStats = [
-  { value: "+12%", label: "Year-over-Year Growth", sub: "Mid-2025" },
+  { value: "+9.4%", label: "Full-Year 2025 Growth", sub: "FCC confirmed" },
   { value: "$3,210", label: "Avg. Sale Price/Acre", sub: "Jan 2026" },
-  { value: "13.1%", label: "SK Growth 2024", sub: "#1 in Canada" },
+  { value: "#3", label: "SK Rank in Canada", sub: "Behind MB & AB" },
   { value: "$8,200", label: "Irrigated Land Avg", sub: "Premium segment" },
 ];
 
@@ -119,14 +119,14 @@ export default function FarmlandMarketReport() {
           </h2>
           <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
             <p>
-              Saskatchewan farmland continues its run as one of the hottest agricultural land markets in
-              Canada. The province led the country in farmland value growth for the second straight year in
-              2024 at 13.1%, and the first half of 2025 showed no signs of that reversing — FCC reported
-              cultivated dryland values up 6.0% in the first six months of 2025 and 12.0% year-over-year.
+              Saskatchewan farmland continues its run as one of the strongest agricultural land markets in
+              Canada. The province posted a 9.4% increase in farmland values for full-year 2025, ranking
+              third nationally behind Manitoba (12.2%) and Alberta (11.4%). This followed a 13.1% gain in
+              2024 when Saskatchewan led the country.
             </p>
             <p>
-              The pace has moderated from the 15%+ gains of 2023, but make no mistake: land values are
-              still climbing. The market is settling into a steadier groove after several years of breakneck appreciation.
+              The pace has moderated from the 15.7% gains of 2023 and 13.1% in 2024, but make no mistake: land values are
+              still climbing. At 9.4%, Saskatchewan is growing in line with the national average (9.3%), and the market is settling into a steadier groove after several years of breakneck appreciation.
             </p>
           </div>
 
@@ -134,8 +134,9 @@ export default function FarmlandMarketReport() {
           <div className="mt-8 rounded-lg border-l-4 border-green-700 bg-green-50 p-6">
             <h3 className="text-lg font-bold text-green-800">2025 Numbers at a Glance</h3>
             <ul className="mt-3 space-y-1.5 text-sm text-gray-700">
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />H1 2025 growth: +6.0% (6-month), +12.0% year-over-year</li>
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />Provincial avg cultivated price: ~$3,200–$3,500/acre (est. mid-2025)</li>
+              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />Full-year 2025 growth: +9.4% (FCC confirmed March 2026)</li>
+              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />SK rank: #3 nationally — behind Manitoba (12.2%) and Alberta (11.4%)</li>
+              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />Provincial avg cultivated price: ~$3,200–$3,500/acre</li>
               <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />Jan 2026 avg sale price: ~$3,210/acre across all classes</li>
               <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />Irrigated land: $8,200/acre avg ($6,800–$9,900 range)</li>
               <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />Rent-to-price ratio: 3.1% (steady)</li>
@@ -161,13 +162,13 @@ export default function FarmlandMarketReport() {
               <tbody className="divide-y divide-gray-200">
                 <tr className="bg-white"><td className="px-4 py-3 font-medium">2022</td><td className="px-4 py-3">14.2%</td><td className="px-4 py-3">12.8%</td><td className="px-4 py-3">Top 3</td></tr>
                 <tr className="bg-gray-50"><td className="px-4 py-3 font-medium">2023</td><td className="px-4 py-3">15.7%</td><td className="px-4 py-3">11.5%</td><td className="px-4 py-3 font-bold">#1</td></tr>
-                <tr className="bg-white"><td className="px-4 py-3 font-medium">2024</td><td className="px-4 py-3">13.1%</td><td className="px-4 py-3">9.3%</td><td className="px-4 py-3 font-bold">#1</td></tr>
-                <tr className="bg-gray-50"><td className="px-4 py-3 font-medium">H1 2025</td><td className="px-4 py-3">+6.0% (6 mo.)</td><td className="px-4 py-3">+6.0% (6 mo.)</td><td className="px-4 py-3">On pace</td></tr>
+                <tr className="bg-white"><td className="px-4 py-3 font-medium">2024</td><td className="px-4 py-3">13.1%</td><td className="px-4 py-3">9.8%</td><td className="px-4 py-3 font-bold">#1</td></tr>
+                <tr className="bg-gray-50 font-semibold"><td className="px-4 py-3 font-medium">2025</td><td className="px-4 py-3">9.4%</td><td className="px-4 py-3">9.3%</td><td className="px-4 py-3">#3</td></tr>
               </tbody>
             </table>
           </div>
           <p className="mt-4 text-sm italic text-gray-500">
-            Still positive, but levelling out. Full-year 2025 results from FCC are expected shortly. Based on mid-year data and late-2025 auction results, expect something in the 8–12% range for the full year.
+            Still positive, but levelling out. FCC confirmed full-year 2025 growth at 9.4% — in line with the national average of 9.3%. Manitoba led at 12.2%, followed by Alberta at 11.4%. Saskatchewan dropped from #1 to #3 after two years atop the rankings.
           </p>
         </section>
 
@@ -337,15 +338,21 @@ export default function FarmlandMarketReport() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-[#c49a2a]">Margins Are the Wildcard</h3>
+              <h3 className="text-lg font-bold text-[#c49a2a]">Margins &amp; Trade Headwinds Are the Wildcard</h3>
               <p className="mt-2 text-gray-700 leading-relaxed">
-                Land prices don&apos;t exist in a vacuum. Input costs, interest rates, and commodity prices all feed into how aggressively buyers will bid. Late 2025 saw some auctions come in flat or slightly below expectations — a sign that buyers are sharpening their pencils.
+                Land prices don&apos;t exist in a vacuum. Input costs, interest rates, and commodity prices all feed into how aggressively buyers will bid. Late 2025 saw some auctions come in flat or slightly below expectations — a sign that buyers are sharpening their pencils. FCC&apos;s latest commentary also flags ongoing uncertainties related to trade and tariffs, high input costs, and low commodity prices as key factors to watch heading into 2026.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#c49a2a]">North and East Still Lead</h3>
               <p className="mt-2 text-gray-700 leading-relaxed">
                 The premium on northeast and northwest Saskatchewan land isn&apos;t going away. These zones offer the most consistent yields, the best soil, and the strongest buyer demand. If you&apos;re looking for relative value, the southeast and southwest offer lower entry points — but with the corresponding risk profile.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-[#c49a2a]">Manitoba &amp; Alberta Pulled Ahead in 2025</h3>
+              <p className="mt-2 text-gray-700 leading-relaxed">
+                Saskatchewan slipped to #3 nationally in 2025 after two years at #1. Manitoba (12.2%) and Alberta (11.4%) outpaced SK&apos;s 9.4%. This doesn&apos;t change the long-term thesis — Saskatchewan land is still among the best-value farmland in Canada — but it&apos;s worth watching whether neighbouring provinces continue to close the gap.
               </p>
             </div>
             <div>
@@ -366,7 +373,7 @@ export default function FarmlandMarketReport() {
                 Saskatchewan farmland is still a strong asset — the market has shifted from red-hot to steady-strong.
               </p>
               <div className="mt-3 space-y-2 text-sm text-gray-300 leading-relaxed">
-                <p>Values climbed another 12% year-over-year through mid-2025, and early 2026 activity confirms continued demand. But the growth rate is moderating, margins are tightening, and the smart money is running more conservative numbers.</p>
+                <p>Values rose 9.4% in 2025 (FCC confirmed), and early 2026 activity confirms continued demand. But the growth rate is moderating, margins are tightening, and the smart money is running more conservative numbers.</p>
                 <p>If you&apos;re buying, don&apos;t count on last year&apos;s best yields to justify today&apos;s prices. If you&apos;re renting, negotiate with average yields in mind. If you&apos;re selling, you&apos;re still in a strong position — particularly in the northeast and northwest.</p>
                 <p className="italic text-[#c49a2a]">Know your numbers, know your land, and make the decision that fits your operation.</p>
               </div>
@@ -397,7 +404,7 @@ export default function FarmlandMarketReport() {
             </a>
           </div>
           <p className="mt-4 text-xs text-gray-500">
-            Sources: FCC 2025 Mid-Year Report, FCC 2024 Annual Report, Industry Market Data &amp; MLS® Farmland Sales
+            Sources: FCC 2025 Annual Farmland Values Report (March 2026), FCC 2024 Annual Report, Industry Market Data &amp; MLS® Farmland Sales
           </p>
         </section>
       </article>

@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
       <p>Deciding to buy farmland is one of the biggest investments you'll ever make. This guide walks you through everything you need to know about purchasing agricultural land in Saskatchewan in 2026.</p>
 
       <h3>Market Overview</h3>
-      <p>Saskatchewan farmland values have seen consistent year-over-year increases for more than a decade. FCC reported a 13.1% increase in 2024 \u2014 the highest in Canada \u2014 and mid-2025 data showed values up another 12%. As of early 2026, the market remains strong with tight inventory and high demand.</p>
+      <p>Saskatchewan farmland values have seen consistent year-over-year increases for more than a decade. FCC reported a 9.4% increase for full-year 2025, following a 13.1% jump in 2024. Saskatchewan ranked third nationally behind Manitoba (12.2%) and Alberta (11.4%). As of early 2026, the market remains strong with tight inventory and high demand.</p>
 
       <h3>Understanding Soil Zones</h3>
       <p>Saskatchewan\u2019s farmland is divided into several soil zones, each affecting land value and agricultural potential. The Black soil zone in central Saskatchewan offers the highest productivity and commands premium pricing. Brown and Dark Brown soils in the south are well-suited for grain and oilseed production. Understanding which zone your target property falls in is critical to evaluating its true worth.</p>
@@ -125,7 +125,7 @@ export const blogPosts: BlogPost[] = [
       <p>The Saskatchewan farmland market closed out 2025 on a strong note. Here\u2019s a comprehensive look at what happened and what to expect in 2026.</p>
 
       <h3>2025 Performance</h3>
-      <p>Saskatchewan led Canada in farmland value growth for the second consecutive year. Average values increased approximately 12% year-over-year through mid-2025, building on the 13.1% gain reported by FCC for 2024. Transaction volumes remained healthy despite higher interest rates, with strong demand from local operators and investors.</p>
+      <p>Saskatchewan posted a 9.4% increase in farmland values for full-year 2025, ranking third nationally behind Manitoba (12.2%) and Alberta (11.4%). This followed the 13.1% gain reported by FCC for 2024. Transaction volumes remained healthy despite higher interest rates, with strong demand from local operators and investors.</p>
 
       <h3>Regional Breakdown</h3>
       <p>Southeast SK (around Regina): Strongest demand, with quality grain land selling above $3,500/acre in many RMs. The Indian Head, Lumsden, and Sherwood areas saw particularly active markets. Central SK (Saskatoon region): Corman Park, Dundurn, and surrounding RMs saw continued appreciation driven by urban proximity and excellent soils. Southwest SK: More moderate price growth, with ranch and pasture land seeing increased interest from cattle operations. Northeast SK: Mixed farming areas saw steady but lower appreciation rates.</p>

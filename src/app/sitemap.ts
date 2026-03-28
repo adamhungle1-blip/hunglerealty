@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/map`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/field-notes`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/field-notes/farmland-market-report-2025`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/field-notes/saskatchewan-farmland-rental-rates`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/field-notes/saskatchewan-farmland-price-history`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   // RM area pages (280+)

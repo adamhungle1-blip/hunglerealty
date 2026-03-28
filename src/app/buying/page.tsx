@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const investmentReasons = [
   {
     title: "Consistent Value Growth",
-    text: "Saskatchewan farmland values have increased every year for more than a decade. FCC reported a 13.1% increase in 2024 (highest in Canada), and mid-2025 data shows values up another 12% year-over-year. Unlike stocks or crypto, farmland doesn't crash overnight.",
+    text: "Saskatchewan farmland values have increased every year for more than a decade. FCC reported a 9.4% increase in 2025, following a 13.1% jump in 2024. Values have climbed every year for over a decade. Unlike stocks or crypto, farmland doesn't crash overnight.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.306a11.95 11.95 0 015.814-5.518l2.74-1.22m0 0l-5.94-2.281m5.94 2.28l-2.28 5.941" />
@@ -146,7 +146,7 @@ export default function BuyingPage() {
           </h2>
           <p className="mx-auto mb-10 max-w-3xl text-center text-gray-600">
             Farmland has been one of the strongest-performing assets in Canada over the past decade,
-            and Saskatchewan has led the charge. Here's why buyers continue to see farmland as a
+            and Saskatchewan has been one of the strongest-performing provinces. Here's why buyers continue to see farmland as a
             safe, long-term investment:
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -193,7 +193,7 @@ export default function RootLayout({
                       name: "Is Saskatchewan farmland a good investment?",
                       acceptedAnswer: {
                         "@type": "Answer",
-                        text: "Saskatchewan farmland has delivered consistent year-over-year value increases for over a decade. FCC reported a 13.1% increase in 2024, the highest in Canada, and mid-2025 data shows values up another 12% year-over-year.",
+                        text: "FCC reported a 9.4% increase in Saskatchewan farmland values for 2025, following 13.1% in 2024. Saskatchewan ranked third nationally behind Manitoba (12.2%) and Alberta (11.4%).",
                       },
                     },
                   ],

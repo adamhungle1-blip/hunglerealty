@@ -231,7 +231,7 @@ export default async function RMPage({
                   </h4>
                   <p className="mt-1 text-sm text-gray-600">
                     Saskatchewan farmland has delivered consistent year-over-year value increases, with
-                    provincial averages up 12% in 2025. {content?.soilType ? `The RM of ${rm.name} features ${content.soilType.toLowerCase()}, ` : ""}making
+                    provincial averages up 9.4% in 2025. {content?.soilType ? `The RM of ${rm.name} features ${content.soilType.toLowerCase()}, ` : ""}making
                     it attractive for both active farming operations and long-term investment.
                   </p>
                 </div>
@@ -341,7 +341,7 @@ export default async function RMPage({
                 name: `Is farmland in RM of ${rm.name} a good investment?`,
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: `Saskatchewan farmland has delivered consistent year-over-year value increases, with provincial averages up 12% in 2025.${content?.soilType ? ` The RM of ${rm.name} features ${content.soilType.toLowerCase()}.` : ""}`,
+                  text: `Saskatchewan farmland has delivered consistent year-over-year value increases, with provincial averages up 9.4% in 2025.${content?.soilType ? ` The RM of ${rm.name} features ${content.soilType.toLowerCase()}.` : ""}`,
                 },
               },
               {

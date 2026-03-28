@@ -14,12 +14,12 @@ export default function HomeSEOContent() {
           zone along the Montana border.
         </p>
         <p>
-          Farm Credit Canada reported a <strong>13.1&nbsp;% increase</strong> in Saskatchewan
-          farmland values for 2024, the largest jump of any Canadian province. Mid-2025 data shows
-          prices climbing another <strong>12&nbsp;% year-over-year</strong>, driven by strong
-          commodity prices, limited inventory, and growing demand from expanding operations and
-          out-of-province investors. For sellers, this means record equity. For buyers, it means
-          acting quickly on well-priced land before someone else does.
+          Farm Credit Canada reported a <strong>9.4&nbsp;% increase</strong> in Saskatchewan
+          farmland values for 2025, the third-highest in the country behind Manitoba and Alberta.
+          Values have climbed every year for over a decade, with 2024 seeing <strong>13.1&nbsp;%
+          growth</strong> and 2023 hitting <strong>15.7&nbsp;%</strong>. For sellers, this means
+          record equity. For buyers, it means acting quickly on well-priced land before someone
+          else does.
         </p>
         <p>
           Adam Hungle, REALTOR&reg; with Sutton Group Results Realty, brings over 15 years of

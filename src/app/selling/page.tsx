@@ -130,9 +130,9 @@ export default function SellingPage() {
             Why Now Is the Time to Sell
           </h2>
           <p className="mb-8 text-[15px] leading-relaxed text-gray-300">
-            Saskatchewan farmland values are at all-time highs. FCC reported a 13.1
-            % increase in 2024 (highest in Canada), and mid-2025 data shows values
-            up another 12% year-over-year. Inventory is tight, demand is high, and
+            Saskatchewan farmland values are at all-time highs. FCC reported a 9.4%
+            increase for 2025, following a 13.1% jump in 2024. Values have climbed
+            every year for over a decade. Inventory is tight, demand is high, and
             buyers are competing for good land. If you&apos;ve been thinking about selling,
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

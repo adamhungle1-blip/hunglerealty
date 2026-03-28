@@ -10,21 +10,51 @@ export const metadata: Metadata = {
     "Read Adam Hungle's latest market reports, farmland insights, and view recent sold listings across Saskatchewan. Expert real estate analysis and sales.",
 };
 
-// Market report data
-const marketReport = {
-  slug: "farmland-market-report-2025",
-  title: "Saskatchewan Farmland Market Report — 2025 Update",
-  date: "March 2026",
-  category: "Market Update",
-  excerpt:
-    "SK farmland values climbed +12% year-over-year through mid-2025. Provincial avg cultivated price sits at ~$3,200–$3,500/acre with the northeast leading at $4,450+. Here's the full breakdown by region, plus rental rates, irrigated land, and the 2026 outlook.",
-  image: "/hero/slide1.jpg",
-  stats: [
-    { label: "YoY Growth", value: "+12%" },
-    { label: "Avg $/Acre", value: "$3,210" },
-    { label: "SK Rank", value: "#1 in Canada" },
-  ],
-};
+// Standalone field-notes pages
+const standalonePages = [
+  {
+    slug: "farmland-market-report-2025",
+    title: "Saskatchewan Farmland Market Report — 2025 Update",
+    date: "March 2026",
+    category: "Market Update",
+    excerpt:
+      "SK farmland values rose 9.4% in 2025 (FCC full-year data), ranking third nationally behind Manitoba and Alberta. Provincial avg cultivated price sits at ~$3,200–$3,500/acre with the northeast leading at $4,450+. Full breakdown by region, plus rental rates, irrigated land, and the 2026 outlook.",
+    image: "/hero/slide1.jpg",
+    stats: [
+      { label: "YoY Growth", value: "+9.4%" },
+      { label: "Avg $/Acre", value: "$3,210" },
+      { label: "SK Rank", value: "#3 in Canada" },
+    ],
+  },
+  {
+    slug: "saskatchewan-farmland-rental-rates",
+    title: "Saskatchewan Farmland Rental Rates (2026)",
+    date: "March 2026",
+    category: "Market Report",
+    excerpt:
+      "Cash rent across Saskatchewan ranges from $68–$124/acre depending on region and soil quality. Full breakdown of rental rates by region, how rates are determined, cash rent vs crop share, and the 3.1% rent-to-price ratio.",
+    image: "/hero/slide3.jpg",
+    stats: [
+      { label: "Avg Cash Rent", value: "$68–$124" },
+      { label: "Rent-to-Price", value: "3.1%" },
+      { label: "Top Region", value: "Northeast" },
+    ],
+  },
+  {
+    slug: "saskatchewan-farmland-price-history",
+    title: "Saskatchewan Farmland Prices: 40 Years of Growth (1986–2025)",
+    date: "March 2026",
+    category: "Market Analysis",
+    excerpt:
+      "From $200/acre in the late 1980s to $3,200+ today — trace four decades of Saskatchewan farmland value growth using FCC data. Key inflection points, era-by-era analysis, and what the trend means for buyers and sellers.",
+    image: "/hero/slide2.jpg",
+    stats: [
+      { label: "1986 Avg", value: "$200" },
+      { label: "2025 Avg", value: "$3,200+" },
+      { label: "40-Yr Growth", value: "1,500%+" },
+    ],
+  },
+];
 
 // Blog article images mapped by category
 const blogCategoryImages: Record<string, string> = {
@@ -50,7 +80,12 @@ export default function FieldNotesPage() {
     _type: "blog" as const,
   }));
 
-  const allPosts = [marketReport, ...blogArticles, ...soldListings];
+  const soldPosts = soldListings.map((listing) => ({
+    ...listing,
+    _type: "sold" as const,
+  }));
+
+  const allPosts = [...standalonePages, ...blogArticles, ...soldPosts];
 
   return (
     <div className="bg-[#0f1a0f]">
@@ -78,11 +113,11 @@ export default function FieldNotesPage() {
             <Link
               key={post.slug}
               href={
-                post.slug === "farmland-market-report-2025"
-                  ? `/field-notes/${post.slug}`
-                  : "_type" in post && post._type === "blog"
-                    ? `/blog/${post.slug}`
-                    : `/field-notes/sold/${post.slug}`
+                "_type" in post && post._type === "blog"
+                  ? `/blog/${post.slug}`
+                  : "_type" in post && post._type === "sold"
+                    ? `/field-notes/sold/${post.slug}`
+                    : `/field-notes/${post.slug}`
               }
               className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[#c49a2a]/40 hover:bg-white/[0.08]"
             >
@@ -130,11 +165,11 @@ export default function FieldNotesPage() {
                 )}
 
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#c49a2a] transition-colors group-hover:text-[#e0b830]">
-                  {post.slug === "farmland-market-report-2025"
-                    ? "Read Full Report"
-                    : "_type" in post && post._type === "blog"
-                      ? "Read Article"
-                      : "View Details"}
+                  {"_type" in post && post._type === "blog"
+                    ? "Read Article"
+                    : "_type" in post && post._type === "sold"
+                      ? "View Details"
+                      : "Read Full Report"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"
