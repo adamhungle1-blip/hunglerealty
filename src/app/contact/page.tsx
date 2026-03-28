@@ -249,7 +249,7 @@ export default function ContactPage() {
                   </svg>
                   <div>
                     <p className="font-bold text-gray-900">Email</p>
-                    <a href="mailto:adam@hunglerealty.ca" className="text-green-700 hover:underline">adam@hunglerealty.ca</a>
+                    <a href="mailto:hunglerealestate@outlook.com" className="text-green-700 hover:underline">hunglerealestate@outlook.com</a>
                   </div>
                 </div>
                 <div className="flex gap-3">

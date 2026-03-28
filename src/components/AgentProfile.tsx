@@ -68,7 +68,7 @@ export default function AgentProfile() {
                 306.531.8854
               </a>
               <a
-                href="mailto:adam@hunglerealty.ca"
+                href="mailto:hunglerealestate@outlook.com"
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-green-500 hover:text-green-400"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
