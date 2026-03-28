@@ -148,12 +148,12 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-020772-regina-battel",
-    title: "SK020772 | 835 Battel Street N, Regina | 3 Bed | 3 Bath | Detached Sold",
+    title: "SK020772 | 835 Battel Street N, Regina | 4-Level Split | Sold",
     date: "2025-10-12",
     category: "Sold",
     blurb:
-      "This lovely 3-bedroom, 3-bathroom detached home on Battel Street North features recently updated kitchen, beautiful hardwood throughout, and a spacious backyard perfect for families. The stable north-end neighbourhood offers excellent schools, tree-lined streets, and strong community spirit.",
-    image: "/hero/residential.jpg",
+      "Excellent location on this large 1600 sqft 4 level split, directly across from École Centennial School and Hayworth Crescent Park, and just a short walk to St. Jerome School. Perfect for a growing family. The main floor features a bright living room and an eat-in kitchen with plenty of cabinetry, along with garden doors that open to a large back deck. Enjoy a private, fully fenced yard—ideal for kids, pets, or entertaining. Upstairs, you'll find three comfortable bedrooms and a four-piece bathroom upgraded with a Bath-fitter tub surround. The primary bedroom includes a walk-in closet and its own two-piece ensuite. The third level offers a generous family room, an additional three-piece bathroom, and great space for everyday living. The basement adds even more flexibility with a finished den, laundry area, and extra storage. Outside, the property includes a 24' x 26' double garage with RV parking beside it, plus two storage sheds. Recent updates include shingles on the house (3 years ago), several vinyl window upgrades, and a new pressure-treated backyard fence (within the last year).",
+    image: "/sold/sk020772-regina-house.jpg",
     mls: "SK020772",
     location: "835 Battel Street N, Regina, Saskatchewan",
     propertyType: "Detached",
@@ -162,7 +162,7 @@ export const soldListings: SoldListing[] = [
       baths: 3,
       sqft: 1600,
     },
-    thankYou: "Thank you to our clients for allowing us to represent this beautiful home. We're delighted to have helped you move forward—congratulations to the new family on their wonderful north-end home!",
+    thankYou: "Happy to have helped on this one — great family home in a great neighbourhood!",
   },
   {
     slug: "sk-009594-hazel-dell-mixed-use",
