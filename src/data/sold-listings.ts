@@ -91,16 +91,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-020391-saltcoats-agriculture",
-    title: "SK020391 | Saltcoats Rm No 213 | Agriculture Sold",
+    title: "SK020391 | RM of Saltcoats | 157.81 Acres | Land Sold",
     date: "2025-11-10",
     category: "Sold",
     blurb:
-      "This quality agricultural land in Saltcoats RM #213 offers solid production potential with proven market access and excellent community support. The established local farming infrastructure and proximity to processing facilities made it an outstanding choice for expansion-minded producers.",
-    image: "/hero/slide2.jpg",
+      "This is a prime opportunity to purchase a highly productive quarter section of farmland in the RM of Saltcoats. The property offers excellent access, located just 1.5 miles south of Highway 15 or 6 miles north of Bangor. With 157.81 ISC titled acres, including 145 cultivated acres according to the seller, this quarter is well suited for grain production or as an addition to an existing operation. The land is rated Soil Class G, carries a strong SAMA assessment of $319,500, and will be available for the 2026 farming season. With its quality soil, strong cultivated acres, and desirable location, this is a very attractive piece of farmland. Offers to Purchase must be submitted in writing to the Seller's Brokerage by 4:00 p.m. on Wednesday, November 12th, 2025 and left open for acceptance until November 19th at 4:00 p.m. Highest or any offer will not necessarily be accepted.",
+    image: "/sold/sk020391-saltcoats-land.jpg",
     mls: "SK020391",
-    location: "Saltcoats Rm No 213, Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "Thank you to our clients for allowing us to facilitate this meaningful transaction. We're grateful we could help connect this property with owners who understand and value its agricultural potential.",
+    location: "RM of Saltcoats, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "Thank you to our clients — it was a pleasure helping you complete this sale.",
   },
   {
     slug: "sk-010215-lajord-agriculture",
