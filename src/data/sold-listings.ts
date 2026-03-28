@@ -117,16 +117,16 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-020404-agriculture-opportunity",
-    title: "SK020404 | Agriculture Sold",
+    title: "SK020404 | RM of Whiska Creek | 406.34 Acres | Land Sold",
     date: "2025-10-25",
     category: "Sold",
     blurb:
-      "This prime agricultural property sits in Saskatchewan's productive heartland with Grade A soil classification and efficient operational systems. Positioned for maximum market opportunity with direct shipping access and established farm-to-market logistics already in place.",
-    image: "/hero/slide6.jpg",
+      "This is a great opportunity to purchase three quarter sections of high-quality farmland in the RM of Whiska Creek No. 106. The property is located 2 miles south and 1 mile west of Pambrun South of Highway 43, making it easily accessible for farming operations. Together the three quarter sections total 406.34 ISC titled acres with 375 acres cultivated according to SAMA. The land is soil class H and will be available for the 2026 farming season, offering strong productivity potential for grain growers or investors alike. Offers to Purchase must be submitted in writing to the Seller's Brokerage by 4:00 p.m. on Friday, November 7th, 2025 and left open for acceptance until November 14th at 4:00 p.m. Highest or any offer will not necessarily be accepted. Please contact agent for more information.",
+    image: "/sold/sk020404-whiska-creek-land.jpg",
     mls: "SK020404",
-    location: "Saskatchewan",
-    propertyType: "Agriculture",
-    thankYou: "It was an honour to help our clients transition this outstanding agricultural asset. Thank you for trusting us with the sale. We wish the new operators years of abundant harvests and agricultural success.",
+    location: "RM of Whiska Creek, Saskatchewan",
+    propertyType: "Land",
+    thankYou: "Thank you to everyone involved — glad we could bring this one together.",
   },
   {
     slug: "sk-020765-regina-attached",
