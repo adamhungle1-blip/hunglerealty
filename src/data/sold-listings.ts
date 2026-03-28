@@ -166,21 +166,22 @@ export const soldListings: SoldListing[] = [
   },
   {
     slug: "sk-009594-hazel-dell-mixed-use",
-    title: "SK009594 | Hazel Dell Rm No 335 | 2 Bed | 1 Bath | Mixed Use Sold",
+    title: "SK009594 | Hazel Dell Rm No 335 | 158 Acres | Hunter's Paradise Sold",
     date: "2025-10-05",
     category: "Sold",
     blurb:
-      "This unique mixed-use property in Hazel Dell RM #335 offers 2 bedrooms, 1 bathroom, plus commercial opportunity on productive land. The combination of residential comfort and entrepreneurial potential made it an ideal platform for business-minded owners seeking diversified rural income.",
-    image: "/hero/slide1.jpg",
+      "Welcome to 158.01 acres of wild, scenic Saskatchewan — a hunter's paradise, a recreational haven, and a peaceful escape all in one. Located just 1.5 miles from the Boreal Forest and half a mile from Shutte Lake, this rare property offers unmatched access to big game, wilderness trails, and excellent fishing. Whether you're hunting whitetail, elk, moose, or bear, this land delivers. With approximately 70 cultivated acres and the rest in dense bush and forested terrain, the property is a magnet for wildlife. A large water feature on the northeast side draws animals year-round, and a heated hunting stand is already in place, offering a warm, elevated view in any season. To the east and southeast, the land borders crown property, expanding your hunting area and preserving privacy. Shutte Lake is just minutes away and is well known to locals for its great walleye, perch and jack fishing. Beyond hunting, this property is ideal as a year-round vacation home or off-grid getaway. The well-maintained yardsite is surrounded by mature trees and offers ample space for gear, equipment, and recreational vehicles. Two powered garages—one with both 220V and 240V service—and a third storage building make it ready for all your needs. The home is a solid 1,440 square foot two-storey. The main floor serves as a man cave and utility area with wood/electric furnace, while upstairs features two bedrooms, a three-piece bathroom, and an eat-in kitchen with wood-burning fireplace and beautiful views of the land. It's perfectly suited for downtime between outdoor adventures. The Saskatchewan Snowmobile Trail runs directly past the property, connecting you to Greenwater, Hudson Bay, and Yorkton. Whether you're tracking game, casting for walleye, sledding in fresh snow, or sitting fireside, this is a true four-season retreat.",
+    image: "/sold/sk009594-hunting-land.jpg",
     mls: "SK009594",
     location: "Hazel Dell Rm No 335, Saskatchewan",
-    propertyType: "Mixed Use",
+    propertyType: "Recreational",
     details: {
       beds: 2,
       baths: 1,
       sqft: 1440,
+      acres: 158,
     },
-    thankYou: "We're grateful we could help facilitate the sale of this distinctive property. Thank you for trusting us—we wish the new owners great success with their mixed-use venture!",
+    thankYou: "What a special property — congrats to the new owners on their own slice of the wild!",
   },
   {
     slug: "sk-003016-agriculture-holdings",
