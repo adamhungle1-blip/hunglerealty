@@ -89,6 +89,123 @@ export const RESIDENTIAL_SEO: Record<string, ResidentialSeoContent> = {
     ],
   },
 
+  /* ── Belle Plaine ── */
+  "belle-plaine": {
+    heading: "Homes for Sale in Belle Plaine, Saskatchewan",
+    paragraphs: [
+      "Belle Plaine is a small community about 40 minutes west of Regina along Highway 1, offering affordable rural living with easy commuting access to the city. Known for its quiet streets and tight-knit prairie atmosphere, Belle Plaine appeals to buyers seeking value and space you simply can't find in town.",
+      "If you're looking for an affordable property near Regina with small-town charm, Adam Hungle can help you explore options in Belle Plaine. Call 306.531.8854.",
+    ],
+  },
+
+  /* ── Buena Vista ── */
+  "buena-vista": {
+    heading: "Homes for Sale in Buena Vista, Saskatchewan",
+    paragraphs: [
+      "Buena Vista is a resort village on the shores of Last Mountain Lake, about an hour north of Regina. Popular with cottagers and year-round residents alike, Buena Vista offers lakefront and near-lake properties in a relaxed, recreational setting. The area is a favourite summer destination for Regina families.",
+      "Whether you're looking for a weekend getaway or a permanent lakeside home, Adam Hungle can help you find the right property in Buena Vista.",
+    ],
+  },
+
+  /* ── Craven ── */
+  craven: {
+    heading: "Homes for Sale in Craven, Saskatchewan",
+    paragraphs: [
+      "Craven is a village in the Qu'Appelle Valley about 30 minutes northwest of Regina, famous for hosting the Country Thunder music festival. Nestled among rolling hills and the winding Qu'Appelle River, Craven offers scenic rural living with a strong community feel and easy Regina commuting access.",
+      "Properties in Craven range from acreages and hobby farms to village lots. Contact Adam Hungle at 306.531.8854 to explore homes for sale in Craven.",
+    ],
+  },
+
+  /* ── Drinkwater ── */
+  drinkwater: {
+    heading: "Homes for Sale in Drinkwater, Saskatchewan",
+    paragraphs: [
+      "Drinkwater is a small village southwest of Regina, offering affordable homes and a peaceful rural lifestyle. With easy access to Highway 2 and a short commute to Moose Jaw or Regina, Drinkwater appeals to buyers who want wide-open prairie living without being far from city amenities.",
+      "Adam Hungle can help you find affordable property options in Drinkwater and the surrounding area.",
+    ],
+  },
+
+  /* ── Grand Coulee ── */
+  "grand-coulee": {
+    heading: "Homes for Sale in Grand Coulee, Saskatchewan",
+    paragraphs: [
+      "Grand Coulee is a small community just west of Regina, offering a rural feel with the convenience of being minutes from the city. Residents enjoy larger lots, quieter streets, and a relaxed pace of life while still having quick access to Regina's amenities via Highway 1.",
+      "For buyers seeking space and value close to Regina, Grand Coulee is worth a look. Contact Adam Hungle at 306.531.8854.",
+    ],
+  },
+
+  /* ── Kannata Valley ── */
+  "kannata-valley": {
+    heading: "Homes for Sale in Kannata Valley, Saskatchewan",
+    paragraphs: [
+      "Kannata Valley is a resort village near Last Mountain Lake, about an hour north of Regina. The community offers a mix of year-round and seasonal homes in a scenic lakeside setting, with boating, fishing, and beach access right at your doorstep. It's a popular choice for Regina families looking for lake life.",
+      "Whether you're after a cottage or a permanent lakeside home, Adam Hungle can help you navigate the Kannata Valley real estate market.",
+    ],
+  },
+
+  /* ── McLean ── */
+  mclean: {
+    heading: "Homes for Sale in McLean, Saskatchewan",
+    paragraphs: [
+      "McLean is a small town east of Regina along Highway 1, offering affordable homes and genuine prairie small-town living. With a school, recreation facilities, and a welcoming community, McLean appeals to families and individuals who want rural life with easy highway access to Regina.",
+      "Contact Adam Hungle to explore available properties in McLean and the surrounding area.",
+    ],
+  },
+
+  /* ── Pense ── */
+  pense: {
+    heading: "Homes for Sale in Pense, Saskatchewan",
+    paragraphs: [
+      "Pense is a town about 30 minutes west of Regina along Highway 1, known for its friendly community and affordable real estate. The town has a school, recreation facilities, and local services, making it a practical choice for families who want small-town living with easy Regina commuting access.",
+      "Home prices in Pense offer strong value compared to Regina proper. Adam Hungle can help you find the right property — call 306.531.8854.",
+    ],
+  },
+
+  /* ── Regina Beach ── */
+  "regina-beach": {
+    heading: "Homes for Sale in Regina Beach, Saskatchewan",
+    paragraphs: [
+      "Regina Beach is a town on the south shore of Last Mountain Lake, about 50 minutes north of Regina. Known for its sandy beaches, marina, and vibrant summer community, Regina Beach is one of the most popular lakeside destinations for Regina residents. The town offers year-round homes, seasonal cottages, and a walkable main street with shops and restaurants.",
+      "Whether you're looking for a full-time residence or a lake getaway, Adam Hungle can help you find the right property in Regina Beach.",
+    ],
+  },
+
+  /* ── Saskatchewan Beach ── */
+  "saskatchewan-beach": {
+    heading: "Homes for Sale in Saskatchewan Beach, Saskatchewan",
+    paragraphs: [
+      "Saskatchewan Beach is a resort village on Last Mountain Lake, adjacent to Regina Beach. The community offers a quieter, more laid-back lakeside experience with cottage-style homes and seasonal properties. It's a favourite for Regina families seeking an affordable entry into lake living.",
+      "Contact Adam Hungle at 306.531.8854 to explore homes and cottages for sale in Saskatchewan Beach.",
+    ],
+  },
+
+  /* ── Sunset Cove ── */
+  "sunset-cove": {
+    heading: "Homes for Sale in Sunset Cove, Saskatchewan",
+    paragraphs: [
+      "Sunset Cove is a resort village on the west shore of Last Mountain Lake, known for its stunning sunsets and relaxed lakeside atmosphere. The community offers seasonal and year-round properties with lake access, making it a desirable option for buyers looking for recreational property near Regina.",
+      "Adam Hungle can help you find your perfect lakeside retreat in Sunset Cove.",
+    ],
+  },
+
+  /* ── Vibank ── */
+  vibank: {
+    heading: "Homes for Sale in Vibank, Saskatchewan",
+    paragraphs: [
+      "Vibank is a village southeast of Regina, offering affordable homes and a genuine Saskatchewan small-town lifestyle. The community has a school, recreation centre, and active local organizations. Vibank appeals to buyers who value affordability, space, and a close-knit rural community.",
+      "Explore available homes in Vibank with Adam Hungle — call 306.531.8854.",
+    ],
+  },
+
+  /* ── Wilcox ── */
+  wilcox: {
+    heading: "Homes for Sale in Wilcox, Saskatchewan",
+    paragraphs: [
+      "Wilcox is a small town south of Regina, best known as the home of Athol Murray College of Notre Dame, a renowned hockey academy. The town offers affordable homes and a unique community identity shaped by its educational heritage and strong local spirit.",
+      "Whether you're connected to Notre Dame or simply looking for affordable rural living near Regina, Adam Hungle can help you find the right home in Wilcox.",
+    ],
+  },
+
   /* ── Key Regina Neighbourhoods ── */
   "harbour-landing": {
     heading: "Harbour Landing Homes for Sale — Regina, SK",
