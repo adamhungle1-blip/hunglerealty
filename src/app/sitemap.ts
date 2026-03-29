@@ -5,6 +5,7 @@ import { soldListings } from "@/data/sold-listings";
 import { RESIDENTIAL_COMMUNITIES } from "@/data/residential-communities";
 import { REGINA_NEIGHBOURHOODS } from "@/data/regina-neighbourhoods";
 import { ACREAGE_CITIES } from "@/data/acreage-cities";
+import { getAllTownSlugs } from "@/data/towns-data";
 
 const BASE = "https://hunglerealty.ca";
 
@@ -82,9 +83,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // Town pages (854 Saskatchewan communities)
+  const townPages: MetadataRoute.Sitemap = getAllTownSlugs().map((slug) => ({
+    url: `${BASE}/town/${slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.5,
+  }));
+
   return [
     ...staticPages,
     ...rmPages,
+    ...townPages,
     ...blogPages,
     ...soldPages,
     ...residentialCommunityPages,
