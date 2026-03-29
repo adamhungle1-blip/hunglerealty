@@ -30,7 +30,7 @@ export async function generateMetadata({
   const desc = `Farmland for sale near ${town.name}, Saskatchewan. Located in RM of ${rmNames.join(" & ")}. ${town.soilType ? town.soilType + ". " : ""}Contact Adam Hungle, REALTOR® — 306.531.8854.`;
 
   return {
-    title: `Farmland for Sale Near ${town.name}, Saskatchewan | Hungle Realty`,
+    title: `Farmland for Sale Near ${town.name}, Saskatchewan`,
     description: desc,
     openGraph: {
       title: `Farmland for Sale Near ${town.name}, SK`,
