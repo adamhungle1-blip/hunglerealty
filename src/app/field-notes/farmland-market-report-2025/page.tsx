@@ -306,25 +306,6 @@ export default function FarmlandMarketReport() {
           </p>
         </section>
 
-        {/* Early 2026 Activity */}
-        <section className="mb-14">
-          <h2 className="border-b-2 border-green-700 pb-2 text-2xl font-bold text-green-800 md:text-3xl">
-            Early 2026 Market Activity
-          </h2>
-          <div className="mt-6 rounded-lg border-l-4 border-[#c49a2a] bg-amber-50 p-6">
-            <h3 className="text-lg font-bold text-[#8a6d1b]">January 2026 Snapshot</h3>
-            <ul className="mt-3 space-y-1.5 text-sm text-gray-700">
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c49a2a]" />25 total farmland sales recorded province-wide</li>
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c49a2a]" />17 of 25 sales (68%) were grain land — still the dominant category</li>
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c49a2a]" />Average sale price: ~$3,210/acre across all land types</li>
-              <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c49a2a]" />Top-performing RM: Rosthern No. 403 (north-central SK)</li>
-            </ul>
-          </div>
-          <p className="mt-4 text-gray-700 leading-relaxed">
-            Demand hasn&apos;t dropped off. Buyers are still active, particularly for productive quarters close to existing operations. The trend of landlords selling directly to their tenants continues into 2026.
-          </p>
-        </section>
-
         {/* 2026 Outlook */}
         <section className="mb-14">
           <h2 className="border-b-2 border-green-700 pb-2 text-2xl font-bold text-green-800 md:text-3xl">

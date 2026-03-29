@@ -169,6 +169,32 @@ export default async function RMPage({
                     <p className="text-sm text-gray-700">{content.nearestCity}</p>
                   </div>
                 </div>
+
+                {/* Internal Links — Related Resources */}
+                <div className="mb-8 rounded-lg border border-green-200 bg-green-50/50 p-5">
+                  <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-green-800">
+                    Explore More
+                  </h4>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <Link href="/field-notes/farmland-market-report-2025" className="text-sm text-green-700 hover:text-green-900 hover:underline">
+                      2025 Farmland Market Report
+                    </Link>
+                    <Link href="/buying" className="text-sm text-green-700 hover:text-green-900 hover:underline">
+                      Saskatchewan Buying Guide
+                    </Link>
+                    <Link href="/selling" className="text-sm text-green-700 hover:text-green-900 hover:underline">
+                      Saskatchewan Selling Guide
+                    </Link>
+                    <Link href="/field-notes/saskatchewan-farmland-rental-rates" className="text-sm text-green-700 hover:text-green-900 hover:underline">
+                      Farmland Rental Rates
+                    </Link>
+                    {nearby.slice(0, 3).map((n) => (
+                      <Link key={n.slug} href={`/rm/${n.slug}`} className="text-sm text-green-700 hover:text-green-900 hover:underline">
+                        RM of {n.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </>
             ) : (
               <>
