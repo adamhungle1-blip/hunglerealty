@@ -63,6 +63,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://hunglerealty.ca",
   },
+  verification: {
+    google: "lits1IbkclFWzyne5uxiFo0ORokt9wlavbosEm2CbX0",
+  },
 };
 
 export default function RootLayout({
