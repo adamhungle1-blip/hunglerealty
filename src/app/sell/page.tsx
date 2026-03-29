@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { trackFormSubmission } from "@/lib/analytics";
 
 export default function SellPage() {
   const [form, setForm] = useState({
@@ -35,6 +36,7 @@ export default function SellPage() {
       });
       if (res.ok) {
         setStatus("success");
+        trackFormSubmission("seller-form");
         setForm({ name: "", phone: "", email: "", notes: "" });
       } else {
         setStatus("error");

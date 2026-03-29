@@ -7,6 +7,7 @@ import Link from "next/link";
 import type { DdfListing } from "@/lib/ddf";
 import SraDisclaimer from "@/components/SraDisclaimer";
 import FarmLandDetails from "@/components/FarmLandDetails";
+import { trackFormSubmission } from "@/lib/analytics";
 
 function formatPrice(price: number): string {
   return new Intl.NumberFormat("en-CA", {
@@ -209,6 +210,7 @@ function InquiryForm({
       });
       if (res.ok) {
         setStatus("success");
+        trackFormSubmission("listing-inquiry");
         setForm({ name: "", email: "", phone: "", message: "" });
       } else {
         setStatus("error");

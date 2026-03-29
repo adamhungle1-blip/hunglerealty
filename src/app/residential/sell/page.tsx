@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { trackFormSubmission } from "@/lib/analytics";
 
 export default function ResidentialSellPage() {
   const [form, setForm] = useState({
@@ -38,6 +39,7 @@ export default function ResidentialSellPage() {
       });
       if (res.ok) {
         setStatus("success");
+        trackFormSubmission("residential-seller-form");
         setForm({ name: "", phone: "", email: "", address: "", notes: "" });
       } else {
         setStatus("error");

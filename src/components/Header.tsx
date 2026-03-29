@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { trackFormSubmission } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -32,6 +33,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
       });
       if (res.ok) {
         setStatus("success");
+        trackFormSubmission("header-contact");
         setForm({ name: "", email: "", phone: "", message: "" });
       } else {
         setStatus("error");
