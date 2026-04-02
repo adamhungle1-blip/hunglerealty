@@ -23,6 +23,7 @@ export async function generateMetadata({
   return {
     title: `${hood.name} Homes for Sale — Regina`,
     description: `Browse homes for sale in ${hood.name}, Regina, Saskatchewan. MLS® listings with map search. Adam Hungle, REALTOR®.`,
+    alternates: { canonical: `/residential/regina/${slug}` },
     openGraph: {
       title: `${hood.name} Homes for Sale — Regina, SK`,
       description: `Find homes for sale in ${hood.name}, Regina. Interactive map search powered by MLS® data. Adam Hungle, REALTOR®.`,

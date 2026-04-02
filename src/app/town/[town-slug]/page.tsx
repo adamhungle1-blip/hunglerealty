@@ -32,6 +32,9 @@ export async function generateMetadata({
   return {
     title: `Farmland for Sale Near ${town.name}, Saskatchewan`,
     description: desc,
+    alternates: {
+      canonical: `/town/${slug}`,
+    },
     openGraph: {
       title: `Farmland for Sale Near ${town.name}, SK`,
       description: `Search farmland and agricultural land for sale near ${town.name}, Saskatchewan. ${town.soilType || "Quality agricultural land"} — expert guidance from Adam Hungle.`,

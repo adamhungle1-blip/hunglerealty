@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     images: [{ url: "/hero/slide1.jpg", width: 1200, height: 630 }],
   },
   alternates: {
-    canonical: "https://hunglerealty.ca",
+    canonical: "/",
   },
 };
 

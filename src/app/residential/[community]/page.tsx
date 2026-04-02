@@ -24,6 +24,7 @@ export async function generateMetadata({
   return {
     title: `Homes for Sale in ${community.name}`,
     description: `Browse homes for sale in ${community.name}, Saskatchewan. Interactive map search with Adam Hungle, REALTOR®.`,
+    alternates: { canonical: `/residential/${slug}` },
     openGraph: {
       title: `Homes for Sale in ${community.name}, Saskatchewan`,
       description: `Search MLS® listings in ${community.name}. Find your next home with Adam Hungle, top 5% Saskatchewan REALTOR®.`,

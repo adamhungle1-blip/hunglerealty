@@ -28,6 +28,9 @@ export async function generateMetadata({
   return {
     title: `Farmland for Sale in RM of ${rm.name}`,
     description: desc,
+    alternates: {
+      canonical: `/rm/${slug}`,
+    },
     openGraph: {
       title: `RM of ${rm.name} — Saskatchewan Farmland for Sale`,
       description: `Search farm listings in RM of ${rm.name}. ${content?.soilType || "Saskatchewan agricultural land"}. Expert guidance from Adam Hungle, top 5% Saskatchewan REALTOR®.`,

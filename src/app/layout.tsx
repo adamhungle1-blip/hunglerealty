@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     images: ["/hero/slide1.jpg"],
   },
   alternates: {
-    canonical: "https://hunglerealty.ca",
+    canonical: "/",
   },
   verification: {
     google: "lits1IbkclFWzyne5uxiFo0ORokt9wlavbosEm2CbX0",
