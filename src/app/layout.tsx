@@ -173,36 +173,6 @@ export default function RootLayout({
                   url: "https://hunglerealty.ca",
                   publisher: { "@id": "https://hunglerealty.ca/#business" },
                 },
-                {
-                  "@type": "FAQPage",
-                  "@id": "https://hunglerealty.ca/#faq",
-                  mainEntity: [
-                    {
-                      "@type": "Question",
-                      name: "How much does farmland cost in Saskatchewan?",
-                      acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "Saskatchewan farmland prices vary by region, soil class, and improvements. As of 2025, values range from under $1,000/acre in some northern areas to over $3,500/acre for top-quality grain land near major centres. Contact Adam Hungle at 306.531.8854 for a free comparable sales analysis.",
-                      },
-                    },
-                    {
-                      "@type": "Question",
-                      name: "Do I need a REALTOR\u00ae to buy farmland in Saskatchewan?",
-                      acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "While not legally required, a farmland specialist like Adam Hungle provides comparable sales data, mineral rights verification, soil analysis, and expert negotiation \u2014 all at no cost to the buyer.",
-                      },
-                    },
-                    {
-                      "@type": "Question",
-                      name: "Is Saskatchewan farmland a good investment?",
-                      acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "FCC reported a 9.4% increase in Saskatchewan farmland values for 2025, following 13.1% in 2024. Saskatchewan ranked third nationally behind Manitoba (12.2%) and Alberta (11.4%).",
-                      },
-                    },
-                  ],
-                },
               ],
             }),
           }}
