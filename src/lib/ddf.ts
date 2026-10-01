@@ -168,7 +168,7 @@ export async function fetchListings({
   filter?: string;
 } = {}): Promise<DdfResponse> {
   // Always filter to Saskatchewan + Active listings
-  let filterStr = "StateOrProvince eq 'Saskatchewan' and StandardStatus eq 'Active'";
+    let filterStr = "StateOrProvince eq 'Saskatchewan'";
   if (filter) {
     filterStr += ` and (${filter})`;
   }
