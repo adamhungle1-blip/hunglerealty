@@ -19,6 +19,22 @@ export interface SoldListing {
 
 export const soldListings: SoldListing[] = [
   {
+        slug: "sk-041130-storthoaks-11-quarters",
+        title: "SK041130 | Storthoaks Rm No 31 | 1,745 Acres | 11 Quarters Sold",
+        date: "2026-07-24",
+        category: "Sold",
+        blurb:
+              "Here are 11 quarters totaling 1,745.21 acres in the RM of Storthoaks No. 31, located 7 miles north of Carievale. The land is currently in alfalfa and offers meaningful passive income from numerous surface leases, with soil classes 9(H), 1(J), and 1(K). According to SAMA there are 1,245 cultivated acres, with potential for more to be broken and returned to crop production. One fenced quarter is used for pasture and includes an older yard site with power. A strong investment opportunity combining land value with ongoing income, available for the 2026 crop year.",
+        image: "/sold/sk041130-storthoaks-11-quarters.png",
+        mls: "SK041130",
+        location: "Storthoaks Rm No 31, Saskatchewan",
+        propertyType: "Agriculture",
+        details: {
+                acres: 1745.21,
+        },
+        thankYou: "Congratulations to the new owners on this excellent Storthoaks investment property!",
+  },
+  {
     slug: "sk-020293-sherwood-land",
     title: "SK020293 | Sherwood Rm No 159 | 39.96 Acres | Land Sold",
     date: "2025-12-15",
