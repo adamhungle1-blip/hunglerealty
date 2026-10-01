@@ -16,6 +16,22 @@ export interface FieldNotePost {
 
 // Standalone field-notes pages (market reports etc.)
 const standalonePages: FieldNotePost[] = [
+    {
+            slug: "saskatchewan-farmland-market-report-october-2026",
+            title: "Saskatchewan Farmland Market Report — October 2026",
+            date: "October 2026",
+            sortDate: "2026-10-01",
+            category: "Market Update",
+            excerpt:
+                      "Farmland values, interest rates, farm income and the late 2026 harvest - where the Saskatchewan market stands heading into the final quarter, and what it means for buyers and sellers.",
+            image: "/hero/slide2.jpg",
+            stats: [
+                { label: "2025 Growth", value: "+9.4%" },
+                { label: "BoC Rate", value: "2.25%" },
+                { label: "Harvested", value: "41%" },
+                    ],
+            _type: "standalone",
+    },
   {
         slug: "farmland-market-report-2025",
         title: "Saskatchewan Farmland Market Report — 2025 Update",
