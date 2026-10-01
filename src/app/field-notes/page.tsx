@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { soldListings } from "@/data/sold-listings";
-import { getSortedPosts } from "@/data/blog-posts";
+import { getAllFieldNotePosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Field Notes — Market Insights & Sold Listings",
@@ -10,82 +9,21 @@ export const metadata: Metadata = {
     "Read Adam Hungle's latest market reports, farmland insights, and view recent sold listings across Saskatchewan. Expert real estate analysis and sales.",
 };
 
-// Standalone field-notes pages
-const standalonePages = [
-  {
-    slug: "farmland-market-report-2025",
-    title: "Saskatchewan Farmland Market Report — 2025 Update",
-    date: "March 2026",
-    category: "Market Update",
-    excerpt:
-      "SK farmland values rose 9.4% in 2025 (FCC full-year data), ranking third nationally behind Manitoba and Alberta. Provincial avg cultivated price sits at ~$3,200–$3,500/acre with the northeast leading at $4,450+. Full breakdown by region, plus rental rates, irrigated land, and the 2026 outlook.",
-    image: "/hero/slide1.jpg",
-    stats: [
-      { label: "YoY Growth", value: "+9.4%" },
-      { label: "Avg $/Acre", value: "$3,210" },
-      { label: "SK Rank", value: "#3 in Canada" },
-    ],
-  },
-  {
-    slug: "saskatchewan-farmland-rental-rates",
-    title: "Saskatchewan Farmland Rental Rates (2026)",
-    date: "March 2026",
-    category: "Market Report",
-    excerpt:
-      "Cash rent across Saskatchewan ranges from $68–$124/acre depending on region and soil quality. Full breakdown of rental rates by region, how rates are determined, cash rent vs crop share, and the 3.1% rent-to-price ratio.",
-    image: "/hero/slide3.jpg",
-    stats: [
-      { label: "Avg Cash Rent", value: "$68–$124" },
-      { label: "Rent-to-Price", value: "3.1%" },
-      { label: "Top Region", value: "Northeast" },
-    ],
-  },
-  {
-    slug: "saskatchewan-farmland-price-history",
-    title: "Saskatchewan Farmland Prices: 40 Years of Growth (1986–2025)",
-    date: "March 2026",
-    category: "Market Analysis",
-    excerpt:
-      "From $200/acre in the late 1980s to $3,200+ today — trace four decades of Saskatchewan farmland value growth using FCC data. Key inflection points, era-by-era analysis, and what the trend means for buyers and sellers.",
-    image: "/hero/slide2.jpg",
-    stats: [
-      { label: "1986 Avg", value: "$200" },
-      { label: "2025 Avg", value: "$3,200+" },
-      { label: "40-Yr Growth", value: "1,500%+" },
-    ],
-  },
-];
+const POSTS_PER_PAGE = 9;
 
-// Blog article images mapped by category
-const blogCategoryImages: Record<string, string> = {
-  "Tax & Finance": "/hero/slide3.jpg",
-  "Investment Guide": "/hero/slide1.jpg",
-  "Acreage Guide": "/hero/slide2.jpg",
-  "Buying Guide": "/hero/slide1.jpg",
-  "Market Analysis": "/hero/slide3.jpg",
-  "Market Insights": "/hero/slide2.jpg",
-  "RM Spotlight": "/hero/slide1.jpg",
-  "Market Report": "/hero/slide3.jpg",
-};
+export default async function FieldNotesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page } = await searchParams;
+  const requestedPage = Math.max(1, parseInt(page || "1", 10) || 1);
 
-export default function FieldNotesPage() {
-  // Map blog posts to the same shape as other posts
-  const blogArticles = getSortedPosts().map((post) => ({
-    slug: post.slug,
-    title: post.title,
-    date: post.date,
-    category: post.category,
-    excerpt: post.excerpt,
-    image: blogCategoryImages[post.category] || "/hero/slide1.jpg",
-    _type: "blog" as const,
-  }));
-
-  const soldPosts = soldListings.map((listing) => ({
-    ...listing,
-    _type: "sold" as const,
-  }));
-
-  const allPosts = [...standalonePages, ...blogArticles, ...soldPosts];
+  const allPosts = getAllFieldNotePosts();
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
+  const currentPage = Math.min(requestedPage, totalPages);
+  const startIdx = (currentPage - 1) * POSTS_PER_PAGE;
+  const pagePosts = allPosts.slice(startIdx, startIdx + POSTS_PER_PAGE);
 
   return (
     <div className="bg-[#0f1a0f]">
@@ -109,15 +47,15 @@ export default function FieldNotesPage() {
       {/* Posts Grid */}
       <div className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {allPosts.map((post) => (
+          {pagePosts.map((post) => (
             <Link
               key={post.slug}
               href={
-                "_type" in post && post._type === "blog"
+                post._type === "blog"
                   ? `/blog/${post.slug}`
-                  : "_type" in post && post._type === "sold"
-                    ? `/field-notes/sold/${post.slug}`
-                    : `/field-notes/${post.slug}`
+                  : post._type === "sold"
+                  ? `/field-notes/sold/${post.slug}`
+                  : `/field-notes/${post.slug}`
               }
               className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[#c49a2a]/40 hover:bg-white/[0.08]"
             >
@@ -145,11 +83,11 @@ export default function FieldNotesPage() {
                   {post.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
-                  {"excerpt" in post ? post.excerpt : post.blurb}
+                  {post.excerpt || post.blurb}
                 </p>
 
                 {/* Quick stats - only for market report */}
-                {"stats" in post && post.stats && (
+                {post.stats && (
                   <div className="mt-4 grid grid-cols-3 gap-2 rounded-lg bg-white/5 p-3">
                     {post.stats.map((stat) => (
                       <div key={stat.label} className="text-center">
@@ -165,11 +103,11 @@ export default function FieldNotesPage() {
                 )}
 
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#c49a2a] transition-colors group-hover:text-[#e0b830]">
-                  {"_type" in post && post._type === "blog"
+                  {post._type === "blog"
                     ? "Read Article"
-                    : "_type" in post && post._type === "sold"
-                      ? "View Details"
-                      : "Read Full Report"}
+                    : post._type === "sold"
+                    ? "View Details"
+                    : "Read Full Report"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -187,6 +125,49 @@ export default function FieldNotesPage() {
             </Link>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
+            {currentPage > 1 && (
+              <Link
+                href={
+                  currentPage - 1 === 1
+                    ? "/field-notes"
+                    : `/field-notes?page=${currentPage - 1}`
+                }
+                className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-all hover:border-[#c49a2a]/40 hover:bg-white/[0.08]"
+              >
+                ← Previous
+              </Link>
+            )}
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (pageNum) => (
+                <Link
+                  key={pageNum}
+                  href={
+                    pageNum === 1 ? "/field-notes" : `/field-notes?page=${pageNum}`
+                  }
+                  className={
+                    pageNum === currentPage
+                      ? "rounded-lg bg-[#c49a2a] px-4 py-2 text-sm font-bold text-[#0f1a0f]"
+                      : "rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-all hover:border-[#c49a2a]/40 hover:bg-white/[0.08]"
+                  }
+                >
+                  {pageNum}
+                </Link>
+              )
+            )}
+            {currentPage < totalPages && (
+              <Link
+                href={`/field-notes?page=${currentPage + 1}`}
+                className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-all hover:border-[#c49a2a]/40 hover:bg-white/[0.08]"
+              >
+                Next →
+              </Link>
+            )}
+          </div>
+        )}
 
         {/* Footer CTA */}
         <div className="mt-16 rounded-xl border border-white/10 bg-white/5 p-8 text-center">
