@@ -1,29 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { soldListings } from "@/data/sold-listings";
-
-// Market report data
-const marketReport = {
-  slug: "farmland-market-report-2025",
-  title: "Saskatchewan Farmland Market Report — 2025 Update",
-  date: "March 2026",
-  category: "Market Update",
-  excerpt:
-    "SK farmland values rose 9.4% in 2025 (FCC full-year data), ranking third nationally behind Manitoba and Alberta. Provincial avg cultivated price sits at ~$3,200–$3,500/acre with the northeast leading at $4,450+. Full breakdown by region, plus rental rates, irrigated land, and the 2026 outlook.",
-  image: "/hero/slide1.jpg",
-  stats: [
-    { label: "YoY Growth", value: "+9.4%" },
-    { label: "Avg $/Acre", value: "$3,210" },
-    { label: "SK Rank", value: "#3 in Canada" },
-  ],
-};
+import { getAllFieldNotePosts } from "@/lib/posts";
 
 export default function FieldNotes() {
-  // Get 8 most recent sold listings to fill a 9-card grid with market report
-  const recentSolds = soldListings.slice(0, 8);
-
-  // Combine market report with recent sold listings
-  const displayPosts = [marketReport, ...recentSolds];
+  // Show the 9 most recent posts across market reports, blog articles, and sold listings
+  const displayPosts = getAllFieldNotePosts().slice(0, 9);
 
   return (
     <section className="border-t-[3px] border-[#c49a2a] bg-[#0f1a0f]">
@@ -45,9 +26,11 @@ export default function FieldNotes() {
             <Link
               key={post.slug}
               href={
-                post.slug === "farmland-market-report-2025"
-                  ? `/field-notes/${post.slug}`
-                  : `/field-notes/sold/${post.slug}`
+                post._type === "blog"
+                  ? `/blog/${post.slug}`
+                  : post._type === "sold"
+                  ? `/field-notes/sold/${post.slug}`
+                  : `/field-notes/${post.slug}`
               }
               className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[#c49a2a]/40 hover:bg-white/[0.08]"
             >
@@ -75,11 +58,11 @@ export default function FieldNotes() {
                   {post.title}
                 </h3>
                 <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-gray-400">
-                  {"excerpt" in post ? post.excerpt : post.blurb}
+                  {post.excerpt || post.blurb}
                 </p>
 
                 {/* Quick stats - only for market report */}
-                {"stats" in post && post.stats && (
+                {post.stats && (
                   <div className="mt-4 grid grid-cols-3 gap-2 rounded-lg bg-white/5 p-3">
                     {post.stats.map((stat) => (
                       <div key={stat.label} className="text-center">
@@ -95,9 +78,11 @@ export default function FieldNotes() {
                 )}
 
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#c49a2a] transition-colors group-hover:text-[#e0b830]">
-                  {post.slug === "farmland-market-report-2025"
-                    ? "Read Full Report"
-                    : "View Details"}
+                  {post._type === "blog"
+                    ? "Read Article"
+                    : post._type === "sold"
+                    ? "View Details"
+                    : "Read Full Report"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -114,7 +99,6 @@ export default function FieldNotes() {
               </div>
             </Link>
           ))}
-
         </div>
 
         {/* View All Posts Link */}
